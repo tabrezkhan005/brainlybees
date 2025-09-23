@@ -10,10 +10,10 @@ export default function TestimonialsSection() {
               happy parents
               <div className="absolute -bottom-2 left-0 w-full">
                 <svg viewBox="0 0 300 20" className="w-full h-4">
-                  <path 
-                    d="M5 15 Q50 5 150 15 T295 15" 
-                    stroke="#ef4444" 
-                    strokeWidth="4" 
+                  <path
+                    d="M5 15 Q50 5 150 15 T295 15"
+                    stroke="#ef4444"
+                    strokeWidth="4"
                     fill="none"
                   />
                 </svg>
@@ -42,7 +42,7 @@ export default function TestimonialsSection() {
                 <span className="text-white font-bold">M</span>
               </div>
               <div>
-                <div className="font-semibold text-gray-800">Matthew's Mom</div>
+                <div className="font-semibold text-gray-800">Matthew&apos;s Mom</div>
                 <div className="text-sm text-gray-600">Los Angeles, California</div>
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
                 <span className="text-white font-bold">A</span>
               </div>
               <div>
-                <div className="font-semibold text-gray-800">Akshat's Mom</div>
+                <div className="font-semibold text-gray-800">Akshat&apos;s Mom</div>
                 <div className="text-sm text-gray-600">McKinney, Texas</div>
               </div>
             </div>

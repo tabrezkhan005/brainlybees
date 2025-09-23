@@ -11,7 +11,7 @@ export default function TargetDevelopmentSection() {
       )
     },
     {
-      title: "English", 
+      title: "English",
       icon: (
         <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
           <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -67,16 +67,16 @@ export default function TargetDevelopmentSection() {
               Target all major developmental areas
               <div className="absolute -bottom-2 left-0 w-full">
                 <svg viewBox="0 0 400 20" className="w-full h-4">
-                  <path 
-                    d="M5 15 Q100 5 200 15 T395 15" 
-                    stroke="#ef4444" 
-                    strokeWidth="4" 
+                  <path
+                    d="M5 15 Q100 5 200 15 T395 15"
+                    stroke="#ef4444"
+                    strokeWidth="4"
                     fill="none"
                   />
                 </svg>
               </div>
             </span>{' '}
-            vital for kids to thrive in today's world.
+            vital for kids to thrive in today&apos;s world.
           </h2>
         </div>
 
