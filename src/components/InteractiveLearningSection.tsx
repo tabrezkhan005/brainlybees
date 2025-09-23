@@ -18,9 +18,16 @@ export default function InteractiveLearningSection() {
               </h2>
               <h2 className="text-4xl md:text-5xl font-bold leading-tight mt-2">
                 like{' '}
-                <span className="relative text-red-500">
+                <span 
+                  className="relative"
+                  style={{
+                    WebkitTextStroke: '2px #ef4444',
+                    WebkitTextFillColor: 'transparent',
+                    color: '#ef4444'
+                  }}
+                >
                   never before
-                  <div className="absolute -bottom-2 left-0 w-full">
+                  <div className="absolute -bottom-3 left-0 w-full">
                     <svg viewBox="0 0 300 20" className="w-full h-4">
                       <path 
                         d="M5 15 Q50 5 150 15 T295 15" 
@@ -34,19 +41,19 @@ export default function InteractiveLearningSection() {
               </h2>
             </div>
 
-            {/* Curved Arrow */}
+            {/* Curved Arrow - Updated design */}
             <div className="flex justify-center lg:justify-start">
-              <svg width="200" height="100" viewBox="0 0 200 100" className="text-orange-400">
+              <svg width="250" height="120" viewBox="0 0 250 120" className="text-orange-400">
                 <defs>
-                  <marker id="arrowhead" markerWidth="10" markerHeight="7" 
-                    refX="10" refY="3.5" orient="auto">
-                    <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+                  <marker id="arrowhead" markerWidth="12" markerHeight="10" 
+                    refX="12" refY="5" orient="auto">
+                    <polygon points="0 0, 12 5, 0 10" fill="currentColor" />
                   </marker>
                 </defs>
                 <path 
-                  d="M 20 30 Q 100 10 180 50" 
+                  d="M 30 50 Q 80 20 130 40 Q 180 60 220 35" 
                   stroke="currentColor" 
-                  strokeWidth="3" 
+                  strokeWidth="4" 
                   fill="none"
                   markerEnd="url(#arrowhead)"
                 />

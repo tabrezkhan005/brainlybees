@@ -65,21 +65,28 @@ export default function FourReasonsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-            <span className="relative text-purple-600">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+            <span 
+              className="relative text-red-500"
+              style={{
+                WebkitTextStroke: '2px #ef4444',
+                WebkitTextFillColor: 'transparent',
+                textShadow: '0 0 0 #ef4444'
+              }}
+            >
               4 Reasons
-              <div className="absolute -bottom-2 left-0 w-full">
+              <div className="absolute -bottom-3 left-0 w-full">
                 <svg viewBox="0 0 200 20" className="w-full h-4">
                   <path 
                     d="M5 15 Q50 5 100 15 T195 15" 
-                    stroke="#9333ea" 
+                    stroke="#ef4444" 
                     strokeWidth="4" 
                     fill="none"
                   />
                 </svg>
               </div>
             </span>{' '}
-            to Choose Us
+            <span className="text-gray-900">to Choose Us</span>
           </h2>
         </div>
 

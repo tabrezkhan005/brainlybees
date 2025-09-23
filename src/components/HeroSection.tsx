@@ -15,9 +15,16 @@ export default function HeroSection() {
               <div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Unleash{' '}
-                  <span className="relative">
+                  <span 
+                    className="relative"
+                    style={{
+                      WebkitTextStroke: '2px #ef4444',
+                      WebkitTextFillColor: 'transparent',
+                      color: '#ef4444'
+                    }}
+                  >
                     your child's
-                    <div className="absolute -bottom-2 left-0 w-full">
+                    <div className="absolute -bottom-3 left-0 w-full">
                       <svg viewBox="0 0 300 20" className="w-full h-4">
                         <path 
                           d="M5 15 Q50 5 150 15 T295 15" 
