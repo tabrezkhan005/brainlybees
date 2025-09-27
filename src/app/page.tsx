@@ -9,7 +9,7 @@ import LearningRoadmapSection from '../components/LearningRoadmapSection';
 import CompetitionsSection from '../components/CompetitionsSection';
 import WorksheetsSection from '../components/WorksheetsSection';
 import ActivitySection from '../components/ActivitySection';
-import TestimonialsSection from '../components/TestimonialsSection';
+import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
       <CompetitionsSection />
       <WorksheetsSection />
       <ActivitySection />
-      <TestimonialsSection />
+      <FAQSection />
       <Footer />
     </div>
   );
