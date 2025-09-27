@@ -1,101 +1,86 @@
 export default function QualityTeachingSection() {
   const qualityFeatures = [
     {
-      title: "In-house training",
-      description: "Extensive in-house training of teachers",
+      title: "Expert Teacher Training",
+      description: "Comprehensive certification program with ongoing professional development to ensure our educators master the latest teaching methodologies and child psychology principles.",
       icon: (
-        <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
-          <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-          </svg>
-        </div>
-      )
+        <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      ),
+      color: "blue"
     },
     {
-      title: "Monitoring",
-      description: "Constant monitoring of quality of teaching in the sessions",
+      title: "Real-Time Quality Monitoring",
+      description: "Advanced session monitoring and feedback systems ensure consistent delivery of high-quality education with immediate support when needed.",
       icon: (
-        <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center">
-          <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-          </svg>
-        </div>
-      )
+        <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      ),
+      color: "green"
     },
     {
-      title: "Personalizing",
-      description: "Personalizing sessions based on psychology /needs of each child",
+      title: "Personalized Learning Approach",
+      description: "Each session is tailored to the individual child's learning style, pace, and psychological needs, ensuring optimal engagement and academic growth.",
       icon: (
-        <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center">
-          <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-          </svg>
-        </div>
-      )
+        <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      ),
+      color: "purple"
     }
   ];
 
   return (
-    <section className="bg-white py-20 relative overflow-hidden">
+    <section className="bg-white py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-            How we provide unmatched{' '}
-            <span className="relative text-red-500">
-              Quality
-              <div className="absolute -bottom-2 left-0 w-full">
-                <svg viewBox="0 0 200 20" className="w-full h-4">
-                  <path 
-                    d="M5 15 Q50 5 100 15 T195 15" 
-                    stroke="#ef4444" 
-                    strokeWidth="4" 
-                    fill="none"
-                  />
-                </svg>
-              </div>
-            </span>{' '}
-            in teaching?
-          </h2>
-
-          {/* Green Arrow */}
-          <div className="flex justify-center mt-8">
-            <svg width="120" height="80" viewBox="0 0 120 80" className="text-green-500">
-              <defs>
-                <marker id="greenArrowhead" markerWidth="10" markerHeight="7" 
-                  refX="10" refY="3.5" orient="auto">
-                  <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
-                </marker>
-              </defs>
-              <path 
-                d="M 10 20 Q 60 10 110 40" 
-                stroke="currentColor" 
-                strokeWidth="4" 
-                fill="none"
-                markerEnd="url(#greenArrowhead)"
-              />
-            </svg>
+          <div className="inline-flex items-center px-4 py-2 bg-red-50 rounded-full text-red-700 text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+            Teaching Excellence
           </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
+            Our Commitment to{' '}
+            <span className="text-red-500">Exceptional Teaching</span>{' '}
+            Quality
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            We maintain the highest standards through comprehensive training, continuous monitoring, 
+            and personalized approaches that ensure every child receives world-class education.
+          </p>
         </div>
 
         {/* Quality Features */}
         <div className="grid md:grid-cols-3 gap-8">
           {qualityFeatures.map((feature, index) => (
-            <div key={index} className="bg-pink-50 rounded-2xl p-8 border-2 border-pink-200 hover:shadow-lg transition-shadow duration-300">
-              <div className="flex flex-col items-center text-center space-y-4">
-                {feature.icon}
-                <h3 className="text-xl font-bold text-red-500">{feature.title}</h3>
+            <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100">
+              <div className="space-y-4">
+                <div className={`w-12 h-12 bg-${feature.color}-50 rounded-lg flex items-center justify-center`}>
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Decorative wave elements */}
-        <div className="absolute top-10 right-10">
-          <svg className="w-16 h-8 text-red-300" fill="currentColor" viewBox="0 0 100 20">
-            <path d="M0,10 Q25,0 50,10 T100,10 L100,20 L0,20 Z"/>
-          </svg>
+        {/* Achievement Stats */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="bg-red-50 rounded-lg p-6">
+            <div className="text-3xl font-bold text-red-600 mb-2">98%</div>
+            <div className="text-gray-700 font-medium">Parent Satisfaction</div>
+          </div>
+          <div className="bg-orange-50 rounded-lg p-6">
+            <div className="text-3xl font-bold text-orange-600 mb-2">500+</div>
+            <div className="text-gray-700 font-medium">Certified Teachers</div>
+          </div>
+          <div className="bg-green-50 rounded-lg p-6">
+            <div className="text-3xl font-bold text-green-600 mb-2">25+</div>
+            <div className="text-gray-700 font-medium">Years Experience</div>
+          </div>
         </div>
       </div>
     </section>

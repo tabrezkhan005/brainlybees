@@ -13,6 +13,10 @@ export default function InteractiveLearningSection() {
           {/* Left Content */}
           <div className="space-y-8 relative z-10">
             <div>
+              <div className="inline-flex items-center px-4 py-2 bg-red-50 rounded-full text-red-700 text-sm font-medium mb-6">
+                <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                Interactive Platform
+              </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                 Experience{' '}
                 <span className="text-red-500">Interactive Learning</span>

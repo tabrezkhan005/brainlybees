@@ -1,113 +1,97 @@
 export default function TargetDevelopmentSection() {
   const developmentAreas = [
     {
-      title: "Maths",
+      title: "Mathematics",
+      description: "Building strong numerical & analytical skills",
+      color: "red",
       icon: (
-        <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-          </svg>
-        </div>
+        <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        </svg>
       )
     },
     {
-      title: "English",
+      title: "Language Arts",
+      description: "Enhancing communication & literary skills",
+      color: "blue",
       icon: (
-        <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-          </svg>
-        </div>
+        <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
       )
     },
     {
-      title: "Logical reasoning",
+      title: "Logical Reasoning",
+      description: "Developing critical thinking abilities",
+      color: "purple",
       icon: (
-        <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-        </div>
+        <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
       )
     },
     {
-      title: "Creative thinking",
+      title: "Creative Expression",
+      description: "Fostering imagination & artistic talents",
+      color: "orange",
       icon: (
-        <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H19v2h-1.5v17c0 1.1-.9 2-2 2h-11c-1.1 0-2-.9-2-2V4H1V2h3.5c.28 0 .5.22.5.5S5.28 3 5.5 3H18.5c.28 0 .5-.22.5-.5S18.78 2 18.5 2z"/>
-          </svg>
-        </div>
+        <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM7 3H5a2 2 0 00-2 2v12a4 4 0 004 4h2V3z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.5 7.5l2.8-2.8a3.5 3.5 0 015 5L21 12l-7 7-1.5-1.5L21 9.5l-5.5-2z" />
+        </svg>
       )
     },
     {
-      title: "Brainpower",
+      title: "Cognitive Development",
+      description: "Strengthening memory & mental agility",
+      color: "green",
       icon: (
-        <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-          </svg>
-        </div>
+        <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
       )
     }
   ];
 
   return (
-    <section className="bg-pink-50 py-20 relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-10 right-10">
-        <div className="w-32 h-32 bg-yellow-300 rounded-full opacity-20"></div>
-      </div>
-
+    <section className="bg-gray-50 py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            <span className="relative">
-              Target all major developmental areas
-              <div className="absolute -bottom-2 left-0 w-full">
-                <svg viewBox="0 0 400 20" className="w-full h-4">
-                  <path
-                    d="M5 15 Q100 5 200 15 T395 15"
-                    stroke="#ef4444"
-                    strokeWidth="4"
-                    fill="none"
-                  />
-                </svg>
-              </div>
-            </span>{' '}
-            vital for kids to thrive in today&apos;s world.
+          <div className="inline-flex items-center px-4 py-2 bg-red-50 rounded-full text-red-700 text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+            Comprehensive Development
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+            Nurturing Every Aspect of Your Child's{' '}
+            <span className="text-red-500">Growth & Development</span>
           </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Our holistic approach ensures your child develops essential skills across all critical areas, 
+            building a strong foundation for lifelong success and confidence.
+          </p>
         </div>
 
         {/* Development Areas Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
           {developmentAreas.map((area, index) => (
-            <div key={index} className="text-center group">
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                <div className="flex justify-center mb-4">
+            <div key={index} className="group">
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 h-full">
+                <div className={`w-12 h-12 bg-${area.color}-50 rounded-lg flex items-center justify-center mb-4`}>
                   {area.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800">{area.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{area.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{area.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Learn More Button */}
+        {/* Call to Action */}
         <div className="text-center">
-          <button className="bg-white border-2 border-red-500 text-red-500 px-8 py-3 rounded-full text-lg font-medium hover:bg-red-500 hover:text-white transition-all duration-300 shadow-lg">
-            Learn More
+          <button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-sm">
+            Explore Our Programs
           </button>
-        </div>
-
-        {/* Right side illustration */}
-        <div className="absolute top-1/2 right-10 transform -translate-y-1/2 hidden lg:block">
-          <div className="w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center">
-            <svg className="w-16 h-16 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
-          </div>
         </div>
       </div>
     </section>
