@@ -1,114 +1,116 @@
 export default function CompetitionsSection() {
   const competitionRegions = [
     {
-      title: "USA/Canada",
+      title: "North America",
+      subtitle: "USA & Canada",
+      icon: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+      ),
       color: "bg-red-500",
-      competitions: ["STAAR", "NAPLAN", "CogAT/Gifted child program", "Kangaroo Math", "Kangaroo", "Olympiad"]
+      competitions: [
+        { name: "STAAR Test", description: "State standardized assessment" },
+        { name: "CogAT", description: "Cognitive abilities test for gifted programs" },
+        { name: "Math Kangaroo", description: "International mathematics competition" },
+        { name: "Math Olympiad", description: "Advanced mathematical problem solving" }
+      ]
     },
     {
-      title: "UK/Europe", 
+      title: "Europe", 
+      subtitle: "UK & European Union",
+      icon: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      ),
       color: "bg-orange-500",
-      competitions: ["11+ GCSE", "Olympiads", "Kangaroo Math", "Grammar School"]
+      competitions: [
+        { name: "11+ Exams", description: "Grammar school entrance tests" },
+        { name: "GCSE Prep", description: "General Certificate preparation" },
+        { name: "European Olympiads", description: "Subject-specific competitions" },
+        { name: "Math Kangaroo", description: "Pan-European mathematics contest" }
+      ]
     },
     {
-      title: "Australia/NZ",
-      color: "bg-red-500", 
-      competitions: ["STAAR", "NAPLAN", "CogAT/Gifted child program", "Kangaroo Math", "Kangaroo", "Olympiad"]
+      title: "Asia Pacific",
+      subtitle: "Australia & New Zealand", 
+      icon: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      color: "bg-blue-500", 
+      competitions: [
+        { name: "NAPLAN", description: "National Assessment Program" },
+        { name: "ICAS", description: "International Competitions & Assessments" },
+        { name: "AMC", description: "Australian Mathematics Competition" },
+        { name: "Science Olympiad", description: "National science competitions" }
+      ]
     }
   ];
 
   return (
-    <section className="bg-pink-50 py-20 relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-10 left-10">
-        <svg className="w-16 h-4 text-orange-400" fill="currentColor" viewBox="0 0 100 20">
-          <path d="M0,0 L20,0 L20,20 L0,20 Z M30,0 L50,0 L50,20 L30,20 Z M60,0 L80,0 L80,20 L60,20 Z"/>
-        </svg>
-      </div>
-      
-      <div className="absolute top-1/2 right-10">
-        <svg className="w-12 h-8 text-red-400" fill="currentColor" viewBox="0 0 100 40">
-          <path d="M0,20 Q25,0 50,20 T100,20 L100,40 L0,40 Z"/>
-          <path d="M0,20 Q25,40 50,20 T100,20"/>
-          <path d="M0,20 Q25,0 50,20 T100,20"/>
-        </svg>
-      </div>
-
-      <div className="absolute bottom-10 right-1/4">
-        <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-        </div>
-        <div className="flex space-x-2 mt-2">
-          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-        </div>
-        <div className="flex space-x-2 mt-2">
-          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-        </div>
-      </div>
-
+    <section className="bg-gray-50 py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-            Cracking competitions{' '}
-            <span className="relative text-red-500">
-              globally
-              <div className="absolute -bottom-2 left-0 w-full">
-                <svg viewBox="0 0 200 20" className="w-full h-4">
-                  <path 
-                    d="M5 15 Q50 5 100 15 T195 15" 
-                    stroke="#ef4444" 
-                    strokeWidth="4" 
-                    fill="none"
-                  />
-                </svg>
-              </div>
-            </span>
+          <div className="inline-flex items-center px-4 py-2 bg-red-50 rounded-full text-red-700 text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+            Global Excellence
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
+            Preparing Students for{' '}
+            <span className="text-red-500">International Competitions</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Various competitions are conducted across different nations to 
-            help kids go beyond bookish curriculum and learn different skill sets 
-            in the process.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            We prepare students for prestigious academic competitions worldwide, 
+            helping them excel beyond traditional curriculum and develop advanced problem-solving skills.
           </p>
         </div>
 
         {/* Competition Regions */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {competitionRegions.map((region, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div key={index} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100">
               {/* Header */}
-              <div className={`${region.color} text-white p-6 text-center`}>
-                <h3 className="text-xl font-bold">{region.title}</h3>
+              <div className={`${region.color} text-white p-6 rounded-t-lg`}>
+                <div className="flex items-center justify-center mb-3">
+                  {region.icon}
+                </div>
+                <h3 className="text-xl font-bold text-center">{region.title}</h3>
+                <p className="text-sm text-center opacity-90 mt-1">{region.subtitle}</p>
               </div>
 
               {/* Competition List */}
               <div className="p-6">
-                <ul className="space-y-3">
+                <div className="space-y-4">
                   {region.competitions.map((competition, cIndex) => (
-                    <li key={cIndex} className="flex items-center text-gray-700">
-                      <div className="w-2 h-2 bg-gray-400 rounded-full mr-3"></div>
-                      {competition}
-                    </li>
+                    <div key={cIndex} className="border-l-4 border-gray-200 pl-4">
+                      <h4 className="font-semibold text-gray-900 text-sm">{competition.name}</h4>
+                      <p className="text-xs text-gray-600 mt-1">{competition.description}</p>
+                    </div>
                   ))}
-                </ul>
-
-                <div className="mt-6">
-                  <button className="text-red-500 font-semibold hover:text-red-600 transition-colors flex items-center">
-                    Learn More 
-                    <svg className="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"/>
-                    </svg>
-                  </button>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Success Statistics */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <div className="text-3xl font-bold text-red-600 mb-2">500+</div>
+            <div className="text-gray-700 font-medium">Students Qualified</div>
+          </div>
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <div className="text-3xl font-bold text-orange-600 mb-2">15+</div>
+            <div className="text-gray-700 font-medium">Competition Types</div>
+          </div>
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <div className="text-3xl font-bold text-blue-600 mb-2">85%</div>
+            <div className="text-gray-700 font-medium">Success Rate</div>
+          </div>
         </div>
       </div>
     </section>

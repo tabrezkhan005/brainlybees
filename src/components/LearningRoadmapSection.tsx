@@ -1,117 +1,126 @@
 export default function LearningRoadmapSection() {
   const roadmapSteps = [
     {
-      title: "Strengthen Foundation",
-      description: "Deep understanding of Concepts"
+      step: "01",
+      title: "Build Strong Foundations",
+      description: "Establish deep understanding of core concepts across all subjects",
+      icon: (
+        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      )
     },
     {
-      title: "Expand thinking", 
-      description: "Explore Multiple ways to solve a problem"
+      step: "02",
+      title: "Expand Critical Thinking", 
+      description: "Develop multiple problem-solving approaches and analytical skills",
+      icon: (
+        <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+      )
     },
     {
-      title: "Stimulate brain development",
-      description: ""
+      step: "03",
+      title: "Enhance Cognitive Development",
+      description: "Stimulate brain growth through targeted mental exercises and challenges",
+      icon: (
+        <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      )
     },
     {
-      title: "Improve reflexes",
-      description: "Focus, Concentration and Memory"
+      step: "04",
+      title: "Sharpen Mental Agility",
+      description: "Improve focus, concentration, memory, and quick thinking abilities",
+      icon: (
+        <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
     },
     {
-      title: "Nurture Self-learning",
-      description: ""
+      step: "05",
+      title: "Foster Independent Learning",
+      description: "Develop self-directed study habits and autonomous learning skills",
+      icon: (
+        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      )
     },
     {
-      title: "Competitions Ready",
-      description: ""
+      step: "06",
+      title: "Competition Preparation",
+      description: "Master advanced concepts and strategies for academic competitions",
+      icon: (
+        <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+      )
     },
     {
-      title: "Enrichment to Next Level",
-      description: ""
+      step: "07",
+      title: "Advanced Mastery",
+      description: "Achieve excellence and readiness for higher-level academic challenges",
+      icon: (
+        <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        </svg>
+      )
     }
   ];
 
   return (
-    <section className="bg-gradient-to-b from-orange-100 to-orange-50 py-20 relative overflow-hidden">
+    <section className="bg-white py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            <span className="relative text-purple-600">
-              Learning Road Map with BrainlyBees
-              <div className="absolute -bottom-2 left-0 w-full">
-                <svg viewBox="0 0 500 20" className="w-full h-4">
-                  <path 
-                    d="M5 15 Q125 5 250 15 T495 15" 
-                    stroke="#9333ea" 
-                    strokeWidth="4" 
-                    fill="none"
-                  />
-                </svg>
-              </div>
-            </span>
+          <div className="inline-flex items-center px-4 py-2 bg-red-50 rounded-full text-red-700 text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+            Learning Journey
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
+            Your Child's{' '}
+            <span className="text-red-500">Learning Roadmap</span>{' '}
+            with BrainlyBees
           </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            A carefully designed progression that builds your child's skills step by step, 
+            ensuring strong foundations and continuous growth toward academic excellence.
+          </p>
         </div>
 
         {/* Roadmap Steps */}
-        <div className="relative">
-          {/* Connecting dashed lines */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <svg className="w-full h-full" viewBox="0 0 800 600">
-              {/* Zigzag path connecting all boxes */}
-              <path 
-                d="M150,80 L350,120 M300,120 L150,200 M200,200 L400,240 M350,240 L200,320 M250,320 L450,360 M400,360 L250,440"
-                stroke="#666" 
-                strokeWidth="2" 
-                strokeDasharray="8,8" 
-                fill="none"
-              />
-            </svg>
-          </div>
-
-          {/* Steps positioned in zigzag pattern */}
-          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 min-h-[500px]">
-            {roadmapSteps.map((step, index) => (
-              <div 
-                key={index}
-                className={`bg-red-500 text-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ${
-                  index % 2 === 0 ? 'md:justify-self-start' : 'md:justify-self-end'
-                } ${
-                  index === 0 ? 'mt-0' : 
-                  index === 1 ? 'mt-8' :
-                  index === 2 ? 'mt-16' :
-                  index === 3 ? 'mt-24' :
-                  index === 4 ? 'mt-32' :
-                  index === 5 ? 'mt-40' : 'mt-48'
-                }`}
-                style={{ 
-                  maxWidth: '280px',
-                  zIndex: 10,
-                  position: 'relative'
-                }}
-              >
-                <h3 className="text-lg font-bold mb-2">{step.title}</h3>
-                {step.description && (
-                  <p className="text-sm opacity-90">{step.description}</p>
-                )}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {roadmapSteps.map((step, index) => (
+            <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-all duration-300 border border-gray-100">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center">
+                    {step.icon}
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center mb-2">
+                    <span className="text-xs font-bold text-red-500 bg-red-100 px-2 py-1 rounded-full mr-2">
+                      {step.step}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{step.description}</p>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
-        {/* Learn More Button */}
-        <div className="text-center mt-16">
-          <button className="bg-white border-2 border-red-500 text-red-500 px-8 py-3 rounded-full text-lg font-medium hover:bg-red-500 hover:text-white transition-all duration-300 shadow-lg">
-            Learn More
+        {/* Call to Action */}
+        <div className="text-center">
+          <button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors duration-200 shadow-sm">
+            Start Your Journey
           </button>
-        </div>
-
-        {/* Right side illustration */}
-        <div className="absolute bottom-10 right-10">
-          <div className="w-32 h-32 bg-blue-100 rounded-full flex items-center justify-center opacity-60">
-            <svg className="w-16 h-16 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
-          </div>
         </div>
       </div>
     </section>
