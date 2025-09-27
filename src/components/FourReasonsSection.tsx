@@ -2,130 +2,90 @@ export default function FourReasonsSection() {
   const reasons = [
     {
       number: "01",
-      title: "100% success rate in competitive exams",
-      subtitle: "( cogAT, Naplan, 11+ )",
+      title: "Personalized Learning Journey",
+      subtitle: "Tailored to your child's unique learning style and pace",
       icon: (
-        <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
-          <span className="text-white font-bold text-lg">100%</span>
-        </div>
+        <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
       )
     },
     {
       number: "02", 
-      title: "No Apps or pre-recorded lessons. 100% interactive class",
-      subtitle: "",
+      title: "Live Interactive Sessions",
+      subtitle: "Real-time engagement with expert teachers, not pre-recorded videos",
       icon: (
-        <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-          </svg>
-        </div>
+        <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        </svg>
       )
     },
     {
       number: "03",
-      title: "25+ years in psychology based teaching", 
-      subtitle: "",
+      title: "Psychology-Based Teaching", 
+      subtitle: "25+ years of research-backed educational methods",
       icon: (
-        <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-          </svg>
-        </div>
+        <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
       )
     },
     {
       number: "04",
-      title: "Making kids self-learners",
-      subtitle: "",
+      title: "Building Confident Learners",
+      subtitle: "Nurturing independence and self-directed learning skills",
       icon: (
-        <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-        </div>
+        <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
       )
     }
   ];
 
   return (
-    <section className="bg-orange-50 py-20 relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-10 left-10">
-        <svg className="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </svg>
-      </div>
-      <div className="absolute top-20 right-20">
-        <svg className="w-12 h-12 text-red-500" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </svg>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-gray-50 py-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            <span 
-              className="relative text-red-500"
-              style={{
-                WebkitTextStroke: '2px #ef4444',
-                WebkitTextFillColor: 'transparent',
-                textShadow: '0 0 0 #ef4444'
-              }}
-            >
-              4 Reasons
-              <div className="absolute -bottom-3 left-0 w-full">
-                <svg viewBox="0 0 200 20" className="w-full h-4">
-                  <path 
-                    d="M5 15 Q50 5 100 15 T195 15" 
-                    stroke="#ef4444" 
-                    strokeWidth="4" 
-                    fill="none"
-                  />
-                </svg>
-              </div>
-            </span>{' '}
-            <span className="text-gray-900">to Choose Us</span>
+          <div className="inline-flex items-center px-4 py-2 bg-red-50 rounded-full text-red-700 text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+            Why Choose Us
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            What Makes BrainlyBees
+            <span className="text-red-500"> Special</span>
           </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We believe every child deserves a learning experience that's as unique as they are.
+          </p>
         </div>
 
         {/* Reasons Grid */}
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8">
           {reasons.map((reason, index) => (
-            <div key={index} className="flex items-start space-x-6 bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              {/* Number */}
-              <div className="flex-shrink-0">
-                <div className="text-6xl font-bold text-red-500 opacity-20">
+            <div key={index} className="group bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200">
+              {/* Icon and Number */}
+              <div className="flex items-start justify-between mb-6">
+                <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center">
+                  {reason.icon}
+                </div>
+                <div className="text-4xl font-bold text-gray-200">
                   {reason.number}
                 </div>
               </div>
 
               {/* Content */}
-              <div className="flex-1 space-y-4">
-                {/* Icon */}
-                <div>
-                  {reason.icon}
-                </div>
-
-                {/* Title */}
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 leading-tight">
-                    {reason.title}
-                  </h3>
-                  {reason.subtitle && (
-                    <p className="text-gray-600 mt-2">{reason.subtitle}</p>
-                  )}
-                </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {reason.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {reason.subtitle}
+                </p>
               </div>
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Bottom decorative illustration */}
-      <div className="absolute bottom-10 right-10 opacity-20">
-        <div className="w-32 h-32 bg-yellow-300 rounded-full"></div>
       </div>
     </section>
   );
