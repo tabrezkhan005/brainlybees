@@ -17,10 +17,10 @@ export default function Home() {
     <div className="min-h-screen">
       <Navigation />
       <HeroSection />
+      <FourReasonsSection />
       <TargetDevelopmentSection />
       <InteractiveLearningSection />
       <TrustedByParentsSection />
-      <FourReasonsSection />
       <QualityTeachingSection />
       <LearningRoadmapSection />
       <CompetitionsSection />
