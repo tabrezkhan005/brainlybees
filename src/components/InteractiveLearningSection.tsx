@@ -1,20 +1,38 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
 export default function InteractiveLearningSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 200);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="bg-white py-20 relative overflow-hidden">
-      {/* Red Wave Background - Full Width */}
+      {/* Animated Red Wave Background */}
       <div className="absolute top-0 left-0 w-full">
-        <svg viewBox="0 0 1440 400" className="w-full h-40 text-red-500" fill="currentColor" preserveAspectRatio="none">
+        <svg viewBox="0 0 1440 400" className="w-full h-40 text-red-500 animate-pulse" fill="currentColor" preserveAspectRatio="none">
           <path d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
         </svg>
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-32 left-10 w-20 h-20 bg-orange-200/40 rounded-full blur-xl animate-float"></div>
+        <div className="absolute top-64 right-20 w-32 h-32 bg-red-200/30 rounded-full blur-xl animate-float delay-500"></div>
+        <div className="absolute bottom-32 left-1/4 w-24 h-24 bg-yellow-200/40 rounded-full blur-xl animate-float delay-1000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8 relative z-10">
+          <div className={`space-y-8 relative z-10 transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
             <div>
-              <div className="inline-flex items-center px-4 py-2 bg-red-50 rounded-full text-red-700 text-sm font-medium mb-6">
-                <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+              <div className="inline-flex items-center px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-red-700 text-sm font-medium mb-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <span className="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse"></span>
                 Interactive Platform
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">

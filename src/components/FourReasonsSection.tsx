@@ -1,4 +1,35 @@
+'use client';
+
+import { useEffect, useState, useRef } from 'react';
+
 export default function FourReasonsSection() {
+  const [visibleCards, setVisibleCards] = useState<number[]>([]);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Animate cards one by one with delay
+            reasons.forEach((_, index) => {
+              setTimeout(() => {
+                setVisibleCards(prev => [...prev, index]);
+              }, index * 200);
+            });
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const reasons = [
     {
       number: "01",
@@ -43,46 +74,65 @@ export default function FourReasonsSection() {
   ];
 
   return (
-    <section className="bg-gray-50 py-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Header */}
+    <section ref={sectionRef} className="bg-gradient-to-b from-gray-50 to-white py-20 relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-red-200/30 rounded-full blur-xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-orange-200/30 rounded-full blur-xl animate-float delay-1000"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        {/* Animated Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-red-50 rounded-full text-red-700 text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+          <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-red-700 text-sm font-medium mb-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <span className="w-2 h-2 bg-red-500 rounded-full mr-2 animate-pulse"></span>
             Why Choose Us
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             What Makes BrainlyBees
-            <span className="text-red-500"> Special</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500 animate-gradient-x"> Special</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We believe every child deserves a learning experience that's as unique as they are.
           </p>
         </div>
 
-        {/* Reasons Grid */}
+        {/* Animated Reasons Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {reasons.map((reason, index) => (
-            <div key={index} className="group bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200">
-              {/* Icon and Number */}
+            <div 
+              key={index} 
+              className={`group bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 hover-lift transform ${
+                visibleCards.includes(index) 
+                  ? 'translate-y-0 opacity-100' 
+                  : 'translate-y-10 opacity-0'
+              } hover:scale-105`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              {/* Animated Icon and Number */}
               <div className="flex items-start justify-between mb-6">
-                <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center">
-                  {reason.icon}
+                <div className="w-16 h-16 bg-gradient-to-br from-red-50 to-orange-50 rounded-xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                  <div className="transform group-hover:scale-110 transition-transform duration-300">
+                    {reason.icon}
+                  </div>
                 </div>
-                <div className="text-4xl font-bold text-gray-200">
+                <div className="text-5xl font-bold text-gray-100 group-hover:text-red-200 transition-colors duration-300">
                   {reason.number}
                 </div>
               </div>
 
-              {/* Content */}
+              {/* Content with Animations */}
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900">
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-red-600 transition-colors duration-300">
                   {reason.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                   {reason.subtitle}
                 </p>
               </div>
+
+              {/* Hover Gradient Border */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-red-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
             </div>
           ))}
         </div>
