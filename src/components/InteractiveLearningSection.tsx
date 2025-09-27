@@ -89,25 +89,6 @@ export default function InteractiveLearningSection() {
                 <span className="text-gray-700 font-medium">Adaptive Learning</span>
               </div>
             </div>
-
-            {/* Curved Arrow - Updated design */}
-            <div className="flex justify-center lg:justify-start">
-              <svg width="250" height="120" viewBox="0 0 250 120" className="text-orange-400">
-                <defs>
-                  <marker id="arrowhead" markerWidth="12" markerHeight="10" 
-                    refX="12" refY="5" orient="auto">
-                    <polygon points="0 0, 12 5, 0 10" fill="currentColor" />
-                  </marker>
-                </defs>
-                <path 
-                  d="M 30 50 Q 80 20 130 40 Q 180 60 220 35" 
-                  stroke="currentColor" 
-                  strokeWidth="4" 
-                  fill="none"
-                  markerEnd="url(#arrowhead)"
-                />
-              </svg>
-            </div>
           </div>
 
           {/* Right Content - Interactive Demo */}
