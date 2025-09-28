@@ -74,33 +74,114 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Content - Clean Professional Visual */}
-          <div className="flex items-center justify-center lg:pl-8">
-            <div className="relative">
-              {/* Main Educational Visual */}
-              <div className="w-full max-w-md h-80 bg-gradient-to-br from-red-50 to-orange-50 rounded-lg shadow-lg flex items-center justify-center border border-red-100">
-                <div className="text-center p-8">
-                  <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Quality Education</h3>
-                  <p className="text-gray-600 text-sm">Expert teachers delivering personalized learning experiences</p>
-                </div>
+          {/* Right Content - Professional Visual Portfolio */}
+          <div className="flex items-center justify-center lg:pl-8 relative">
+            <div className="relative w-full max-w-2xl">
+              {/* Subtle Background Elements */}
+              <div className="absolute inset-0">
+                <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-red-500/5 to-orange-500/5 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-10 right-20 w-80 h-80 bg-gradient-to-br from-orange-500/5 to-red-500/5 rounded-full blur-3xl"></div>
               </div>
-              
-              {/* Success Stats Card */}
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-lg shadow-lg p-4 border border-gray-200">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+
+              {/* Main Learning Interface */}
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 overflow-hidden hover:shadow-3xl transition-all duration-700 group">
+                {/* Top Section - Learning Platform Preview */}
+                <div className="p-8 bg-gradient-to-br from-gray-50 to-white">
+                  <div className="grid grid-cols-3 gap-6">
+                    {/* Student Progress Card */}
+                    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                      <div className="h-2 bg-gray-200 rounded-full mb-4">
+                        <div className="h-2 bg-gradient-to-r from-red-500 to-orange-500 rounded-full" style={{width: '78%'}}></div>
+                      </div>
+                      <div className="text-2xl font-bold text-gray-900 mb-1">2,847</div>
+                      <div className="text-sm text-gray-600">Problems Solved</div>
+                    </div>
+
+                    {/* Achievement Metrics */}
+                    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <div className="text-xs text-gray-500 font-medium">LIVE</div>
+                      </div>
+                      <div className="text-2xl font-bold text-gray-900 mb-1">4.7</div>
+                      <div className="text-sm text-gray-600">Average Rating</div>
+                    </div>
+
+                    {/* Success Metrics */}
+                    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <div className="w-8 h-1 bg-red-500 rounded-full"></div>
+                        <div className="w-6 h-1 bg-orange-400 rounded-full"></div>
+                        <div className="w-4 h-1 bg-red-300 rounded-full"></div>
+                      </div>
+                      <div className="text-2xl font-bold text-gray-900 mb-1">98%</div>
+                      <div className="text-sm text-gray-600">Success Rate</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="text-sm font-semibold text-gray-900">25K+ Students</div>
-                    <div className="text-xs text-gray-600">Success Stories</div>
+                </div>
+
+                {/* Middle Section - Learning Experience */}
+                <div className="px-8 py-6 bg-white">
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center">
+                      <div className="w-6 h-6 bg-white rounded-lg"></div>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900 text-lg">Interactive Learning Session</div>
+                      <div className="text-gray-600">Personalized Mathematics Program</div>
+                    </div>
+                  </div>
+
+                  {/* Learning Content Preview */}
+                  <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-6 mb-6">
+                    <div className="grid grid-cols-2 gap-8">
+                      <div>
+                        <div className="text-sm font-medium text-gray-600 mb-3">Current Topic</div>
+                        <div className="text-xl font-bold text-gray-900 mb-2">Advanced Problem Solving</div>
+                        <div className="text-gray-600 text-sm leading-relaxed">
+                          Developing critical thinking through structured mathematical reasoning and analytical approaches.
+                        </div>
+                      </div>
+                      <div>
+                        <div className="text-sm font-medium text-gray-600 mb-3">Learning Path</div>
+                        <div className="space-y-2">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <div className="text-sm text-gray-700">Foundation Building</div>
+                          </div>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                            <div className="text-sm text-gray-700">Critical Thinking</div>
+                          </div>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                            <div className="text-sm text-gray-500">Advanced Mastery</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom Section - Professional Stats */}
+                <div className="px-8 py-6 bg-gradient-to-r from-gray-50 to-white border-t border-gray-100">
+                  <div className="grid grid-cols-4 gap-4 text-center">
+                    <div>
+                      <div className="text-lg font-bold text-gray-900">25K+</div>
+                      <div className="text-xs text-gray-600">Students</div>
+                    </div>
+                    <div>
+                      <div className="text-lg font-bold text-gray-900">15+</div>
+                      <div className="text-xs text-gray-600">Countries</div>
+                    </div>
+                    <div>
+                      <div className="text-lg font-bold text-gray-900">500+</div>
+                      <div className="text-xs text-gray-600">Teachers</div>
+                    </div>
+                    <div>
+                      <div className="text-lg font-bold text-gray-900">24/7</div>
+                      <div className="text-xs text-gray-600">Support</div>
+                    </div>
                   </div>
                 </div>
               </div>
