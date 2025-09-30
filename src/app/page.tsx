@@ -606,16 +606,16 @@ export default function Home() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-red-200 shadow-lg mb-6">
               <div className="w-3 h-3 bg-red-400 rounded-full mr-3"></div>
-              <span className="text-red-700 font-bold text-sm">Your Learning Adventure!</span>
+              <span className="text-red-700 font-bold text-sm">Learning Journey Timeline</span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
-              How Learning Works at
+              Your Structured Path to
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 mt-2">
-                BrainlyBees!
+                Academic Excellence
               </span>
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Follow these fun steps and watch yourself become a super smart learner!
+              Our proven 4-step methodology ensures measurable progress through personalized instruction and continuous assessment.
             </p>
           </div>
 
@@ -627,32 +627,32 @@ export default function Home() {
               {[
                 {
                   step: '1',
-                  title: 'Meet Your Teacher',
-                  description: 'Say hello to your awesome teacher! They\'ll get to know you and what makes you special.',
+                  title: 'Initial Assessment',
+                  description: 'Comprehensive evaluation of your child\'s current academic level, learning preferences, and educational goals to create a personalized foundation.',
                   color: 'from-red-400 to-pink-400',
                   bgColor: 'from-red-50 to-pink-50',
                   position: 'left'
                 },
                 {
                   step: '2',
-                  title: 'Find Your Style',
-                  description: 'Discover how you learn best! Some kids love pictures, others love games or stories.',
+                  title: 'Customized Learning Plan',
+                  description: 'Development of a tailored curriculum pathway that aligns with your child\'s unique learning style, pace, and academic objectives.',
                   color: 'from-pink-400 to-purple-400',
                   bgColor: 'from-pink-50 to-purple-50',
                   position: 'right'
                 },
                 {
                   step: '3',
-                  title: 'Start Learning',
-                  description: 'Jump into fun lessons made just for you! Every lesson is like a new adventure.',
+                  title: 'Interactive Sessions',
+                  description: 'Engaging one-on-one instruction with qualified educators using proven methodologies and interactive learning tools.',
                   color: 'from-purple-400 to-indigo-400',
                   bgColor: 'from-purple-50 to-indigo-50',
                   position: 'left'
                 },
                 {
                   step: '4',
-                  title: 'Celebrate Success',
-                  description: 'High-five time! Watch yourself get smarter and celebrate every win with your family.',
+                  title: 'Progress Monitoring',
+                  description: 'Regular assessments and detailed feedback to track advancement, adjust strategies, and ensure continuous academic improvement.',
                   color: 'from-indigo-400 to-blue-400',
                   bgColor: 'from-indigo-50 to-blue-50',
                   position: 'right'
