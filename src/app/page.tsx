@@ -6,65 +6,72 @@ import FloatingButtons from '../components/FloatingButtons';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50 font-nunito">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-100 via-blue-100 to-indigo-100">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-100 via-orange-100 to-red-100 overflow-hidden">
+        {/* Friendly Background Pattern */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-300 rounded-full blur-2xl"></div>
+          <div className="absolute top-20 right-20 w-24 h-24 bg-pink-300 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-20 left-32 w-20 h-20 bg-orange-300 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-32 right-40 w-28 h-28 bg-red-300 rounded-full blur-2xl"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
-                {/* Badge */}
-                <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full border border-blue-100">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                  <span className="text-blue-700 font-medium text-sm">Trusted by 25,000+ families</span>
+                {/* Fun Badge */}
+                <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-yellow-200 shadow-lg">
+                  <div className="w-3 h-3 bg-green-400 rounded-full mr-3"></div>
+                  <span className="text-orange-700 font-bold text-sm">25,000+ Happy Kids Learning!</span>
                 </div>
 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
-                  Unlock Your Child's
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                    Learning Potential
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins">
+                  Let's Make Learning
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 mt-2">
+                    Super Fun!
                   </span>
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                  Personalized 1-on-1 online and offline classes that make learning engaging, effective, and enjoyable for children aged 3-15.
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  Amazing 1-on-1 classes where kids love to learn! We make math, science, and reading feel like playing games with friends.
                 </p>
               </div>
               
-              <div className="grid grid-cols-3 gap-6 py-8">
-                <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-blue-100">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">25,000+</div>
-                  <div className="text-sm text-gray-600 font-medium">Students Taught</div>
+              <div className="grid grid-cols-3 gap-4 py-6">
+                <div className="text-center bg-white rounded-3xl p-4 shadow-lg border-2 border-yellow-200">
+                  <div className="text-2xl md:text-3xl font-bold text-orange-600 font-poppins">25K+</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Happy Kids</div>
                 </div>
-                <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-emerald-100">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-emerald-500 to-green-500 bg-clip-text text-transparent">98%</div>
-                  <div className="text-sm text-gray-600 font-medium">Success Rate</div>
+                <div className="text-center bg-white rounded-3xl p-4 shadow-lg border-2 border-green-200">
+                  <div className="text-2xl md:text-3xl font-bold text-green-600 font-poppins">98%</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Love Learning</div>
                 </div>
-                <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-blue-100">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">4.9/5</div>
-                  <div className="text-sm text-gray-600 font-medium">Parent Rating</div>
+                <div className="text-center bg-white rounded-3xl p-4 shadow-lg border-2 border-pink-200">
+                  <div className="text-2xl md:text-3xl font-bold text-pink-600 font-poppins">4.9★</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Parent Rating</div>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg">
+                <button className="bg-gradient-to-r from-orange-400 to-red-400 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins">
                   Start Free Trial
                 </button>
-                <button className="bg-white/80 backdrop-blur-sm text-blue-700 px-8 py-4 rounded-2xl font-semibold text-lg border border-blue-200 shadow-lg">
-                  Book Consultation
+                <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg border-2 border-orange-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-orange-50 font-poppins">
+                  Meet Our Teachers
                 </button>
               </div>
             </div>
 
             <div className="relative">
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-white/50">
+              <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-yellow-200 p-2">
                 <img 
                   src="/assets/teacher-with-all-kids.png"
-                  alt="BrainlyBees Learning Experience"
-                  className="w-full h-96 object-cover"
+                  alt="Kids Learning with BrainlyBees"
+                  className="w-full h-80 md:h-96 object-cover rounded-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -72,97 +79,109 @@ export default function Home() {
       </section>
 
       {/* Learning Programs */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 to-amber-100">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Choose Your
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">
-                Learning Style
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-green-200 shadow-lg mb-6">
+              <div className="w-3 h-3 bg-green-400 rounded-full mr-3"></div>
+              <span className="text-green-700 font-bold text-sm">Choose Your Adventure!</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              How Do You Like to
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 mt-2">
+                Learn Best?
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Flexible learning options designed to meet every child's unique needs and preferences.
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Pick the way that makes you most excited to learn new things!
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Online Programs */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-white/50">
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-blue-200 hover:border-blue-300 transition-all duration-300 hover:scale-105">
               <div className="relative">
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 flex items-center justify-center min-h-64">
-                  <img 
-                    src="/assets/Boy-kid-doing-work-in-laptop.png"
-                    alt="Online Learning"
-                    className="w-full h-56 object-cover rounded-2xl"
-                  />
+                <div className="bg-gradient-to-br from-blue-100 to-purple-100 p-6 flex items-center justify-center">
+                  <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-lg">
+                    <img 
+                      src="/assets/Boy-kid-doing-work-in-laptop.png"
+                      alt="Online Learning Fun"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
                 <div className="absolute top-4 left-4">
-                  <h3 className="text-blue-800 text-xl font-bold bg-white/95 backdrop-blur-sm px-4 py-2 rounded-2xl shadow-lg">
-                    Online Programs
-                  </h3>
+                  <div className="bg-white px-4 py-2 rounded-full shadow-lg border-2 border-blue-200">
+                    <h3 className="text-blue-700 text-lg font-bold font-poppins">Online Classes</h3>
+                  </div>
                 </div>
               </div>
               
               <div className="p-8">
-                <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                  Interactive virtual classrooms with digital tools, online activities, and personalized virtual tutoring from anywhere.
+                <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+                  Learn from anywhere! Use cool computers and tablets to play learning games with awesome teachers.
                 </p>
                 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-800 mb-3">Key Features:</h4>
-                  <div className="space-y-2">
-                    {['Virtual Classrooms', 'Interactive Digital Tools', 'Flexible Scheduling', 'Recording Available'].map((feature, index) => (
+                  <h4 className="font-bold text-gray-800 mb-4 text-lg font-poppins">What's Super Cool:</h4>
+                  <div className="space-y-3">
+                    {['Fun computer games while learning', 'Cool digital drawing and writing tools', 'Learn anytime from home', 'Watch classes again if you want'].map((feature, index) => (
                       <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2.5 h-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
-                        <span className="text-gray-600 font-medium">{feature}</span>
+                        <div className="w-6 h-6 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-white text-sm font-bold">✓</span>
+                        </div>
+                        <span className="text-gray-700 font-medium">{feature}</span>
                       </div>
                     ))}
                   </div>
                 </div>
                 
-                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-4 rounded-2xl font-semibold text-lg shadow-lg">
-                  Explore Online Programs
+                <button className="w-full bg-gradient-to-r from-blue-400 to-purple-400 text-white py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins">
+                  Try Online Classes
                 </button>
               </div>
             </div>
 
             {/* Offline Programs */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-white/50">
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-orange-200 hover:border-orange-300 transition-all duration-300 hover:scale-105">
               <div className="relative">
-                <div className="bg-gradient-to-br from-amber-50 to-orange-100 p-6 flex items-center justify-center min-h-64">
-                  <img 
-                    src="/assets/teacher-helping-girl-kid-doubt.png"
-                    alt="Offline Learning"
-                    className="w-full h-56 object-cover rounded-2xl"
-                  />
+                <div className="bg-gradient-to-br from-orange-100 to-yellow-100 p-6 flex items-center justify-center">
+                  <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-lg">
+                    <img 
+                      src="/assets/teacher-helping-girl-kid-doubt.png"
+                      alt="In-Person Learning Fun"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
                 <div className="absolute top-4 left-4">
-                  <h3 className="text-amber-800 text-xl font-bold bg-white/95 backdrop-blur-sm px-4 py-2 rounded-2xl shadow-lg">
-                    Offline Programs
-                  </h3>
+                  <div className="bg-white px-4 py-2 rounded-full shadow-lg border-2 border-orange-200">
+                    <h3 className="text-orange-700 text-lg font-bold font-poppins">In-Person Classes</h3>
+                  </div>
                 </div>
               </div>
               
               <div className="p-8">
-                <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                  Face-to-face learning with hands-on activities, direct teacher interaction, and collaborative group projects.
+                <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+                  Meet your teacher in person! Do fun experiments, crafts, and activities with your hands.
                 </p>
                 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-800 mb-3">Key Features:</h4>
-                  <div className="space-y-2">
-                    {['In-Person Teaching', 'Hands-On Activities', 'Group Projects', 'Real-World Skills'].map((feature, index) => (
+                  <h4 className="font-bold text-gray-800 mb-4 text-lg font-poppins">What's Super Cool:</h4>
+                  <div className="space-y-3">
+                    {['Real science experiments you can touch', 'Fun arts and crafts projects', 'Play learning games with friends', 'Build and create real things'].map((feature, index) => (
                       <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2.5 h-2.5 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full"></div>
-                        <span className="text-gray-600 font-medium">{feature}</span>
+                        <div className="w-6 h-6 bg-gradient-to-r from-orange-400 to-red-400 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-white text-sm font-bold">✓</span>
+                        </div>
+                        <span className="text-gray-700 font-medium">{feature}</span>
                       </div>
                     ))}
                   </div>
                 </div>
                 
-                <button className="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-4 rounded-2xl font-semibold text-lg shadow-lg">
-                  Explore Offline Programs
+                <button className="w-full bg-gradient-to-r from-orange-400 to-red-400 text-white py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins">
+                  Try In-Person Classes
                 </button>
               </div>
             </div>
@@ -171,65 +190,87 @@ export default function Home() {
       </section>
 
       {/* Age Groups */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-emerald-100">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-100">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Programs for
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-600">
-                Every Age
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-purple-200 shadow-lg mb-6">
+              <div className="w-3 h-3 bg-purple-400 rounded-full mr-3"></div>
+              <span className="text-purple-700 font-bold text-sm">Perfect for Every Age!</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              Fun Learning for
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 mt-2">
+                Every Age Group
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Age-appropriate curricula designed to meet developmental milestones and learning objectives.
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              We have the perfect learning adventure for kids of all ages!
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 age: '4-6',
-                title: 'Early Learners',
-                description: 'Foundation skills through play-based learning',
-                image: '/assets/teacher-with-kids-doing-ring-activity.png'
+                title: 'Little Explorers',
+                description: 'Learning through play, songs, and fun activities',
+                image: '/assets/teacher-with-kids-doing-ring-activity.png',
+                bgColor: 'from-pink-200 to-red-200',
+                borderColor: 'border-pink-300',
+                badgeColor: 'from-pink-400 to-red-400'
               },
               {
                 age: '7-9', 
-                title: 'Primary Students',
-                description: 'Core academic skills development',
-                image: '/assets/teacher-helping-girl-kid-doubt.png'
+                title: 'Young Learners',
+                description: 'Reading, writing, and math made super fun',
+                image: '/assets/teacher-helping-girl-kid-doubt.png',
+                bgColor: 'from-blue-200 to-purple-200',
+                borderColor: 'border-blue-300',
+                badgeColor: 'from-blue-400 to-purple-400'
               },
               {
                 age: '10-12',
-                title: 'Middle School',
-                description: 'Advanced concepts and critical thinking',
-                image: '/assets/teacher-solving-boy-kid-doubt.png'
+                title: 'Smart Kids',
+                description: 'Cool science and advanced problem solving',
+                image: '/assets/teacher-solving-boy-kid-doubt.png',
+                bgColor: 'from-green-200 to-teal-200',
+                borderColor: 'border-green-300',
+                badgeColor: 'from-green-400 to-teal-400'
               },
               {
                 age: '13+',
-                title: 'High School',
-                description: 'College prep and career readiness',
-                image: '/assets/teacher-asking-question-students-saying-answer.png'
+                title: 'Teen Scholars',
+                description: 'Getting ready for high school and beyond',
+                image: '/assets/teacher-asking-question-students-saying-answer.png',
+                bgColor: 'from-orange-200 to-yellow-200',
+                borderColor: 'border-orange-300',
+                badgeColor: 'from-orange-400 to-yellow-400'
               }
             ].map((program, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-6 border border-white/50">
-                <div className="text-center mb-6">
-                  <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-teal-100 to-emerald-100 rounded-2xl flex items-center justify-center overflow-hidden">
+              <div key={index} className={`bg-white rounded-3xl shadow-xl border-4 ${program.borderColor} overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
+                <div className={`bg-gradient-to-br ${program.bgColor} p-4`}>
+                  <div className="w-full h-40 rounded-2xl overflow-hidden shadow-lg bg-white">
                     <img 
                       src={program.image}
                       alt={program.title}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <span className="inline-block bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-2">
+                </div>
+                
+                <div className="p-6 text-center">
+                  <div className={`inline-block bg-gradient-to-r ${program.badgeColor} text-white px-4 py-2 rounded-full text-sm font-bold mb-4 shadow-lg`}>
                     Ages {program.age}
-                  </span>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">
                     {program.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {program.description}
                   </p>
+                  <button className={`w-full bg-gradient-to-r ${program.badgeColor} text-white py-3 rounded-full font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins`}>
+                    Start Learning
+                  </button>
                 </div>
               </div>
             ))}
@@ -238,41 +279,54 @@ export default function Home() {
       </section>
 
       {/* Why Choose BrainlyBees */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-rose-50 to-pink-100">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cyan-100 via-blue-100 to-indigo-100">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Why Choose
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-pink-600">
-                BrainlyBees?
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-cyan-200 shadow-lg mb-6">
+              <div className="w-3 h-3 bg-cyan-400 rounded-full mr-3"></div>
+              <span className="text-cyan-700 font-bold text-sm">Why Kids Love Us!</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              What Makes Us
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 mt-2">
+                Super Special?
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Experience the difference of personalized, high-quality education that delivers real results.
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Here's why thousands of kids and parents choose BrainlyBees for amazing learning adventures!
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'Expert Teachers',
-                description: 'Qualified educators with proven track records in child development and learning.',
-                image: '/assets/lady-teacher-telling-story.png'
+                title: 'Amazing Teachers',
+                description: 'Our teachers are like superheroes! They make every lesson fun and help you become a learning champion.',
+                image: '/assets/lady-teacher-telling-story.png',
+                bgColor: 'from-pink-200 to-purple-200',
+                borderColor: 'border-pink-300',
+                badgeColor: 'from-pink-400 to-purple-400'
               },
               {
-                title: 'Personalized Learning',
-                description: 'Customized curricula that adapt to your child\'s unique learning style and pace.',
-                image: '/assets/kid-with-graduation-outfit.png'
+                title: 'Just for You',
+                description: 'Every kid is special! We create lessons that match exactly how you like to learn and what makes you excited.',
+                image: '/assets/kid-with-graduation-outfit.png',
+                bgColor: 'from-green-200 to-teal-200',
+                borderColor: 'border-green-300',
+                badgeColor: 'from-green-400 to-teal-400'
               },
               {
-                title: 'Proven Results',
-                description: 'Track record of improving academic performance and building confidence.',
-                image: '/assets/kid-enjoying.png'
+                title: 'You\'ll Get Better',
+                description: 'Watch yourself become smarter every day! We help you learn new things and feel proud of what you can do.',
+                image: '/assets/kid-enjoying.png',
+                bgColor: 'from-yellow-200 to-orange-200',
+                borderColor: 'border-yellow-300',
+                badgeColor: 'from-yellow-400 to-orange-400'
               }
             ].map((benefit, index) => (
-              <div key={index} className="text-center bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-lg">
-                <div className="relative mb-8">
-                  <div className="w-48 h-48 mx-auto rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br from-rose-50 to-pink-100">
+              <div key={index} className={`text-center bg-white rounded-3xl p-8 shadow-xl border-4 ${benefit.borderColor} hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
+                <div className={`bg-gradient-to-br ${benefit.bgColor} rounded-3xl p-4 mb-6`}>
+                  <div className="w-full h-48 rounded-2xl overflow-hidden shadow-lg bg-white">
                     <img 
                       src={benefit.image}
                       alt={benefit.title}
@@ -280,130 +334,102 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-4">
+                <h3 className="text-2xl font-bold text-gray-800 mb-4 font-poppins">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-lg mb-6">
                   {benefit.description}
                 </p>
+                
+                <button className={`bg-gradient-to-r ${benefit.badgeColor} text-white px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins`}>
+                  Learn More
+                </button>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Learning Roadmap */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-violet-50 to-purple-100">
+      {/* Learning Roadmap Timeline */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 via-pink-100 to-purple-100">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Learning
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-purple-600">
-                Roadmap
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-red-200 shadow-lg mb-6">
+              <div className="w-3 h-3 bg-red-400 rounded-full mr-3"></div>
+              <span className="text-red-700 font-bold text-sm">Your Learning Adventure!</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              How Learning Works at
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 mt-2">
+                BrainlyBees!
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              A structured path to academic excellence, designed to build skills progressively and boost confidence.
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Follow these fun steps and watch yourself become a super smart learner!
             </p>
           </div>
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-violet-400 via-purple-400 to-violet-400 rounded-full hidden lg:block"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-red-300 via-pink-300 to-purple-300 rounded-full hidden lg:block"></div>
             
-            <div className="space-y-20">
+            <div className="space-y-12">
               {[
                 {
-                  step: '01',
-                  title: 'Assessment & Goal Setting',
-                  description: 'Comprehensive evaluation of your child\'s current skills, learning style, and academic objectives to create a personalized foundation.',
-                  features: ['Skill Assessment', 'Learning Style Analysis', 'Goal Planning', 'Parent Consultation'],
-                  image: '/assets/teacher-helping-girl-kid-doubt.png',
-                  side: 'left'
+                  step: '1',
+                  title: 'Meet Your Teacher',
+                  description: 'Say hello to your awesome teacher! They\'ll get to know you and what makes you special.',
+                  icon: '👋',
+                  color: 'from-red-400 to-pink-400',
+                  bgColor: 'from-red-50 to-pink-50',
+                  position: 'left'
                 },
                 {
-                  step: '02', 
-                  title: 'Personalized Learning Plan',
-                  description: 'Custom curriculum designed specifically for your child\'s needs, interests, and optimal learning pace.',
-                  features: ['Custom Curriculum', 'Individual Pace', 'Subject Selection', 'Flexible Schedule'],
-                  image: '/assets/lady-teacher-telling-story.png',
-                  side: 'right'
+                  step: '2',
+                  title: 'Find Your Style',
+                  description: 'Discover how you learn best! Some kids love pictures, others love games or stories.',
+                  icon: '🎨',
+                  color: 'from-pink-400 to-purple-400',
+                  bgColor: 'from-pink-50 to-purple-50',
+                  position: 'right'
                 },
                 {
-                  step: '03',
-                  title: 'Interactive Learning Sessions',
-                  description: 'Engaging one-on-one classes with expert teachers using proven methodologies and interactive tools.',
-                  features: ['Expert Teachers', '1-on-1 Sessions', 'Interactive Tools', 'Live Feedback'],
-                  image: '/assets/Boy-kid-doing-work-in-laptop.png',
-                  side: 'left'
+                  step: '3',
+                  title: 'Start Learning',
+                  description: 'Jump into fun lessons made just for you! Every lesson is like a new adventure.',
+                  icon: '🚀',
+                  color: 'from-purple-400 to-indigo-400',
+                  bgColor: 'from-purple-50 to-indigo-50',
+                  position: 'left'
                 },
                 {
-                  step: '04',
-                  title: 'Progress Tracking',
-                  description: 'Regular assessments and detailed feedback to ensure continuous improvement and skill mastery.',
-                  features: ['Regular Tests', 'Progress Reports', 'Parent Updates', 'Skill Tracking'],
-                  image: '/assets/kid-with-graduation-outfit.png',
-                  side: 'right'
-                },
-                {
-                  step: '05',
-                  title: 'Achievement & Growth',
-                  description: 'Celebrate milestones and receive certifications as your child masters new skills and builds confidence.',
-                  features: ['Milestone Tracking', 'Certificates', 'Skill Mastery', 'Confidence Building'],
-                  image: '/assets/kid-enjoying.png',
-                  side: 'left'
+                  step: '4',
+                  title: 'Celebrate Success',
+                  description: 'High-five time! Watch yourself get smarter and celebrate every win with your family.',
+                  icon: '🎉',
+                  color: 'from-indigo-400 to-blue-400',
+                  bgColor: 'from-indigo-50 to-blue-50',
+                  position: 'right'
                 }
-              ].map((item, index) => (
-                <div key={index} className={`flex flex-col lg:flex-row items-center gap-8 ${item.side === 'right' ? 'lg:flex-row-reverse' : ''}`}>
-                  {/* Content Side */}
-                  <div className="w-full lg:w-5/12">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/60">
-                      {/* Step Badge */}
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-lg">
-                          <span className="text-white font-bold text-lg">{item.step}</span>
+              ].map((step, index) => (
+                <div key={index} className={`relative flex items-center ${step.position === 'left' ? 'lg:justify-start' : 'lg:justify-end'} justify-center`}>
+                  {/* Timeline Dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white border-4 border-pink-300 rounded-full z-10 hidden lg:block"></div>
+                  
+                  <div className={`bg-white rounded-3xl p-8 shadow-xl border-4 border-pink-200 max-w-md lg:max-w-lg ${step.position === 'left' ? 'lg:mr-8' : 'lg:ml-8'} hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
+                    <div className={`bg-gradient-to-br ${step.bgColor} rounded-2xl p-6 mb-6`}>
+                      <div className="flex items-center mb-4">
+                        <div className={`bg-gradient-to-r ${step.color} text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4 shadow-lg`}>
+                          {step.step}
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-800">
-                          {item.title}
-                        </h3>
+                        <div className="text-4xl">{step.icon}</div>
                       </div>
-                      
-                      <p className="text-gray-600 leading-relaxed mb-6">
-                        {item.description}
+                      <h3 className="text-2xl font-bold text-gray-800 mb-3 font-poppins">
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed text-lg">
+                        {step.description}
                       </p>
-                      
-                      {/* Features */}
-                      <div className="grid grid-cols-2 gap-3">
-                        {item.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full"></div>
-                            <span className="text-sm text-gray-700 font-medium">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Timeline Node (Hidden on Mobile) */}
-                  <div className="hidden lg:flex w-2/12 justify-center">
-                    <div className="w-6 h-6 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full shadow-lg border-4 border-white"></div>
-                  </div>
-
-                  {/* Image Side */}
-                  <div className="w-full lg:w-5/12">
-                    <div className="relative">
-                      <div className="bg-gradient-to-br from-violet-100 to-purple-100 rounded-3xl p-6 shadow-xl">
-                        <div className="w-full h-64 rounded-2xl overflow-hidden bg-white/50 backdrop-blur-sm">
-                          <img 
-                            src={item.image}
-                            alt={item.title}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-                      {/* Decorative Elements */}
-                      <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-violet-400 to-purple-400 rounded-full opacity-60"></div>
-                      <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full opacity-60"></div>
                     </div>
                   </div>
                 </div>
@@ -414,6 +440,107 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
+      {/* FAQ Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-green-200 shadow-lg mb-6">
+              <div className="w-3 h-3 bg-green-400 rounded-full mr-3"></div>
+              <span className="text-green-700 font-bold text-sm">Questions & Answers</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              What Parents
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 mt-2">
+                Want to Know!
+              </span>
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Here are answers to the most common questions from families just like yours!
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                question: 'What ages do you teach?',
+                answer: 'We teach kids from 3 to 15 years old! We have special programs for little ones, school kids, and teenagers.',
+                bgColor: 'from-green-50 to-teal-50',
+                borderColor: 'border-green-200'
+              },
+              {
+                question: 'How do online classes work?',
+                answer: 'It\'s super easy! Your child will have fun video calls with their teacher, play learning games, and do activities together.',
+                bgColor: 'from-teal-50 to-blue-50',
+                borderColor: 'border-teal-200'
+              },
+              {
+                question: 'Will my child really learn?',
+                answer: 'Absolutely! Our teachers are amazing and make learning so much fun that kids actually look forward to their lessons.',
+                bgColor: 'from-blue-50 to-indigo-50',
+                borderColor: 'border-blue-200'
+              },
+              {
+                question: 'What if my child is shy?',
+                answer: 'No worries! Our teachers are great with shy kids. They take time to make your child feel comfortable and confident.',
+                bgColor: 'from-indigo-50 to-purple-50',
+                borderColor: 'border-indigo-200'
+              },
+              {
+                question: 'How much does it cost?',
+                answer: 'We have different plans for different families. Contact us and we\'ll help you find the perfect fit for your budget!',
+                bgColor: 'from-purple-50 to-pink-50',
+                borderColor: 'border-purple-200'
+              }
+            ].map((faq, index) => (
+              <div key={index} className={`bg-white rounded-3xl p-8 shadow-xl border-4 ${faq.borderColor} hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
+                <div className={`bg-gradient-to-r ${faq.bgColor} rounded-2xl p-6`}>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">
+                    {faq.question}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-100 via-red-100 to-pink-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-white rounded-3xl p-12 shadow-2xl border-4 border-orange-200">
+            <div className="mb-8">
+              <div className="text-6xl mb-6">🎉</div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+                Ready to Start Your
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 mt-2">
+                  Learning Adventure?
+                </span>
+              </h2>
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed mb-8">
+                Join thousands of happy kids who love learning with BrainlyBees! 
+                Your amazing learning journey starts with just one click.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <button className="bg-gradient-to-r from-orange-400 to-red-400 text-white px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins">
+                Start Free Trial! 🚀
+              </button>
+              <button className="bg-gradient-to-r from-pink-400 to-purple-400 text-white px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins">
+                Talk to Teacher! 👋
+              </button>
+            </div>
+            
+            <div className="mt-8 text-sm text-gray-600">
+              <p className="font-bold">🎁 Special Offer: First lesson completely FREE!</p>
+              <p>No credit card needed • Safe & secure • Parents love us!</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cyan-50 to-blue-100">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">
