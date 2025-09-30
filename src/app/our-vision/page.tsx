@@ -2,179 +2,241 @@
 
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import FloatingButtons from '@/components/FloatingButtons';
+import { useState } from 'react';
 
 export default function OurVisionPage() {
-  const coreValues = [
-    {
-      title: 'Excellence in Education',
-      description: 'We strive for the highest standards in educational quality and student outcomes',
-      image: '/src/assets/kid-with-graduation-outfit.png',
-      icon: '🎓'
-    },
-    {
-      title: 'Inclusive Learning',
-      description: 'Every child deserves access to quality education regardless of their background or abilities',
-      image: '/src/assets/teacher-with-all-kids.png',
-      icon: '🤝'
-    },
-    {
-      title: 'Innovation & Technology',
-      description: 'Leveraging cutting-edge technology to enhance learning experiences',
-      image: '/src/assets/teacher-teaching-kids-about-plants.png',
-      icon: '💡'
-    },
-    {
-      title: 'Personalized Approach',
-      description: 'Tailoring education to meet each child\'s unique learning style and pace',
-      image: '/src/assets/teacher-helping-girl-kid-doubt.png',
-      icon: '🎯'
-    }
-  ];
+  const [selectedCurriculum, setSelectedCurriculum] = useState('cognitive');
 
-  const missionPoints = [
-    {
-      title: 'Empowering Young Minds',
-      description: 'To unleash the limitless potential in every child through innovative and personalized learning experiences.',
-      color: 'from-red-400 to-red-600'
+  const curriculumBasis = {
+    cognitive: {
+      title: 'Cognitive Abilities',
+      subtitle: 'Think Beyond Boundaries',
+      description: 'Explore problem-solving alternatives and cultivate thinking abilities through interactive learning experiences.',
+      image: '/assets/kid-keeping-book-on-head-and-thinking.png',
+      features: [
+        'Critical thinking development',
+        'Problem-solving strategies',
+        'Analytical reasoning skills',
+        'Creative thinking exercises',
+        'Memory enhancement techniques',
+        'Logic and pattern recognition'
+      ],
+      color: 'from-blue-400 to-purple-500',
+      bgColor: 'from-blue-50 to-purple-50'
     },
-    {
-      title: 'Building Future Leaders',
-      description: 'To develop critical thinking, creativity, and leadership skills that prepare children for tomorrow\'s challenges.',
-      color: 'from-blue-400 to-blue-600'
+    visualization: {
+      title: 'Visual Learning Excellence',
+      subtitle: 'Learn Through Discovery',
+      description: 'Transform abstract concepts into tangible understanding through innovative visual techniques and interactive exploration.',
+      image: '/assets/kids-doing-painting.png',
+      features: [
+        'Visual learning techniques',
+        'Real-world connections',
+        'Interactive demonstrations',
+        'Concept mapping',
+        'Story-based learning',
+        'Hands-on activities'
+      ],
+      color: 'from-green-400 to-blue-500',
+      bgColor: 'from-green-50 to-blue-50'
     },
-    {
-      title: 'Creating Global Citizens',
-      description: 'To foster understanding, empathy, and cultural awareness that transcends geographical boundaries.',
-      color: 'from-green-400 to-green-600'
+    conceptual: {
+      title: 'Foundational Mastery',
+      subtitle: 'Build Strong Foundations',
+      description: 'Develop deep understanding of core concepts through structured learning that builds confidence and competence.',
+      image: '/assets/teacher-helping-girl-kid-doubt.png',
+      features: [
+        'Foundation building',
+        'Step-by-step learning',
+        'Concept reinforcement',
+        'Practical applications',
+        'Simplified explanations',
+        'Progressive difficulty'
+      ],
+      color: 'from-orange-400 to-red-500',
+      bgColor: 'from-orange-50 to-red-50'
     },
-    {
-      title: 'Nurturing Lifelong Learners',
-      description: 'To instill a love for learning that continues throughout life, adapting to an ever-changing world.',
-      color: 'from-purple-400 to-purple-600'
+    behavioral: {
+      title: 'Character Excellence',
+      subtitle: 'Values-Based Growth',
+      description: 'Cultivate positive character traits and emotional intelligence through supportive relationships and meaningful experiences.',
+      image: '/assets/teacher-with-all-kids.png',
+      features: [
+        'Empathy building',
+        'Trust development',
+        'Social skills training',
+        'Emotional intelligence',
+        'Positive reinforcement',
+        'Value-based learning'
+      ],
+      color: 'from-pink-400 to-purple-500',
+      bgColor: 'from-pink-50 to-purple-50'
+    },
+    personality: {
+      title: 'Whole Child Development',
+      subtitle: 'Complete Growth',
+      description: 'Nurture confident, creative, and compassionate individuals through comprehensive developmental activities and experiences.',
+      image: '/assets/teacher-with-kids-doing-ring-activity.png',
+      features: [
+        'Confidence building',
+        'Communication skills',
+        'Leadership qualities',
+        'Team collaboration',
+        'Self-expression',
+        'Cultural awareness'
+      ],
+      color: 'from-teal-400 to-green-500',
+      bgColor: 'from-teal-50 to-green-50'
+    },
+    curriculum: {
+      title: 'Academic Integration',
+      subtitle: 'Seamless Learning',
+      description: 'Create meaningful connections between learning experiences and academic achievement through innovative integration methods.',
+      image: '/assets/teacher-teaching-kids-about-plants.png',
+      features: [
+        'Curriculum alignment',
+        'Academic standards',
+        'Grade-appropriate content',
+        'Assessment preparation',
+        'Progress tracking',
+        'Performance analytics'
+      ],
+      color: 'from-indigo-400 to-blue-500',
+      bgColor: 'from-indigo-50 to-blue-50'
     }
-  ];
+  };
 
-  const timeline = [
+  const journeySteps = [
     {
       year: '2020',
       title: 'Foundation',
-      description: 'BrainlyBees was founded with a vision to revolutionize online education for children',
-      achievement: 'Launched with 50 students'
+      description: 'Started with a dream to transform how children learn and grow',
+      achievement: '50+ Happy Students',
+      icon: '🌱'
     },
     {
       year: '2021',
-      title: 'Expansion',
-      description: 'Expanded programs to include special needs education and multiple age groups',
-      achievement: 'Reached 500+ students across 5 countries'
+      title: 'Growth',
+      description: 'Expanded our reach with innovative teaching methodologies',
+      achievement: '500+ Students Worldwide',
+      icon: '🌿'
     },
     {
       year: '2022',
       title: 'Innovation',
-      description: 'Introduced AI-powered personalized learning and virtual reality experiences',
-      achievement: 'Won "Best Educational Innovation" award'
+      description: 'Introduced personalized learning and special needs programs',
+      achievement: '1000+ Success Stories',
+      icon: '🌳'
     },
     {
       year: '2023',
-      title: 'Global Reach',
-      description: 'Extended services to 15+ countries with localized curriculum adaptations',
-      achievement: '2,000+ students and 50+ expert teachers'
+      title: 'Recognition',
+      description: 'Received awards for educational excellence and innovation',
+      achievement: '2000+ Global Students',
+      icon: '🏆'
     },
     {
       year: '2024',
       title: 'Excellence',
-      description: 'Achieved highest satisfaction ratings and launched comprehensive online school',
-      achievement: '5,000+ students with 98% satisfaction rate'
+      description: 'Achieved highest satisfaction rates with comprehensive programs',
+      achievement: '5000+ Transformed Lives',
+      icon: '⭐'
     },
     {
       year: '2025',
       title: 'Future Vision',
-      description: 'Expanding to reach 25,000+ students globally with cutting-edge technologies',
-      achievement: 'Leading the future of education'
-    }
-  ];
-
-  const leadershipTeam = [
-    {
-      name: 'Dr. Sarah Johnson',
-      position: 'Chief Education Officer',
-      image: '/src/assets/lady-teacher-telling-story.png',
-      background: 'Ph.D. in Educational Psychology, 15+ years in curriculum development',
-      expertise: 'Special Needs Education, Curriculum Design'
-    },
-    {
-      name: 'Prof. Michael Chen',
-      position: 'Head of Innovation',
-      image: '/src/assets/teacher-reading-for-kids.png',
-      background: 'Former MIT professor, Expert in Educational Technology',
-      expertise: 'AI in Education, Learning Analytics'
-    },
-    {
-      name: 'Dr. Priya Sharma',
-      position: 'Director of Student Success',
-      image: '/src/assets/teacher-with-all-kids.png',
-      background: 'Child Psychology specialist, Published researcher',
-      expertise: 'Student Engagement, Learning Outcomes'
-    }
-  ];
-
-  const globalImpact = [
-    { metric: '25,000+', label: 'Students Worldwide', icon: '👨‍🎓' },
-    { metric: '20+', label: 'Countries Served', icon: '🌍' },
-    { metric: '98%', label: 'Student Success Rate', icon: '📈' },
-    { metric: '500+', label: 'Expert Educators', icon: '👩‍🏫' }
-  ];
-
-  const futureGoals = [
-    {
-      title: 'Technology Integration',
-      description: 'Implementing AI, VR, and AR technologies for immersive learning experiences',
-      target: '2025-2026',
-      image: '/src/assets/kid-enjoying.png'
-    },
-    {
-      title: 'Global Accessibility',
-      description: 'Making quality education accessible to underserved communities worldwide',
-      target: '2025-2027',
-      image: '/src/assets/kids-doing-painting.png'
-    },
-    {
-      title: 'Research & Development',
-      description: 'Advancing educational research and developing new learning methodologies',
-      target: '2026-2028',
-      image: '/src/assets/kid-keeping-book-on-head-and-thinking.png'
+      description: 'Leading the next generation of educational transformation',
+      achievement: '10000+ Global Impact',
+      icon: '🚀'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-50 font-nunito">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Our 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500"> Vision</span>
-            <br />for the Future
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-            To create a world where every child has access to exceptional education that nurtures their unique potential, 
-            fosters creativity, and prepares them to become confident, capable leaders of tomorrow.
-          </p>
-          
-          <div className="relative max-w-5xl mx-auto">
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-              <img 
-                src="/src/assets/teacher-with-kids-doing-ring-activity.png"
-                alt="Our Vision"
-                className="w-full h-96 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-              <div className="absolute bottom-8 left-8 right-8">
-                <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Empowering Every Child</h3>
-                  <p className="text-gray-600">Building the foundation for lifelong success and happiness</p>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-50 overflow-hidden">
+        {/* Organic Wave Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z" 
+                  fill="url(#heroWave1)" opacity="0.4"/>
+            <path d="M0,300 C400,200 800,400 1200,250 L1200,0 L0,0 Z" 
+                  fill="url(#heroWave2)" opacity="0.3"/>
+            <path d="M0,400 C200,300 600,500 1000,350 C1100,325 1200,400 1200,400 L1200,0 L0,0 Z" 
+                  fill="url(#heroWave3)" opacity="0.2"/>
+            <defs>
+              <linearGradient id="heroWave1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fef3c7" />
+                <stop offset="50%" stopColor="#fed7aa" />
+                <stop offset="100%" stopColor="#fb923c" />
+              </linearGradient>
+              <linearGradient id="heroWave2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fed7aa" />
+                <stop offset="100%" stopColor="#f97316" />
+              </linearGradient>
+              <linearGradient id="heroWave3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fb923c" />
+                <stop offset="100%" stopColor="#ea580c" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-4 border-orange-200 relative z-10">
+                <div className="inline-flex items-center px-6 py-3 bg-orange-50 rounded-full border-2 border-orange-200 shadow-lg mb-6">
+                  <span className="text-orange-600 font-bold font-poppins text-lg">✨ Our Vision</span>
+                </div>
+                
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins leading-tight">
+                  Transforming Tomorrow
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 mt-2">
+                    Through Innovative Learning
+                  </span>
+                  <span className="block text-gray-700 mt-2">for Every Child!</span>
+                </h1>
+                
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  At BrainlyBees, we believe every child is unique and deserves an education that celebrates their individuality. 
+                  We create transformative learning experiences that ignite curiosity, build confidence, and nurture the innovators 
+                  and problem-solvers of tomorrow.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button className="bg-white border-4 border-orange-400 text-orange-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-orange-50">
+                    Explore Our Vision
+                  </button>
+                  <a 
+                    href="https://wa.me/919305454447" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-gradient-to-r from-orange-400 to-yellow-400 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
+                  >
+                    Start Journey
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="order-1 lg:order-2 relative">
+              <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-orange-200">
+                <div className="bg-gradient-to-br from-orange-100 to-yellow-100 p-6 flex items-center justify-center">
+                  <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-lg">
+                    <img 
+                      src="/assets/teacher-with-all-kids.png"
+                      alt="Nurturing Young Minds"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="absolute top-4 left-4">
+                  <div className="bg-white px-4 py-2 rounded-full shadow-lg border-2 border-orange-200">
+                    <span className="text-orange-600 text-lg font-bold font-poppins">Future Leaders!</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -182,227 +244,545 @@ export default function OurVisionPage() {
         </div>
       </section>
 
-      {/* Mission Points */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Mission
+      {/* Vision Statement Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white -mt-16 pt-24">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-12 shadow-xl border-4 border-blue-200">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8 font-poppins">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+                Our Vision Statement
+              </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Four core pillars that drive everything we do in our quest to transform education.
+            <p className="text-2xl text-gray-700 leading-relaxed font-medium">
+              "To create an inspiring educational ecosystem where every child discovers their passion, develops their talents, 
+              and gains the confidence to pursue their dreams while making a positive impact on the world."
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {missionPoints.map((point, index) => (
-              <div key={index} className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
-                <div className={`w-16 h-16 bg-gradient-to-r ${point.color} rounded-2xl flex items-center justify-center mb-6`}>
-                  <span className="text-2xl font-bold text-white">{index + 1}</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{point.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{point.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
-      {/* Core Values */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-50 to-pink-50">
-        <div className="max-w-7xl mx-auto">
+      {/* Our Mission Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 via-teal-50 to-blue-50 overflow-hidden -mt-16 pt-24">
+        {/* Flowing background shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path d="M0,600 C300,500 600,700 900,550 C1050,475 1200,600 1200,600 L1200,800 L0,800 Z" 
+                  fill="url(#missionWave)" opacity="0.3"/>
+            <defs>
+              <linearGradient id="missionWave" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#a7f3d0" />
+                <stop offset="50%" stopColor="#6ee7b7" />
+                <stop offset="100%" stopColor="#34d399" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Core Values
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-teal-500 to-blue-500">
+                Our Mission
+              </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The fundamental principles that guide our decisions and shape our educational approach.
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              At BrainlyBees, we're committed to revolutionizing education by putting each child at the center of their learning journey. 
+              We combine cutting-edge technology with proven pedagogical methods to create engaging, meaningful, and joyful educational 
+              experiences that prepare children for success in life.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {coreValues.map((value, index) => (
-              <div key={index} className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 group">
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={value.image}
-                    alt={value.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  <div className="absolute top-4 right-4">
-                    <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
-                      <span className="text-2xl">{value.icon}</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-3xl p-8 shadow-xl border-4 border-green-200 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-teal-400 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-3xl">🎯</span>
               </div>
-            ))}
+              <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Personalized Learning</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Tailoring education to meet each child's unique learning style, pace, and interests for optimal growth.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-xl border-4 border-teal-200 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-teal-400 to-blue-400 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-3xl">🌟</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Holistic Development</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Fostering cognitive, emotional, social, and creative development for well-rounded personalities.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-xl border-4 border-blue-200 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-3xl">🚀</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Future Ready</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Preparing children with 21st-century skills and mindset to thrive in tomorrow's world.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Our Journey Timeline */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 overflow-hidden -mt-16 pt-24">
+        {/* Flowing background shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path d="M0,600 C300,500 600,700 900,550 C1050,475 1200,600 1200,600 L1200,800 L0,800 Z" 
+                  fill="url(#journeyWave)" opacity="0.3"/>
+            <defs>
+              <linearGradient id="journeyWave" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#f3e8ff" />
+                <stop offset="50%" stopColor="#e879f9" />
+                <stop offset="100%" stopColor="#c084fc" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Journey
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500">
+                Our Journey
+              </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From a small startup to a global educational leader - our story of growth and impact.
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              From humble beginnings to educational excellence - the story of how we've grown alongside thousands of children.
             </p>
           </div>
 
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-400 to-pink-400 rounded-full"></div>
-            
-            <div className="space-y-12">
-              {timeline.map((item, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
-                    <div className="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300">
-                      <div className="text-2xl font-bold text-purple-600 mb-2">{item.year}</div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                      <p className="text-gray-600 mb-4">{item.description}</p>
-                      <div className="text-sm font-medium text-purple-600">{item.achievement}</div>
-                    </div>
-                  </div>
-                  
-                  {/* Timeline Node */}
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center border-4 border-white shadow-lg">
-                      <span className="text-white font-bold text-lg">{index + 1}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="w-1/2"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {journeySteps.map((step, index) => (
+              <div key={index} className="bg-white rounded-3xl p-8 shadow-xl border-4 border-purple-200 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <div className="text-center mb-6">
+                  <div className="text-5xl mb-4">{step.icon}</div>
+                  <div className="text-2xl font-bold text-purple-600 mb-2 font-poppins">{step.year}</div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">{step.title}</h3>
                 </div>
-              ))}
+                <p className="text-gray-600 leading-relaxed mb-4 text-center">
+                  {step.description}
+                </p>
+                <div className="bg-purple-50 rounded-2xl p-4 text-center border-2 border-purple-200">
+                  <span className="text-purple-700 font-bold text-lg">{step.achievement}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Building Right Learning Path */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white -mt-16 pt-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              Building Right Learning Path 
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500 mt-2">
+                for Kids
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Every child's learning journey is unique. We create personalized pathways that respect individual pace, 
+              learning styles, and interests to ensure optimal growth and development.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-3xl p-6 shadow-lg border-4 border-indigo-200">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">Assessment & Analysis</h3>
+                <p className="text-gray-600">
+                  Understanding each child's strengths, challenges, and learning preferences through comprehensive assessment.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-6 shadow-lg border-4 border-blue-200">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">Customized Curriculum</h3>
+                <p className="text-gray-600">
+                  Tailoring educational content and methodology to match individual learning styles and pace.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-indigo-200">
+                <div className="bg-gradient-to-br from-indigo-100 to-blue-100 p-6 flex items-center justify-center">
+                  <div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-lg">
+                    <img 
+                      src="/assets/teacher-helping-girl-kid-doubt.png"
+                      alt="Personalized Learning"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-cyan-50 to-teal-50 rounded-3xl p-6 shadow-lg border-4 border-cyan-200">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">Progress Monitoring</h3>
+                <p className="text-gray-600">
+                  Continuous tracking and adjustment of learning paths based on real-time progress and feedback.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-teal-50 to-green-50 rounded-3xl p-6 shadow-lg border-4 border-teal-200">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">Skill Development</h3>
+                <p className="text-gray-600">
+                  Building essential 21st-century skills including critical thinking, creativity, and collaboration.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Global Impact */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-500 to-pink-500">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Our Global Impact
-          </h2>
-          <p className="text-xl text-white/90 mb-16 max-w-3xl mx-auto">
-            Making a difference in children's lives across the globe through quality education.
-          </p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {globalImpact.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-5xl mb-4">{stat.icon}</div>
-                <div className="text-4xl font-bold text-white mb-2">{stat.metric}</div>
-                <div className="text-lg text-white/90">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership Team */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Dynamic Curriculum Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 overflow-hidden -mt-16 pt-24">
+        <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Leadership Team
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              Basis of Our Dynamic and 
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mt-2">
+                Global Curriculum
+              </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Visionary leaders committed to transforming education and empowering young minds.
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Our curriculum is built on six fundamental pillars that ensure comprehensive development of every child.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {leadershipTeam.map((leader, index) => (
-              <div key={index} className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
-                <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={leader.image}
-                    alt={leader.name}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">{leader.name}</h3>
-                  <p className="text-purple-600 font-medium mb-3">{leader.position}</p>
-                  <p className="text-gray-600 text-sm mb-3">{leader.background}</p>
-                  <div className="text-sm text-gray-500">
-                    <strong>Expertise:</strong> {leader.expertise}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Future Goals */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-purple-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Looking Ahead
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our ambitious plans for the future of education and the innovations we're bringing to life.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {futureGoals.map((goal, index) => (
-              <div key={index} className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={goal.image}
-                    alt={goal.title}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4">
-                    <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-900">
-                      {goal.target}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{goal.title}</h3>
-                  <p className="text-gray-600">{goal.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl p-12 text-white">
-            <h2 className="text-4xl font-bold mb-6">
-              Join Us in Shaping the Future
-            </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Be part of our mission to create a world where every child has access to exceptional education. 
-              Together, we can unlock unlimited potential.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-500 px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                Partner With Us
+          {/* Tab Navigation */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {Object.keys(curriculumBasis).map((approach) => (
+              <button
+                key={approach}
+                onClick={() => setSelectedCurriculum(approach)}
+                className={`px-6 py-3 rounded-full font-bold font-poppins transition-all duration-300 ${
+                  selectedCurriculum === approach
+                    ? 'bg-white border-4 border-indigo-400 text-indigo-600 shadow-xl scale-105'
+                    : 'bg-white border-2 border-purple-200 text-gray-700 shadow-lg hover:border-purple-300 hover:scale-105'
+                }`}
+              >
+                {approach === 'cognitive' ? 'Cognitive Development' : 
+                 approach === 'visualization' ? 'Visual Learning' : 
+                 approach === 'conceptual' ? 'Foundational Mastery' : 
+                 approach === 'behavioral' ? 'Character Excellence' : 
+                 approach === 'personality' ? 'Personality Growth' : 
+                 'Academic Integration'}
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-purple-500 transition-all duration-300">
-                Learn More
+            ))}
+          </div>
+
+          {/* Selected Curriculum Display */}
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-indigo-200">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+              <div className="p-12">
+                <div className="mb-6">
+                  <h3 className="text-3xl font-bold text-gray-800 mb-3 font-poppins">
+                    {curriculumBasis[selectedCurriculum as keyof typeof curriculumBasis].title}
+                  </h3>
+                  <p className="text-xl text-gray-600 font-medium mb-4">
+                    {curriculumBasis[selectedCurriculum as keyof typeof curriculumBasis].subtitle}
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    {curriculumBasis[selectedCurriculum as keyof typeof curriculumBasis].description}
+                  </p>
+                </div>
+                
+                <div className="space-y-4">
+                  <h4 className="text-lg font-bold text-gray-800 font-poppins">Key Features:</h4>
+                  <div className="grid grid-cols-1 gap-3">
+                    {curriculumBasis[selectedCurriculum as keyof typeof curriculumBasis].features.map((feature, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <div className="w-6 h-6 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-white text-sm">✓</span>
+                        </div>
+                        <span className="text-gray-600">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-8">
+                  <button className="w-full bg-white border-4 border-indigo-400 text-indigo-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-indigo-50">
+                    Learn More About This Approach
+                  </button>
+                </div>
+              </div>
+              
+              <div className="relative">
+                <div className="bg-gradient-to-br from-indigo-100 to-purple-100 p-6 h-full flex items-center justify-center">
+                  <div className="relative w-full h-96 lg:h-full rounded-2xl overflow-hidden shadow-lg">
+                    <img 
+                      src={curriculumBasis[selectedCurriculum as keyof typeof curriculumBasis].image}
+                      alt="Curriculum Approach"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 overflow-hidden -mt-16 pt-24">
+        <div className="relative max-w-5xl mx-auto">
+          <div className="bg-white rounded-3xl shadow-xl p-12 border-4 border-amber-200">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-orange-500 to-red-500">
+                  Our Philosophy
+                </span>
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Our Educational Philosophy —
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 mb-8 border-4 border-amber-200">
+              <blockquote className="text-2xl md:text-3xl font-bold text-gray-800 text-center leading-relaxed font-poppins">
+                "Learning is not about filling empty vessels, but about igniting the spark of curiosity 
+                and wonder that already exists within every child."
+              </blockquote>
+            </div>
+
+            <p className="text-lg text-gray-600 leading-relaxed text-center mb-8">
+              At BrainlyBees, we understand that every child learns differently and has unique strengths waiting to be discovered. 
+              Our approach focuses on creating adaptive learning environments where children feel safe to explore, experiment, 
+              and express themselves while building strong foundational skills and confidence.
+            </p>
+
+            <div className="text-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white border-4 border-amber-400 text-amber-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-amber-50">
+                  Discover Our Approach
+                </button>
+                <a 
+                  href="https://wa.me/919305454447" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
+                >
+                  Start Your Child's Journey
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Global Impact Stats */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 overflow-hidden -mt-16 pt-24">
+        {/* Flowing background shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path d="M0,600 C300,500 600,700 900,550 C1050,475 1200,600 1200,600 L1200,800 L0,800 Z" 
+                  fill="url(#impactWave)" opacity="0.3"/>
+            <defs>
+              <linearGradient id="impactWave" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#a7f3d0" />
+                <stop offset="50%" stopColor="#67e8f9" />
+                <stop offset="100%" stopColor="#60a5fa" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500">
+                Our Global Impact
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Transforming lives across the globe through innovative education and personalized learning experiences.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white rounded-3xl p-8 shadow-xl border-4 border-teal-200 text-center hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="text-5xl mb-4">🌍</div>
+              <div className="text-4xl font-bold text-teal-600 mb-2 font-poppins">15+</div>
+              <div className="text-lg text-gray-600 font-medium">Countries Served</div>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-xl border-4 border-cyan-200 text-center hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="text-5xl mb-4">👨‍🎓</div>
+              <div className="text-4xl font-bold text-cyan-600 mb-2 font-poppins">5,000+</div>
+              <div className="text-lg text-gray-600 font-medium">Students Worldwide</div>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-xl border-4 border-blue-200 text-center hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="text-5xl mb-4">📈</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2 font-poppins">98%</div>
+              <div className="text-lg text-gray-600 font-medium">Success Rate</div>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-xl border-4 border-indigo-200 text-center hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="text-5xl mb-4">👩‍🏫</div>
+              <div className="text-4xl font-bold text-indigo-600 mb-2 font-poppins">200+</div>
+              <div className="text-lg text-gray-600 font-medium">Expert Educators</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership & Values */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white -mt-16 pt-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              Our Core Values &
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-pink-500 to-purple-500 mt-2">
+                Leadership Principles
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              The fundamental beliefs and principles that guide every decision we make and every program we design.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 shadow-xl border-4 border-rose-200 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-rose-400 to-pink-400 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-3xl">💝</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Love & Trust</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Building genuine relationships with children through empathy, understanding, and unconditional support 
+                that creates a safe learning environment.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl p-8 shadow-xl border-4 border-purple-200 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-3xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Excellence in Education</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Maintaining the highest standards in curriculum design, teaching methodologies, and student outcomes 
+                to ensure every child reaches their full potential.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-3xl p-8 shadow-xl border-4 border-indigo-200 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-3xl">🤝</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Inclusive Learning</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Ensuring every child, regardless of background, abilities, or learning style, has access to quality 
+                education that celebrates their uniqueness.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 shadow-xl border-4 border-blue-200 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-3xl">💡</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Innovation & Growth</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Continuously evolving our methods and embracing new technologies to enhance learning experiences 
+                and prepare children for the future.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-cyan-50 to-teal-50 rounded-3xl p-8 shadow-xl border-4 border-cyan-200 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-teal-400 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-3xl">🌟</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Character Building</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Fostering strong moral values, empathy, and leadership qualities that help children become 
+                responsible global citizens.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-teal-50 to-green-50 rounded-3xl p-8 shadow-xl border-4 border-teal-200 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-teal-400 to-green-400 rounded-2xl flex items-center justify-center mb-6">
+                <span className="text-3xl">🚀</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Future Readiness</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Equipping children with critical thinking, creativity, and adaptability skills needed to thrive 
+                in an ever-changing world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Call to Action */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-violet-50 via-purple-50 to-fuchsia-50 overflow-hidden -mt-16 pt-24">
+        {/* Flowing background shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z" 
+                  fill="url(#ctaWave1)" opacity="0.4"/>
+            <path d="M0,400 C400,300 800,500 1200,350 L1200,0 L0,0 Z" 
+                  fill="url(#ctaWave2)" opacity="0.3"/>
+            <defs>
+              <linearGradient id="ctaWave1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#e879f9" />
+                <stop offset="50%" stopColor="#c084fc" />
+                <stop offset="100%" stopColor="#a855f7" />
+              </linearGradient>
+              <linearGradient id="ctaWave2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#c084fc" />
+                <stop offset="100%" stopColor="#8b5cf6" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div className="relative max-w-5xl mx-auto text-center">
+          <div className="bg-white rounded-3xl shadow-xl p-12 border-4 border-purple-200">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              Join Us in 
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-fuchsia-500 to-pink-500 mt-2">
+                Shaping Tomorrow
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 leading-relaxed mb-8">
+              Be part of our mission to create a world where every child discovers their unique potential and becomes 
+              a confident leader of tomorrow. Together, we can transform education and transform lives.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200">
+                <div className="text-3xl mb-3">📚</div>
+                <h3 className="font-bold text-gray-800 mb-2 font-poppins">Start Learning</h3>
+                <p className="text-gray-600 text-sm">Begin your child's transformative educational journey</p>
+              </div>
+              <div className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 border-2 border-pink-200">
+                <div className="text-3xl mb-3">🤝</div>
+                <h3 className="font-bold text-gray-800 mb-2 font-poppins">Partner with Us</h3>
+                <p className="text-gray-600 text-sm">Collaborate to expand our global educational impact</p>
+              </div>
+              <div className="bg-gradient-to-br from-rose-50 to-purple-50 rounded-2xl p-6 border-2 border-rose-200">
+                <div className="text-3xl mb-3">💼</div>
+                <h3 className="font-bold text-gray-800 mb-2 font-poppins">Join Our Team</h3>
+                <p className="text-gray-600 text-sm">Become part of our passionate education community</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="https://wa.me/919305454447" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
+              >
+                Start Your Journey Today
+              </a>
+              <button className="bg-white border-4 border-purple-400 text-purple-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-purple-50">
+                Schedule a Consultation
               </button>
             </div>
           </div>
@@ -410,7 +790,6 @@ export default function OurVisionPage() {
       </section>
 
       <Footer />
-      <FloatingButtons />
     </div>
   );
 }
