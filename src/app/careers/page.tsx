@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function CareersPage() {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
@@ -199,7 +200,7 @@ export default function CareersPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -211,8 +212,8 @@ export default function CareersPage() {
                 <br />to Transform Education
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Be part of a passionate team dedicated to revolutionizing education and making a positive impact 
-                on children's lives around the world. Grow your career while making a difference.
+                Be part of a passionate team dedicated to revolutionizing education and making a positive impact
+                on children&apos;s lives around the world. Grow your career while making a difference.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
@@ -223,12 +224,14 @@ export default function CareersPage() {
                 </button>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                <img 
+                <Image
                   src="/src/assets/teacher-with-kids-doing-ring-activity.png"
                   alt="Our Team"
+                  width={800}
+                  height={320}
                   className="w-full h-80 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-orange-900/20 to-transparent"></div>
@@ -289,9 +292,11 @@ export default function CareersPage() {
             {filteredJobs.map((job) => (
               <div key={job.id} className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500">
                 <div className="relative h-48 overflow-hidden">
-                  <img 
+                  <Image
                     src={job.image}
                     alt={job.title}
+                    width={400}
+                    height={192}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
@@ -301,11 +306,11 @@ export default function CareersPage() {
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{job.title}</h3>
                   <p className="text-gray-600 mb-4 text-sm">{job.description}</p>
-                  
+
                   <div className="space-y-2 mb-6">
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-500">Location:</span>
@@ -386,9 +391,11 @@ export default function CareersPage() {
               <div key={index} className="flex items-start space-x-6 group">
                 <div className="flex-shrink-0">
                   <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                    <img 
+                    <Image
                       src={item.image}
                       alt={item.title}
+                      width={96}
+                      height={96}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
@@ -418,7 +425,7 @@ export default function CareersPage() {
           <div className="relative">
             {/* Process Line */}
             <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-orange-400 to-red-400 rounded-full transform -translate-y-1/2"></div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {hiringProcess.map((step, index) => (
                 <div key={index} className="text-center relative">
@@ -453,9 +460,11 @@ export default function CareersPage() {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300">
                 <div className="flex items-center mb-6">
-                  <img 
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
+                    width={64}
+                    height={64}
                     className="w-16 h-16 rounded-full object-cover mr-4"
                   />
                   <div>
@@ -463,7 +472,7 @@ export default function CareersPage() {
                     <p className="text-orange-600 font-medium">{testimonial.position}</p>
                   </div>
                 </div>
-                <p className="text-gray-700 italic text-lg">"{testimonial.quote}"</p>
+                <p className="text-gray-700 italic text-lg">&ldquo;{testimonial.quote}&rdquo;</p>
               </div>
             ))}
           </div>
@@ -478,7 +487,7 @@ export default function CareersPage() {
               Ready to Make a Difference?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join our passionate team and help us transform education for children around the world. 
+              Join our passionate team and help us transform education for children around the world.
               Your expertise can make a lasting impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

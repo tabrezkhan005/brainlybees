@@ -14,7 +14,7 @@ export default function HeroSection() {
             {/* Main Heading */}
             <div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Unlock Your Child's
+                Unlock Your Child&apos;s
                 <br />
                 <span className="text-red-500">Learning Potential</span>
               </h1>
@@ -28,7 +28,7 @@ export default function HeroSection() {
               <button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
-              
+
               <button className="bg-white hover:bg-gray-50 text-gray-700 px-8 py-3 rounded-lg text-lg font-semibold border border-gray-300 transition-colors duration-200">
                 Watch Demo
               </button>
@@ -47,7 +47,7 @@ export default function HeroSection() {
                   <div className="text-sm text-gray-600">Personal attention</div>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ export default function HeroSection() {
                   <div className="text-sm text-gray-600">Qualified educators</div>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

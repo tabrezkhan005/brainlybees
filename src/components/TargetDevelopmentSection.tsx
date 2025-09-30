@@ -63,11 +63,11 @@ export default function TargetDevelopmentSection() {
             Comprehensive Development
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            Nurturing Every Aspect of Your Child's{' '}
+            Nurturing Every Aspect of Your Child&apos;s{' '}
             <span className="text-red-500">Growth & Development</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our holistic approach ensures your child develops essential skills across all critical areas, 
+            Our holistic approach ensures your child develops essential skills across all critical areas,
             building a strong foundation for lifelong success and confidence.
           </p>
         </div>

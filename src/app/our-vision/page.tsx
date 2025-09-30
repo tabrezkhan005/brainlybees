@@ -3,6 +3,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function OurVisionPage() {
   const [selectedCurriculum, setSelectedCurriculum] = useState('cognitive');
@@ -154,17 +155,17 @@ export default function OurVisionPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-50 font-nunito">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-50 overflow-hidden">
         {/* Organic Wave Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z" 
+            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z"
                   fill="url(#heroWave1)" opacity="0.4"/>
-            <path d="M0,300 C400,200 800,400 1200,250 L1200,0 L0,0 Z" 
+            <path d="M0,300 C400,200 800,400 1200,250 L1200,0 L0,0 Z"
                   fill="url(#heroWave2)" opacity="0.3"/>
-            <path d="M0,400 C200,300 600,500 1000,350 C1100,325 1200,400 1200,400 L1200,0 L0,0 Z" 
+            <path d="M0,400 C200,300 600,500 1000,350 C1100,325 1200,400 1200,400 L1200,0 L0,0 Z"
                   fill="url(#heroWave3)" opacity="0.2"/>
             <defs>
               <linearGradient id="heroWave1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -182,7 +183,7 @@ export default function OurVisionPage() {
               </linearGradient>
             </defs>
           </svg>
-          
+
           {/* Floating Educational Elements */}
           <div className="absolute top-32 left-20 w-6 h-6 bg-gradient-to-br from-yellow-300 to-orange-300 rounded-full opacity-60 animate-pulse"></div>
           <div className="absolute top-48 right-32 w-4 h-4 bg-gradient-to-br from-orange-300 to-amber-300 rounded-full opacity-50 animate-pulse delay-100"></div>
@@ -197,7 +198,7 @@ export default function OurVisionPage() {
                 <div className="inline-flex items-center px-6 py-3 bg-orange-50 rounded-full border-2 border-orange-200 shadow-lg mb-6">
                   <span className="text-orange-600 font-bold font-poppins text-lg">✨ Our Vision</span>
                 </div>
-                
+
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins leading-tight">
                   Transforming Tomorrow
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 mt-2">
@@ -205,20 +206,20 @@ export default function OurVisionPage() {
                   </span>
                   <span className="block text-gray-700 mt-2">for Every Child!</span>
                 </h1>
-                
+
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  At BrainlyBees, we believe every child is unique and deserves an education that celebrates their individuality. 
-                  We create transformative learning experiences that ignite curiosity, build confidence, and nurture the innovators 
+                  At BrainlyBees, we believe every child is unique and deserves an education that celebrates their individuality.
+                  We create transformative learning experiences that ignite curiosity, build confidence, and nurture the innovators
                   and problem-solvers of tomorrow.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button className="bg-white border-4 border-orange-400 text-orange-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-orange-50">
                     Explore Our Vision
                   </button>
-                  <a 
-                    href="https://wa.me/919305454447" 
-                    target="_blank" 
+                  <a
+                    href="https://wa.me/919305454447"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-orange-400 to-yellow-400 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
                   >
@@ -232,9 +233,11 @@ export default function OurVisionPage() {
               <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-orange-200">
                 <div className="bg-gradient-to-br from-orange-100 to-yellow-100 p-6 flex items-center justify-center">
                   <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-lg">
-                    <img 
+                    <Image
                       src="/assets/teacher-with-all-kids.png"
                       alt="Nurturing Young Minds"
+                      width={400}
+                      height={384}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -259,7 +262,7 @@ export default function OurVisionPage() {
           <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-25 animate-pulse delay-150"></div>
           <div className="absolute bottom-10 right-1/3 w-28 h-28 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full opacity-20 animate-pulse delay-300"></div>
         </div>
-        
+
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-12 shadow-xl border-4 border-blue-200">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8 font-poppins">
@@ -268,8 +271,8 @@ export default function OurVisionPage() {
               </span>
             </h2>
             <p className="text-2xl text-gray-700 leading-relaxed font-medium">
-              "To create an inspiring educational ecosystem where every child discovers their passion, develops their talents, 
-              and gains the confidence to pursue their dreams while making a positive impact on the world."
+              &ldquo;To create an inspiring educational ecosystem where every child discovers their passion, develops their talents,
+              and gains the confidence to pursue their dreams while making a positive impact on the world.&rdquo;
             </p>
           </div>
         </div>
@@ -280,7 +283,7 @@ export default function OurVisionPage() {
         {/* Flowing background shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M0,600 C300,500 600,700 900,550 C1050,475 1200,600 1200,600 L1200,800 L0,800 Z" 
+            <path d="M0,600 C300,500 600,700 900,550 C1050,475 1200,600 1200,600 L1200,800 L0,800 Z"
                   fill="url(#missionWave)" opacity="0.3"/>
             <defs>
               <linearGradient id="missionWave" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -300,8 +303,8 @@ export default function OurVisionPage() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              At BrainlyBees, we're committed to revolutionizing education by putting each child at the center of their learning journey. 
-              We combine cutting-edge technology with proven pedagogical methods to create engaging, meaningful, and joyful educational 
+              At BrainlyBees, we&apos;re committed to revolutionizing education by putting each child at the center of their learning journey.
+              We combine cutting-edge technology with proven pedagogical methods to create engaging, meaningful, and joyful educational
               experiences that prepare children for success in life.
             </p>
           </div>
@@ -313,7 +316,7 @@ export default function OurVisionPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Personalized Learning</h3>
               <p className="text-gray-600 leading-relaxed">
-                Tailoring education to meet each child's unique learning style, pace, and interests for optimal growth.
+                Tailoring education to meet each child&apos;s unique learning style, pace, and interests for optimal growth.
               </p>
             </div>
 
@@ -333,7 +336,7 @@ export default function OurVisionPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Future Ready</h3>
               <p className="text-gray-600 leading-relaxed">
-                Preparing children with 21st-century skills and mindset to thrive in tomorrow's world.
+                Preparing children with 21st-century skills and mindset to thrive in tomorrow&apos;s world.
               </p>
             </div>
           </div>
@@ -345,7 +348,7 @@ export default function OurVisionPage() {
         {/* Flowing background shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M0,600 C300,500 600,700 900,550 C1050,475 1200,600 1200,600 L1200,800 L0,800 Z" 
+            <path d="M0,600 C300,500 600,700 900,550 C1050,475 1200,600 1200,600 L1200,800 L0,800 Z"
                   fill="url(#journeyWave)" opacity="0.3"/>
             <defs>
               <linearGradient id="journeyWave" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -365,7 +368,7 @@ export default function OurVisionPage() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              From humble beginnings to educational excellence - the story of how we've grown alongside thousands of children.
+              From humble beginnings to educational excellence - the story of how we&apos;ve grown alongside thousands of children.
             </p>
           </div>
 
@@ -394,9 +397,9 @@ export default function OurVisionPage() {
         {/* Organic Flowing Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M0,300 C300,200 600,400 900,250 C1050,175 1200,300 1200,300 L1200,800 L0,800 Z" 
+            <path d="M0,300 C300,200 600,400 900,250 C1050,175 1200,300 1200,300 L1200,800 L0,800 Z"
                   fill="url(#learningWave1)" opacity="0.2"/>
-            <path d="M0,500 C400,400 800,600 1200,450 L1200,800 L0,800 Z" 
+            <path d="M0,500 C400,400 800,600 1200,450 L1200,800 L0,800 Z"
                   fill="url(#learningWave2)" opacity="0.15"/>
             <defs>
               <linearGradient id="learningWave1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -410,22 +413,22 @@ export default function OurVisionPage() {
               </linearGradient>
             </defs>
           </svg>
-          
+
           {/* Floating Elements */}
           <div className="absolute top-1/4 left-10 w-20 h-20 bg-gradient-to-br from-indigo-200 to-blue-200 rounded-full opacity-30 animate-pulse"></div>
           <div className="absolute bottom-1/4 right-10 w-16 h-16 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-full opacity-25 animate-pulse delay-100"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
-              Building Right Learning Path 
+              Building Right Learning Path
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500 mt-2">
                 for Kids
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Every child's learning journey is unique. We create personalized pathways that respect individual pace, 
+              Every child&apos;s learning journey is unique. We create personalized pathways that respect individual pace,
               learning styles, and interests to ensure optimal growth and development.
             </p>
           </div>
@@ -435,7 +438,7 @@ export default function OurVisionPage() {
               <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-3xl p-6 shadow-lg border-4 border-indigo-200">
                 <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">Assessment & Analysis</h3>
                 <p className="text-gray-600">
-                  Understanding each child's strengths, challenges, and learning preferences through comprehensive assessment.
+                  Understanding each child&apos;s strengths, challenges, and learning preferences through comprehensive assessment.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-6 shadow-lg border-4 border-blue-200">
@@ -450,9 +453,11 @@ export default function OurVisionPage() {
               <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-indigo-200">
                 <div className="bg-gradient-to-br from-indigo-100 to-blue-100 p-6 flex items-center justify-center">
                   <div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-lg">
-                    <img 
+                    <Image
                       src="/assets/teacher-helping-girl-kid-doubt.png"
                       alt="Personalized Learning"
+                      width={400}
+                      height={320}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -483,7 +488,7 @@ export default function OurVisionPage() {
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
-              Basis of Our Dynamic and 
+              Basis of Our Dynamic and
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mt-2">
                 Global Curriculum
               </span>
@@ -505,11 +510,11 @@ export default function OurVisionPage() {
                     : 'bg-white border-2 border-purple-200 text-gray-700 shadow-lg hover:border-purple-300 hover:scale-105'
                 }`}
               >
-                {approach === 'cognitive' ? 'Cognitive Development' : 
-                 approach === 'visualization' ? 'Visual Learning' : 
-                 approach === 'conceptual' ? 'Foundational Mastery' : 
-                 approach === 'behavioral' ? 'Character Excellence' : 
-                 approach === 'personality' ? 'Personality Growth' : 
+                {approach === 'cognitive' ? 'Cognitive Development' :
+                 approach === 'visualization' ? 'Visual Learning' :
+                 approach === 'conceptual' ? 'Foundational Mastery' :
+                 approach === 'behavioral' ? 'Character Excellence' :
+                 approach === 'personality' ? 'Personality Growth' :
                  'Academic Integration'}
               </button>
             ))}
@@ -530,7 +535,7 @@ export default function OurVisionPage() {
                     {curriculumBasis[selectedCurriculum as keyof typeof curriculumBasis].description}
                   </p>
                 </div>
-                
+
                 <div className="space-y-4">
                   <h4 className="text-lg font-bold text-gray-800 font-poppins">Key Features:</h4>
                   <div className="grid grid-cols-1 gap-3">
@@ -551,13 +556,15 @@ export default function OurVisionPage() {
                   </button>
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="bg-gradient-to-br from-indigo-100 to-purple-100 p-6 h-full flex items-center justify-center">
                   <div className="relative w-full h-96 lg:h-full rounded-2xl overflow-hidden shadow-lg">
-                    <img 
+                    <Image
                       src={curriculumBasis[selectedCurriculum as keyof typeof curriculumBasis].image}
                       alt="Curriculum Approach"
+                      width={400}
+                      height={384}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -585,14 +592,14 @@ export default function OurVisionPage() {
 
             <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 mb-8 border-4 border-amber-200">
               <blockquote className="text-2xl md:text-3xl font-bold text-gray-800 text-center leading-relaxed font-poppins">
-                "Learning is not about filling empty vessels, but about igniting the spark of curiosity 
-                and wonder that already exists within every child."
+                &ldquo;Learning is not about filling empty vessels, but about igniting the spark of curiosity
+                and wonder that already exists within every child.&rdquo;
               </blockquote>
             </div>
 
             <p className="text-lg text-gray-600 leading-relaxed text-center mb-8">
-              At BrainlyBees, we understand that every child learns differently and has unique strengths waiting to be discovered. 
-              Our approach focuses on creating adaptive learning environments where children feel safe to explore, experiment, 
+              At BrainlyBees, we understand that every child learns differently and has unique strengths waiting to be discovered.
+              Our approach focuses on creating adaptive learning environments where children feel safe to explore, experiment,
               and express themselves while building strong foundational skills and confidence.
             </p>
 
@@ -601,13 +608,13 @@ export default function OurVisionPage() {
                 <button className="bg-white border-4 border-amber-400 text-amber-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-amber-50">
                   Discover Our Approach
                 </button>
-                <a 
-                  href="https://wa.me/919305454447" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/919305454447"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
                 >
-                  Start Your Child's Journey
+                  Start Your Child&apos;s Journey
                 </a>
               </div>
             </div>
@@ -620,7 +627,7 @@ export default function OurVisionPage() {
         {/* Flowing background shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M0,600 C300,500 600,700 900,550 C1050,475 1200,600 1200,600 L1200,800 L0,800 Z" 
+            <path d="M0,600 C300,500 600,700 900,550 C1050,475 1200,600 1200,600 L1200,800 L0,800 Z"
                   fill="url(#impactWave)" opacity="0.3"/>
             <defs>
               <linearGradient id="impactWave" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -677,9 +684,9 @@ export default function OurVisionPage() {
         {/* Organic Background Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M0,100 C200,50 400,150 600,75 C800,25 1000,125 1200,50 L1200,0 L0,0 Z" 
+            <path d="M0,100 C200,50 400,150 600,75 C800,25 1000,125 1200,50 L1200,0 L0,0 Z"
                   fill="url(#valuesWave1)" opacity="0.3"/>
-            <path d="M0,700 C300,600 600,800 900,650 C1050,575 1200,700 1200,700 L1200,800 L0,800 Z" 
+            <path d="M0,700 C300,600 600,800 900,650 C1050,575 1200,700 1200,700 L1200,800 L0,800 Z"
                   fill="url(#valuesWave2)" opacity="0.25"/>
             <defs>
               <linearGradient id="valuesWave1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -693,14 +700,14 @@ export default function OurVisionPage() {
               </linearGradient>
             </defs>
           </svg>
-          
+
           {/* Floating Value Icons */}
           <div className="absolute top-20 left-1/4 w-12 h-12 bg-gradient-to-br from-rose-200 to-pink-200 rounded-full opacity-40 animate-pulse"></div>
           <div className="absolute top-40 right-1/4 w-8 h-8 bg-gradient-to-br from-purple-200 to-violet-200 rounded-full opacity-30 animate-pulse delay-75"></div>
           <div className="absolute bottom-32 left-1/3 w-16 h-16 bg-gradient-to-br from-pink-200 to-rose-200 rounded-full opacity-35 animate-pulse delay-150"></div>
           <div className="absolute bottom-20 right-1/3 w-10 h-10 bg-gradient-to-br from-violet-200 to-purple-200 rounded-full opacity-25 animate-pulse delay-200"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
@@ -721,7 +728,7 @@ export default function OurVisionPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Love & Trust</h3>
               <p className="text-gray-600 leading-relaxed">
-                Building genuine relationships with children through empathy, understanding, and unconditional support 
+                Building genuine relationships with children through empathy, understanding, and unconditional support
                 that creates a safe learning environment.
               </p>
             </div>
@@ -732,7 +739,7 @@ export default function OurVisionPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Excellence in Education</h3>
               <p className="text-gray-600 leading-relaxed">
-                Maintaining the highest standards in curriculum design, teaching methodologies, and student outcomes 
+                Maintaining the highest standards in curriculum design, teaching methodologies, and student outcomes
                 to ensure every child reaches their full potential.
               </p>
             </div>
@@ -743,7 +750,7 @@ export default function OurVisionPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Inclusive Learning</h3>
               <p className="text-gray-600 leading-relaxed">
-                Ensuring every child, regardless of background, abilities, or learning style, has access to quality 
+                Ensuring every child, regardless of background, abilities, or learning style, has access to quality
                 education that celebrates their uniqueness.
               </p>
             </div>
@@ -754,7 +761,7 @@ export default function OurVisionPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Innovation & Growth</h3>
               <p className="text-gray-600 leading-relaxed">
-                Continuously evolving our methods and embracing new technologies to enhance learning experiences 
+                Continuously evolving our methods and embracing new technologies to enhance learning experiences
                 and prepare children for the future.
               </p>
             </div>
@@ -765,7 +772,7 @@ export default function OurVisionPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Character Building</h3>
               <p className="text-gray-600 leading-relaxed">
-                Fostering strong moral values, empathy, and leadership qualities that help children become 
+                Fostering strong moral values, empathy, and leadership qualities that help children become
                 responsible global citizens.
               </p>
             </div>
@@ -776,7 +783,7 @@ export default function OurVisionPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Future Readiness</h3>
               <p className="text-gray-600 leading-relaxed">
-                Equipping children with critical thinking, creativity, and adaptability skills needed to thrive 
+                Equipping children with critical thinking, creativity, and adaptability skills needed to thrive
                 in an ever-changing world.
               </p>
             </div>
@@ -789,11 +796,11 @@ export default function OurVisionPage() {
         {/* Flowing background shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z" 
+            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z"
                   fill="url(#ctaWave1)" opacity="0.4"/>
-            <path d="M0,400 C400,300 800,500 1200,350 L1200,0 L0,0 Z" 
+            <path d="M0,400 C400,300 800,500 1200,350 L1200,0 L0,0 Z"
                   fill="url(#ctaWave2)" opacity="0.3"/>
-            <path d="M0,600 C200,500 500,700 800,550 C950,475 1200,600 1200,600 L1200,0 L0,0 Z" 
+            <path d="M0,600 C200,500 500,700 800,550 C950,475 1200,600 1200,600 L1200,0 L0,0 Z"
                   fill="url(#ctaWave3)" opacity="0.2"/>
             <defs>
               <linearGradient id="ctaWave1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -811,13 +818,13 @@ export default function OurVisionPage() {
               </linearGradient>
             </defs>
           </svg>
-          
+
           {/* Animated Floating Elements */}
           <div className="absolute top-20 left-16 w-12 h-12 bg-gradient-to-br from-violet-300 to-purple-300 rounded-full opacity-50 animate-bounce"></div>
           <div className="absolute top-32 right-20 w-8 h-8 bg-gradient-to-br from-purple-300 to-fuchsia-300 rounded-full opacity-40 animate-bounce delay-75"></div>
           <div className="absolute bottom-32 left-1/4 w-16 h-16 bg-gradient-to-br from-fuchsia-200 to-pink-200 rounded-full opacity-35 animate-bounce delay-150"></div>
           <div className="absolute bottom-20 right-1/3 w-10 h-10 bg-gradient-to-br from-pink-300 to-violet-300 rounded-full opacity-45 animate-bounce delay-300"></div>
-          
+
           {/* Additional Decorative Circles */}
           <div className="absolute top-1/2 left-12 w-6 h-6 bg-gradient-to-br from-purple-200 to-violet-200 rounded-full opacity-30 animate-pulse"></div>
           <div className="absolute top-1/3 right-12 w-4 h-4 bg-gradient-to-br from-fuchsia-200 to-purple-200 rounded-full opacity-25 animate-pulse delay-100"></div>
@@ -826,13 +833,13 @@ export default function OurVisionPage() {
         <div className="relative max-w-5xl mx-auto text-center">
           <div className="bg-white rounded-3xl shadow-xl p-12 border-4 border-purple-200">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
-              Join Us in 
+              Join Us in
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-fuchsia-500 to-pink-500 mt-2">
                 Shaping Tomorrow
               </span>
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Be part of our mission to create a world where every child discovers their unique potential and becomes 
+              Be part of our mission to create a world where every child discovers their unique potential and becomes
               a confident leader of tomorrow. Together, we can transform education and transform lives.
             </p>
 
@@ -840,7 +847,7 @@ export default function OurVisionPage() {
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200">
                 <div className="text-3xl mb-3">📚</div>
                 <h3 className="font-bold text-gray-800 mb-2 font-poppins">Start Learning</h3>
-                <p className="text-gray-600 text-sm">Begin your child's transformative educational journey</p>
+                <p className="text-gray-600 text-sm">Begin your child&apos;s transformative educational journey</p>
               </div>
               <div className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 border-2 border-pink-200">
                 <div className="text-3xl mb-3">🤝</div>
@@ -855,9 +862,9 @@ export default function OurVisionPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://wa.me/919305454447" 
-                target="_blank" 
+              <a
+                href="https://wa.me/919305454447"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
               >

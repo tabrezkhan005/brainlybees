@@ -3,23 +3,25 @@
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import FloatingButtons from '../components/FloatingButtons';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50 font-nunito">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-100 via-orange-100 to-red-100 overflow-hidden">
         {/* Organic Wave Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
             {/* Wave layers for organic feel */}
-            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z" 
+            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z"
                   fill="url(#heroWave1)" opacity="0.4"/>
-            <path d="M0,300 C400,200 800,400 1200,250 L1200,0 L0,0 Z" 
+            <path d="M0,300 C400,200 800,400 1200,250 L1200,0 L0,0 Z"
                   fill="url(#heroWave2)" opacity="0.3"/>
-            <path d="M0,400 C200,300 600,500 1000,350 C1100,325 1200,400 1200,400 L1200,0 L0,0 Z" 
+            <path d="M0,400 C200,300 600,500 1000,350 C1100,325 1200,400 1200,400 L1200,0 L0,0 Z"
                   fill="url(#heroWave3)" opacity="0.2"/>
             <defs>
               <linearGradient id="heroWave1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -43,11 +45,11 @@ export default function Home() {
           <div className="absolute bottom-20 left-32 w-20 h-20 bg-orange-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
           <div className="absolute bottom-32 right-40 w-28 h-28 bg-red-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
         </div>
-        
+
         {/* Flowing transition to next section */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,60 C300,20 600,100 900,40 C1050,10 1200,80 1200,80 L1200,120 L0,120 Z" 
+            <path d="M0,60 C300,20 600,100 900,40 C1050,10 1200,80 1200,80 L1200,120 L0,120 Z"
                   fill="url(#heroToPrograms)" />
             <defs>
               <linearGradient id="heroToPrograms" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -58,7 +60,7 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto z-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -70,7 +72,7 @@ export default function Home() {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins">
-                  Let's Make Learning
+                  Let&apos;s Make Learning
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 mt-2">
                     Super Fun!
                   </span>
@@ -79,7 +81,7 @@ export default function Home() {
                   Amazing 1-on-1 classes where kids love to learn! We make math, science, and reading feel like playing games with friends.
                 </p>
               </div>
-              
+
               <div className="grid grid-cols-3 gap-4 py-6">
                 <div className="text-center bg-white rounded-3xl p-4 shadow-lg border-2 border-yellow-200">
                   <div className="text-2xl md:text-3xl font-bold text-orange-600 font-poppins">25K+</div>
@@ -107,9 +109,11 @@ export default function Home() {
 
             <div className="relative z-20">
               <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-yellow-200 p-2">
-                <img 
+                <Image
                   src="/assets/teacher-with-all-kids.png"
                   alt="Kids Learning with BrainlyBees"
+                  width={800}
+                  height={400}
                   className="w-full h-80 md:h-96 object-cover rounded-2xl"
                 />
               </div>
@@ -123,7 +127,7 @@ export default function Home() {
         {/* Flowing continuation from hero */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,40 C300,80 600,0 900,60 C1050,90 1200,20 1200,20 L1200,0 L0,0 Z" 
+            <path d="M0,40 C300,80 600,0 900,60 C1050,90 1200,20 1200,20 L1200,0 L0,0 Z"
                   fill="url(#programsFromHero)" />
             <defs>
               <linearGradient id="programsFromHero" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -134,11 +138,11 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Curved Bottom Shape */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,80 C200,20 400,100 600,40 C800,0 1000,80 1200,20 L1200,120 L0,120 Z" 
+            <path d="M0,80 C200,20 400,100 600,40 C800,0 1000,80 1200,20 L1200,120 L0,120 Z"
                   fill="url(#programsToAge)" />
             <defs>
               <linearGradient id="programsToAge" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -149,7 +153,7 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Organic floating elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-16 w-20 h-20 bg-green-300 rounded-full blur-xl opacity-50 animate-pulse"></div>
@@ -179,9 +183,11 @@ export default function Home() {
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-100 to-purple-100 p-6 flex items-center justify-center">
                   <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-lg">
-                    <img 
+                    <Image
                       src="/assets/Boy-kid-doing-work-in-laptop.png"
                       alt="Online Learning Fun"
+                      width={400}
+                      height={256}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -192,14 +198,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="p-8">
                 <p className="text-gray-700 mb-6 leading-relaxed text-lg">
                   Learn from anywhere! Use cool computers and tablets to play learning games with awesome teachers.
                 </p>
-                
+
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-800 mb-4 text-lg font-poppins">What's Super Cool:</h4>
+                  <h4 className="font-bold text-gray-800 mb-4 text-lg font-poppins">What&apos;s Super Cool:</h4>
                   <div className="space-y-3">
                     {['Fun computer games while learning', 'Cool digital drawing and writing tools', 'Learn anytime from home', 'Watch classes again if you want'].map((feature, index) => (
                       <div key={index} className="flex items-center space-x-3">
@@ -211,12 +217,12 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
-                
-                <a href="/online-programs">
+
+                <Link href="/online-programs">
                   <button className="w-full bg-white border-3 border-blue-400 text-blue-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-blue-50">
                     Try Online Classes
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -225,9 +231,11 @@ export default function Home() {
               <div className="relative">
                 <div className="bg-gradient-to-br from-orange-100 to-yellow-100 p-6 flex items-center justify-center">
                   <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-lg">
-                    <img 
+                    <Image
                       src="/assets/teacher-helping-girl-kid-doubt.png"
                       alt="In-Person Learning Fun"
+                      width={400}
+                      height={256}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -238,14 +246,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="p-8">
                 <p className="text-gray-700 mb-6 leading-relaxed text-lg">
                   Meet your teacher in person! Do fun experiments, crafts, and activities with your hands.
                 </p>
-                
+
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-800 mb-4 text-lg font-poppins">What's Super Cool:</h4>
+                  <h4 className="font-bold text-gray-800 mb-4 text-lg font-poppins">What&apos;s Super Cool:</h4>
                   <div className="space-y-3">
                     {['Real science experiments you can touch', 'Fun arts and crafts projects', 'Play learning games with friends', 'Build and create real things'].map((feature, index) => (
                       <div key={index} className="flex items-center space-x-3">
@@ -257,12 +265,12 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
-                
-                <a href="/offline-programs">
+
+                <Link href="/offline-programs">
                   <button className="w-full bg-white border-3 border-orange-400 text-orange-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-orange-50">
                     Try Offline Classes
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -274,7 +282,7 @@ export default function Home() {
         {/* Flowing transition from programs */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,20 C200,80 400,0 600,60 C800,100 1000,20 1200,80 L1200,0 L0,0 Z" 
+            <path d="M0,20 C200,80 400,0 600,60 C800,100 1000,20 1200,80 L1200,0 L0,0 Z"
                   fill="url(#ageFromPrograms)" />
             <defs>
               <linearGradient id="ageFromPrograms" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -285,13 +293,13 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Diagonal Flowing Shape */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute top-0 right-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M400,0 C600,200 800,100 1200,300 L1200,0 Z" 
+            <path d="M400,0 C600,200 800,100 1200,300 L1200,0 Z"
                   fill="url(#ageGroupShape1)" opacity="0.3"/>
-            <path d="M600,0 C800,150 1000,250 1200,100 L1200,0 Z" 
+            <path d="M600,0 C800,150 1000,250 1200,100 L1200,0 Z"
                   fill="url(#ageGroupShape2)" opacity="0.4"/>
             <defs>
               <linearGradient id="ageGroupShape1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -305,17 +313,17 @@ export default function Home() {
               </linearGradient>
             </defs>
           </svg>
-          
+
           {/* Organic blob shapes */}
           <div className="absolute top-32 left-20 w-40 h-40 bg-purple-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
           <div className="absolute bottom-20 right-32 w-28 h-28 bg-pink-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
           <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-yellow-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
         </div>
-        
+
         {/* Flowing transition to next section */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,40 C300,100 600,20 900,80 C1050,100 1200,40 1200,40 L1200,120 L0,120 Z" 
+            <path d="M0,40 C300,100 600,20 900,80 C1050,100 1200,40 1200,40 L1200,120 L0,120 Z"
                   fill="url(#ageToWhy)" />
             <defs>
               <linearGradient id="ageToWhy" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -355,7 +363,7 @@ export default function Home() {
                 badgeColor: 'from-pink-400 to-red-400'
               },
               {
-                age: '7-9', 
+                age: '7-9',
                 title: 'Young Learners',
                 description: 'Reading, writing, and math made super fun',
                 image: '/assets/teacher-helping-girl-kid-doubt.png',
@@ -385,14 +393,16 @@ export default function Home() {
               <div key={index} className={`bg-white rounded-3xl shadow-xl border-4 ${program.borderColor} overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
                 <div className={`bg-gradient-to-br ${program.bgColor} p-4`}>
                   <div className="w-full h-40 rounded-2xl overflow-hidden shadow-lg bg-white">
-                    <img 
+                    <Image
                       src={program.image}
                       alt={program.title}
+                      width={400}
+                      height={160}
                       className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
-                
+
                 <div className="p-6 text-center">
                   <div className={`inline-block bg-gradient-to-r ${program.badgeColor} text-white px-4 py-2 rounded-full text-sm font-bold mb-4 shadow-lg`}>
                     Ages {program.age}
@@ -418,7 +428,7 @@ export default function Home() {
         {/* Flowing transition from age groups */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,80 C300,20 600,100 900,40 C1050,60 1200,80 1200,80 L1200,0 L0,0 Z" 
+            <path d="M0,80 C300,20 600,100 900,40 C1050,60 1200,80 1200,80 L1200,0 L0,0 Z"
                   fill="url(#whyFromAge)" />
             <defs>
               <linearGradient id="whyFromAge" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -429,14 +439,14 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Circular Wave Pattern */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
             <circle cx="200" cy="100" r="150" fill="url(#whyChooseCircle1)" opacity="0.2"/>
             <circle cx="1000" cy="200" r="200" fill="url(#whyChooseCircle2)" opacity="0.3"/>
             <circle cx="600" cy="600" r="180" fill="url(#whyChooseCircle3)" opacity="0.2"/>
-            <path d="M0,600 Q300,450 600,500 T1200,400 L1200,800 L0,800 Z" 
+            <path d="M0,600 Q300,450 600,500 T1200,400 L1200,800 L0,800 Z"
                   fill="url(#whyChooseWave)" opacity="0.4"/>
             <defs>
               <radialGradient id="whyChooseCircle1">
@@ -459,11 +469,11 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Flowing transition to roadmap */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,20 C200,80 400,40 600,100 C800,60 1000,100 1200,40 L1200,120 L0,120 Z" 
+            <path d="M0,20 C200,80 400,40 600,100 C800,60 1000,100 1200,40 L1200,120 L0,120 Z"
                   fill="url(#whyToRoadmap)" />
             <defs>
               <linearGradient id="whyToRoadmap" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -487,7 +497,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Here's why thousands of kids and parents choose BrainlyBees for amazing learning adventures!
+              Here&apos;s why thousands of kids and parents choose BrainlyBees for amazing learning adventures!
             </p>
           </div>
 
@@ -521,9 +531,11 @@ export default function Home() {
               <div key={index} className={`text-center bg-white rounded-3xl p-8 shadow-xl border-4 ${benefit.borderColor} hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
                 <div className={`bg-gradient-to-br ${benefit.bgColor} rounded-3xl p-4 mb-6`}>
                   <div className="w-full h-48 rounded-2xl overflow-hidden shadow-lg bg-white">
-                    <img 
+                    <Image
                       src={benefit.image}
                       alt={benefit.title}
+                      width={400}
+                      height={192}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -534,7 +546,7 @@ export default function Home() {
                 <p className="text-gray-700 leading-relaxed text-lg mb-6">
                   {benefit.description}
                 </p>
-                
+
                 <button className={`bg-white border-3 ${benefit.borderColor} text-gray-700 px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-gray-50`}>
                   Learn More
                 </button>
@@ -549,7 +561,7 @@ export default function Home() {
         {/* Flowing transition from why choose */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,40 C200,100 400,60 600,20 C800,40 1000,20 1200,60 L1200,0 L0,0 Z" 
+            <path d="M0,40 C200,100 400,60 600,20 C800,40 1000,20 1200,60 L1200,0 L0,0 Z"
                   fill="url(#roadmapFromWhy)" />
             <defs>
               <linearGradient id="roadmapFromWhy" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -560,13 +572,13 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Zigzag Pattern Background */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M0,200 L200,100 L400,200 L600,100 L800,200 L1000,100 L1200,200 L1200,0 L0,0 Z" 
+            <path d="M0,200 L200,100 L400,200 L600,100 L800,200 L1000,100 L1200,200 L1200,0 L0,0 Z"
                   fill="url(#roadmapZigzag1)" opacity="0.3"/>
-            <path d="M0,400 L150,300 L350,400 L550,300 L750,400 L950,300 L1200,400 L1200,0 L0,0 Z" 
+            <path d="M0,400 L150,300 L350,400 L550,300 L750,400 L950,300 L1200,400 L1200,0 L0,0 Z"
                   fill="url(#roadmapZigzag2)" opacity="0.2"/>
             <ellipse cx="300" cy="500" rx="100" ry="60" fill="url(#roadmapEllipse1)" opacity="0.3"/>
             <ellipse cx="900" cy="300" rx="80" ry="50" fill="url(#roadmapEllipse2)" opacity="0.3"/>
@@ -591,11 +603,11 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Flowing transition to FAQ */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,80 C300,20 600,100 900,40 C1050,10 1200,80 1200,80 L1200,120 L0,120 Z" 
+            <path d="M0,80 C300,20 600,100 900,40 C1050,10 1200,80 1200,80 L1200,120 L0,120 Z"
                   fill="url(#roadmapToFaq)" />
             <defs>
               <linearGradient id="roadmapToFaq" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -626,7 +638,7 @@ export default function Home() {
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-red-300 via-pink-300 to-purple-300 rounded-full hidden lg:block"></div>
-            
+
             <div className="space-y-12">
               {[
                 {
@@ -665,7 +677,7 @@ export default function Home() {
                 <div key={index} className={`relative flex items-center ${step.position === 'left' ? 'lg:justify-start' : 'lg:justify-end'} justify-center`}>
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white border-4 border-pink-300 rounded-full z-10 hidden lg:block"></div>
-                  
+
                   <div className={`bg-white rounded-3xl p-8 shadow-xl border-4 border-pink-200 max-w-md lg:max-w-lg ${step.position === 'left' ? 'lg:mr-8' : 'lg:ml-8'} hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
                     <div className={`bg-gradient-to-br ${step.bgColor} rounded-2xl p-6 mb-6`}>
                       <div className="flex items-center mb-4">
@@ -693,7 +705,7 @@ export default function Home() {
         {/* Flowing transition from roadmap */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,80 C300,100 600,20 900,60 C1050,80 1200,20 1200,20 L1200,0 L0,0 Z" 
+            <path d="M0,80 C300,100 600,20 900,60 C1050,80 1200,20 1200,20 L1200,0 L0,0 Z"
                   fill="url(#faqFromRoadmap)" />
             <defs>
               <linearGradient id="faqFromRoadmap" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -704,19 +716,19 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Leafy Organic Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
             {/* Organic leaf-like shapes */}
-            <path d="M100,200 Q200,100 300,200 Q400,300 300,400 Q200,300 100,200 Z" 
+            <path d="M100,200 Q200,100 300,200 Q400,300 300,400 Q200,300 100,200 Z"
                   fill="url(#faqLeaf1)" opacity="0.3"/>
-            <path d="M800,100 Q950,50 1100,150 Q1050,250 900,200 Q850,150 800,100 Z" 
+            <path d="M800,100 Q950,50 1100,150 Q1050,250 900,200 Q850,150 800,100 Z"
                   fill="url(#faqLeaf2)" opacity="0.3"/>
-            <path d="M200,600 Q350,550 500,600 Q450,700 300,650 Q250,600 200,600 Z" 
+            <path d="M200,600 Q350,550 500,600 Q450,700 300,650 Q250,600 200,600 Z"
                   fill="url(#faqLeaf3)" opacity="0.3"/>
             {/* Bottom wave */}
-            <path d="M0,700 Q300,600 600,650 Q900,700 1200,600 L1200,800 L0,800 Z" 
+            <path d="M0,700 Q300,600 600,650 Q900,700 1200,600 L1200,800 L0,800 Z"
                   fill="url(#faqWave)" opacity="0.4"/>
             <defs>
               <radialGradient id="faqLeaf1">
@@ -739,11 +751,11 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Flowing transition to CTA */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,40 C200,100 400,20 600,80 C800,120 1000,40 1200,100 L1200,120 L0,120 Z" 
+            <path d="M0,40 C200,100 400,20 600,80 C800,120 1000,40 1200,100 L1200,120 L0,120 Z"
                   fill="url(#faqToCta)" />
             <defs>
               <linearGradient id="faqToCta" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -824,7 +836,7 @@ export default function Home() {
         {/* Flowing transition from FAQ */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,100 C200,40 400,120 600,80 C800,40 1000,100 1200,60 L1200,0 L0,0 Z" 
+            <path d="M0,100 C200,40 400,120 600,80 C800,40 1000,100 1200,60 L1200,0 L0,0 Z"
                   fill="url(#ctaFromFaq)" />
             <defs>
               <linearGradient id="ctaFromFaq" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -835,26 +847,26 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Celebration Burst Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
             {/* Star burst patterns */}
-            <path d="M200,150 L220,200 L270,200 L230,240 L250,290 L200,260 L150,290 L170,240 L130,200 L180,200 Z" 
+            <path d="M200,150 L220,200 L270,200 L230,240 L250,290 L200,260 L150,290 L170,240 L130,200 L180,200 Z"
                   fill="url(#ctaStar1)" opacity="0.4"/>
-            <path d="M900,100 L920,150 L970,150 L930,190 L950,240 L900,210 L850,240 L870,190 L830,150 L880,150 Z" 
+            <path d="M900,100 L920,150 L970,150 L930,190 L950,240 L900,210 L850,240 L870,190 L830,150 L880,150 Z"
                   fill="url(#ctaStar2)" opacity="0.4"/>
-            <path d="M100,500 L120,550 L170,550 L130,590 L150,640 L100,610 L50,640 L70,590 L30,550 L80,550 Z" 
+            <path d="M100,500 L120,550 L170,550 L130,590 L150,640 L100,610 L50,640 L70,590 L30,550 L80,550 Z"
                   fill="url(#ctaStar3)" opacity="0.4"/>
-            <path d="M1000,450 L1020,500 L1070,500 L1030,540 L1050,590 L1000,560 L950,590 L970,540 L930,500 L980,500 Z" 
+            <path d="M1000,450 L1020,500 L1070,500 L1030,540 L1050,590 L1000,560 L950,590 L970,540 L930,500 L980,500 Z"
                   fill="url(#ctaStar4)" opacity="0.4"/>
-            
+
             {/* Celebratory spirals */}
-            <path d="M500,100 Q600,200 500,300 Q400,200 500,100 Z" 
+            <path d="M500,100 Q600,200 500,300 Q400,200 500,100 Z"
                   fill="url(#ctaSpiral1)" opacity="0.3"/>
-            <path d="M700,400 Q800,500 700,600 Q600,500 700,400 Z" 
+            <path d="M700,400 Q800,500 700,600 Q600,500 700,400 Z"
                   fill="url(#ctaSpiral2)" opacity="0.3"/>
-            
+
             <defs>
               <radialGradient id="ctaStar1">
                 <stop offset="0%" stopColor="#fed7aa" />
@@ -882,7 +894,7 @@ export default function Home() {
               </radialGradient>
             </defs>
           </svg>
-          
+
           {/* Floating celebration elements */}
           <div className="absolute top-20 left-20 w-16 h-16 bg-yellow-300 rounded-full blur-lg opacity-60 animate-bounce"></div>
           <div className="absolute bottom-32 right-32 w-20 h-20 bg-red-300 rounded-full blur-lg opacity-60 animate-bounce" style={{animationDelay: '0.5s'}}></div>
@@ -892,17 +904,17 @@ export default function Home() {
           <div className="bg-white rounded-3xl p-12 shadow-2xl border-4 border-orange-200">
             <div className="mb-8">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
-                Ready to Start Your Child's
+                Ready to Start Your Child&apos;s
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 mt-2">
                   Educational Journey?
                 </span>
               </h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed mb-8">
-                Join thousands of families who have chosen BrainlyBees for quality education. 
+                Join thousands of families who have chosen BrainlyBees for quality education.
                 Schedule your consultation or connect with us directly to get started.
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <button className="bg-white border-4 border-orange-400 text-orange-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-orange-50">
                 Book Consultation
@@ -913,7 +925,7 @@ export default function Home() {
                 </button>
               </a>
             </div>
-            
+
             <div className="mt-8 text-sm text-gray-600">
               <p className="font-bold">Special Offer: First consultation completely FREE!</p>
               <p>No obligation • Professional guidance • Trusted by parents</p>

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50 text-gray-800 py-16 border-t border-orange-100">
@@ -15,7 +17,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-700 leading-relaxed mb-6 font-nunito">
-              Empowering young minds through personalized online and offline learning experiences. Building confidence, knowledge, and skills for tomorrow's leaders.
+              Empowering young minds through personalized online and offline learning experiences. Building confidence, knowledge, and skills for tomorrow&apos;s leaders.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full flex items-center justify-center text-white hover:from-blue-500 hover:to-blue-600 transition-all duration-300 shadow-md hover:shadow-lg">
@@ -40,12 +42,12 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6 text-gray-800 font-poppins">Pages</h4>
             <div className="space-y-3">
-              <a href="/" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Home</a>
-              <a href="/online-programs" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Online Programs</a>
-              <a href="/offline-programs" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Offline Programs</a>
-              <a href="/special-needs" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Special Needs</a>
-              <a href="/our-vision" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Our Vision</a>
-              <a href="/careers" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Careers</a>
+              <Link href="/" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Home</Link>
+              <Link href="/online-programs" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Online Programs</Link>
+              <Link href="/offline-programs" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Offline Programs</Link>
+              <Link href="/special-needs" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Special Needs</Link>
+              <Link href="/our-vision" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Our Vision</Link>
+              <Link href="/careers" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Careers</Link>
             </div>
           </div>
 

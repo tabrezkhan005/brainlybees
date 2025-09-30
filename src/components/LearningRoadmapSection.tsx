@@ -1,36 +1,12 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useMemo } from 'react';
 
 export default function LearningRoadmapSection() {
   const [visibleSteps, setVisibleSteps] = useState<number[]>([]);
   const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Animate steps one by one with delay
-            roadmapSteps.forEach((_, index) => {
-              setTimeout(() => {
-                setVisibleSteps(prev => [...prev, index]);
-              }, index * 150);
-            });
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  const roadmapSteps = [
+  const roadmapSteps = useMemo(() => [
     {
       step: "01",
       title: "Build Strong Foundations",
@@ -43,7 +19,7 @@ export default function LearningRoadmapSection() {
     },
     {
       step: "02",
-      title: "Expand Critical Thinking", 
+      title: "Expand Critical Thinking",
       description: "Develop multiple problem-solving approaches and analytical skills",
       icon: (
         <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,7 +77,31 @@ export default function LearningRoadmapSection() {
         </svg>
       )
     }
-  ];
+  ], []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Animate steps one by one with delay
+            roadmapSteps.forEach((_, index) => {
+              setTimeout(() => {
+                setVisibleSteps(prev => [...prev, index]);
+              }, index * 150);
+            });
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [roadmapSteps]);
 
   return (
     <section ref={sectionRef} className="bg-gradient-to-b from-gray-50 via-white to-gray-50 py-20 relative overflow-hidden">
@@ -122,7 +122,7 @@ export default function LearningRoadmapSection() {
             Learning Journey
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            Your Child's{' '}
+            Your Child&apos;s{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-red-600 animate-gradient-x">
               Learning Roadmap
             </span>
@@ -130,7 +130,7 @@ export default function LearningRoadmapSection() {
             <span className="text-2xl md:text-3xl lg:text-4xl text-gray-700">with BrainlyBees</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            A carefully crafted, step-by-step journey that transforms your child from foundation building 
+            A carefully crafted, step-by-step journey that transforms your child from foundation building
             to advanced mastery, ensuring continuous growth and academic excellence.
           </p>
         </div>
@@ -139,15 +139,15 @@ export default function LearningRoadmapSection() {
         <div className="relative">
           {/* Central Timeline Line */}
           <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-red-500 via-orange-500 to-red-500 rounded-full opacity-30"></div>
-          
+
           {/* Timeline Steps */}
           <div className="space-y-12 lg:space-y-16">
             {roadmapSteps.map((step, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`relative transform transition-all duration-700 ${
-                  visibleSteps.includes(index) 
-                    ? 'translate-y-0 opacity-100' 
+                  visibleSteps.includes(index)
+                    ? 'translate-y-0 opacity-100'
                     : 'translate-y-8 opacity-0'
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
@@ -155,8 +155,8 @@ export default function LearningRoadmapSection() {
                 {/* Timeline Node */}
                 <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 -translate-y-2">
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-500 ${
-                    visibleSteps.includes(index) 
-                      ? 'bg-gradient-to-r from-red-500 to-orange-500 scale-110' 
+                    visibleSteps.includes(index)
+                      ? 'bg-gradient-to-r from-red-500 to-orange-500 scale-110'
                       : 'bg-gray-300 scale-100'
                   }`}>
                     <span className="text-white font-bold text-sm">{step.step}</span>
@@ -211,9 +211,9 @@ export default function LearningRoadmapSection() {
               Ready to Begin This Amazing Journey?
             </h3>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join thousands of families who have transformed their children's learning experience with our proven roadmap.
+              Join thousands of families who have transformed their children&apos;s learning experience with our proven roadmap.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button className="group bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white px-10 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1">
                 <span className="flex items-center">
@@ -223,7 +223,7 @@ export default function LearningRoadmapSection() {
                   </svg>
                 </span>
               </button>
-              
+
               <button className="group bg-white/80 hover:bg-white text-gray-700 px-8 py-4 rounded-2xl text-lg font-semibold border-2 border-gray-200 hover:border-red-300 transition-all duration-300 shadow-lg hover:shadow-xl">
                 <span className="flex items-center">
                   <svg className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

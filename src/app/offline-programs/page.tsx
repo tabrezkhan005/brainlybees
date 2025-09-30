@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
+import Image from 'next/image';
 
 export default function OfflineProgramsPage() {
   const [selectedAge, setSelectedAge] = useState('4-6');
@@ -119,18 +120,18 @@ export default function OfflineProgramsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-fuchsia-50 font-nunito">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-100 via-rose-100 to-fuchsia-100 overflow-hidden">
         {/* Organic Wave Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
             {/* Wave layers for organic feel */}
-            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z" 
+            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z"
                   fill="url(#heroWave1)" opacity="0.4"/>
-            <path d="M0,300 C400,200 800,400 1200,250 L1200,0 L0,0 Z" 
+            <path d="M0,300 C400,200 800,400 1200,250 L1200,0 L0,0 Z"
                   fill="url(#heroWave2)" opacity="0.3"/>
-            <path d="M0,400 C200,300 600,500 1000,350 C1100,325 1200,400 1200,400 L1200,0 L0,0 Z" 
+            <path d="M0,400 C200,300 600,500 1000,350 C1100,325 1200,400 1200,400 L1200,0 L0,0 Z"
                   fill="url(#heroWave3)" opacity="0.2"/>
             <defs>
               <linearGradient id="heroWave1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -154,11 +155,11 @@ export default function OfflineProgramsPage() {
           <div className="absolute bottom-20 left-32 w-20 h-20 bg-fuchsia-300 rounded-full blur-2xl opacity-40"></div>
           <div className="absolute bottom-32 right-40 w-28 h-28 bg-pink-400 rounded-full blur-2xl opacity-40"></div>
         </div>
-        
+
         {/* Flowing transition to next section */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,60 C300,20 600,100 900,40 C1050,10 1200,80 1200,80 L1200,120 L0,120 Z" 
+            <path d="M0,60 C300,20 600,100 900,40 C1050,10 1200,80 1200,80 L1200,120 L0,120 Z"
                   fill="url(#heroToPrograms)" />
             <defs>
               <linearGradient id="heroToPrograms" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -169,7 +170,7 @@ export default function OfflineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto z-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -190,7 +191,7 @@ export default function OfflineProgramsPage() {
                   Amazing in-person classes where kids touch, build, and create! Real experiments, crafts, and activities with friends and teachers.
                 </p>
               </div>
-              
+
               <div className="grid grid-cols-3 gap-4 py-6">
                 <div className="text-center bg-white rounded-3xl p-4 shadow-lg border-2 border-pink-200">
                   <div className="text-2xl md:text-3xl font-bold text-pink-600 font-poppins">15K+</div>
@@ -210,9 +211,9 @@ export default function OfflineProgramsPage() {
                 <button className="bg-white border-3 border-pink-400 text-pink-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-pink-50">
                   Schedule Visit
                 </button>
-                <a 
-                  href="https://wa.me/919305454447" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/919305454447"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-pink-400 to-rose-400 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
                 >
@@ -225,9 +226,11 @@ export default function OfflineProgramsPage() {
               <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-pink-200">
                 <div className="bg-gradient-to-br from-pink-100 to-rose-100 p-6 flex items-center justify-center">
                   <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-lg">
-                    <img 
+                    <Image
                       src="/assets/teacher-with-all-kids.png"
                       alt="Offline Learning Classroom"
+                      width={400}
+                      height={384}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -248,7 +251,7 @@ export default function OfflineProgramsPage() {
         {/* Flowing transition from hero */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,20 C200,80 400,0 600,60 C800,100 1000,20 1200,80 L1200,0 L0,0 Z" 
+            <path d="M0,20 C200,80 400,0 600,60 C800,100 1000,20 1200,80 L1200,0 L0,0 Z"
                   fill="url(#ageFromHero)" />
             <defs>
               <linearGradient id="ageFromHero" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -259,13 +262,13 @@ export default function OfflineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Organic background shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute top-0 right-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M400,0 C600,200 800,100 1200,300 L1200,0 Z" 
+            <path d="M400,0 C600,200 800,100 1200,300 L1200,0 Z"
                   fill="url(#ageGroupShape1)" opacity="0.3"/>
-            <path d="M600,0 C800,150 1000,250 1200,100 L1200,0 Z" 
+            <path d="M600,0 C800,150 1000,250 1200,100 L1200,0 Z"
                   fill="url(#ageGroupShape2)" opacity="0.4"/>
             <defs>
               <linearGradient id="ageGroupShape1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -279,17 +282,17 @@ export default function OfflineProgramsPage() {
               </linearGradient>
             </defs>
           </svg>
-          
+
           {/* Organic blob shapes */}
           <div className="absolute top-32 left-20 w-40 h-40 bg-yellow-300 rounded-full blur-2xl opacity-40"></div>
           <div className="absolute bottom-20 right-32 w-28 h-28 bg-orange-300 rounded-full blur-2xl opacity-40"></div>
           <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-amber-300 rounded-full blur-2xl opacity-40"></div>
         </div>
-        
+
         {/* Flowing transition to next section */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,40 C300,100 600,20 900,80 C1050,100 1200,40 1200,40 L1200,120 L0,120 Z" 
+            <path d="M0,40 C300,100 600,20 900,80 C1050,100 1200,40 1200,40 L1200,120 L0,120 Z"
                   fill="url(#ageToSubjects)" />
             <defs>
               <linearGradient id="ageToSubjects" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -300,7 +303,7 @@ export default function OfflineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         <div className="max-w-7xl mx-auto z-20 relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-amber-200 shadow-lg mb-6">
@@ -314,7 +317,7 @@ export default function OfflineProgramsPage() {
               </span>
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Age-appropriate hands-on learning experiences designed just for your child's stage!
+              Age-appropriate hands-on learning experiences designed just for your child&apos;s stage!
             </p>
           </div>
 
@@ -353,7 +356,7 @@ export default function OfflineProgramsPage() {
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-800 mb-4 text-lg font-poppins">What's Super Cool:</h4>
+                    <h4 className="font-bold text-gray-800 mb-4 text-lg font-poppins">What&apos;s Super Cool:</h4>
                     <div className="space-y-3">
                       {agePrograms[selectedAge as keyof typeof agePrograms].features.map((feature, index) => (
                         <div key={index} className="flex items-center space-x-3">
@@ -386,13 +389,15 @@ export default function OfflineProgramsPage() {
                   </button>
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="bg-gradient-to-br from-amber-100 to-orange-100 p-6 h-full flex items-center justify-center">
                   <div className="relative w-full h-96 lg:h-full rounded-2xl overflow-hidden shadow-lg">
-                    <img 
+                    <Image
                       src={agePrograms[selectedAge as keyof typeof agePrograms].image}
                       alt="Offline Learning Program"
+                      width={400}
+                      height={384}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -408,7 +413,7 @@ export default function OfflineProgramsPage() {
         {/* Flowing transition from age programs */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,20 C200,80 400,0 600,60 C800,100 1000,20 1200,80 L1200,0 L0,0 Z" 
+            <path d="M0,20 C200,80 400,0 600,60 C800,100 1000,20 1200,80 L1200,0 L0,0 Z"
                   fill="url(#subjectsFromAge)" />
             <defs>
               <linearGradient id="subjectsFromAge" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -419,13 +424,13 @@ export default function OfflineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Diagonal organic shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M0,0 C200,300 400,100 800,400 C1000,500 1200,200 1200,0 Z" 
+            <path d="M0,0 C200,300 400,100 800,400 C1000,500 1200,200 1200,0 Z"
                   fill="url(#subjectShape1)" opacity="0.3"/>
-            <path d="M0,100 C300,400 600,200 1200,500 L1200,0 L0,0 Z" 
+            <path d="M0,100 C300,400 600,200 1200,500 L1200,0 L0,0 Z"
                   fill="url(#subjectShape2)" opacity="0.4"/>
             <defs>
               <linearGradient id="subjectShape1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -439,17 +444,17 @@ export default function OfflineProgramsPage() {
               </linearGradient>
             </defs>
           </svg>
-          
+
           {/* Organic floating shapes */}
           <div className="absolute top-20 right-20 w-36 h-36 bg-emerald-300 rounded-full blur-2xl opacity-40"></div>
           <div className="absolute bottom-32 left-24 w-32 h-32 bg-teal-300 rounded-full blur-2xl opacity-40"></div>
           <div className="absolute top-1/3 left-1/3 w-24 h-24 bg-green-300 rounded-full blur-2xl opacity-40"></div>
         </div>
-        
+
         {/* Flowing transition to next section */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,40 C300,100 600,20 900,80 C1050,100 1200,40 1200,40 L1200,120 L0,120 Z" 
+            <path d="M0,40 C300,100 600,20 900,80 C1050,100 1200,40 1200,40 L1200,120 L0,120 Z"
                   fill="url(#subjectsToWhy)" />
             <defs>
               <linearGradient id="subjectsToWhy" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -460,7 +465,7 @@ export default function OfflineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         <div className="max-w-7xl mx-auto z-20 relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-emerald-200 shadow-lg mb-6">
@@ -490,7 +495,7 @@ export default function OfflineProgramsPage() {
                     {subject.description}
                   </p>
                 </div>
-                
+
                 <div className="mb-8">
                   <h4 className="font-bold text-gray-800 mb-3 font-poppins">Cool Activities:</h4>
                   <div className="space-y-3">
@@ -504,7 +509,7 @@ export default function OfflineProgramsPage() {
                     ))}
                   </div>
                 </div>
-                
+
                 <button className="w-full bg-white border-3 border-emerald-400 text-emerald-600 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-emerald-50">
                   Try This Subject
                 </button>
@@ -519,7 +524,7 @@ export default function OfflineProgramsPage() {
         {/* Flowing transition from subjects */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,20 C200,80 400,0 600,60 C800,100 1000,20 1200,80 L1200,0 L0,0 Z" 
+            <path d="M0,20 C200,80 400,0 600,60 C800,100 1000,20 1200,80 L1200,0 L0,0 Z"
                   fill="url(#whyFromSubjects)" />
             <defs>
               <linearGradient id="whyFromSubjects" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -530,13 +535,13 @@ export default function OfflineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Organic background shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute bottom-0 right-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M0,800 C400,600 800,700 1200,500 L1200,800 Z" 
+            <path d="M0,800 C400,600 800,700 1200,500 L1200,800 Z"
                   fill="url(#whyShape1)" opacity="0.3"/>
-            <path d="M200,800 C600,650 1000,750 1200,600 L1200,800 Z" 
+            <path d="M200,800 C600,650 1000,750 1200,600 L1200,800 Z"
                   fill="url(#whyShape2)" opacity="0.4"/>
             <defs>
               <linearGradient id="whyShape1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -550,13 +555,13 @@ export default function OfflineProgramsPage() {
               </linearGradient>
             </defs>
           </svg>
-          
+
           {/* Floating shapes */}
           <div className="absolute top-24 left-24 w-32 h-32 bg-yellow-300 rounded-full blur-2xl opacity-40"></div>
           <div className="absolute bottom-32 right-32 w-28 h-28 bg-orange-300 rounded-full blur-2xl opacity-40"></div>
           <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-amber-300 rounded-full blur-2xl opacity-40"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto z-20 relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-amber-200 shadow-lg mb-6">
@@ -602,7 +607,7 @@ export default function OfflineProgramsPage() {
               </div>
             ))}
           </div>
-          
+
           {/* Call to Action */}
           <div className="text-center mt-16">
             <div className="bg-white rounded-3xl shadow-xl p-12 border-4 border-amber-200 max-w-4xl mx-auto">
@@ -616,9 +621,9 @@ export default function OfflineProgramsPage() {
                 <button className="bg-white border-3 border-amber-400 text-amber-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-amber-50">
                   Schedule Visit
                 </button>
-                <a 
-                  href="https://wa.me/919305454447" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/919305454447"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
                 >

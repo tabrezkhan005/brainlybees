@@ -41,7 +41,7 @@ export default function InteractiveLearningSection() {
               </h2>
               <h2 className="text-4xl md:text-5xl font-bold leading-tight mt-2">
                 that transforms{' '}
-                <span 
+                <span
                   className="relative text-red-500"
                   style={{
                     WebkitTextStroke: '2px #ef4444',
@@ -52,10 +52,10 @@ export default function InteractiveLearningSection() {
                   young minds
                   <div className="absolute -bottom-3 left-0 w-full">
                     <svg viewBox="0 0 300 20" className="w-full h-4">
-                      <path 
-                        d="M5 15 Q50 5 150 15 T295 15" 
-                        stroke="#ef4444" 
-                        strokeWidth="4" 
+                      <path
+                        d="M5 15 Q50 5 150 15 T295 15"
+                        stroke="#ef4444"
+                        strokeWidth="4"
                         fill="none"
                       />
                     </svg>
@@ -66,7 +66,7 @@ export default function InteractiveLearningSection() {
 
             {/* Description */}
             <p className="text-lg text-gray-600 max-w-xl">
-              Our cutting-edge interactive platform engages students through gamified learning, real-time feedback, and personalized content that adapts to each child's unique learning style.
+              Our cutting-edge interactive platform engages students through gamified learning, real-time feedback, and personalized content that adapts to each child&apos;s unique learning style.
             </p>
 
             {/* Key Features */}
@@ -79,7 +79,7 @@ export default function InteractiveLearningSection() {
                 </div>
                 <span className="text-gray-700 font-medium">Smart AI Tutoring</span>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,7 +88,7 @@ export default function InteractiveLearningSection() {
                 </div>
                 <span className="text-gray-700 font-medium">Gamified Rewards</span>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@ export default function InteractiveLearningSection() {
                 </div>
                 <span className="text-gray-700 font-medium">Real-time Progress</span>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
                   <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,7 +119,7 @@ export default function InteractiveLearningSection() {
                 }}>
                 </div>
               </div>
-              
+
               <div className="text-center relative z-10">
                 <div className="w-20 h-20 bg-white bg-opacity-20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 hover:bg-opacity-30 transition-all duration-300 cursor-pointer">
                   <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -141,12 +141,12 @@ export default function InteractiveLearningSection() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Floating Elements */}
               <div className="absolute top-4 right-4 w-6 h-6 bg-white bg-opacity-20 rounded-full animate-pulse"></div>
               <div className="absolute bottom-6 left-6 w-4 h-4 bg-white bg-opacity-20 rounded-full animate-pulse delay-1000"></div>
             </div>
-            
+
             {/* Stats Card */}
             <div className="absolute -bottom-6 -left-6 bg-white rounded-lg shadow-lg p-4 border">
               <div className="flex items-center space-x-3">

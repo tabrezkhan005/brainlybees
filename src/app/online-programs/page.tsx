@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
+import Image from 'next/image';
 
 export default function OnlineProgramsPage() {
   const [selectedAge, setSelectedAge] = useState('4-6');
@@ -139,51 +140,51 @@ export default function OnlineProgramsPage() {
   ];
 
   // Success stories
-  const successStories = [
-    {
-      name: 'Emma Thompson',
-      age: 8,
-      program: 'Primary Mathematics',
-      achievement: 'Improved test scores by 40%',
-      quote: 'Emma went from struggling with basic math to solving complex problems with confidence.',
-      image: '/assets/girl-saying-hi.png',
-      location: 'California, USA'
-    },
-    {
-      name: 'Alex Chen',
-      age: 11,
-      program: 'Science Explorer',
-      achievement: 'Won school science fair',
-      quote: 'Alex discovered a passion for science and now dreams of becoming an astronaut.',
-      image: '/assets/boy-saying-hi.png',
-      location: 'Singapore'
-    },
-    {
-      name: 'Sofia Rodriguez',
-      age: 6,
-      program: 'Early Learning',
-      achievement: 'Reading above grade level',
-      quote: 'Sofia\'s confidence and love for learning have grown tremendously.',
-      image: '/assets/cute-kid-doing-work.png',
-      location: 'Madrid, Spain'
-    }
-  ];
+  // const successStories = [
+  //   {
+  //     name: 'Emma Thompson',
+  //     age: 8,
+  //     program: 'Primary Mathematics',
+  //     achievement: 'Improved test scores by 40%',
+  //     quote: 'Emma went from struggling with basic math to solving complex problems with confidence.',
+  //     image: '/assets/girl-saying-hi.png',
+  //     location: 'California, USA'
+  //   },
+  //   {
+  //     name: 'Alex Chen',
+  //     age: 11,
+  //     program: 'Science Explorer',
+  //     achievement: 'Won school science fair',
+  //     quote: 'Alex discovered a passion for science and now dreams of becoming an astronaut.',
+  //     image: '/assets/boy-saying-hi.png',
+  //     location: 'Singapore'
+  //   },
+  //   {
+  //     name: 'Sofia Rodriguez',
+  //     age: 6,
+  //     program: 'Early Learning',
+  //     achievement: 'Reading above grade level',
+  //     quote: 'Sofia\'s confidence and love for learning have grown tremendously.',
+  //     image: '/assets/cute-kid-doing-work.png',
+  //     location: 'Madrid, Spain'
+  //   }
+  // ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50 font-nunito">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 overflow-hidden">
         {/* Organic Wave Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
             {/* Wave layers for organic feel */}
-            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z" 
+            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z"
                   fill="url(#heroWave1)" opacity="0.4"/>
-            <path d="M0,300 C400,200 800,400 1200,250 L1200,0 L0,0 Z" 
+            <path d="M0,300 C400,200 800,400 1200,250 L1200,0 L0,0 Z"
                   fill="url(#heroWave2)" opacity="0.3"/>
-            <path d="M0,400 C200,300 600,500 1000,350 C1100,325 1200,400 1200,400 L1200,0 L0,0 Z" 
+            <path d="M0,400 C200,300 600,500 1000,350 C1100,325 1200,400 1200,400 L1200,0 L0,0 Z"
                   fill="url(#heroWave3)" opacity="0.2"/>
             <defs>
               <linearGradient id="heroWave1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -207,11 +208,11 @@ export default function OnlineProgramsPage() {
           <div className="absolute bottom-20 left-32 w-20 h-20 bg-pink-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
           <div className="absolute bottom-32 right-40 w-28 h-28 bg-indigo-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
         </div>
-        
+
         {/* Flowing transition to next section */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,60 C300,20 600,100 900,40 C1050,10 1200,80 1200,80 L1200,120 L0,120 Z" 
+            <path d="M0,60 C300,20 600,100 900,40 C1050,10 1200,80 1200,80 L1200,120 L0,120 Z"
                   fill="url(#heroToPrograms)" />
             <defs>
               <linearGradient id="heroToPrograms" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -222,7 +223,7 @@ export default function OnlineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto z-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -243,7 +244,7 @@ export default function OnlineProgramsPage() {
                   Learn from anywhere with super fun virtual classrooms! Interactive games, amazing teachers, and cool digital tools make learning feel like playing with friends online.
                 </p>
               </div>
-              
+
               <div className="grid grid-cols-3 gap-4 py-6">
                 <div className="text-center bg-white rounded-3xl p-4 shadow-lg border-2 border-blue-200">
                   <div className="text-2xl md:text-3xl font-bold text-blue-600 font-poppins">50K+</div>
@@ -271,9 +272,11 @@ export default function OnlineProgramsPage() {
 
             <div className="relative z-20">
               <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-blue-200 p-2">
-                <img 
+                <Image
                   src="/assets/Virtualschoolinindia.jpg"
                   alt="Online Learning Fun"
+                  width={800}
+                  height={400}
                   className="w-full h-80 md:h-96 object-cover rounded-2xl"
                 />
               </div>
@@ -287,7 +290,7 @@ export default function OnlineProgramsPage() {
         {/* Flowing continuation from hero */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,40 C300,80 600,0 900,60 C1050,90 1200,20 1200,20 L1200,0 L0,0 Z" 
+            <path d="M0,40 C300,80 600,0 900,60 C1050,90 1200,20 1200,20 L1200,0 L0,0 Z"
                   fill="url(#programsFromHero)" />
             <defs>
               <linearGradient id="programsFromHero" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -298,11 +301,11 @@ export default function OnlineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Flowing transition to next section */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,80 C200,20 400,100 600,40 C800,0 1000,80 1200,20 L1200,120 L0,120 Z" 
+            <path d="M0,80 C200,20 400,100 600,40 C800,0 1000,80 1200,20 L1200,120 L0,120 Z"
                   fill="url(#programsToSubjects)" />
             <defs>
               <linearGradient id="programsToSubjects" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -313,14 +316,14 @@ export default function OnlineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Organic floating elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-16 w-20 h-20 bg-green-300 rounded-full blur-xl opacity-50 animate-pulse"></div>
           <div className="absolute bottom-40 right-20 w-32 h-32 bg-teal-300 rounded-full blur-xl opacity-50 animate-pulse"></div>
           <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-cyan-300 rounded-full blur-xl opacity-50 animate-pulse"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto z-20 relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-green-200 shadow-lg mb-6">
@@ -406,12 +409,14 @@ export default function OnlineProgramsPage() {
                   </button>
                 </div>
               </div>
-              
+
               <div className="relative p-4">
                 <div className="bg-gradient-to-br from-green-50 to-cyan-100 rounded-3xl overflow-hidden shadow-lg">
-                  <img 
+                  <Image
                     src={agePrograms[selectedAge as keyof typeof agePrograms].image}
                     alt="Online Learning Program"
+                    width={400}
+                    height={384}
                     className="w-full h-96 object-cover"
                   />
                 </div>
@@ -426,7 +431,7 @@ export default function OnlineProgramsPage() {
         {/* Flowing transition from age programs */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,20 C200,80 400,0 600,60 C800,100 1000,20 1200,80 L1200,0 L0,0 Z" 
+            <path d="M0,20 C200,80 400,0 600,60 C800,100 1000,20 1200,80 L1200,0 L0,0 Z"
                   fill="url(#subjectsFromPrograms)" />
             <defs>
               <linearGradient id="subjectsFromPrograms" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -437,7 +442,7 @@ export default function OnlineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Organic shapes background */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
@@ -460,11 +465,11 @@ export default function OnlineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Flowing transition to benefits */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,40 C300,100 600,20 900,80 C1050,100 1200,40 1200,40 L1200,120 L0,120 Z" 
+            <path d="M0,40 C300,100 600,20 900,80 C1050,100 1200,40 1200,40 L1200,120 L0,120 Z"
                   fill="url(#subjectsToBenefits)" />
             <defs>
               <linearGradient id="subjectsToBenefits" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -475,7 +480,7 @@ export default function OnlineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         <div className="max-w-7xl mx-auto z-20 relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-purple-200 shadow-lg mb-6">
@@ -498,15 +503,17 @@ export default function OnlineProgramsPage() {
               const borderColors = ['border-purple-300', 'border-pink-300', 'border-orange-300', 'border-red-300'];
               const bgColors = ['from-purple-50 to-pink-50', 'from-pink-50 to-orange-50', 'from-orange-50 to-red-50', 'from-red-50 to-purple-50'];
               const textColors = ['text-purple-700', 'text-pink-700', 'text-orange-700', 'text-red-700'];
-              
+
               return (
                 <div key={index} className={`bg-white rounded-3xl shadow-xl overflow-hidden border-4 ${borderColors[index]} hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
                   <div className="relative">
                     <div className={`bg-gradient-to-br ${bgColors[index]} p-6 flex items-center justify-center min-h-64`}>
                       <div className="relative w-full h-56 rounded-2xl overflow-hidden shadow-lg">
-                        <img 
+                        <Image
                           src={subject.image}
                           alt={subject.title}
+                          width={400}
+                          height={224}
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -519,12 +526,12 @@ export default function OnlineProgramsPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="p-8">
                     <p className="text-gray-700 mb-6 leading-relaxed text-lg font-nunito">
                       {subject.description}
                     </p>
-                    
+
                     <div className="mb-6">
                       <h4 className="font-bold text-gray-800 mb-3 font-poppins">Available Levels:</h4>
                       <div className="flex flex-wrap gap-2">
@@ -535,7 +542,7 @@ export default function OnlineProgramsPage() {
                         ))}
                       </div>
                     </div>
-                    
+
                     <div className="mb-8">
                       <h4 className="font-bold text-gray-800 mb-3 font-poppins">Cool Digital Topics:</h4>
                       <div className="space-y-2">
@@ -549,7 +556,7 @@ export default function OnlineProgramsPage() {
                         ))}
                       </div>
                     </div>
-                    
+
                     <button className={`w-full bg-white border-3 ${borderColors[index]} ${textColors[index]} py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-gray-50`}>
                       Start {subject.title}
                     </button>
@@ -566,7 +573,7 @@ export default function OnlineProgramsPage() {
         {/* Flowing transition from subjects */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,80 C300,20 600,100 900,40 C1050,60 1200,80 1200,80 L1200,0 L0,0 Z" 
+            <path d="M0,80 C300,20 600,100 900,40 C1050,60 1200,80 1200,80 L1200,0 L0,0 Z"
                   fill="url(#benefitsFromSubjects)" />
             <defs>
               <linearGradient id="benefitsFromSubjects" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -577,15 +584,15 @@ export default function OnlineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Leafy organic shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M150,200 Q250,100 350,200 Q450,300 350,400 Q250,300 150,200 Z" 
+            <path d="M150,200 Q250,100 350,200 Q450,300 350,400 Q250,300 150,200 Z"
                   fill="url(#benefitLeaf1)" opacity="0.3"/>
-            <path d="M850,150 Q1000,100 1150,200 Q1100,300 950,250 Q900,200 850,150 Z" 
+            <path d="M850,150 Q1000,100 1150,200 Q1100,300 950,250 Q900,200 850,150 Z"
                   fill="url(#benefitLeaf2)" opacity="0.3"/>
-            <path d="M300,600 Q450,550 600,600 Q550,700 400,650 Q350,600 300,600 Z" 
+            <path d="M300,600 Q450,550 600,600 Q550,700 400,650 Q350,600 300,600 Z"
                   fill="url(#benefitLeaf3)" opacity="0.3"/>
             <defs>
               <radialGradient id="benefitLeaf1">
@@ -603,11 +610,11 @@ export default function OnlineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Flowing transition to CTA */}
         <div className="absolute inset-x-0 bottom-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,40 C200,100 400,20 600,80 C800,120 1000,40 1200,100 L1200,120 L0,120 Z" 
+            <path d="M0,40 C200,100 400,20 600,80 C800,120 1000,40 1200,100 L1200,120 L0,120 Z"
                   fill="url(#benefitsToCta)" />
             <defs>
               <linearGradient id="benefitsToCta" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -618,7 +625,7 @@ export default function OnlineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         <div className="max-w-7xl mx-auto z-20 relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-cyan-200 shadow-lg mb-6">
@@ -640,14 +647,16 @@ export default function OnlineProgramsPage() {
             {learningBenefits.map((benefit, index) => {
               const borderColors = ['border-cyan-300', 'border-blue-300', 'border-indigo-300', 'border-purple-300', 'border-pink-300', 'border-red-300'];
               const bgColors = ['from-cyan-50 to-blue-50', 'from-blue-50 to-indigo-50', 'from-indigo-50 to-purple-50', 'from-purple-50 to-pink-50', 'from-pink-50 to-red-50', 'from-red-50 to-cyan-50'];
-              
+
               return (
                 <div key={index} className={`text-center bg-white rounded-3xl p-8 shadow-xl border-4 ${borderColors[index]} hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
                   <div className="relative mb-8">
                     <div className={`w-48 h-48 mx-auto rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br ${bgColors[index]}`}>
-                      <img 
+                      <Image
                         src={benefit.image}
                         alt={benefit.title}
+                        width={192}
+                        height={192}
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -670,7 +679,7 @@ export default function OnlineProgramsPage() {
         {/* Flowing transition from benefits */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,100 C200,40 400,120 600,80 C800,40 1000,100 1200,60 L1200,0 L0,0 Z" 
+            <path d="M0,100 C200,40 400,120 600,80 C800,40 1000,100 1200,60 L1200,0 L0,0 Z"
                   fill="url(#ctaFromBenefits)" />
             <defs>
               <linearGradient id="ctaFromBenefits" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -681,17 +690,17 @@ export default function OnlineProgramsPage() {
             </defs>
           </svg>
         </div>
-        
+
         {/* Celebration burst shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
-            <path d="M200,150 L220,200 L270,200 L230,240 L250,290 L200,260 L150,290 L170,240 L130,200 L180,200 Z" 
+            <path d="M200,150 L220,200 L270,200 L230,240 L250,290 L200,260 L150,290 L170,240 L130,200 L180,200 Z"
                   fill="url(#ctaStar1)" opacity="0.4"/>
-            <path d="M900,100 L920,150 L970,150 L930,190 L950,240 L900,210 L850,240 L870,190 L830,150 L880,150 Z" 
+            <path d="M900,100 L920,150 L970,150 L930,190 L950,240 L900,210 L850,240 L870,190 L830,150 L880,150 Z"
                   fill="url(#ctaStar2)" opacity="0.4"/>
-            <path d="M100,500 L120,550 L170,550 L130,590 L150,640 L100,610 L50,640 L70,590 L30,550 L80,550 Z" 
+            <path d="M100,500 L120,550 L170,550 L130,590 L150,640 L100,610 L50,640 L70,590 L30,550 L80,550 Z"
                   fill="url(#ctaStar3)" opacity="0.4"/>
-            <path d="M1000,450 L1020,500 L1070,500 L1030,540 L1050,590 L1000,560 L950,590 L970,540 L930,500 L980,500 Z" 
+            <path d="M1000,450 L1020,500 L1070,500 L1030,540 L1050,590 L1000,560 L950,590 L970,540 L930,500 L980,500 Z"
                   fill="url(#ctaStar4)" opacity="0.4"/>
             <defs>
               <radialGradient id="ctaStar1">
@@ -712,13 +721,13 @@ export default function OnlineProgramsPage() {
               </radialGradient>
             </defs>
           </svg>
-          
+
           {/* Floating celebration elements */}
           <div className="absolute top-20 left-20 w-16 h-16 bg-yellow-300 rounded-full blur-lg opacity-60 animate-bounce"></div>
           <div className="absolute bottom-32 right-32 w-20 h-20 bg-red-300 rounded-full blur-lg opacity-60 animate-bounce" style={{animationDelay: '0.5s'}}></div>
           <div className="absolute top-1/3 right-1/4 w-12 h-12 bg-pink-300 rounded-full blur-lg opacity-60 animate-bounce" style={{animationDelay: '1s'}}></div>
         </div>
-        
+
         <div className="max-w-4xl mx-auto text-center z-20 relative">
           <div className="bg-white rounded-3xl p-12 shadow-2xl border-4 border-orange-200">
             <div className="mb-8">
@@ -727,17 +736,17 @@ export default function OnlineProgramsPage() {
                 <span className="text-orange-700 font-bold text-sm font-nunito">Start Your Online Journey!</span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
-                Ready to Start Your Child's
+                Ready to Start Your Child&apos;s
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 mt-2">
                   Online Learning Journey?
                 </span>
               </h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed mb-8 font-nunito">
-                Join thousands of families who have chosen BrainlyBees for amazing online education. 
+                Join thousands of families who have chosen BrainlyBees for amazing online education.
                 Start your digital learning adventure today!
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <button className="bg-white border-4 border-orange-400 text-orange-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-orange-50">
                 Start Free Online Trial
@@ -748,7 +757,7 @@ export default function OnlineProgramsPage() {
                 </button>
               </a>
             </div>
-            
+
             <div className="mt-8 text-sm text-gray-600 font-nunito">
               <p className="font-bold">Special Offer: First online session completely FREE!</p>
               <p>No credit card required • Personalized learning plan • Trusted by parents worldwide</p>

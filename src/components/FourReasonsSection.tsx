@@ -1,36 +1,12 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useMemo } from 'react';
 
 export default function FourReasonsSection() {
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
   const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Animate cards one by one with delay
-            reasons.forEach((_, index) => {
-              setTimeout(() => {
-                setVisibleCards(prev => [...prev, index]);
-              }, index * 200);
-            });
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  const reasons = [
+  const reasons = useMemo(() => [
     {
       number: "01",
       title: "Personalized Learning Journey",
@@ -42,7 +18,7 @@ export default function FourReasonsSection() {
       )
     },
     {
-      number: "02", 
+      number: "02",
       title: "Live Interactive Sessions",
       subtitle: "Real-time engagement with expert teachers, not pre-recorded videos",
       icon: (
@@ -53,7 +29,7 @@ export default function FourReasonsSection() {
     },
     {
       number: "03",
-      title: "Psychology-Based Teaching", 
+      title: "Psychology-Based Teaching",
       subtitle: "25+ years of research-backed educational methods",
       icon: (
         <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,7 +47,31 @@ export default function FourReasonsSection() {
         </svg>
       )
     }
-  ];
+  ], []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Animate cards one by one with delay
+            reasons.forEach((_, index) => {
+              setTimeout(() => {
+                setVisibleCards(prev => [...prev, index]);
+              }, index * 200);
+            });
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [reasons]);
 
   return (
     <section ref={sectionRef} className="bg-gradient-to-b from-gray-50 to-white py-20 relative overflow-hidden">
@@ -80,7 +80,7 @@ export default function FourReasonsSection() {
         <div className="absolute top-20 left-10 w-32 h-32 bg-red-200/30 rounded-full blur-xl animate-float"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-orange-200/30 rounded-full blur-xl animate-float delay-1000"></div>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         {/* Animated Header */}
         <div className="text-center mb-16">
@@ -93,18 +93,18 @@ export default function FourReasonsSection() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500 animate-gradient-x"> Special</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We believe every child deserves a learning experience that's as unique as they are.
+            We believe every child deserves a learning experience that&apos;s as unique as they are.
           </p>
         </div>
 
         {/* Animated Reasons Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {reasons.map((reason, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`group bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 hover-lift transform ${
-                visibleCards.includes(index) 
-                  ? 'translate-y-0 opacity-100' 
+                visibleCards.includes(index)
+                  ? 'translate-y-0 opacity-100'
                   : 'translate-y-10 opacity-0'
               } hover:scale-105`}
               style={{ transitionDelay: `${index * 100}ms` }}
