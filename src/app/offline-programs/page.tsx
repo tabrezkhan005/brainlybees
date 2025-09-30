@@ -121,25 +121,40 @@ export default function OfflineProgramsPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-200">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-8">
-            <span className="text-gray-800">Offline Learning</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-indigo-600">
-              Programs
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
-            Hands-on educational experiences designed for face-to-face learning with personalized attention, 
-            interactive activities, and real-world skill development.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-12 py-5 rounded-2xl font-semibold text-lg hover:from-sky-600 hover:to-indigo-600 transition-all duration-300 shadow-xl">
-              Explore Programs
-            </button>
-            <button className="bg-white/80 backdrop-blur-sm text-sky-700 px-12 py-5 rounded-2xl font-semibold text-lg hover:bg-white hover:shadow-lg transition-all duration-300 border border-sky-200">
-              Schedule Visit
-            </button>
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-stone-100 via-neutral-100 to-gray-200">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                <span className="text-gray-800">Offline Learning</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-stone-600 to-gray-700">
+                  Programs
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
+                Hands-on educational experiences designed for face-to-face learning with personalized attention, 
+                interactive activities, and real-world skill development.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6">
+                <button className="bg-gradient-to-r from-stone-500 to-gray-600 text-white px-12 py-5 rounded-2xl font-semibold text-lg shadow-xl">
+                  Explore Programs
+                </button>
+                <button className="bg-white/80 backdrop-blur-sm text-stone-700 px-12 py-5 rounded-2xl font-semibold text-lg shadow-lg border border-stone-200">
+                  Schedule Visit
+                </button>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-white/50">
+                <img 
+                  src="/assets/teacher-with-all-kids.png"
+                  alt="Offline Learning Classroom"
+                  className="w-full h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-500/20 to-transparent"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
