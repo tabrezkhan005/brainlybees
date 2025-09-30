@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -18,13 +18,13 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-orange-50 via-yellow-50 to-pink-50 backdrop-blur-lg shadow-lg sticky top-0 z-50 border-b border-orange-100">
+    <nav className="bg-white/95 backdrop-blur-lg shadow-lg sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-400 via-red-400 to-pink-400 rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-br from-orange-400 via-red-400 to-pink-400 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300">
                 <span className="text-white font-bold text-xl font-poppins">B</span>
               </div>
               <div>
@@ -43,15 +43,15 @@ export default function Navigation() {
                   <Link
                     key={index}
                     href={link.href}
-                    className={`text-sm font-semibold whitespace-nowrap relative group px-4 py-3 rounded-2xl font-nunito ${
+                    className={`text-sm font-semibold whitespace-nowrap relative group px-4 py-3 rounded-2xl font-nunito transition-all duration-300 ${
                       isActive 
-                        ? 'text-orange-700 bg-white shadow-lg border-2 border-orange-200' 
-                        : 'text-gray-700 hover:text-orange-700 hover:bg-white hover:shadow-md hover:border-2 hover:border-orange-100'
+                        ? 'text-white bg-gradient-to-r from-orange-400 via-pink-400 to-purple-400 shadow-lg scale-105' 
+                        : 'text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-orange-300 hover:via-pink-300 hover:to-purple-300 hover:shadow-md hover:scale-105'
                     }`}
                   >
                     {link.name}
                     {isActive && (
-                      <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-gradient-to-r from-orange-400 to-pink-400 rounded-full"></span>
+                      <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-white rounded-full"></span>
                     )}
                   </Link>
                 );
@@ -66,7 +66,7 @@ export default function Navigation() {
               href="https://wa.me/919305454447" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hidden lg:flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="hidden lg:flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               title="Chat on WhatsApp"
             >
               <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -75,7 +75,7 @@ export default function Navigation() {
             </a>
 
             {/* Book Free Trial Button */}
-            <button className="bg-white border-3 border-orange-400 text-orange-600 px-8 py-3 rounded-2xl text-sm font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-orange-50">
+            <button className="bg-gradient-to-r from-orange-400 to-pink-400 hover:from-orange-500 hover:to-pink-500 text-white px-8 py-3 rounded-2xl text-sm font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins">
               Book Consultation
             </button>
 
@@ -99,17 +99,17 @@ export default function Navigation() {
       {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden">
-          <div className="px-4 pt-4 pb-6 space-y-2 bg-gradient-to-r from-orange-50 via-yellow-50 to-pink-50 backdrop-blur-lg border-t border-orange-100">
+          <div className="px-4 pt-4 pb-6 space-y-2 bg-white/95 backdrop-blur-lg border-t border-gray-100">
             {navLinks.map((link, index) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={index}
                   href={link.href}
-                  className={`block px-4 py-3 text-base font-semibold rounded-2xl font-nunito ${
+                  className={`block px-4 py-3 text-base font-semibold rounded-2xl font-nunito transition-all duration-300 ${
                     isActive 
-                      ? 'text-orange-700 bg-white shadow-lg border-2 border-orange-200' 
-                      : 'text-gray-700 hover:text-orange-700 hover:bg-white hover:shadow-md hover:border-2 hover:border-orange-100'
+                      ? 'text-white bg-gradient-to-r from-orange-400 via-pink-400 to-purple-400 shadow-lg' 
+                      : 'text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-orange-300 hover:via-pink-300 hover:to-purple-300 hover:shadow-md'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -129,7 +129,7 @@ export default function Navigation() {
                 </svg>
                 Chat on WhatsApp
               </a>
-              <button className="w-full bg-white border-3 border-orange-400 text-orange-600 px-6 py-4 rounded-2xl text-sm font-bold shadow-lg font-poppins hover:bg-orange-50">
+              <button className="w-full bg-gradient-to-r from-orange-400 to-pink-400 hover:from-orange-500 hover:to-pink-500 text-white px-6 py-4 rounded-2xl text-sm font-bold shadow-lg font-poppins">
                 Book Consultation
               </button>
             </div>

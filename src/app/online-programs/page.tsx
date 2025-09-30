@@ -170,60 +170,112 @@ export default function OnlineProgramsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50 font-nunito">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-100 via-blue-100 to-indigo-100">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 overflow-hidden">
+        {/* Organic Wave Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            {/* Wave layers for organic feel */}
+            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z" 
+                  fill="url(#heroWave1)" opacity="0.4"/>
+            <path d="M0,300 C400,200 800,400 1200,250 L1200,0 L0,0 Z" 
+                  fill="url(#heroWave2)" opacity="0.3"/>
+            <path d="M0,400 C200,300 600,500 1000,350 C1100,325 1200,400 1200,400 L1200,0 L0,0 Z" 
+                  fill="url(#heroWave3)" opacity="0.2"/>
+            <defs>
+              <linearGradient id="heroWave1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#bfdbfe" />
+                <stop offset="50%" stopColor="#c084fc" />
+                <stop offset="100%" stopColor="#f9a8d4" />
+              </linearGradient>
+              <linearGradient id="heroWave2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#93c5fd" />
+                <stop offset="100%" stopColor="#a855f7" />
+              </linearGradient>
+              <linearGradient id="heroWave3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#f9a8d4" />
+                <stop offset="100%" stopColor="#ec4899" />
+              </linearGradient>
+            </defs>
+          </svg>
+          {/* Floating organic shapes */}
+          <div className="absolute top-10 left-10 w-32 h-32 bg-blue-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+          <div className="absolute top-20 right-20 w-24 h-24 bg-purple-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+          <div className="absolute bottom-20 left-32 w-20 h-20 bg-pink-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+          <div className="absolute bottom-32 right-40 w-28 h-28 bg-indigo-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+        </div>
+        
+        {/* Flowing transition to next section */}
+        <div className="absolute inset-x-0 bottom-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,60 C300,20 600,100 900,40 C1050,10 1200,80 1200,80 L1200,120 L0,120 Z" 
+                  fill="url(#heroToPrograms)" />
+            <defs>
+              <linearGradient id="heroToPrograms" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#bbf7d0" />
+                <stop offset="50%" stopColor="#a7f3d0" />
+                <stop offset="100%" stopColor="#93c5fd" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto z-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
-                  Online Learning
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                    Programs
+                {/* Fun Badge */}
+                <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-blue-200 shadow-lg">
+                  <div className="w-3 h-3 bg-blue-400 rounded-full mr-3"></div>
+                  <span className="text-blue-700 font-bold text-sm">50,000+ Kids Learning Online!</span>
+                </div>
+
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins">
+                  Amazing Online Learning
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mt-2">
+                    Adventure!
                   </span>
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                  Digital learning through virtual classrooms, interactive online tools, and personalized virtual tutoring. 
-                  Connect from anywhere with expert teachers through cutting-edge online platforms.
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  Learn from anywhere with super fun virtual classrooms! Interactive games, amazing teachers, and cool digital tools make learning feel like playing with friends online.
                 </p>
               </div>
               
-              <div className="grid grid-cols-3 gap-6 py-8">
-                <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-blue-100">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">50,000+</div>
-                  <div className="text-sm text-gray-600 font-medium">Students Taught</div>
+              <div className="grid grid-cols-3 gap-4 py-6">
+                <div className="text-center bg-white rounded-3xl p-4 shadow-lg border-2 border-blue-200">
+                  <div className="text-2xl md:text-3xl font-bold text-blue-600 font-poppins">50K+</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Online Students</div>
                 </div>
-                <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-emerald-100">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-emerald-500 to-green-500 bg-clip-text text-transparent">98%</div>
-                  <div className="text-sm text-gray-600 font-medium">Success Rate</div>
+                <div className="text-center bg-white rounded-3xl p-4 shadow-lg border-2 border-green-200">
+                  <div className="text-2xl md:text-3xl font-bold text-green-600 font-poppins">98%</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Success Rate</div>
                 </div>
-                <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-blue-100">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">4.9/5</div>
-                  <div className="text-sm text-gray-600 font-medium">Parent Rating</div>
+                <div className="text-center bg-white rounded-3xl p-4 shadow-lg border-2 border-purple-200">
+                  <div className="text-2xl md:text-3xl font-bold text-purple-600 font-poppins">4.9★</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Parent Rating</div>
                 </div>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg">
+                <button className="bg-white border-3 border-blue-400 text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-blue-50">
                   Start Learning Online
                 </button>
-                <button className="bg-white/80 backdrop-blur-sm text-blue-700 px-8 py-4 rounded-2xl font-semibold text-lg border border-blue-200 shadow-lg">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg border-2 border-purple-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-purple-50 font-poppins">
                   Schedule Demo
                 </button>
               </div>
             </div>
-            
-            <div className="relative">
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-white/50">
+
+            <div className="relative z-20">
+              <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-blue-200 p-2">
                 <img 
                   src="/assets/Virtualschoolinindia.jpg"
-                  alt="Online Learning Platform"
-                  className="w-full h-96 object-cover"
+                  alt="Online Learning Fun"
+                  className="w-full h-80 md:h-96 object-cover rounded-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -231,17 +283,58 @@ export default function OnlineProgramsPage() {
       </section>
 
       {/* Programs by Age */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-cyan-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Programs Designed for
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
-                Every Age
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-cyan-100 overflow-hidden -mt-32 pt-40">
+        {/* Flowing continuation from hero */}
+        <div className="absolute inset-x-0 top-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,40 C300,80 600,0 900,60 C1050,90 1200,20 1200,20 L1200,0 L0,0 Z" 
+                  fill="url(#programsFromHero)" />
+            <defs>
+              <linearGradient id="programsFromHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#c084fc" />
+                <stop offset="50%" stopColor="#bbf7d0" />
+                <stop offset="100%" stopColor="#a7f3d0" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        {/* Flowing transition to next section */}
+        <div className="absolute inset-x-0 bottom-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,80 C200,20 400,100 600,40 C800,0 1000,80 1200,20 L1200,120 L0,120 Z" 
+                  fill="url(#programsToSubjects)" />
+            <defs>
+              <linearGradient id="programsToSubjects" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#e9d5ff" />
+                <stop offset="50%" stopColor="#fbcfe8" />
+                <stop offset="100%" stopColor="#fed7aa" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        {/* Organic floating elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-16 w-20 h-20 bg-green-300 rounded-full blur-xl opacity-50 animate-pulse"></div>
+          <div className="absolute bottom-40 right-20 w-32 h-32 bg-teal-300 rounded-full blur-xl opacity-50 animate-pulse"></div>
+          <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-cyan-300 rounded-full blur-xl opacity-50 animate-pulse"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto z-20 relative">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-green-200 shadow-lg mb-6">
+              <div className="w-3 h-3 bg-green-400 rounded-full mr-3"></div>
+              <span className="text-green-700 font-bold text-sm">Perfect for Every Age!</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              Online Programs for
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-teal-500 to-cyan-500 mt-2">
+                Every Age Group
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Age-appropriate curricula that grow with your child, ensuring optimal learning at every stage of development.
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Age-appropriate online curricula that grow with your child, ensuring optimal learning at every stage!
             </p>
           </div>
 
@@ -251,10 +344,10 @@ export default function OnlineProgramsPage() {
               <button
                 key={age}
                 onClick={() => setSelectedAge(age)}
-                className={`px-8 py-4 rounded-2xl font-semibold ${
+                className={`px-8 py-4 rounded-full font-bold font-poppins transition-all duration-300 shadow-lg hover:shadow-xl ${
                   selectedAge === age
-                    ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg'
-                    : 'bg-white/80 text-gray-700 shadow-md border border-blue-100'
+                    ? 'bg-white border-3 border-green-400 text-green-600 scale-105'
+                    : 'bg-white text-gray-700 border-2 border-green-200 hover:border-green-300 hover:scale-105'
                 }`}
               >
                 Ages {age}
@@ -263,29 +356,31 @@ export default function OnlineProgramsPage() {
           </div>
 
           {/* Selected Program Display */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-white/50">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-green-200">
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
               <div className="p-10 lg:p-16">
                 <div className="space-y-8">
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-800 mb-3">
+                    <h3 className="text-3xl font-bold text-gray-800 mb-3 font-poppins">
                       {agePrograms[selectedAge as keyof typeof agePrograms].title}
                     </h3>
-                    <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 font-semibold mb-6">
+                    <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-cyan-600 font-bold mb-6 font-poppins">
                       {agePrograms[selectedAge as keyof typeof agePrograms].subtitle}
                     </p>
-                    <p className="text-gray-600 leading-relaxed text-lg">
+                    <p className="text-gray-700 leading-relaxed text-lg font-nunito">
                       {agePrograms[selectedAge as keyof typeof agePrograms].description}
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-800 mb-4 text-lg">Online Features:</h4>
+                    <h4 className="font-bold text-gray-800 mb-4 text-lg font-poppins">Super Cool Online Features:</h4>
                     <ul className="space-y-3">
                       {agePrograms[selectedAge as keyof typeof agePrograms].features.map((feature, index) => (
                         <li key={index} className="flex items-center space-x-4">
-                          <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
-                          <span className="text-gray-700 font-medium">{feature}</span>
+                          <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-cyan-400 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span className="text-white text-sm font-bold">✓</span>
+                          </div>
+                          <span className="text-gray-700 font-medium font-nunito">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -293,27 +388,27 @@ export default function OnlineProgramsPage() {
 
                   <div className="flex items-center space-x-12 pt-8 border-t border-gray-200">
                     <div>
-                      <span className="text-sm text-gray-500 block">Duration:</span>
-                      <div className="font-bold text-gray-800 text-lg">
+                      <span className="text-sm text-gray-500 block font-nunito">Duration:</span>
+                      <div className="font-bold text-gray-800 text-lg font-poppins">
                         {agePrograms[selectedAge as keyof typeof agePrograms].duration}
                       </div>
                     </div>
                     <div>
-                      <span className="text-sm text-gray-500 block">Starting at:</span>
-                      <div className="font-bold text-gray-800 text-lg">
+                      <span className="text-sm text-gray-500 block font-nunito">Starting at:</span>
+                      <div className="font-bold text-gray-800 text-lg font-poppins">
                         {agePrograms[selectedAge as keyof typeof agePrograms].price}
                       </div>
                     </div>
                   </div>
 
-                  <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-4 rounded-2xl font-semibold text-lg shadow-lg">
+                  <button className="w-full bg-white border-3 border-green-400 text-green-600 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-green-50">
                     Start Online Learning
                   </button>
                 </div>
               </div>
               
               <div className="relative p-4">
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl overflow-hidden shadow-lg">
+                <div className="bg-gradient-to-br from-green-50 to-cyan-100 rounded-3xl overflow-hidden shadow-lg">
                   <img 
                     src={agePrograms[selectedAge as keyof typeof agePrograms].image}
                     alt="Online Learning Program"
@@ -327,137 +422,337 @@ export default function OnlineProgramsPage() {
       </section>
 
       {/* Subject Programs */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100 overflow-hidden -mt-32 pt-40">
+        {/* Flowing transition from age programs */}
+        <div className="absolute inset-x-0 top-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,20 C200,80 400,0 600,60 C800,100 1000,20 1200,80 L1200,0 L0,0 Z" 
+                  fill="url(#subjectsFromPrograms)" />
+            <defs>
+              <linearGradient id="subjectsFromPrograms" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#a7f3d0" />
+                <stop offset="50%" stopColor="#e9d5ff" />
+                <stop offset="100%" stopColor="#fbcfe8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        {/* Organic shapes background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <circle cx="200" cy="150" r="120" fill="url(#subjectCircle1)" opacity="0.3"/>
+            <circle cx="1000" cy="250" r="150" fill="url(#subjectCircle2)" opacity="0.3"/>
+            <circle cx="600" cy="600" r="130" fill="url(#subjectCircle3)" opacity="0.3"/>
+            <defs>
+              <radialGradient id="subjectCircle1">
+                <stop offset="0%" stopColor="#e9d5ff" />
+                <stop offset="100%" stopColor="#fbcfe8" />
+              </radialGradient>
+              <radialGradient id="subjectCircle2">
+                <stop offset="0%" stopColor="#fbcfe8" />
+                <stop offset="100%" stopColor="#fed7aa" />
+              </radialGradient>
+              <radialGradient id="subjectCircle3">
+                <stop offset="0%" stopColor="#fed7aa" />
+                <stop offset="100%" stopColor="#fecaca" />
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        {/* Flowing transition to benefits */}
+        <div className="absolute inset-x-0 bottom-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,40 C300,100 600,20 900,80 C1050,100 1200,40 1200,40 L1200,120 L0,120 Z" 
+                  fill="url(#subjectsToBenefits)" />
+            <defs>
+              <linearGradient id="subjectsToBenefits" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#a5f3fc" />
+                <stop offset="50%" stopColor="#bfdbfe" />
+                <stop offset="100%" stopColor="#c7d2fe" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        <div className="max-w-7xl mx-auto z-20 relative">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-purple-200 shadow-lg mb-6">
+              <div className="w-3 h-3 bg-purple-400 rounded-full mr-3"></div>
+              <span className="text-purple-700 font-bold text-sm">Fun Online Subjects!</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
               Digital Subject
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                Learning
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 mt-2">
+                Learning Adventure
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Specialized online programs in core subjects designed to build expertise through interactive digital platforms.
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Specialized online programs that make every subject super exciting through interactive digital games and activities!
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {subjectPrograms.map((subject, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-white/50">
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 flex items-center justify-center min-h-64">
-                    <img 
-                      src={subject.image}
-                      alt={subject.title}
-                      className="w-full h-56 object-cover rounded-2xl"
-                    />
-                  </div>
-                  <div className="absolute top-4 left-4">
-                    <h3 className="text-blue-800 text-xl font-bold bg-white/95 backdrop-blur-sm px-4 py-2 rounded-2xl shadow-lg">
-                      {subject.title}
-                    </h3>
-                  </div>
-                </div>
-                
-                <div className="p-8">
-                  <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                    {subject.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-bold text-gray-800 mb-3">Available Levels:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {subject.levels.map((level, levelIndex) => (
-                        <span key={levelIndex} className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-4 py-2 rounded-2xl text-sm font-semibold border border-blue-200">
-                          {level}
-                        </span>
-                      ))}
+            {subjectPrograms.map((subject, index) => {
+              const borderColors = ['border-purple-300', 'border-pink-300', 'border-orange-300', 'border-red-300'];
+              const bgColors = ['from-purple-50 to-pink-50', 'from-pink-50 to-orange-50', 'from-orange-50 to-red-50', 'from-red-50 to-purple-50'];
+              const textColors = ['text-purple-700', 'text-pink-700', 'text-orange-700', 'text-red-700'];
+              
+              return (
+                <div key={index} className={`bg-white rounded-3xl shadow-xl overflow-hidden border-4 ${borderColors[index]} hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
+                  <div className="relative">
+                    <div className={`bg-gradient-to-br ${bgColors[index]} p-6 flex items-center justify-center min-h-64`}>
+                      <div className="relative w-full h-56 rounded-2xl overflow-hidden shadow-lg">
+                        <img 
+                          src={subject.image}
+                          alt={subject.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    <div className="absolute top-4 left-4">
+                      <div className={`bg-white px-4 py-2 rounded-full shadow-lg border-2 ${borderColors[index]}`}>
+                        <h3 className={`${textColors[index]} text-lg font-bold font-poppins`}>
+                          {subject.title}
+                        </h3>
+                      </div>
                     </div>
                   </div>
                   
-                  <div className="mb-8">
-                    <h4 className="font-bold text-gray-800 mb-3">Digital Topics:</h4>
-                    <div className="space-y-2">
-                      {subject.topics.map((topic, topicIndex) => (
-                        <div key={topicIndex} className="flex items-center space-x-3">
-                          <div className="w-2.5 h-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
-                          <span className="text-gray-600 font-medium">{topic}</span>
-                        </div>
-                      ))}
+                  <div className="p-8">
+                    <p className="text-gray-700 mb-6 leading-relaxed text-lg font-nunito">
+                      {subject.description}
+                    </p>
+                    
+                    <div className="mb-6">
+                      <h4 className="font-bold text-gray-800 mb-3 font-poppins">Available Levels:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {subject.levels.map((level, levelIndex) => (
+                          <span key={levelIndex} className={`bg-white border-2 ${borderColors[index]} ${textColors[index]} px-4 py-2 rounded-full text-sm font-bold shadow-md`}>
+                            {level}
+                          </span>
+                        ))}
+                      </div>
                     </div>
+                    
+                    <div className="mb-8">
+                      <h4 className="font-bold text-gray-800 mb-3 font-poppins">Cool Digital Topics:</h4>
+                      <div className="space-y-2">
+                        {subject.topics.map((topic, topicIndex) => (
+                          <div key={topicIndex} className="flex items-center space-x-3">
+                            <div className={`w-6 h-6 bg-white border-2 ${borderColors[index]} rounded-full flex items-center justify-center flex-shrink-0`}>
+                              <span className={`${textColors[index]} text-sm font-bold`}>✓</span>
+                            </div>
+                            <span className="text-gray-700 font-medium font-nunito">{topic}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <button className={`w-full bg-white border-3 ${borderColors[index]} ${textColors[index]} py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-gray-50`}>
+                      Start {subject.title}
+                    </button>
                   </div>
-                  
-                  <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-4 rounded-2xl font-semibold text-lg shadow-lg">
-                    Start {subject.title}
-                  </button>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Learning Benefits */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-gray-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Why Choose
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cyan-100 via-blue-100 to-indigo-100 overflow-hidden -mt-32 pt-40">
+        {/* Flowing transition from subjects */}
+        <div className="absolute inset-x-0 top-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,80 C300,20 600,100 900,40 C1050,60 1200,80 1200,80 L1200,0 L0,0 Z" 
+                  fill="url(#benefitsFromSubjects)" />
+            <defs>
+              <linearGradient id="benefitsFromSubjects" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fed7aa" />
+                <stop offset="50%" stopColor="#a5f3fc" />
+                <stop offset="100%" stopColor="#bfdbfe" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        {/* Leafy organic shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path d="M150,200 Q250,100 350,200 Q450,300 350,400 Q250,300 150,200 Z" 
+                  fill="url(#benefitLeaf1)" opacity="0.3"/>
+            <path d="M850,150 Q1000,100 1150,200 Q1100,300 950,250 Q900,200 850,150 Z" 
+                  fill="url(#benefitLeaf2)" opacity="0.3"/>
+            <path d="M300,600 Q450,550 600,600 Q550,700 400,650 Q350,600 300,600 Z" 
+                  fill="url(#benefitLeaf3)" opacity="0.3"/>
+            <defs>
+              <radialGradient id="benefitLeaf1">
+                <stop offset="0%" stopColor="#a5f3fc" />
+                <stop offset="100%" stopColor="#bfdbfe" />
+              </radialGradient>
+              <radialGradient id="benefitLeaf2">
+                <stop offset="0%" stopColor="#bfdbfe" />
+                <stop offset="100%" stopColor="#c7d2fe" />
+              </radialGradient>
+              <radialGradient id="benefitLeaf3">
+                <stop offset="0%" stopColor="#c7d2fe" />
+                <stop offset="100%" stopColor="#a5f3fc" />
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        {/* Flowing transition to CTA */}
+        <div className="absolute inset-x-0 bottom-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,40 C200,100 400,20 600,80 C800,120 1000,40 1200,100 L1200,120 L0,120 Z" 
+                  fill="url(#benefitsToCta)" />
+            <defs>
+              <linearGradient id="benefitsToCta" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fed7aa" />
+                <stop offset="50%" stopColor="#fecaca" />
+                <stop offset="100%" stopColor="#f9a8d4" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        <div className="max-w-7xl mx-auto z-20 relative">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-cyan-200 shadow-lg mb-6">
+              <div className="w-3 h-3 bg-cyan-400 rounded-full mr-3"></div>
+              <span className="text-cyan-700 font-bold text-sm">Why Kids Love Online Learning!</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+              Why Choose Our
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 mt-2">
                 Online Learning?
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Experience the benefits of personalized, high-quality digital education that adapts to your child's needs.
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Experience the magic of personalized, high-quality digital education that makes learning super fun and effective!
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {learningBenefits.map((benefit, index) => (
-              <div key={index} className="text-center bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-lg">
-                <div className="relative mb-8">
-                  <div className="w-48 h-48 mx-auto rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br from-blue-50 to-indigo-100">
-                    <img 
-                      src={benefit.image}
-                      alt={benefit.title}
-                      className="w-full h-full object-cover"
-                    />
+            {learningBenefits.map((benefit, index) => {
+              const borderColors = ['border-cyan-300', 'border-blue-300', 'border-indigo-300', 'border-purple-300', 'border-pink-300', 'border-red-300'];
+              const bgColors = ['from-cyan-50 to-blue-50', 'from-blue-50 to-indigo-50', 'from-indigo-50 to-purple-50', 'from-purple-50 to-pink-50', 'from-pink-50 to-red-50', 'from-red-50 to-cyan-50'];
+              
+              return (
+                <div key={index} className={`text-center bg-white rounded-3xl p-8 shadow-xl border-4 ${borderColors[index]} hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
+                  <div className="relative mb-8">
+                    <div className={`w-48 h-48 mx-auto rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br ${bgColors[index]}`}>
+                      <img 
+                        src={benefit.image}
+                        alt={benefit.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed font-nunito">
+                    {benefit.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            Ready to Start Your Child's
-            <span className="block">Learning Journey?</span>
-          </h2>
-          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of families who have chosen BrainlyBees for personalized, effective online education.
-          </p>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-100 via-red-100 to-pink-100 overflow-hidden -mt-32 pt-40">
+        {/* Flowing transition from benefits */}
+        <div className="absolute inset-x-0 top-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,100 C200,40 400,120 600,80 C800,40 1000,100 1200,60 L1200,0 L0,0 Z" 
+                  fill="url(#ctaFromBenefits)" />
+            <defs>
+              <linearGradient id="ctaFromBenefits" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#bfdbfe" />
+                <stop offset="50%" stopColor="#fed7aa" />
+                <stop offset="100%" stopColor="#fecaca" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        {/* Celebration burst shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path d="M200,150 L220,200 L270,200 L230,240 L250,290 L200,260 L150,290 L170,240 L130,200 L180,200 Z" 
+                  fill="url(#ctaStar1)" opacity="0.4"/>
+            <path d="M900,100 L920,150 L970,150 L930,190 L950,240 L900,210 L850,240 L870,190 L830,150 L880,150 Z" 
+                  fill="url(#ctaStar2)" opacity="0.4"/>
+            <path d="M100,500 L120,550 L170,550 L130,590 L150,640 L100,610 L50,640 L70,590 L30,550 L80,550 Z" 
+                  fill="url(#ctaStar3)" opacity="0.4"/>
+            <path d="M1000,450 L1020,500 L1070,500 L1030,540 L1050,590 L1000,560 L950,590 L970,540 L930,500 L980,500 Z" 
+                  fill="url(#ctaStar4)" opacity="0.4"/>
+            <defs>
+              <radialGradient id="ctaStar1">
+                <stop offset="0%" stopColor="#fed7aa" />
+                <stop offset="100%" stopColor="#fbbf24" />
+              </radialGradient>
+              <radialGradient id="ctaStar2">
+                <stop offset="0%" stopColor="#fecaca" />
+                <stop offset="100%" stopColor="#f87171" />
+              </radialGradient>
+              <radialGradient id="ctaStar3">
+                <stop offset="0%" stopColor="#f9a8d4" />
+                <stop offset="100%" stopColor="#ec4899" />
+              </radialGradient>
+              <radialGradient id="ctaStar4">
+                <stop offset="0%" stopColor="#fbbf24" />
+                <stop offset="100%" stopColor="#f59e0b" />
+              </radialGradient>
+            </defs>
+          </svg>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <button className="bg-white text-purple-600 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-gray-50 transition-all duration-300 shadow-xl hover:shadow-2xl">
-              Start Free Trial
-            </button>
-            <button className="border-3 border-white text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300">
-              Schedule Consultation
-            </button>
-          </div>
-          
-          <div className="text-white/80 text-lg font-medium">
-            No credit card required • Free assessment • Personalized learning plan
+          {/* Floating celebration elements */}
+          <div className="absolute top-20 left-20 w-16 h-16 bg-yellow-300 rounded-full blur-lg opacity-60 animate-bounce"></div>
+          <div className="absolute bottom-32 right-32 w-20 h-20 bg-red-300 rounded-full blur-lg opacity-60 animate-bounce" style={{animationDelay: '0.5s'}}></div>
+          <div className="absolute top-1/3 right-1/4 w-12 h-12 bg-pink-300 rounded-full blur-lg opacity-60 animate-bounce" style={{animationDelay: '1s'}}></div>
+        </div>
+        
+        <div className="max-w-4xl mx-auto text-center z-20 relative">
+          <div className="bg-white rounded-3xl p-12 shadow-2xl border-4 border-orange-200">
+            <div className="mb-8">
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-50 to-pink-50 rounded-full border-2 border-orange-200 shadow-lg mb-8">
+                <div className="w-3 h-3 bg-orange-400 rounded-full mr-3"></div>
+                <span className="text-orange-700 font-bold text-sm font-nunito">Start Your Online Journey!</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
+                Ready to Start Your Child's
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 mt-2">
+                  Online Learning Journey?
+                </span>
+              </h2>
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed mb-8 font-nunito">
+                Join thousands of families who have chosen BrainlyBees for amazing online education. 
+                Start your digital learning adventure today!
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <button className="bg-white border-4 border-orange-400 text-orange-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-orange-50">
+                Start Free Online Trial
+              </button>
+              <a href="https://wa.me/919305454447" target="_blank" rel="noopener noreferrer">
+                <button className="bg-white border-4 border-green-400 text-green-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-green-50">
+                  WhatsApp Us
+                </button>
+              </a>
+            </div>
+            
+            <div className="mt-8 text-sm text-gray-600 font-nunito">
+              <p className="font-bold">Special Offer: First online session completely FREE!</p>
+              <p>No credit card required • Personalized learning plan • Trusted by parents worldwide</p>
+            </div>
           </div>
         </div>
       </section>
