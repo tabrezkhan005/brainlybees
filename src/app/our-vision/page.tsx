@@ -182,6 +182,12 @@ export default function OurVisionPage() {
               </linearGradient>
             </defs>
           </svg>
+          
+          {/* Floating Educational Elements */}
+          <div className="absolute top-32 left-20 w-6 h-6 bg-gradient-to-br from-yellow-300 to-orange-300 rounded-full opacity-60 animate-pulse"></div>
+          <div className="absolute top-48 right-32 w-4 h-4 bg-gradient-to-br from-orange-300 to-amber-300 rounded-full opacity-50 animate-pulse delay-100"></div>
+          <div className="absolute bottom-40 left-1/4 w-8 h-8 bg-gradient-to-br from-amber-300 to-yellow-300 rounded-full opacity-40 animate-pulse delay-200"></div>
+          <div className="absolute bottom-24 right-1/5 w-5 h-5 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-full opacity-45 animate-pulse delay-300"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto">
@@ -246,7 +252,15 @@ export default function OurVisionPage() {
 
       {/* Vision Statement Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white -mt-16 pt-24">
-        <div className="max-w-5xl mx-auto text-center">
+        {/* Floating Organic Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full opacity-20 animate-pulse"></div>
+          <div className="absolute top-20 right-20 w-24 h-24 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full opacity-30 animate-pulse delay-75"></div>
+          <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-25 animate-pulse delay-150"></div>
+          <div className="absolute bottom-10 right-1/3 w-28 h-28 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full opacity-20 animate-pulse delay-300"></div>
+        </div>
+        
+        <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-12 shadow-xl border-4 border-blue-200">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8 font-poppins">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
@@ -377,7 +391,32 @@ export default function OurVisionPage() {
 
       {/* Building Right Learning Path */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white -mt-16 pt-24">
-        <div className="max-w-7xl mx-auto">
+        {/* Organic Flowing Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path d="M0,300 C300,200 600,400 900,250 C1050,175 1200,300 1200,300 L1200,800 L0,800 Z" 
+                  fill="url(#learningWave1)" opacity="0.2"/>
+            <path d="M0,500 C400,400 800,600 1200,450 L1200,800 L0,800 Z" 
+                  fill="url(#learningWave2)" opacity="0.15"/>
+            <defs>
+              <linearGradient id="learningWave1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#e0f2fe" />
+                <stop offset="50%" stopColor="#bae6fd" />
+                <stop offset="100%" stopColor="#7dd3fc" />
+              </linearGradient>
+              <linearGradient id="learningWave2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#dbeafe" />
+                <stop offset="100%" stopColor="#93c5fd" />
+              </linearGradient>
+            </defs>
+          </svg>
+          
+          {/* Floating Elements */}
+          <div className="absolute top-1/4 left-10 w-20 h-20 bg-gradient-to-br from-indigo-200 to-blue-200 rounded-full opacity-30 animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-10 w-16 h-16 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-full opacity-25 animate-pulse delay-100"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
               Building Right Learning Path 
@@ -635,7 +674,34 @@ export default function OurVisionPage() {
 
       {/* Leadership & Values */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white -mt-16 pt-24">
-        <div className="max-w-7xl mx-auto">
+        {/* Organic Background Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path d="M0,100 C200,50 400,150 600,75 C800,25 1000,125 1200,50 L1200,0 L0,0 Z" 
+                  fill="url(#valuesWave1)" opacity="0.3"/>
+            <path d="M0,700 C300,600 600,800 900,650 C1050,575 1200,700 1200,700 L1200,800 L0,800 Z" 
+                  fill="url(#valuesWave2)" opacity="0.25"/>
+            <defs>
+              <linearGradient id="valuesWave1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fdf2f8" />
+                <stop offset="50%" stopColor="#f9a8d4" />
+                <stop offset="100%" stopColor="#ec4899" />
+              </linearGradient>
+              <linearGradient id="valuesWave2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fef7ff" />
+                <stop offset="100%" stopColor="#d8b4fe" />
+              </linearGradient>
+            </defs>
+          </svg>
+          
+          {/* Floating Value Icons */}
+          <div className="absolute top-20 left-1/4 w-12 h-12 bg-gradient-to-br from-rose-200 to-pink-200 rounded-full opacity-40 animate-pulse"></div>
+          <div className="absolute top-40 right-1/4 w-8 h-8 bg-gradient-to-br from-purple-200 to-violet-200 rounded-full opacity-30 animate-pulse delay-75"></div>
+          <div className="absolute bottom-32 left-1/3 w-16 h-16 bg-gradient-to-br from-pink-200 to-rose-200 rounded-full opacity-35 animate-pulse delay-150"></div>
+          <div className="absolute bottom-20 right-1/3 w-10 h-10 bg-gradient-to-br from-violet-200 to-purple-200 rounded-full opacity-25 animate-pulse delay-200"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
               Our Core Values &
@@ -727,6 +793,8 @@ export default function OurVisionPage() {
                   fill="url(#ctaWave1)" opacity="0.4"/>
             <path d="M0,400 C400,300 800,500 1200,350 L1200,0 L0,0 Z" 
                   fill="url(#ctaWave2)" opacity="0.3"/>
+            <path d="M0,600 C200,500 500,700 800,550 C950,475 1200,600 1200,600 L1200,0 L0,0 Z" 
+                  fill="url(#ctaWave3)" opacity="0.2"/>
             <defs>
               <linearGradient id="ctaWave1" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#e879f9" />
@@ -737,8 +805,22 @@ export default function OurVisionPage() {
                 <stop offset="0%" stopColor="#c084fc" />
                 <stop offset="100%" stopColor="#8b5cf6" />
               </linearGradient>
+              <linearGradient id="ctaWave3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#a855f7" />
+                <stop offset="100%" stopColor="#7c3aed" />
+              </linearGradient>
             </defs>
           </svg>
+          
+          {/* Animated Floating Elements */}
+          <div className="absolute top-20 left-16 w-12 h-12 bg-gradient-to-br from-violet-300 to-purple-300 rounded-full opacity-50 animate-bounce"></div>
+          <div className="absolute top-32 right-20 w-8 h-8 bg-gradient-to-br from-purple-300 to-fuchsia-300 rounded-full opacity-40 animate-bounce delay-75"></div>
+          <div className="absolute bottom-32 left-1/4 w-16 h-16 bg-gradient-to-br from-fuchsia-200 to-pink-200 rounded-full opacity-35 animate-bounce delay-150"></div>
+          <div className="absolute bottom-20 right-1/3 w-10 h-10 bg-gradient-to-br from-pink-300 to-violet-300 rounded-full opacity-45 animate-bounce delay-300"></div>
+          
+          {/* Additional Decorative Circles */}
+          <div className="absolute top-1/2 left-12 w-6 h-6 bg-gradient-to-br from-purple-200 to-violet-200 rounded-full opacity-30 animate-pulse"></div>
+          <div className="absolute top-1/3 right-12 w-4 h-4 bg-gradient-to-br from-fuchsia-200 to-purple-200 rounded-full opacity-25 animate-pulse delay-100"></div>
         </div>
 
         <div className="relative max-w-5xl mx-auto text-center">
