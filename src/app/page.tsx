@@ -11,12 +11,37 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-100 via-orange-100 to-red-100 overflow-hidden">
-        {/* Friendly Background Pattern */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-300 rounded-full blur-2xl"></div>
-          <div className="absolute top-20 right-20 w-24 h-24 bg-pink-300 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-20 left-32 w-20 h-20 bg-orange-300 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-32 right-40 w-28 h-28 bg-red-300 rounded-full blur-2xl"></div>
+        {/* Organic Wave Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            {/* Wave layers for organic feel */}
+            <path d="M0,200 C300,100 600,300 900,150 C1050,75 1200,200 1200,200 L1200,0 L0,0 Z" 
+                  fill="url(#heroWave1)" opacity="0.4"/>
+            <path d="M0,300 C400,200 800,400 1200,250 L1200,0 L0,0 Z" 
+                  fill="url(#heroWave2)" opacity="0.3"/>
+            <path d="M0,400 C200,300 600,500 1000,350 C1100,325 1200,400 1200,400 L1200,0 L0,0 Z" 
+                  fill="url(#heroWave3)" opacity="0.2"/>
+            <defs>
+              <linearGradient id="heroWave1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fef3c7" />
+                <stop offset="50%" stopColor="#fed7aa" />
+                <stop offset="100%" stopColor="#fecaca" />
+              </linearGradient>
+              <linearGradient id="heroWave2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fed7aa" />
+                <stop offset="100%" stopColor="#fbbf24" />
+              </linearGradient>
+              <linearGradient id="heroWave3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fecaca" />
+                <stop offset="100%" stopColor="#f87171" />
+              </linearGradient>
+            </defs>
+          </svg>
+          {/* Floating organic shapes */}
+          <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+          <div className="absolute top-20 right-20 w-24 h-24 bg-pink-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+          <div className="absolute bottom-20 left-32 w-20 h-20 bg-orange-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+          <div className="absolute bottom-32 right-40 w-28 h-28 bg-red-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto">
@@ -79,7 +104,28 @@ export default function Home() {
       </section>
 
       {/* Learning Programs */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100 overflow-hidden">
+        {/* Curved Bottom Shape */}
+        <div className="absolute inset-x-0 bottom-0">
+          <svg className="w-full h-32" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,120 C200,20 400,80 600,40 C800,0 1000,60 1200,20 L1200,120 Z" 
+                  fill="url(#programsShape)" />
+            <defs>
+              <linearGradient id="programsShape" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#bbf7d0" />
+                <stop offset="50%" stopColor="#a7f3d0" />
+                <stop offset="100%" stopColor="#93c5fd" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        {/* Organic floating elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-16 w-20 h-20 bg-green-300 rounded-full blur-xl opacity-50 animate-pulse"></div>
+          <div className="absolute bottom-40 right-20 w-32 h-32 bg-teal-300 rounded-full blur-xl opacity-50 animate-pulse"></div>
+          <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-blue-300 rounded-full blur-xl opacity-50 animate-pulse"></div>
+        </div>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-green-200 shadow-lg mb-6">
@@ -190,7 +236,32 @@ export default function Home() {
       </section>
 
       {/* Age Groups */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-100">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-100 overflow-hidden">
+        {/* Diagonal Flowing Shape */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute top-0 right-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path d="M400,0 C600,200 800,100 1200,300 L1200,0 Z" 
+                  fill="url(#ageGroupShape1)" opacity="0.3"/>
+            <path d="M600,0 C800,150 1000,250 1200,100 L1200,0 Z" 
+                  fill="url(#ageGroupShape2)" opacity="0.4"/>
+            <defs>
+              <linearGradient id="ageGroupShape1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#e9d5ff" />
+                <stop offset="50%" stopColor="#fbcfe8" />
+                <stop offset="100%" stopColor="#fef3c7" />
+              </linearGradient>
+              <linearGradient id="ageGroupShape2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#ddd6fe" />
+                <stop offset="100%" stopColor="#f9a8d4" />
+              </linearGradient>
+            </defs>
+          </svg>
+          
+          {/* Organic blob shapes */}
+          <div className="absolute top-32 left-20 w-40 h-40 bg-purple-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+          <div className="absolute bottom-20 right-32 w-28 h-28 bg-pink-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+          <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-yellow-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+        </div>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-purple-200 shadow-lg mb-6">
@@ -279,7 +350,36 @@ export default function Home() {
       </section>
 
       {/* Why Choose BrainlyBees */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cyan-100 via-blue-100 to-indigo-100">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cyan-100 via-blue-100 to-indigo-100 overflow-hidden">
+        {/* Circular Wave Pattern */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <circle cx="200" cy="100" r="150" fill="url(#whyChooseCircle1)" opacity="0.2"/>
+            <circle cx="1000" cy="200" r="200" fill="url(#whyChooseCircle2)" opacity="0.3"/>
+            <circle cx="600" cy="600" r="180" fill="url(#whyChooseCircle3)" opacity="0.2"/>
+            <path d="M0,600 Q300,450 600,500 T1200,400 L1200,800 L0,800 Z" 
+                  fill="url(#whyChooseWave)" opacity="0.4"/>
+            <defs>
+              <radialGradient id="whyChooseCircle1">
+                <stop offset="0%" stopColor="#a5f3fc" />
+                <stop offset="100%" stopColor="#bfdbfe" />
+              </radialGradient>
+              <radialGradient id="whyChooseCircle2">
+                <stop offset="0%" stopColor="#bfdbfe" />
+                <stop offset="100%" stopColor="#c7d2fe" />
+              </radialGradient>
+              <radialGradient id="whyChooseCircle3">
+                <stop offset="0%" stopColor="#c7d2fe" />
+                <stop offset="100%" stopColor="#a5f3fc" />
+              </radialGradient>
+              <linearGradient id="whyChooseWave" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#a5f3fc" />
+                <stop offset="50%" stopColor="#bfdbfe" />
+                <stop offset="100%" stopColor="#c7d2fe" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-cyan-200 shadow-lg mb-6">
@@ -351,7 +451,37 @@ export default function Home() {
       </section>
 
       {/* Learning Roadmap Timeline */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 via-pink-100 to-purple-100">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 via-pink-100 to-purple-100 overflow-hidden">
+        {/* Zigzag Pattern Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <path d="M0,200 L200,100 L400,200 L600,100 L800,200 L1000,100 L1200,200 L1200,0 L0,0 Z" 
+                  fill="url(#roadmapZigzag1)" opacity="0.3"/>
+            <path d="M0,400 L150,300 L350,400 L550,300 L750,400 L950,300 L1200,400 L1200,0 L0,0 Z" 
+                  fill="url(#roadmapZigzag2)" opacity="0.2"/>
+            <ellipse cx="300" cy="500" rx="100" ry="60" fill="url(#roadmapEllipse1)" opacity="0.3"/>
+            <ellipse cx="900" cy="300" rx="80" ry="50" fill="url(#roadmapEllipse2)" opacity="0.3"/>
+            <defs>
+              <linearGradient id="roadmapZigzag1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fecaca" />
+                <stop offset="50%" stopColor="#fbcfe8" />
+                <stop offset="100%" stopColor="#e9d5ff" />
+              </linearGradient>
+              <linearGradient id="roadmapZigzag2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#f87171" />
+                <stop offset="100%" stopColor="#c084fc" />
+              </linearGradient>
+              <radialGradient id="roadmapEllipse1">
+                <stop offset="0%" stopColor="#f9a8d4" />
+                <stop offset="100%" stopColor="#ddd6fe" />
+              </radialGradient>
+              <radialGradient id="roadmapEllipse2">
+                <stop offset="0%" stopColor="#fbbf24" />
+                <stop offset="100%" stopColor="#f472b6" />
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-red-200 shadow-lg mb-6">
@@ -440,8 +570,41 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      {/* FAQ Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100 overflow-hidden">
+        {/* Leafy Organic Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            {/* Organic leaf-like shapes */}
+            <path d="M100,200 Q200,100 300,200 Q400,300 300,400 Q200,300 100,200 Z" 
+                  fill="url(#faqLeaf1)" opacity="0.3"/>
+            <path d="M800,100 Q950,50 1100,150 Q1050,250 900,200 Q850,150 800,100 Z" 
+                  fill="url(#faqLeaf2)" opacity="0.3"/>
+            <path d="M200,600 Q350,550 500,600 Q450,700 300,650 Q250,600 200,600 Z" 
+                  fill="url(#faqLeaf3)" opacity="0.3"/>
+            {/* Bottom wave */}
+            <path d="M0,700 Q300,600 600,650 Q900,700 1200,600 L1200,800 L0,800 Z" 
+                  fill="url(#faqWave)" opacity="0.4"/>
+            <defs>
+              <radialGradient id="faqLeaf1">
+                <stop offset="0%" stopColor="#bbf7d0" />
+                <stop offset="100%" stopColor="#a7f3d0" />
+              </radialGradient>
+              <radialGradient id="faqLeaf2">
+                <stop offset="0%" stopColor="#a7f3d0" />
+                <stop offset="100%" stopColor="#93c5fd" />
+              </radialGradient>
+              <radialGradient id="faqLeaf3">
+                <stop offset="0%" stopColor="#93c5fd" />
+                <stop offset="100%" stopColor="#bbf7d0" />
+              </radialGradient>
+              <linearGradient id="faqWave" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#bbf7d0" />
+                <stop offset="50%" stopColor="#67e8f9" />
+                <stop offset="100%" stopColor="#93c5fd" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-green-200 shadow-lg mb-6">
@@ -508,7 +671,59 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-100 via-red-100 to-pink-100">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-100 via-red-100 to-pink-100 overflow-hidden">
+        {/* Celebration Burst Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            {/* Star burst patterns */}
+            <path d="M200,150 L220,200 L270,200 L230,240 L250,290 L200,260 L150,290 L170,240 L130,200 L180,200 Z" 
+                  fill="url(#ctaStar1)" opacity="0.4"/>
+            <path d="M900,100 L920,150 L970,150 L930,190 L950,240 L900,210 L850,240 L870,190 L830,150 L880,150 Z" 
+                  fill="url(#ctaStar2)" opacity="0.4"/>
+            <path d="M100,500 L120,550 L170,550 L130,590 L150,640 L100,610 L50,640 L70,590 L30,550 L80,550 Z" 
+                  fill="url(#ctaStar3)" opacity="0.4"/>
+            <path d="M1000,450 L1020,500 L1070,500 L1030,540 L1050,590 L1000,560 L950,590 L970,540 L930,500 L980,500 Z" 
+                  fill="url(#ctaStar4)" opacity="0.4"/>
+            
+            {/* Celebratory spirals */}
+            <path d="M500,100 Q600,200 500,300 Q400,200 500,100 Z" 
+                  fill="url(#ctaSpiral1)" opacity="0.3"/>
+            <path d="M700,400 Q800,500 700,600 Q600,500 700,400 Z" 
+                  fill="url(#ctaSpiral2)" opacity="0.3"/>
+            
+            <defs>
+              <radialGradient id="ctaStar1">
+                <stop offset="0%" stopColor="#fed7aa" />
+                <stop offset="100%" stopColor="#fbbf24" />
+              </radialGradient>
+              <radialGradient id="ctaStar2">
+                <stop offset="0%" stopColor="#fecaca" />
+                <stop offset="100%" stopColor="#f87171" />
+              </radialGradient>
+              <radialGradient id="ctaStar3">
+                <stop offset="0%" stopColor="#f9a8d4" />
+                <stop offset="100%" stopColor="#ec4899" />
+              </radialGradient>
+              <radialGradient id="ctaStar4">
+                <stop offset="0%" stopColor="#fbbf24" />
+                <stop offset="100%" stopColor="#f59e0b" />
+              </radialGradient>
+              <radialGradient id="ctaSpiral1">
+                <stop offset="0%" stopColor="#fed7aa" />
+                <stop offset="100%" stopColor="#fecaca" />
+              </radialGradient>
+              <radialGradient id="ctaSpiral2">
+                <stop offset="0%" stopColor="#f9a8d4" />
+                <stop offset="100%" stopColor="#fed7aa" />
+              </radialGradient>
+            </defs>
+          </svg>
+          
+          {/* Floating celebration elements */}
+          <div className="absolute top-20 left-20 w-16 h-16 bg-yellow-300 rounded-full blur-lg opacity-60 animate-bounce"></div>
+          <div className="absolute bottom-32 right-32 w-20 h-20 bg-red-300 rounded-full blur-lg opacity-60 animate-bounce" style={{animationDelay: '0.5s'}}></div>
+          <div className="absolute top-1/3 right-1/4 w-12 h-12 bg-pink-300 rounded-full blur-lg opacity-60 animate-bounce" style={{animationDelay: '1s'}}></div>
+        </div>
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white rounded-3xl p-12 shadow-2xl border-4 border-orange-200">
             <div className="mb-8">
