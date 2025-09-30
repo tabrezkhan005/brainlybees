@@ -1,56 +1,61 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
-    { name: 'Home', href: '#', active: true },
-    { name: 'Online Programs', href: '#' },
-    { name: 'Offline Programs', href: '#' },
-    { name: 'Online School', href: '#' },
-    { name: 'Special Needs Education', href: '#' },
-    { name: 'Our Vision', href: '#' },
-    { name: 'Careers', href: '#' }
+    { name: 'Home', href: '/' },
+    { name: 'Online Programs', href: '/online-programs' },
+    { name: 'Online School', href: '/online-school' },
+    { name: 'Special Needs Education', href: '/special-needs' },
+    { name: 'Our Vision', href: '/our-vision' },
+    { name: 'Careers', href: '/careers' }
   ];
 
   return (
-    <nav className="bg-white/95 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50 shadow-lg transition-all duration-300">
+    <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Animated Logo */}
+          {/* Logo */}
           <div className="flex items-center flex-shrink-0">
-            <div className="flex items-center group cursor-pointer">
-              <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                <span className="text-white font-bold text-lg group-hover:animate-pulse">B</span>
+            <Link href="/" className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">B</span>
               </div>
-              <div className="ml-3">
-                <div className="text-xl font-bold text-gray-900 group-hover:text-red-500 transition-colors duration-300">BrainlyBees</div>
+              <div>
+                <div className="text-xl font-bold text-gray-900">BrainlyBees</div>
                 <div className="text-xs text-gray-500 -mt-0.5">Smart Learning</div>
               </div>
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation with Hover Effects */}
           <div className="hidden lg:flex items-center flex-1 justify-center px-8">
             <div className="flex items-center space-x-8">
-              {navLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  className={`text-sm font-medium transition-all duration-300 whitespace-nowrap relative group ${
-                    link.active 
-                      ? 'text-red-500' 
-                      : 'text-gray-700 hover:text-red-500'
-                  }`}
-                >
-                  {link.name}
-                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-500 to-orange-500 transition-all duration-300 group-hover:w-full ${
-                    link.active ? 'w-full' : ''
-                  }`}></span>
-                </a>
-              ))}
+              {navLinks.map((link, index) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    className={`text-sm font-medium transition-all duration-200 whitespace-nowrap relative group px-3 py-2 rounded-md ${
+                      isActive 
+                        ? 'text-red-500 bg-red-50' 
+                        : 'text-gray-700 hover:text-red-500 hover:bg-gray-50'
+                    }`}
+                  >
+                    {link.name}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-red-500 to-orange-500"></span>
+                    )}
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
@@ -58,7 +63,7 @@ export default function Navigation() {
           <div className="flex items-center space-x-4 flex-shrink-0">
             {/* WhatsApp Icon */}
             <a 
-              href="https://wa.me/your-whatsapp-number" 
+              href="https://wa.me/919305454447" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hidden lg:flex items-center justify-center w-10 h-10 bg-green-500 hover:bg-green-600 rounded-full transition-colors duration-200"
@@ -70,14 +75,14 @@ export default function Navigation() {
             </a>
 
             {/* Book Free Trial Button */}
-            <button className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-colors duration-200 whitespace-nowrap">
+            <button className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white px-6 py-2 rounded-full text-sm font-semibold transition-all duration-200 shadow-lg hover:shadow-xl">
               Book Free Trial
             </button>
 
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500"
+              className="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (
@@ -95,19 +100,23 @@ export default function Navigation() {
       {isMobileMenuOpen && (
         <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-            {navLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
-                  link.active 
-                    ? 'text-red-500 bg-red-50' 
-                    : 'text-gray-700 hover:text-red-500 hover:bg-gray-50'
-                }`}
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link, index) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={index}
+                  href={link.href}
+                  className={`block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-md ${
+                    isActive 
+                      ? 'text-red-500 bg-red-50' 
+                      : 'text-gray-700 hover:text-red-500 hover:bg-gray-50'
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
             <div className="px-3 py-2 space-y-3">
               <a 
                 href="https://wa.me/your-whatsapp-number" 
