@@ -12,60 +12,60 @@ export default function OnlineProgramsPage() {
   const agePrograms = {
     '4-6': {
       title: 'Early Learners (Ages 4-6)',
-      subtitle: 'Building Strong Foundations',
-      description: 'Interactive programs designed to develop fundamental skills through play-based learning and engaging activities.',
-      image: '/assets/teacher-with-kids-doing-ring-activity.png',
+      subtitle: 'Digital Learning Foundations',
+      description: 'Interactive online programs designed to develop fundamental skills through engaging digital activities and virtual play-based learning.',
+      image: '/assets/Boy-kid-doing-work.png',
       features: [
-        'Phonics and Early Reading',
-        'Number Recognition and Basic Math',
-        'Creative Arts and Crafts',
-        'Social Skills Development',
-        'Motor Skills Enhancement'
+        'Interactive Online Phonics',
+        'Digital Number Games and Math',
+        'Virtual Arts and Creative Tools',
+        'Online Social Skills Activities',
+        'Digital Motor Skills Games'
       ],
       duration: '30 minutes',
       price: '$25/session'
     },
     '7-9': {
       title: 'Primary Learners (Ages 7-9)',
-      subtitle: 'Accelerating Academic Growth',
-      description: 'Comprehensive curriculum focusing on core subjects while maintaining fun and interactive learning experiences.',
-      image: '/assets/teacher-helping-girl-kid-doubt.png',
+      subtitle: 'Virtual Academic Growth',
+      description: 'Comprehensive online curriculum focusing on core subjects through interactive digital platforms and virtual learning experiences.',
+      image: '/assets/girl-doing-work.png',
       features: [
-        'Advanced Reading Comprehension',
-        'Mathematical Problem Solving',
-        'Science Exploration',
-        'Writing Skills Development',
-        'Critical Thinking Activities'
+        'Online Reading Comprehension',
+        'Virtual Math Problem Solving',
+        'Digital Science Exploration',
+        'Online Writing Skills Development',
+        'Virtual Critical Thinking Activities'
       ],
       duration: '45 minutes',
       price: '$30/session'
     },
     '10-12': {
       title: 'Middle School (Ages 10-12)',
-      subtitle: 'Mastering Advanced Concepts',
-      description: 'Challenging programs that prepare students for academic success with advanced concepts and study skills.',
-      image: '/assets/teacher-solving-boy-kid-doubt.png',
+      subtitle: 'Advanced Digital Learning',
+      description: 'Challenging online programs that prepare students for academic success through advanced digital tools and virtual learning environments.',
+      image: '/assets/kid-doing-homework.png',
       features: [
-        'Advanced Mathematics',
-        'Scientific Research Methods',
-        'Essay Writing and Literature',
-        'Problem-Based Learning',
-        'Study Skills Mastery'
+        'Online Advanced Mathematics',
+        'Virtual Scientific Research Methods',
+        'Digital Essay Writing and Literature',
+        'Online Problem-Based Learning',
+        'Virtual Study Skills Mastery'
       ],
       duration: '60 minutes',
       price: '$35/session'
     },
     '13+': {
       title: 'High School (Ages 13+)',
-      subtitle: 'Preparing for Future Success',
-      description: 'Intensive programs focusing on exam preparation, advanced academics, and future career readiness.',
-      image: '/assets/teacher-asking-question-students-saying-answer.png',
+      subtitle: 'Virtual Future Preparation',
+      description: 'Intensive online programs focusing on exam preparation, advanced academics, and future career readiness through digital platforms.',
+      image: '/assets/Virtualschoolinindia.jpg',
       features: [
-        'Exam Preparation (SAT, AP, etc.)',
-        'Advanced STEM Subjects',
-        'Research and Analysis',
-        'College Readiness',
-        'Career Guidance'
+        'Online Exam Preparation (SAT, AP, etc.)',
+        'Virtual Advanced STEM Subjects',
+        'Digital Research and Analysis',
+        'Online College Readiness',
+        'Virtual Career Guidance'
       ],
       duration: '75 minutes',
       price: '$40/session'
@@ -75,29 +75,29 @@ export default function OnlineProgramsPage() {
   // Subject programs
   const subjectPrograms = [
     {
-      title: 'Mathematics',
-      description: 'From basic arithmetic to advanced calculus, our math programs build strong problem-solving skills.',
-      image: '/assets/boy-kid-explaining.png',
+      title: 'Digital Mathematics',
+      description: 'From basic arithmetic to advanced calculus, our online math programs build strong problem-solving skills through interactive digital tools.',
+      image: '/assets/Boy-kid-doing-work.png',
       levels: ['Elementary', 'Intermediate', 'Advanced'],
-      topics: ['Number Theory', 'Algebra', 'Geometry', 'Statistics', 'Calculus']
+      topics: ['Online Number Theory', 'Virtual Algebra', 'Digital Geometry', 'Interactive Statistics', 'Online Calculus']
     },
     {
-      title: 'Science',
-      description: 'Explore the wonders of science through hands-on experiments and interactive demonstrations.',
-      image: '/assets/girl-kid-explaining.png',
+      title: 'Virtual Science',
+      description: 'Explore the wonders of science through virtual experiments, online simulations, and interactive digital demonstrations.',
+      image: '/assets/girl-doing-work.png',
       levels: ['Elementary', 'Intermediate', 'Advanced'],
-      topics: ['Physics', 'Chemistry', 'Biology', 'Earth Science', 'Environmental Science']
+      topics: ['Virtual Physics', 'Online Chemistry', 'Digital Biology', 'Virtual Earth Science', 'Online Environmental Science']
     },
     {
-      title: 'English Language Arts',
-      description: 'Develop strong communication skills through reading, writing, speaking, and listening activities.',
-      image: '/assets/teacher-reading-for-kids.png',
+      title: 'Online Language Arts',
+      description: 'Develop strong communication skills through digital reading platforms, online writing tools, and virtual presentations.',
+      image: '/assets/kid-doing-homework.png',
       levels: ['Elementary', 'Intermediate', 'Advanced'],
-      topics: ['Reading Comprehension', 'Creative Writing', 'Grammar', 'Literature', 'Public Speaking']
+      topics: ['Digital Reading Comprehension', 'Online Creative Writing', 'Virtual Grammar', 'Digital Literature', 'Online Public Speaking']
     },
     {
-      title: 'Computer Science',
-      description: 'Learn programming, computational thinking, and digital literacy skills for the modern world.',
+      title: 'Computer Programming',
+      description: 'Learn coding, computational thinking, and digital literacy skills through hands-on online programming environments.',
       image: '/assets/kid-with-graduation-outfit.png',
       levels: ['Beginner', 'Intermediate', 'Advanced'],
       topics: ['Coding Basics', 'Web Development', 'Game Design', 'Robotics', 'AI Fundamentals']
@@ -186,8 +186,8 @@ export default function OnlineProgramsPage() {
                   </span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                  Personalized one-on-one tutoring that adapts to your child's unique learning style and pace. 
-                  Expert teachers, interactive lessons, and proven results.
+                  Digital learning through virtual classrooms, interactive online tools, and personalized virtual tutoring. 
+                  Connect from anywhere with expert teachers through cutting-edge online platforms.
                 </p>
               </div>
               

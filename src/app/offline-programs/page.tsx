@@ -13,8 +13,8 @@ export default function OfflineProgramsPage() {
     '4-6': {
       title: 'Early Learning Foundation',
       subtitle: 'Building Basics Through Play',
-      description: 'Interactive offline activities that introduce fundamental concepts through hands-on learning, creative play, and structured activities designed for young learners.',
-      image: '/assets/boy-kid-explaining.png',
+      description: 'Interactive offline activities that introduce fundamental concepts through hands-on learning, creative play, and structured activities with direct teacher interaction.',
+      image: '/assets/teacher-with-kids-doing-ring-activity.png',
       features: [
         'Hands-on learning materials and manipulatives',
         'Interactive storytelling and creative activities',
@@ -29,8 +29,8 @@ export default function OfflineProgramsPage() {
     '7-9': {
       title: 'Primary Skills Development',
       subtitle: 'Core Academic Foundation',
-      description: 'Comprehensive offline programs focusing on essential academic skills with structured learning activities, practical exercises, and collaborative projects.',
-      image: '/assets/girl-kid-explaining.png',
+      description: 'Comprehensive offline programs focusing on essential academic skills with structured learning activities, practical exercises, and face-to-face collaborative projects.',
+      image: '/assets/teacher-helping-girl-kid-doubt.png',
       features: [
         'Structured reading and writing workshops',
         'Math problem-solving with physical tools',
@@ -45,8 +45,8 @@ export default function OfflineProgramsPage() {
     '10-12': {
       title: 'Advanced Academic Skills',
       subtitle: 'Pre-Teen Excellence',
-      description: 'Advanced offline learning programs that prepare students for higher education with challenging projects, research activities, and independent learning skills.',
-      image: '/assets/world-map.png',
+      description: 'Advanced offline learning programs that prepare students for higher education with challenging projects, research activities, and direct mentorship from experienced teachers.',
+      image: '/assets/teacher-solving-boy-kid-doubt.png',
       features: [
         'Research projects and information literacy',
         'Advanced mathematical concepts and applications',
@@ -61,8 +61,8 @@ export default function OfflineProgramsPage() {
     '13+': {
       title: 'Teen Academic Mastery',
       subtitle: 'High School Preparation',
-      description: 'Comprehensive offline programs designed for teenagers, focusing on college preparation, life skills, and advanced academic concepts through intensive workshops.',
-      image: '/assets/boy-kid-explaining.png',
+      description: 'Comprehensive offline programs designed for teenagers, focusing on college preparation, life skills, and advanced academic concepts through intensive classroom workshops.',
+      image: '/assets/teacher-asking-question-students-saying-answer.png',
       features: [
         'College preparation and academic planning',
         'Advanced STEM projects and competitions',
