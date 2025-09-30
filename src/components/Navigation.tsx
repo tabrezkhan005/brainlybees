@@ -18,13 +18,13 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-white/95 backdrop-blur-lg shadow-lg sticky top-0 z-50 border-b border-sky-100">
+    <nav className="bg-white/95 backdrop-blur-lg shadow-lg sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-sky-500 via-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 via-indigo-500 to-slate-500 rounded-2xl flex items-center justify-center shadow-lg">
                 <span className="text-white font-bold text-xl">B</span>
               </div>
               <div>
@@ -43,10 +43,10 @@ export default function Navigation() {
                   <Link
                     key={index}
                     href={link.href}
-                    className={`text-sm font-semibold transition-all duration-300 whitespace-nowrap relative group px-4 py-3 rounded-2xl ${
+                    className={`text-sm font-semibold whitespace-nowrap relative group px-4 py-3 rounded-2xl ${
                       isActive 
-                        ? 'text-sky-700 bg-gradient-to-r from-sky-100 to-blue-100 shadow-md' 
-                        : 'text-gray-700 hover:text-sky-700 hover:bg-gradient-to-r hover:from-sky-50 hover:to-blue-50'
+                        ? 'text-blue-700 bg-gradient-to-r from-blue-100 to-slate-100 shadow-md' 
+                        : 'text-gray-700 hover:text-blue-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-slate-50'
                     }`}
                   >
                     {link.name}
@@ -75,7 +75,7 @@ export default function Navigation() {
             </a>
 
             {/* Book Free Trial Button */}
-            <button className="bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-400 hover:from-sky-600 hover:via-blue-600 hover:to-cyan-500 text-white px-8 py-3 rounded-2xl text-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl">
+            <button className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-8 py-3 rounded-2xl text-sm font-bold shadow-lg">
               Book Online Trial
             </button>
 
@@ -99,17 +99,17 @@ export default function Navigation() {
       {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden">
-          <div className="px-4 pt-4 pb-6 space-y-2 bg-white/95 backdrop-blur-lg border-t border-sky-100">
+          <div className="px-4 pt-4 pb-6 space-y-2 bg-white/95 backdrop-blur-lg border-t border-gray-100">
             {navLinks.map((link, index) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={index}
                   href={link.href}
-                  className={`block px-4 py-3 text-base font-semibold transition-all duration-300 rounded-2xl ${
+                  className={`block px-4 py-3 text-base font-semibold rounded-2xl ${
                     isActive 
-                      ? 'text-sky-700 bg-gradient-to-r from-sky-100 to-blue-100 shadow-md' 
-                      : 'text-gray-700 hover:text-sky-700 hover:bg-gradient-to-r hover:from-sky-50 hover:to-blue-50'
+                      ? 'text-blue-700 bg-gradient-to-r from-blue-100 to-slate-100 shadow-md' 
+                      : 'text-gray-700 hover:text-blue-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-slate-50'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -129,7 +129,7 @@ export default function Navigation() {
                 </svg>
                 Chat on WhatsApp
               </a>
-              <button className="w-full bg-gradient-to-r from-sky-500 via-blue-500 to-cyan-400 hover:from-sky-600 hover:via-blue-600 hover:to-cyan-500 text-white px-6 py-4 rounded-2xl text-sm font-bold transition-all duration-300 shadow-lg">
+              <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-6 py-4 rounded-2xl text-sm font-bold shadow-lg">
                 Book Online Trial
               </button>
             </div>

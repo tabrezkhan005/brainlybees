@@ -170,18 +170,18 @@ export default function OnlineProgramsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-100 via-blue-100 to-indigo-100">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
                   Online Learning
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500">
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                     Programs
                   </span>
                 </h1>
@@ -192,41 +192,39 @@ export default function OnlineProgramsPage() {
               </div>
               
               <div className="grid grid-cols-3 gap-6 py-8">
-                <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-purple-100">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">50,000+</div>
+                <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-blue-100">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">50,000+</div>
                   <div className="text-sm text-gray-600 font-medium">Students Taught</div>
                 </div>
-                <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-green-100">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">98%</div>
+                <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-emerald-100">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-emerald-500 to-green-500 bg-clip-text text-transparent">98%</div>
                   <div className="text-sm text-gray-600 font-medium">Success Rate</div>
                 </div>
-                <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-orange-100">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">4.9/5</div>
+                <div className="text-center bg-white/70 backdrop-blur-sm rounded-2xl p-4 border border-blue-100">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">4.9/5</div>
                   <div className="text-sm text-gray-600 font-medium">Parent Rating</div>
                 </div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-xl">
-                  Start Free Trial
+                <button className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg">
+                  Start Learning Online
                 </button>
-                <button className="border-2 border-purple-300 text-purple-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-purple-50 transition-all duration-300">
-                  Book Consultation
+                <button className="bg-white/80 backdrop-blur-sm text-blue-700 px-8 py-4 rounded-2xl font-semibold text-lg border border-blue-200 shadow-lg">
+                  Schedule Demo
                 </button>
               </div>
             </div>
             
             <div className="relative">
-              <div className="relative z-10">
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-white/50">
                 <img 
-                  src="/assets/teacher-with-all-kids.png"
-                  alt="Online Learning"
-                  className="w-full h-auto rounded-3xl shadow-2xl border-4 border-white"
+                  src="/assets/Virtualschoolinindia.jpg"
+                  alt="Online Learning Platform"
+                  className="w-full h-96 object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent"></div>
               </div>
-              <div className="absolute -bottom-8 -right-8 w-full h-full bg-gradient-to-br from-purple-200/50 to-pink-200/50 rounded-3xl"></div>
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-orange-300 to-pink-300 rounded-full opacity-70"></div>
-              <div className="absolute top-1/2 -right-4 w-16 h-16 bg-gradient-to-br from-purple-300 to-blue-300 rounded-full opacity-60"></div>
             </div>
           </div>
         </div>
@@ -253,10 +251,10 @@ export default function OnlineProgramsPage() {
               <button
                 key={age}
                 onClick={() => setSelectedAge(age)}
-                className={`px-8 py-4 rounded-2xl font-semibold transition-all duration-300 ${
+                className={`px-8 py-4 rounded-2xl font-semibold ${
                   selectedAge === age
-                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg scale-105'
-                    : 'bg-white/80 text-gray-700 hover:bg-white hover:shadow-md border border-blue-100'
+                    ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg'
+                    : 'bg-white/80 text-gray-700 shadow-md border border-blue-100'
                 }`}
               >
                 Ages {age}
@@ -328,28 +326,28 @@ export default function OnlineProgramsPage() {
       </section>
 
       {/* Subject Programs */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-50 to-green-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Subject-Focused
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-600">
+              Digital Subject
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600">
                 Learning
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Specialized programs in core subjects designed to build expertise and confidence in specific areas.
+              Specialized online programs in core subjects designed to build expertise through interactive digital platforms.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {subjectPrograms.map((subject, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-white/50 group">
+              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-white/50 group">
                 <div className="relative h-56">
                   <img 
                     src={subject.image}
                     alt={subject.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent"></div>
                   <h3 className="absolute bottom-6 left-6 text-white text-2xl font-bold">
@@ -385,8 +383,8 @@ export default function OnlineProgramsPage() {
                     </div>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white py-4 rounded-2xl font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-lg">
-                    Explore {subject.title}
+                  <button className="w-full bg-gradient-to-r from-emerald-500 to-green-500 text-white py-4 rounded-2xl font-semibold text-lg shadow-lg">
+                    Start {subject.title}
                   </button>
                 </div>
               </div>
@@ -396,29 +394,29 @@ export default function OnlineProgramsPage() {
       </section>
 
       {/* Learning Benefits */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               Why Choose
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-500">
-                BrainlyBees?
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                Online Learning?
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Experience the difference of personalized, high-quality online education that delivers real results.
+              Experience the benefits of personalized, high-quality digital education that adapts to your child's needs.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {learningBenefits.map((benefit, index) => (
-              <div key={index} className="text-center group">
+              <div key={index} className="text-center">
                 <div className="relative mb-8">
-                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl group-hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-white to-gray-50">
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br from-white to-gray-50">
                     <img 
                       src={benefit.image}
                       alt={benefit.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </div>

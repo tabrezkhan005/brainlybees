@@ -145,12 +145,12 @@ export default function OfflineProgramsPage() {
       </section>
 
       {/* Programs by Age */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-violet-50 to-purple-50">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-50 to-amber-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               Programs for
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-purple-600">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">
                 Every Age Group
               </span>
             </h2>
@@ -165,10 +165,10 @@ export default function OfflineProgramsPage() {
               <button
                 key={age}
                 onClick={() => setSelectedAge(age)}
-                className={`px-8 py-4 rounded-2xl font-semibold transition-all duration-300 ${
+                className={`px-8 py-4 rounded-2xl font-semibold ${
                   selectedAge === age
-                    ? 'bg-gradient-to-r from-violet-500 to-purple-500 text-white shadow-lg'
-                    : 'bg-white/80 text-gray-700 hover:bg-white hover:shadow-md border border-violet-100'
+                    ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg'
+                    : 'bg-white/80 text-gray-700 shadow-md border border-orange-100'
                 }`}
               >
                 Ages {age}
@@ -185,7 +185,7 @@ export default function OfflineProgramsPage() {
                     <h3 className="text-3xl font-bold text-gray-800 mb-3">
                       {agePrograms[selectedAge as keyof typeof agePrograms].title}
                     </h3>
-                    <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-purple-600 font-semibold mb-6">
+                    <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600 font-semibold mb-6">
                       {agePrograms[selectedAge as keyof typeof agePrograms].subtitle}
                     </p>
                     <p className="text-gray-600 leading-relaxed text-lg">
@@ -198,7 +198,7 @@ export default function OfflineProgramsPage() {
                     <ul className="space-y-3">
                       {agePrograms[selectedAge as keyof typeof agePrograms].features.map((feature, index) => (
                         <li key={index} className="flex items-center space-x-4">
-                          <div className="w-3 h-3 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full"></div>
                           <span className="text-gray-700 font-medium">{feature}</span>
                         </li>
                       ))}
@@ -220,7 +220,7 @@ export default function OfflineProgramsPage() {
                     </div>
                   </div>
 
-                  <button className="w-full bg-gradient-to-r from-violet-500 to-purple-500 text-white py-4 rounded-2xl font-semibold text-lg hover:from-violet-600 hover:to-purple-600 transition-all duration-300 shadow-lg">
+                  <button className="w-full bg-gradient-to-r from-orange-500 to-amber-500 text-white py-4 rounded-2xl font-semibold text-lg shadow-lg">
                     Enroll in Offline Program
                   </button>
                 </div>
@@ -232,7 +232,7 @@ export default function OfflineProgramsPage() {
                   alt="Offline Learning Program"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-violet-500/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-orange-500/20 to-transparent"></div>
               </div>
             </div>
           </div>
