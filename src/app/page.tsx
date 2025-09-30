@@ -44,7 +44,22 @@ export default function Home() {
           <div className="absolute bottom-32 right-40 w-28 h-28 bg-red-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto">
+        {/* Flowing transition to next section */}
+        <div className="absolute inset-x-0 bottom-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,60 C300,20 600,100 900,40 C1050,10 1200,80 1200,80 L1200,120 L0,120 Z" 
+                  fill="url(#heroToPrograms)" />
+            <defs>
+              <linearGradient id="heroToPrograms" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#bbf7d0" />
+                <stop offset="50%" stopColor="#a7f3d0" />
+                <stop offset="100%" stopColor="#93c5fd" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto z-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
@@ -81,7 +96,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-orange-400 to-red-400 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins">
+                <button className="bg-white border-3 border-orange-400 text-orange-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-orange-50">
                   Start Free Trial
                 </button>
                 <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg border-2 border-orange-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-orange-50 font-poppins">
@@ -90,7 +105,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative z-20">
               <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-yellow-200 p-2">
                 <img 
                   src="/assets/teacher-with-all-kids.png"
@@ -104,17 +119,32 @@ export default function Home() {
       </section>
 
       {/* Learning Programs */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100 overflow-hidden">
-        {/* Curved Bottom Shape */}
-        <div className="absolute inset-x-0 bottom-0">
-          <svg className="w-full h-32" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,120 C200,20 400,80 600,40 C800,0 1000,60 1200,20 L1200,120 Z" 
-                  fill="url(#programsShape)" />
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100 overflow-hidden -mt-32 pt-40">
+        {/* Flowing continuation from hero */}
+        <div className="absolute inset-x-0 top-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,40 C300,80 600,0 900,60 C1050,90 1200,20 1200,20 L1200,0 L0,0 Z" 
+                  fill="url(#programsFromHero)" />
             <defs>
-              <linearGradient id="programsShape" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#bbf7d0" />
-                <stop offset="50%" stopColor="#a7f3d0" />
-                <stop offset="100%" stopColor="#93c5fd" />
+              <linearGradient id="programsFromHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fed7aa" />
+                <stop offset="50%" stopColor="#bbf7d0" />
+                <stop offset="100%" stopColor="#a7f3d0" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
+        {/* Curved Bottom Shape */}
+        <div className="absolute inset-x-0 bottom-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,80 C200,20 400,100 600,40 C800,0 1000,80 1200,20 L1200,120 L0,120 Z" 
+                  fill="url(#programsToAge)" />
+            <defs>
+              <linearGradient id="programsToAge" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#e9d5ff" />
+                <stop offset="50%" stopColor="#fbcfe8" />
+                <stop offset="100%" stopColor="#fef3c7" />
               </linearGradient>
             </defs>
           </svg>
@@ -126,7 +156,7 @@ export default function Home() {
           <div className="absolute bottom-40 right-20 w-32 h-32 bg-teal-300 rounded-full blur-xl opacity-50 animate-pulse"></div>
           <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-blue-300 rounded-full blur-xl opacity-50 animate-pulse"></div>
         </div>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto z-20 relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-green-200 shadow-lg mb-6">
               <div className="w-3 h-3 bg-green-400 rounded-full mr-3"></div>
@@ -182,7 +212,7 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <button className="w-full bg-gradient-to-r from-blue-400 to-purple-400 text-white py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins">
+                <button className="w-full bg-white border-3 border-blue-400 text-blue-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-blue-50">
                   Try Online Classes
                 </button>
               </div>
@@ -226,7 +256,7 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <button className="w-full bg-gradient-to-r from-orange-400 to-red-400 text-white py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins">
+                <button className="w-full bg-white border-3 border-orange-400 text-orange-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-orange-50">
                   Try In-Person Classes
                 </button>
               </div>
@@ -236,7 +266,22 @@ export default function Home() {
       </section>
 
       {/* Age Groups */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-100 overflow-hidden">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-100 overflow-hidden -mt-32 pt-40">
+        {/* Flowing transition from programs */}
+        <div className="absolute inset-x-0 top-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,20 C200,80 400,0 600,60 C800,100 1000,20 1200,80 L1200,0 L0,0 Z" 
+                  fill="url(#ageFromPrograms)" />
+            <defs>
+              <linearGradient id="ageFromPrograms" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#a7f3d0" />
+                <stop offset="50%" stopColor="#e9d5ff" />
+                <stop offset="100%" stopColor="#fbcfe8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
         {/* Diagonal Flowing Shape */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute top-0 right-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
@@ -262,7 +307,22 @@ export default function Home() {
           <div className="absolute bottom-20 right-32 w-28 h-28 bg-pink-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
           <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-yellow-300 rounded-full blur-2xl opacity-40 animate-pulse"></div>
         </div>
-        <div className="max-w-7xl mx-auto">
+        
+        {/* Flowing transition to next section */}
+        <div className="absolute inset-x-0 bottom-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,40 C300,100 600,20 900,80 C1050,100 1200,40 1200,40 L1200,120 L0,120 Z" 
+                  fill="url(#ageToWhy)" />
+            <defs>
+              <linearGradient id="ageToWhy" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#a5f3fc" />
+                <stop offset="50%" stopColor="#bfdbfe" />
+                <stop offset="100%" stopColor="#c7d2fe" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div className="max-w-7xl mx-auto z-20 relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-purple-200 shadow-lg mb-6">
               <div className="w-3 h-3 bg-purple-400 rounded-full mr-3"></div>
@@ -339,7 +399,7 @@ export default function Home() {
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {program.description}
                   </p>
-                  <button className={`w-full bg-gradient-to-r ${program.badgeColor} text-white py-3 rounded-full font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins`}>
+                  <button className={`w-full bg-white border-3 ${program.borderColor} text-gray-700 py-3 rounded-full font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-gray-50`}>
                     Start Learning
                   </button>
                 </div>
@@ -350,7 +410,22 @@ export default function Home() {
       </section>
 
       {/* Why Choose BrainlyBees */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cyan-100 via-blue-100 to-indigo-100 overflow-hidden">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cyan-100 via-blue-100 to-indigo-100 overflow-hidden -mt-32 pt-40">
+        {/* Flowing transition from age groups */}
+        <div className="absolute inset-x-0 top-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,80 C300,20 600,100 900,40 C1050,60 1200,80 1200,80 L1200,0 L0,0 Z" 
+                  fill="url(#whyFromAge)" />
+            <defs>
+              <linearGradient id="whyFromAge" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fbcfe8" />
+                <stop offset="50%" stopColor="#a5f3fc" />
+                <stop offset="100%" stopColor="#bfdbfe" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
         {/* Circular Wave Pattern */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
@@ -380,7 +455,22 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        <div className="max-w-7xl mx-auto">
+        
+        {/* Flowing transition to roadmap */}
+        <div className="absolute inset-x-0 bottom-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,20 C200,80 400,40 600,100 C800,60 1000,100 1200,40 L1200,120 L0,120 Z" 
+                  fill="url(#whyToRoadmap)" />
+            <defs>
+              <linearGradient id="whyToRoadmap" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fecaca" />
+                <stop offset="50%" stopColor="#fbcfe8" />
+                <stop offset="100%" stopColor="#e9d5ff" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div className="max-w-7xl mx-auto z-20 relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-cyan-200 shadow-lg mb-6">
               <div className="w-3 h-3 bg-cyan-400 rounded-full mr-3"></div>
@@ -441,7 +531,7 @@ export default function Home() {
                   {benefit.description}
                 </p>
                 
-                <button className={`bg-gradient-to-r ${benefit.badgeColor} text-white px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins`}>
+                <button className={`bg-white border-3 ${benefit.borderColor} text-gray-700 px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-gray-50`}>
                   Learn More
                 </button>
               </div>
@@ -451,7 +541,22 @@ export default function Home() {
       </section>
 
       {/* Learning Roadmap Timeline */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 via-pink-100 to-purple-100 overflow-hidden">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 via-pink-100 to-purple-100 overflow-hidden -mt-32 pt-40">
+        {/* Flowing transition from why choose */}
+        <div className="absolute inset-x-0 top-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,40 C200,100 400,60 600,20 C800,40 1000,20 1200,60 L1200,0 L0,0 Z" 
+                  fill="url(#roadmapFromWhy)" />
+            <defs>
+              <linearGradient id="roadmapFromWhy" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#bfdbfe" />
+                <stop offset="50%" stopColor="#fecaca" />
+                <stop offset="100%" stopColor="#fbcfe8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
         {/* Zigzag Pattern Background */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
@@ -482,7 +587,22 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        <div className="max-w-7xl mx-auto">
+        
+        {/* Flowing transition to FAQ */}
+        <div className="absolute inset-x-0 bottom-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,80 C300,20 600,100 900,40 C1050,10 1200,80 1200,80 L1200,120 L0,120 Z" 
+                  fill="url(#roadmapToFaq)" />
+            <defs>
+              <linearGradient id="roadmapToFaq" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#bbf7d0" />
+                <stop offset="50%" stopColor="#67e8f9" />
+                <stop offset="100%" stopColor="#93c5fd" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div className="max-w-7xl mx-auto z-20 relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-red-200 shadow-lg mb-6">
               <div className="w-3 h-3 bg-red-400 rounded-full mr-3"></div>
@@ -509,7 +629,6 @@ export default function Home() {
                   step: '1',
                   title: 'Meet Your Teacher',
                   description: 'Say hello to your awesome teacher! They\'ll get to know you and what makes you special.',
-                  icon: '👋',
                   color: 'from-red-400 to-pink-400',
                   bgColor: 'from-red-50 to-pink-50',
                   position: 'left'
@@ -518,7 +637,6 @@ export default function Home() {
                   step: '2',
                   title: 'Find Your Style',
                   description: 'Discover how you learn best! Some kids love pictures, others love games or stories.',
-                  icon: '🎨',
                   color: 'from-pink-400 to-purple-400',
                   bgColor: 'from-pink-50 to-purple-50',
                   position: 'right'
@@ -527,7 +645,6 @@ export default function Home() {
                   step: '3',
                   title: 'Start Learning',
                   description: 'Jump into fun lessons made just for you! Every lesson is like a new adventure.',
-                  icon: '🚀',
                   color: 'from-purple-400 to-indigo-400',
                   bgColor: 'from-purple-50 to-indigo-50',
                   position: 'left'
@@ -536,7 +653,6 @@ export default function Home() {
                   step: '4',
                   title: 'Celebrate Success',
                   description: 'High-five time! Watch yourself get smarter and celebrate every win with your family.',
-                  icon: '🎉',
                   color: 'from-indigo-400 to-blue-400',
                   bgColor: 'from-indigo-50 to-blue-50',
                   position: 'right'
@@ -552,7 +668,6 @@ export default function Home() {
                         <div className={`bg-gradient-to-r ${step.color} text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4 shadow-lg`}>
                           {step.step}
                         </div>
-                        <div className="text-4xl">{step.icon}</div>
                       </div>
                       <h3 className="text-2xl font-bold text-gray-800 mb-3 font-poppins">
                         {step.title}
@@ -570,7 +685,22 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100 overflow-hidden">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100 overflow-hidden -mt-32 pt-40">
+        {/* Flowing transition from roadmap */}
+        <div className="absolute inset-x-0 top-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,80 C300,100 600,20 900,60 C1050,80 1200,20 1200,20 L1200,0 L0,0 Z" 
+                  fill="url(#faqFromRoadmap)" />
+            <defs>
+              <linearGradient id="faqFromRoadmap" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fbcfe8" />
+                <stop offset="50%" stopColor="#bbf7d0" />
+                <stop offset="100%" stopColor="#67e8f9" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
         {/* Leafy Organic Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
@@ -605,7 +735,22 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        <div className="max-w-4xl mx-auto">
+        
+        {/* Flowing transition to CTA */}
+        <div className="absolute inset-x-0 bottom-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,40 C200,100 400,20 600,80 C800,120 1000,40 1200,100 L1200,120 L0,120 Z" 
+                  fill="url(#faqToCta)" />
+            <defs>
+              <linearGradient id="faqToCta" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fed7aa" />
+                <stop offset="50%" stopColor="#fecaca" />
+                <stop offset="100%" stopColor="#f9a8d4" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div className="max-w-4xl mx-auto z-20 relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-green-200 shadow-lg mb-6">
               <div className="w-3 h-3 bg-green-400 rounded-full mr-3"></div>
@@ -671,7 +816,22 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-100 via-red-100 to-pink-100 overflow-hidden">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-100 via-red-100 to-pink-100 overflow-hidden -mt-32 pt-40">
+        {/* Flowing transition from FAQ */}
+        <div className="absolute inset-x-0 top-0 h-32">
+          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,100 C200,40 400,120 600,80 C800,40 1000,100 1200,60 L1200,0 L0,0 Z" 
+                  fill="url(#ctaFromFaq)" />
+            <defs>
+              <linearGradient id="ctaFromFaq" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#67e8f9" />
+                <stop offset="50%" stopColor="#fed7aa" />
+                <stop offset="100%" stopColor="#fecaca" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        
         {/* Celebration Burst Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
@@ -724,7 +884,7 @@ export default function Home() {
           <div className="absolute bottom-32 right-32 w-20 h-20 bg-red-300 rounded-full blur-lg opacity-60 animate-bounce" style={{animationDelay: '0.5s'}}></div>
           <div className="absolute top-1/3 right-1/4 w-12 h-12 bg-pink-300 rounded-full blur-lg opacity-60 animate-bounce" style={{animationDelay: '1s'}}></div>
         </div>
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center z-20 relative">
           <div className="bg-white rounded-3xl p-12 shadow-2xl border-4 border-orange-200">
             <div className="mb-8">
               <div className="text-6xl mb-6">🎉</div>
@@ -741,10 +901,10 @@ export default function Home() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button className="bg-gradient-to-r from-orange-400 to-red-400 text-white px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins">
+              <button className="bg-white border-4 border-orange-400 text-orange-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-orange-50">
                 Start Free Trial! 🚀
               </button>
-              <button className="bg-gradient-to-r from-pink-400 to-purple-400 text-white px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins">
+              <button className="bg-white border-4 border-pink-400 text-pink-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-pink-50">
                 Talk to Teacher! 👋
               </button>
             </div>
