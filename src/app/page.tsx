@@ -921,16 +921,20 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cyan-50 to-blue-100">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-green-200 shadow-lg mb-6">
+              <div className="w-3 h-3 bg-green-400 rounded-full mr-3"></div>
+              <span className="text-green-700 font-bold text-sm font-nunito">Professional Questions & Answers</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-poppins">
               Frequently Asked
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 mt-2">
                 Questions
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-nunito">
               Get answers to common questions about our programs and teaching methodology.
             </p>
           </div>
@@ -939,41 +943,53 @@ export default function Home() {
             {[
               {
                 question: 'What age groups do you teach?',
-                answer: 'We provide personalized learning programs for children aged 3-15, with age-appropriate curricula designed for Early Learners (4-6), Primary Students (7-9), Middle School (10-12), and High School (13+) levels.'
+                answer: 'We provide personalized learning programs for children aged 3-15, with age-appropriate curricula designed for Early Learners (4-6), Primary Students (7-9), Middle School (10-12), and High School (13+) levels.',
+                bgColor: 'from-green-50 to-teal-50',
+                borderColor: 'border-green-200'
               },
               {
                 question: 'How do online classes work?',
-                answer: 'Our online classes are conducted through interactive virtual classrooms with qualified teachers. Students receive personalized attention, access to digital learning tools, and can schedule flexible timings that suit their routine.'
+                answer: 'Our online classes are conducted through interactive virtual classrooms with qualified teachers. Students receive personalized attention, access to digital learning tools, and can schedule flexible timings that suit their routine.',
+                bgColor: 'from-teal-50 to-blue-50',
+                borderColor: 'border-teal-200'
               },
               {
                 question: 'What subjects do you cover?',
-                answer: 'We offer comprehensive programs covering Math, Science, English, Coding, and more. Our curriculum is designed to strengthen foundational skills while building advanced concepts progressively.'
+                answer: 'We offer comprehensive programs covering Math, Science, English, Coding, and more. Our curriculum is designed to strengthen foundational skills while building advanced concepts progressively.',
+                bgColor: 'from-blue-50 to-indigo-50',
+                borderColor: 'border-blue-200'
               },
               {
                 question: 'How do you track my child\'s progress?',
-                answer: 'We provide regular assessments, detailed progress reports, and parent-teacher consultations. Our systematic approach ensures continuous monitoring and improvement of your child\'s academic performance.'
+                answer: 'We provide regular assessments, detailed progress reports, and parent-teacher consultations. Our systematic approach ensures continuous monitoring and improvement of your child\'s academic performance.',
+                bgColor: 'from-indigo-50 to-purple-50',
+                borderColor: 'border-indigo-200'
               },
               {
                 question: 'What is the difference between online and offline programs?',
-                answer: 'Online programs offer virtual learning with digital tools and flexible scheduling, while offline programs provide face-to-face interaction with hands-on activities and group projects. Both maintain the same high-quality teaching standards.'
+                answer: 'Online programs offer virtual learning with digital tools and flexible scheduling, while offline programs provide face-to-face interaction with hands-on activities and group projects. Both maintain the same high-quality teaching standards.',
+                bgColor: 'from-purple-50 to-pink-50',
+                borderColor: 'border-purple-200'
               },
               {
                 question: 'Can I try a class before enrolling?',
-                answer: 'Yes! We offer a free trial class where your child can experience our teaching methodology. This helps you understand our approach and ensures it\'s the right fit for your child\'s learning needs.'
+                answer: 'Yes! We offer a free trial class where your child can experience our teaching methodology. This helps you understand our approach and ensures it\'s the right fit for your child\'s learning needs.',
+                bgColor: 'from-pink-50 to-red-50',
+                borderColor: 'border-pink-200'
               }
             ].map((faq, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/50 overflow-hidden">
+              <div key={index} className={`bg-white rounded-3xl shadow-xl border-4 ${faq.borderColor} overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
                 <details className="group">
-                  <summary className="flex justify-between items-center cursor-pointer p-6 bg-gradient-to-r from-cyan-50 to-blue-50 border-b border-cyan-100">
-                    <h3 className="text-lg font-semibold text-gray-800 pr-8">
+                  <summary className={`flex justify-between items-center cursor-pointer p-6 bg-gradient-to-r ${faq.bgColor} border-b ${faq.borderColor}`}>
+                    <h3 className="text-lg font-bold text-gray-800 pr-8 font-poppins">
                       {faq.question}
                     </h3>
-                    <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm group-open:rotate-45 transition-transform">
+                    <div className={`flex-shrink-0 w-8 h-8 bg-white border-2 ${faq.borderColor} rounded-full flex items-center justify-center text-gray-700 font-bold text-lg group-open:rotate-45 transition-transform shadow-lg`}>
                       +
                     </div>
                   </summary>
-                  <div className="p-6">
-                    <p className="text-gray-600 leading-relaxed">
+                  <div className="p-8">
+                    <p className="text-gray-700 leading-relaxed text-lg font-nunito">
                       {faq.answer}
                     </p>
                   </div>
@@ -983,33 +999,9 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">Still have questions?</p>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg">
+            <p className="text-gray-600 mb-6 font-nunito">Still have questions?</p>
+            <button className="bg-white border-3 border-green-400 text-green-600 px-8 py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-green-50">
               Contact Our Support Team
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50 to-purple-100">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Ready to Start Your Child's
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-              Learning Journey?
-            </span>
-          </h2>
-          <p className="text-xl text-gray-600 mb-12 leading-relaxed">
-            Join thousands of families who have already discovered the BrainlyBees difference. 
-            Book a free consultation today!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-12 py-5 rounded-2xl font-semibold text-lg shadow-xl">
-              Book Free Trial
-            </button>
-            <button className="bg-white/80 backdrop-blur-sm text-indigo-700 px-12 py-5 rounded-2xl font-semibold text-lg border border-indigo-200 shadow-lg">
-              Contact Us
             </button>
           </div>
         </div>
