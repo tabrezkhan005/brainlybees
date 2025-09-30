@@ -212,9 +212,11 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <button className="w-full bg-white border-3 border-blue-400 text-blue-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-blue-50">
-                  Try Online Classes
-                </button>
+                <a href="/online-programs">
+                  <button className="w-full bg-white border-3 border-blue-400 text-blue-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-blue-50">
+                    Try Online Classes
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -232,7 +234,7 @@ export default function Home() {
                 </div>
                 <div className="absolute top-4 left-4">
                   <div className="bg-white px-4 py-2 rounded-full shadow-lg border-2 border-orange-200">
-                    <h3 className="text-orange-700 text-lg font-bold font-poppins">In-Person Classes</h3>
+                    <h3 className="text-orange-700 text-lg font-bold font-poppins">Offline Classes</h3>
                   </div>
                 </div>
               </div>
@@ -256,9 +258,11 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <button className="w-full bg-white border-3 border-orange-400 text-orange-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-orange-50">
-                  Try In-Person Classes
-                </button>
+                <a href="/offline-programs">
+                  <button className="w-full bg-white border-3 border-orange-400 text-orange-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-orange-50">
+                    Try Offline Classes
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -887,31 +891,32 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center z-20 relative">
           <div className="bg-white rounded-3xl p-12 shadow-2xl border-4 border-orange-200">
             <div className="mb-8">
-              <div className="text-6xl mb-6">🎉</div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 font-poppins">
-                Ready to Start Your
+                Ready to Start Your Child's
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 mt-2">
-                  Learning Adventure?
+                  Educational Journey?
                 </span>
               </h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed mb-8">
-                Join thousands of happy kids who love learning with BrainlyBees! 
-                Your amazing learning journey starts with just one click.
+                Join thousands of families who have chosen BrainlyBees for quality education. 
+                Schedule your consultation or connect with us directly to get started.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <button className="bg-white border-4 border-orange-400 text-orange-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-orange-50">
-                Start Free Trial! 🚀
+                Book Consultation
               </button>
-              <button className="bg-white border-4 border-pink-400 text-pink-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-pink-50">
-                Talk to Teacher! 👋
-              </button>
+              <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer">
+                <button className="bg-white border-4 border-green-400 text-green-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-green-50">
+                  WhatsApp Us
+                </button>
+              </a>
             </div>
             
             <div className="mt-8 text-sm text-gray-600">
-              <p className="font-bold">🎁 Special Offer: First lesson completely FREE!</p>
-              <p>No credit card needed • Safe & secure • Parents love us!</p>
+              <p className="font-bold">Special Offer: First consultation completely FREE!</p>
+              <p>No obligation • Professional guidance • Trusted by parents</p>
             </div>
           </div>
         </div>
