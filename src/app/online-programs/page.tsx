@@ -14,7 +14,7 @@ export default function OnlineProgramsPage() {
       title: 'Early Learners (Ages 4-6)',
       subtitle: 'Digital Learning Foundations',
       description: 'Interactive online programs designed to develop fundamental skills through engaging digital activities and virtual play-based learning.',
-      image: '/assets/Boy-kid-doing-work.png',
+      image: '/assets/cute-kid-doing-work.png',
       features: [
         'Interactive Online Phonics',
         'Digital Number Games and Math',
@@ -29,7 +29,7 @@ export default function OnlineProgramsPage() {
       title: 'Primary Learners (Ages 7-9)',
       subtitle: 'Virtual Academic Growth',
       description: 'Comprehensive online curriculum focusing on core subjects through interactive digital platforms and virtual learning experiences.',
-      image: '/assets/girl-doing-work.png',
+      image: '/assets/Girl-kid-doing-workin-laptop.png',
       features: [
         'Online Reading Comprehension',
         'Virtual Math Problem Solving',
@@ -44,7 +44,7 @@ export default function OnlineProgramsPage() {
       title: 'Middle School (Ages 10-12)',
       subtitle: 'Advanced Digital Learning',
       description: 'Challenging online programs that prepare students for academic success through advanced digital tools and virtual learning environments.',
-      image: '/assets/kid-doing-homework.png',
+      image: '/assets/girl-kid-explaining-in-laptop.png',
       features: [
         'Online Advanced Mathematics',
         'Virtual Scientific Research Methods',
@@ -59,7 +59,7 @@ export default function OnlineProgramsPage() {
       title: 'High School (Ages 13+)',
       subtitle: 'Virtual Future Preparation',
       description: 'Intensive online programs focusing on exam preparation, advanced academics, and future career readiness through digital platforms.',
-      image: '/assets/Virtualschoolinindia.jpg',
+      image: '/assets/boy-kid-explaining-in-laptop.png',
       features: [
         'Online Exam Preparation (SAT, AP, etc.)',
         'Virtual Advanced STEM Subjects',
@@ -77,28 +77,28 @@ export default function OnlineProgramsPage() {
     {
       title: 'Digital Mathematics',
       description: 'From basic arithmetic to advanced calculus, our online math programs build strong problem-solving skills through interactive digital tools.',
-      image: '/assets/Boy-kid-doing-work.png',
+      image: '/assets/Boy-kid-doing-work-in-laptop.png',
       levels: ['Elementary', 'Intermediate', 'Advanced'],
       topics: ['Online Number Theory', 'Virtual Algebra', 'Digital Geometry', 'Interactive Statistics', 'Online Calculus']
     },
     {
       title: 'Virtual Science',
       description: 'Explore the wonders of science through virtual experiments, online simulations, and interactive digital demonstrations.',
-      image: '/assets/girl-doing-work.png',
+      image: '/assets/girl-doing-work-in-laptop.png',
       levels: ['Elementary', 'Intermediate', 'Advanced'],
       topics: ['Virtual Physics', 'Online Chemistry', 'Digital Biology', 'Virtual Earth Science', 'Online Environmental Science']
     },
     {
       title: 'Online Language Arts',
       description: 'Develop strong communication skills through digital reading platforms, online writing tools, and virtual presentations.',
-      image: '/assets/kid-doing-homework.png',
+      image: '/assets/girl-saying-hi-in-laptop.png',
       levels: ['Elementary', 'Intermediate', 'Advanced'],
       topics: ['Digital Reading Comprehension', 'Online Creative Writing', 'Virtual Grammar', 'Digital Literature', 'Online Public Speaking']
     },
     {
       title: 'Computer Programming',
       description: 'Learn coding, computational thinking, and digital literacy skills through hands-on online programming environments.',
-      image: '/assets/kid-with-graduation-outfit.png',
+      image: '/assets/boy-kid-explaining-in-laptop.png',
       levels: ['Beginner', 'Intermediate', 'Advanced'],
       topics: ['Coding Basics', 'Web Development', 'Game Design', 'Robotics', 'AI Fundamentals']
     }
@@ -264,14 +264,14 @@ export default function OnlineProgramsPage() {
 
           {/* Selected Program Display */}
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-white/50">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
               <div className="p-10 lg:p-16">
                 <div className="space-y-8">
                   <div>
                     <h3 className="text-3xl font-bold text-gray-800 mb-3">
                       {agePrograms[selectedAge as keyof typeof agePrograms].title}
                     </h3>
-                    <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600 font-semibold mb-6">
+                    <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 font-semibold mb-6">
                       {agePrograms[selectedAge as keyof typeof agePrograms].subtitle}
                     </p>
                     <p className="text-gray-600 leading-relaxed text-lg">
@@ -280,11 +280,11 @@ export default function OnlineProgramsPage() {
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-gray-800 mb-4 text-lg">Program Features:</h4>
+                    <h4 className="font-bold text-gray-800 mb-4 text-lg">Online Features:</h4>
                     <ul className="space-y-3">
                       {agePrograms[selectedAge as keyof typeof agePrograms].features.map((feature, index) => (
                         <li key={index} className="flex items-center space-x-4">
-                          <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
                           <span className="text-gray-700 font-medium">{feature}</span>
                         </li>
                       ))}
@@ -306,19 +306,20 @@ export default function OnlineProgramsPage() {
                     </div>
                   </div>
 
-                  <button className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-4 rounded-2xl font-semibold text-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg">
-                    Start Learning Today
+                  <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-4 rounded-2xl font-semibold text-lg shadow-lg">
+                    Start Online Learning
                   </button>
                 </div>
               </div>
               
-              <div className="relative h-80 lg:h-auto">
-                <img 
-                  src={agePrograms[selectedAge as keyof typeof agePrograms].image}
-                  alt="Program"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent"></div>
+              <div className="relative p-4">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl overflow-hidden shadow-lg">
+                  <img 
+                    src={agePrograms[selectedAge as keyof typeof agePrograms].image}
+                    alt="Online Learning Program"
+                    className="w-full h-96 object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -326,12 +327,12 @@ export default function OnlineProgramsPage() {
       </section>
 
       {/* Subject Programs */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-50 to-green-100">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               Digital Subject
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                 Learning
               </span>
             </h2>
@@ -342,17 +343,20 @@ export default function OnlineProgramsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {subjectPrograms.map((subject, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-white/50 group">
-                <div className="relative h-56">
-                  <img 
-                    src={subject.image}
-                    alt={subject.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent"></div>
-                  <h3 className="absolute bottom-6 left-6 text-white text-2xl font-bold">
-                    {subject.title}
-                  </h3>
+              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-white/50">
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 flex items-center justify-center min-h-64">
+                    <img 
+                      src={subject.image}
+                      alt={subject.title}
+                      className="w-full h-56 object-cover rounded-2xl"
+                    />
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <h3 className="text-blue-800 text-xl font-bold bg-white/95 backdrop-blur-sm px-4 py-2 rounded-2xl shadow-lg">
+                      {subject.title}
+                    </h3>
+                  </div>
                 </div>
                 
                 <div className="p-8">
@@ -364,7 +368,7 @@ export default function OnlineProgramsPage() {
                     <h4 className="font-bold text-gray-800 mb-3">Available Levels:</h4>
                     <div className="flex flex-wrap gap-2">
                       {subject.levels.map((level, levelIndex) => (
-                        <span key={levelIndex} className="bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-4 py-2 rounded-2xl text-sm font-semibold border border-green-200">
+                        <span key={levelIndex} className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-4 py-2 rounded-2xl text-sm font-semibold border border-blue-200">
                           {level}
                         </span>
                       ))}
@@ -372,18 +376,18 @@ export default function OnlineProgramsPage() {
                   </div>
                   
                   <div className="mb-8">
-                    <h4 className="font-bold text-gray-800 mb-3">Key Topics:</h4>
+                    <h4 className="font-bold text-gray-800 mb-3">Digital Topics:</h4>
                     <div className="space-y-2">
                       {subject.topics.map((topic, topicIndex) => (
                         <div key={topicIndex} className="flex items-center space-x-3">
-                          <div className="w-2.5 h-2.5 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"></div>
+                          <div className="w-2.5 h-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
                           <span className="text-gray-600 font-medium">{topic}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-emerald-500 to-green-500 text-white py-4 rounded-2xl font-semibold text-lg shadow-lg">
+                  <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-4 rounded-2xl font-semibold text-lg shadow-lg">
                     Start {subject.title}
                   </button>
                 </div>
@@ -410,9 +414,9 @@ export default function OnlineProgramsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {learningBenefits.map((benefit, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-lg">
                 <div className="relative mb-8">
-                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br from-white to-gray-50">
+                  <div className="w-48 h-48 mx-auto rounded-3xl overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br from-blue-50 to-indigo-100">
                     <img 
                       src={benefit.image}
                       alt={benefit.title}
