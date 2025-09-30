@@ -436,51 +436,6 @@ export default function OnlineProgramsPage() {
         </div>
       </section>
 
-      {/* Success Stories */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Student Success
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-                Stories
-              </span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Real students, real results. See how our programs have transformed learning journeys.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {successStories.map((story, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 border border-white/50">
-                <div className="text-center mb-8">
-                  <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border-4 border-gradient-to-r from-yellow-300 to-orange-300 shadow-lg">
-                    <img 
-                      src={story.image}
-                      alt={story.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{story.name}</h3>
-                  <p className="text-sm text-gray-600 mb-4">Age {story.age} • {story.location}</p>
-                  <span className="inline-block bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 px-4 py-2 rounded-2xl text-sm font-semibold border border-green-200">
-                    {story.achievement}
-                  </span>
-                </div>
-                
-                <div className="text-center">
-                  <p className="text-gray-700 italic mb-6 leading-relaxed">"{story.quote}"</p>
-                  <div className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 font-bold">
-                    Program: {story.program}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500">
         <div className="max-w-4xl mx-auto text-center">
