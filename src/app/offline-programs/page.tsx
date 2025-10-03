@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
@@ -25,7 +26,7 @@ export default function OfflineProgramsPage() {
         'Social skills development in group settings'
       ],
       duration: '45 minutes',
-      price: '$25/session'
+      price: '₹1,800/session'
     },
     '7-9': {
       title: 'Primary Skills Development',
@@ -41,7 +42,7 @@ export default function OfflineProgramsPage() {
         'Presentation skills and confidence building'
       ],
       duration: '60 minutes',
-      price: '$30/session'
+      price: '₹2,200/session'
     },
     '10-12': {
       title: 'Advanced Academic Skills',
@@ -57,7 +58,7 @@ export default function OfflineProgramsPage() {
         'Study skills and time management'
       ],
       duration: '75 minutes',
-      price: '$35/session'
+      price: '₹2,500/session'
     },
     '13+': {
       title: 'Teen Academic Mastery',
@@ -73,7 +74,7 @@ export default function OfflineProgramsPage() {
         'Life skills and financial literacy'
       ],
       duration: '90 minutes',
-      price: '$40/session'
+      price: '₹2,800/session'
     }
   };
 
@@ -208,9 +209,11 @@ export default function OfflineProgramsPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-white border-3 border-pink-400 text-pink-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-pink-50">
-                  Schedule Visit
-                </button>
+                <Link href="/consultation">
+                  <button className="bg-white border-3 border-pink-400 text-pink-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-pink-50">
+                    Schedule Visit
+                  </button>
+                </Link>
                 <a
                   href="https://wa.me/918979245215"
                   target="_blank"
@@ -384,9 +387,11 @@ export default function OfflineProgramsPage() {
                     </div>
                   </div>
 
-                  <button className="w-full bg-white border-3 border-orange-400 text-orange-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-orange-50">
-                    Join This Program
-                  </button>
+                  <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                    <button className="w-full bg-white border-3 border-orange-400 text-orange-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-orange-50">
+                      Join This Program
+                    </button>
+                  </a>
                 </div>
               </div>
 
@@ -510,9 +515,11 @@ export default function OfflineProgramsPage() {
                   </div>
                 </div>
 
-                <button className="w-full bg-white border-3 border-emerald-400 text-emerald-600 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-emerald-50">
-                  Try This Subject
-                </button>
+                <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                  <button className="w-full bg-white border-3 border-emerald-400 text-emerald-600 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-emerald-50">
+                    Try This Subject
+                  </button>
+                </a>
               </div>
             ))}
           </div>
@@ -618,9 +625,11 @@ export default function OfflineProgramsPage() {
                 Join thousands of happy kids who love learning through real experiments, creative projects, and fun activities!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white border-3 border-amber-400 text-amber-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-amber-50">
-                  Schedule Visit
-                </button>
+                <Link href="/consultation">
+                  <button className="bg-white border-3 border-amber-400 text-amber-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-amber-50">
+                    Schedule Visit
+                  </button>
+                </Link>
                 <a
                   href="https://wa.me/918979245215"
                   target="_blank"
