@@ -98,12 +98,16 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-white border-3 border-orange-400 text-orange-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-orange-50">
-                  Start Free Trial
-                </button>
-                <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg border-2 border-orange-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-orange-50 font-poppins">
-                  Meet Our Teachers
-                </button>
+                <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                  <button className="bg-white border-3 border-green-400 text-green-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-green-50">
+                    WhatsApp Us
+                  </button>
+                </a>
+                <Link href="/offline-programs">
+                  <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg border-2 border-orange-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-orange-50 font-poppins">
+                    Meet Our Teachers
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -410,12 +414,9 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">
                     {program.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {program.description}
                   </p>
-                  <button className={`w-full bg-white border-3 ${program.borderColor} text-gray-700 py-3 rounded-full font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-gray-50`}>
-                    Start Learning
-                  </button>
                 </div>
               </div>
             ))}
@@ -543,13 +544,9 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-gray-800 mb-4 font-poppins">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed text-lg mb-6">
+                <p className="text-gray-700 leading-relaxed text-lg">
                   {benefit.description}
                 </p>
-
-                <button className={`bg-white border-3 ${benefit.borderColor} text-gray-700 px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-gray-50`}>
-                  Learn More
-                </button>
               </div>
             ))}
           </div>
@@ -916,10 +913,12 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button className="bg-white border-4 border-orange-400 text-orange-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-orange-50">
-                Book Consultation
-              </button>
-              <a href="https://wa.me/+918979245215" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                <button className="bg-white border-4 border-orange-400 text-orange-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-orange-50">
+                  Book Consultation
+                </button>
+              </a>
+              <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
                 <button className="bg-white border-4 border-green-400 text-green-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-green-50">
                   WhatsApp Us
                 </button>
@@ -1012,9 +1011,11 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6 font-nunito">Still have questions?</p>
-            <button className="bg-white border-3 border-green-400 text-green-600 px-8 py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-green-50">
-              Contact Our Support Team
-            </button>
+            <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+              <button className="bg-white border-3 border-green-400 text-green-600 px-8 py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-green-50">
+                Contact Our Support Team
+              </button>
+            </a>
           </div>
         </div>
       </section>
