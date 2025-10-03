@@ -55,11 +55,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6 text-gray-800 font-poppins">Support</h4>
             <div className="space-y-3">
-              <a href="#" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Help Center</a>
-              <a href="#" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">FAQ</a>
-              <a href="#" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Contact Us</a>
-              <a href="#" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Parent Guide</a>
-              <a href="#" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Teacher Resources</a>
+              <Link href="/help-center" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Help Center</Link>
+              <Link href="/faq" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">FAQ</Link>
+              <Link href="/contact-us" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Contact Us</Link>
+              <Link href="/parent-guide" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Parent Guide</Link>
+              <Link href="/teacher-resources" className="block text-gray-600 hover:text-orange-600 transition-colors font-nunito">Teacher Resources</Link>
             </div>
           </div>
 
@@ -108,10 +108,10 @@ export default function Footer() {
         <div className="border-t border-orange-200 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-wrap justify-center md:justify-start space-x-6 mb-4 md:mb-0">
-              <a href="#" className="text-gray-500 hover:text-orange-600 text-sm transition-colors font-nunito">Privacy Policy</a>
-              <a href="#" className="text-gray-500 hover:text-orange-600 text-sm transition-colors font-nunito">Terms of Service</a>
-              <a href="#" className="text-gray-500 hover:text-orange-600 text-sm transition-colors font-nunito">Cookie Policy</a>
-              <a href="#" className="text-gray-500 hover:text-orange-600 text-sm transition-colors font-nunito">Refund Policy</a>
+              <Link href="/privacy-policy" className="text-gray-500 hover:text-orange-600 text-sm transition-colors font-nunito">Privacy Policy</Link>
+              <Link href="/terms-of-service" className="text-gray-500 hover:text-orange-600 text-sm transition-colors font-nunito">Terms of Service</Link>
+              <Link href="/cookie-policy" className="text-gray-500 hover:text-orange-600 text-sm transition-colors font-nunito">Cookie Policy</Link>
+              <Link href="/refund-policy" className="text-gray-500 hover:text-orange-600 text-sm transition-colors font-nunito">Refund Policy</Link>
             </div>
             <div className="text-gray-500 text-sm font-nunito">
               © 2025 BrainlyBees. All rights reserved.
