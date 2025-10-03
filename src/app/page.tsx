@@ -913,11 +913,11 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+              <Link href="/consultation">
                 <button className="bg-white border-4 border-orange-400 text-orange-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-orange-50">
                   Book Consultation
                 </button>
-              </a>
+              </Link>
               <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
                 <button className="bg-white border-4 border-green-400 text-green-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-green-50">
                   WhatsApp Us

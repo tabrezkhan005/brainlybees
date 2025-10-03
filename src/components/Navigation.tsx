@@ -134,9 +134,11 @@ export default function Navigation() {
             </a>
 
             {/* Book Consultation Button */}
-            <button className="bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 shadow-md hover:shadow-lg">
-              Book Consultation
-            </button>
+            <Link href="/consultation">
+              <button className="bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 shadow-md hover:shadow-lg">
+                Book Consultation
+              </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -190,9 +192,11 @@ export default function Navigation() {
                 </svg>
                 WhatsApp
               </a>
-              <button className="w-full px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full font-semibold shadow-sm transition-all duration-200">
-                Book Consultation
-              </button>
+              <Link href="/consultation">
+                <button className="w-full px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full font-semibold shadow-sm transition-all duration-200">
+                  Book Consultation
+                </button>
+              </Link>
             </div>
           </div>
         </div>
