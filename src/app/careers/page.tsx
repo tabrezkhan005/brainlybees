@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -166,10 +167,12 @@ export default function CareersPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button className="bg-white border-2 border-orange-400 text-orange-600 px-8 py-4 rounded-2xl font-semibold hover:bg-orange-50 transition-all duration-300 transform hover:scale-105">
-                  View Open Positions
-                </button>
-                <a href="https://wa.me/your-number" className="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-500 hover:to-amber-500 transition-all duration-300 transform hover:scale-105">
+                <Link href="/consultation">
+                  <button className="bg-white border-2 border-orange-400 text-orange-600 px-8 py-4 rounded-2xl font-semibold hover:bg-orange-50 transition-all duration-300 transform hover:scale-105">
+                    Book Consultation
+                  </button>
+                </Link>
+                <a href="https://wa.me/918979245215" className="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-500 hover:to-amber-500 transition-all duration-300 transform hover:scale-105">
                   Contact HR Team
                 </a>
               </div>
@@ -346,9 +349,11 @@ export default function CareersPage() {
                   </ul>
                 </div>
                 
-                <button className="w-full bg-white border-2 border-purple-400 text-purple-600 py-3 rounded-2xl font-semibold hover:bg-purple-50 transition-all duration-300">
-                  Apply Now
-                </button>
+                <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                  <button className="w-full bg-white border-2 border-purple-400 text-purple-600 py-3 rounded-2xl font-semibold hover:bg-purple-50 transition-all duration-300">
+                    Apply Now
+                  </button>
+                </a>
               </div>
             ))}
           </div>
@@ -469,10 +474,12 @@ export default function CareersPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button className="bg-white border-2 border-orange-400 text-orange-600 px-8 py-4 rounded-2xl font-semibold hover:bg-orange-50 transition-all duration-300 transform hover:scale-105">
-                  Browse All Positions
-                </button>
-                <a href="https://wa.me/your-number" className="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-500 hover:to-amber-500 transition-all duration-300 transform hover:scale-105">
+                <Link href="/consultation">
+                  <button className="bg-white border-2 border-orange-400 text-orange-600 px-8 py-4 rounded-2xl font-semibold hover:bg-orange-50 transition-all duration-300 transform hover:scale-105">
+                    Book Consultation
+                  </button>
+                </Link>
+                <a href="https://wa.me/918979245215" className="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-500 hover:to-amber-500 transition-all duration-300 transform hover:scale-105">
                   Contact Recruitment Team
                 </a>
               </div>
