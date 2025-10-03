@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useState } from 'react';
@@ -12,7 +13,7 @@ export default function OurVisionPage() {
     cognitive: {
       title: 'Cognitive Abilities',
       subtitle: 'Think Beyond Boundaries',
-      description: 'Explore problem-solving alternatives and cultivate thinking abilities through interactive learning experiences.',
+      description: 'Explore problem-solving alternatives and cultivate thinking abilities through interactive learning experiences that challenge and expand young minds.',
       image: '/assets/kid-keeping-book-on-head-and-thinking.png',
       features: [
         'Critical thinking development',
@@ -22,13 +23,23 @@ export default function OurVisionPage() {
         'Memory enhancement techniques',
         'Logic and pattern recognition'
       ],
+      additionalContent: {
+        title: 'Cognitive Development Approach',
+        description: 'Our cognitive development program focuses on building strong thinking foundations through age-appropriate challenges. We use interactive puzzles, strategic games, and creative problem-solving activities that stimulate neural pathways and enhance cognitive flexibility. Children learn to approach problems from multiple angles, developing metacognitive skills that help them understand how they learn best.',
+        benefits: [
+          'Enhanced concentration and focus abilities',
+          'Improved academic performance across subjects',
+          'Better decision-making and reasoning skills',
+          'Increased confidence in tackling new challenges'
+        ]
+      },
       color: 'from-blue-400 to-purple-500',
       bgColor: 'from-blue-50 to-purple-50'
     },
     visualization: {
       title: 'Visual Learning Excellence',
       subtitle: 'Learn Through Discovery',
-      description: 'Transform abstract concepts into tangible understanding through innovative visual techniques and interactive exploration.',
+      description: 'Transform abstract concepts into tangible understanding through innovative visual techniques and interactive exploration that makes learning memorable.',
       image: '/assets/kids-doing-painting.png',
       features: [
         'Visual learning techniques',
@@ -38,13 +49,23 @@ export default function OurVisionPage() {
         'Story-based learning',
         'Hands-on activities'
       ],
+      additionalContent: {
+        title: 'Visual Learning Integration',
+        description: 'Our visual learning approach leverages the natural power of imagery and spatial intelligence. We incorporate mind maps, infographics, educational videos, and interactive visual aids to make complex concepts accessible. This method particularly benefits visual learners while enhancing comprehension for all learning styles.',
+        benefits: [
+          'Faster concept comprehension and retention',
+          'Enhanced spatial and visual intelligence',
+          'Better understanding of complex relationships',
+          'Improved creative expression and imagination'
+        ]
+      },
       color: 'from-green-400 to-blue-500',
       bgColor: 'from-green-50 to-blue-50'
     },
     conceptual: {
       title: 'Foundational Mastery',
       subtitle: 'Build Strong Foundations',
-      description: 'Develop deep understanding of core concepts through structured learning that builds confidence and competence.',
+      description: 'Develop deep understanding of core concepts through structured learning that builds confidence and competence step by step.',
       image: '/assets/teacher-helping-girl-kid-doubt.png',
       features: [
         'Foundation building',
@@ -54,13 +75,23 @@ export default function OurVisionPage() {
         'Simplified explanations',
         'Progressive difficulty'
       ],
+      additionalContent: {
+        title: 'Foundational Learning Methodology',
+        description: 'We believe that strong foundations are essential for future success. Our systematic approach ensures that children master fundamental concepts before advancing to more complex topics. This prevents knowledge gaps and builds genuine understanding rather than rote memorization.',
+        benefits: [
+          'Solid academic foundation across all subjects',
+          'Reduced learning anxiety and increased confidence',
+          'Better preparation for advanced concepts',
+          'Long-term retention and understanding'
+        ]
+      },
       color: 'from-orange-400 to-red-500',
       bgColor: 'from-orange-50 to-red-50'
     },
     behavioral: {
       title: 'Character Excellence',
       subtitle: 'Values-Based Growth',
-      description: 'Cultivate positive character traits and emotional intelligence through supportive relationships and meaningful experiences.',
+      description: 'Cultivate positive character traits and emotional intelligence through supportive relationships and meaningful experiences that shape character.',
       image: '/assets/teacher-with-all-kids.png',
       features: [
         'Empathy building',
@@ -70,13 +101,23 @@ export default function OurVisionPage() {
         'Positive reinforcement',
         'Value-based learning'
       ],
+      additionalContent: {
+        title: 'Character Development Program',
+        description: 'Character education is woven into every aspect of our curriculum. We focus on developing emotional intelligence, empathy, integrity, and leadership qualities through real-life scenarios, collaborative projects, and mentorship. Children learn to make ethical decisions and become responsible global citizens.',
+        benefits: [
+          'Enhanced emotional regulation and self-awareness',
+          'Stronger interpersonal relationships and communication',
+          'Increased empathy and social responsibility',
+          'Leadership skills and moral reasoning development'
+        ]
+      },
       color: 'from-pink-400 to-purple-500',
       bgColor: 'from-pink-50 to-purple-50'
     },
     personality: {
       title: 'Whole Child Development',
       subtitle: 'Complete Growth',
-      description: 'Nurture confident, creative, and compassionate individuals through comprehensive developmental activities and experiences.',
+      description: 'Nurture confident, creative, and compassionate individuals through comprehensive developmental activities and experiences that honor each child\'s uniqueness.',
       image: '/assets/teacher-with-kids-doing-ring-activity.png',
       features: [
         'Confidence building',
@@ -86,13 +127,23 @@ export default function OurVisionPage() {
         'Self-expression',
         'Cultural awareness'
       ],
+      additionalContent: {
+        title: 'Holistic Personality Development',
+        description: 'We recognize that each child is a unique individual with distinct talents, interests, and potential. Our holistic approach nurtures all aspects of personality development including self-confidence, creativity, communication skills, and cultural awareness. Children learn to express themselves authentically while respecting diversity.',
+        benefits: [
+          'Increased self-confidence and positive self-image',
+          'Enhanced creative expression and artistic abilities',
+          'Better communication and presentation skills',
+          'Greater cultural sensitivity and global awareness'
+        ]
+      },
       color: 'from-teal-400 to-green-500',
       bgColor: 'from-teal-50 to-green-50'
     },
     curriculum: {
       title: 'Academic Integration',
       subtitle: 'Seamless Learning',
-      description: 'Create meaningful connections between learning experiences and academic achievement through innovative integration methods.',
+      description: 'Create meaningful connections between learning experiences and academic achievement through innovative integration methods that ensure comprehensive success.',
       image: '/assets/teacher-teaching-kids-about-plants.png',
       features: [
         'Curriculum alignment',
@@ -102,6 +153,16 @@ export default function OurVisionPage() {
         'Progress tracking',
         'Performance analytics'
       ],
+      additionalContent: {
+        title: 'Integrated Academic Excellence',
+        description: 'Our curriculum seamlessly integrates with international academic standards while maintaining flexibility for individual learning needs. We ensure that all learning experiences contribute to academic success while fostering creativity and critical thinking. Regular assessments and progress tracking help optimize each child\'s learning journey.',
+        benefits: [
+          'Improved academic performance and test scores',
+          'Better preparation for higher education',
+          'Enhanced study skills and learning strategies',
+          'Comprehensive skill development across disciplines'
+        ]
+      },
       color: 'from-indigo-400 to-blue-500',
       bgColor: 'from-indigo-50 to-blue-50'
     }
@@ -536,7 +597,7 @@ export default function OurVisionPage() {
                   </p>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-4 mb-8">
                   <h4 className="text-lg font-bold text-gray-800 font-poppins">Key Features:</h4>
                   <div className="grid grid-cols-1 gap-3">
                     {curriculumBasis[selectedCurriculum as keyof typeof curriculumBasis].features.map((feature, index) => (
@@ -550,10 +611,24 @@ export default function OurVisionPage() {
                   </div>
                 </div>
 
-                <div className="mt-8">
-                  <button className="w-full bg-white border-4 border-indigo-400 text-indigo-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-indigo-50">
-                    Learn More About This Approach
-                  </button>
+                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 border-2 border-indigo-200">
+                  <h4 className="text-lg font-bold text-gray-800 mb-3 font-poppins">
+                    {curriculumBasis[selectedCurriculum as keyof typeof curriculumBasis].additionalContent.title}
+                  </h4>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    {curriculumBasis[selectedCurriculum as keyof typeof curriculumBasis].additionalContent.description}
+                  </p>
+                  <div className="space-y-2">
+                    <h5 className="font-semibold text-gray-700 font-poppins">Key Benefits:</h5>
+                    {curriculumBasis[selectedCurriculum as keyof typeof curriculumBasis].additionalContent.benefits.map((benefit, index) => (
+                      <div key={index} className="flex items-start gap-2">
+                        <div className="w-4 h-4 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <span className="text-white text-xs">●</span>
+                        </div>
+                        <span className="text-gray-600 text-sm">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -870,9 +945,11 @@ export default function OurVisionPage() {
               >
                 Start Your Journey Today
               </a>
-              <button className="bg-white border-4 border-purple-400 text-purple-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-purple-50">
-                Schedule a Consultation
-              </button>
+              <Link href="/consultation">
+                <button className="bg-white border-4 border-purple-400 text-purple-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-purple-50">
+                  Schedule a Consultation
+                </button>
+              </Link>
             </div>
           </div>
         </div>
