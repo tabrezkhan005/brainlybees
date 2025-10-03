@@ -512,7 +512,7 @@ export default function OnlineProgramsPage() {
               const textColors = ['text-purple-700', 'text-pink-700', 'text-orange-700', 'text-red-700'];
 
               return (
-                <div key={index} className={`bg-white rounded-3xl shadow-xl overflow-hidden border-4 ${borderColors[index]} hover:shadow-2xl transition-all duration-300 hover:scale-105`}>
+                <div key={index} className={`bg-white rounded-3xl shadow-xl overflow-hidden border-4 ${borderColors[index]} hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col h-full`}>
                   <div className="relative">
                     <div className={`bg-gradient-to-br ${bgColors[index]} p-6 flex items-center justify-center min-h-64`}>
                       <div className="relative w-full h-56 rounded-2xl overflow-hidden shadow-lg">
@@ -534,7 +534,7 @@ export default function OnlineProgramsPage() {
                     </div>
                   </div>
 
-                  <div className="p-8">
+                  <div className="p-8 flex flex-col flex-grow">
                     <p className="text-gray-700 mb-6 leading-relaxed text-lg font-nunito">
                       {subject.description}
                     </p>
@@ -550,7 +550,7 @@ export default function OnlineProgramsPage() {
                       </div>
                     </div>
 
-                    <div className="mb-8">
+                    <div className="mb-8 flex-grow">
                       <h4 className="font-bold text-gray-800 mb-3 font-poppins">Cool Digital Topics:</h4>
                       <div className="space-y-2">
                         {subject.topics.map((topic, topicIndex) => (
@@ -564,11 +564,13 @@ export default function OnlineProgramsPage() {
                       </div>
                     </div>
 
-                    <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
-                      <button className={`w-full bg-white border-3 ${borderColors[index]} ${textColors[index]} py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-gray-50`}>
-                        Start {subject.title}
-                      </button>
-                    </a>
+                    <div className="mt-auto">
+                      <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                        <button className={`w-full bg-white border-3 ${borderColors[index]} ${textColors[index]} py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-gray-50`}>
+                          Start {subject.title}
+                        </button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               );
