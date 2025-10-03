@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function OnlineProgramsPage() {
   const [selectedAge, setSelectedAge] = useState('4-6');
@@ -24,7 +25,7 @@ export default function OnlineProgramsPage() {
         'Digital Motor Skills Games'
       ],
       duration: '30 minutes',
-      price: '$25/session'
+      price: '₹499/session'
     },
     '7-9': {
       title: 'Primary Learners (Ages 7-9)',
@@ -39,7 +40,7 @@ export default function OnlineProgramsPage() {
         'Virtual Critical Thinking Activities'
       ],
       duration: '45 minutes',
-      price: '$30/session'
+      price: '₹699/session'
     },
     '10-12': {
       title: 'Middle School (Ages 10-12)',
@@ -54,7 +55,7 @@ export default function OnlineProgramsPage() {
         'Virtual Study Skills Mastery'
       ],
       duration: '60 minutes',
-      price: '$35/session'
+      price: '₹899/session'
     },
     '13+': {
       title: 'High School (Ages 13+)',
@@ -62,14 +63,14 @@ export default function OnlineProgramsPage() {
       description: 'Intensive online programs focusing on exam preparation, advanced academics, and future career readiness through digital platforms.',
       image: '/assets/boy-kid-explaining-in-laptop.png',
       features: [
-        'Online Exam Preparation (SAT, AP, etc.)',
+        'Online Exam Preparation (JEE, NEET, CBSE, etc.)',
         'Virtual Advanced STEM Subjects',
         'Digital Research and Analysis',
         'Online College Readiness',
         'Virtual Career Guidance'
       ],
       duration: '75 minutes',
-      price: '$40/session'
+      price: '₹1199/session'
     }
   };
 
@@ -261,12 +262,16 @@ export default function OnlineProgramsPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-white border-3 border-blue-400 text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-blue-50">
-                  Start Learning Online
-                </button>
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg border-2 border-purple-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-purple-50 font-poppins">
-                  Schedule Demo
-                </button>
+                <Link href="/consultation">
+                  <button className="bg-white border-3 border-blue-400 text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-blue-50">
+                    Start Learning Online
+                  </button>
+                </Link>
+                <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                  <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg border-2 border-purple-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-purple-50 font-poppins">
+                    Schedule Demo
+                  </button>
+                </a>
               </div>
             </div>
 
@@ -404,9 +409,11 @@ export default function OnlineProgramsPage() {
                     </div>
                   </div>
 
-                  <button className="w-full bg-white border-3 border-green-400 text-green-600 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-green-50">
-                    Start Online Learning
-                  </button>
+                  <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                    <button className="w-full bg-white border-3 border-green-400 text-green-600 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-green-50">
+                      Start Online Learning
+                    </button>
+                  </a>
                 </div>
               </div>
 
@@ -557,9 +564,11 @@ export default function OnlineProgramsPage() {
                       </div>
                     </div>
 
-                    <button className={`w-full bg-white border-3 ${borderColors[index]} ${textColors[index]} py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-gray-50`}>
-                      Start {subject.title}
-                    </button>
+                    <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                      <button className={`w-full bg-white border-3 ${borderColors[index]} ${textColors[index]} py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-gray-50`}>
+                        Start {subject.title}
+                      </button>
+                    </a>
                   </div>
                 </div>
               );
@@ -748,9 +757,11 @@ export default function OnlineProgramsPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button className="bg-white border-4 border-orange-400 text-orange-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-orange-50">
-                Start Free Online Trial
-              </button>
+              <Link href="/consultation">
+                <button className="bg-white border-4 border-orange-400 text-orange-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-orange-50">
+                  Book Consultation
+                </button>
+              </Link>
               <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
                 <button className="bg-white border-4 border-green-400 text-green-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-green-50">
                   WhatsApp Us
@@ -760,7 +771,7 @@ export default function OnlineProgramsPage() {
 
             <div className="mt-8 text-sm text-gray-600 font-nunito">
               <p className="font-bold">Special Offer: First online session completely FREE!</p>
-              <p>No credit card required • Personalized learning plan • Trusted by parents worldwide</p>
+              <p>No credit card required • Personalized learning plan • Trusted by Indian parents</p>
             </div>
           </div>
         </div>
