@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
@@ -436,9 +437,11 @@ export default function SpecialNeedsPage() {
                     </div>
                   </div>
 
-                  <button className="w-full bg-white border-3 border-yellow-400 text-orange-500 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-yellow-50">
-                    Learn More About This
-                  </button>
+                  <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                    <button className="w-full bg-white border-3 border-yellow-400 text-orange-500 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-yellow-50">
+                      Learn More About This
+                    </button>
+                  </a>
                 </div>
               </div>
 
@@ -561,10 +564,6 @@ export default function SpecialNeedsPage() {
                     ))}
                   </div>
                 </div>
-
-                <button className="w-full bg-white border-3 border-emerald-400 text-emerald-600 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-emerald-50">
-                  Learn About Support
-                </button>
               </div>
             ))}
           </div>
@@ -799,9 +798,11 @@ export default function SpecialNeedsPage() {
               Let us help your child discover their unique strengths and reach their full potential. Every small step forward is a celebration!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white border-3 border-purple-400 text-purple-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-purple-50">
-                Schedule Free Assessment
-              </button>
+              <Link href="/consultation">
+                <button className="bg-white border-3 border-purple-400 text-purple-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-purple-50">
+                  Book Consultation
+                </button>
+              </Link>
               <a
                 href="https://wa.me/918979245215"
                 target="_blank"
