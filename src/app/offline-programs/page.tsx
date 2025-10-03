@@ -212,7 +212,7 @@ export default function OfflineProgramsPage() {
                   Schedule Visit
                 </button>
                 <a
-                  href="https://wa.me/919305454447"
+                  href="https://wa.me/918979245215"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-pink-400 to-rose-400 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
@@ -622,7 +622,7 @@ export default function OfflineProgramsPage() {
                   Schedule Visit
                 </button>
                 <a
-                  href="https://wa.me/919305454447"
+                  href="https://wa.me/918979245215"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"

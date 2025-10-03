@@ -478,7 +478,7 @@ export default function CareersPage() {
               </div>
               
               <div className="mt-8 text-sm text-gray-600">
-                <p>Questions about careers? Email us at careers@brainlybees.com</p>
+                <p>Questions about careers? Email us at BrainlyBeesGlobal@gmail.com</p>
               </div>
             </div>
           </div>

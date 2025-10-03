@@ -218,7 +218,7 @@ export default function OurVisionPage() {
                     Explore Our Vision
                   </button>
                   <a
-                    href="https://wa.me/919305454447"
+                    href="https://wa.me/918979245215"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-orange-400 to-yellow-400 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
@@ -609,7 +609,7 @@ export default function OurVisionPage() {
                   Discover Our Approach
                 </button>
                 <a
-                  href="https://wa.me/919305454447"
+                  href="https://wa.me/918979245215"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
@@ -863,7 +863,7 @@ export default function OurVisionPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/919305454447"
+                href="https://wa.me/918979245215"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"

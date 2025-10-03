@@ -75,7 +75,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-gray-500 text-sm font-nunito">WhatsApp</div>
-                  <div className="text-gray-800 font-semibold font-poppins">+91 9305454447</div>
+                  <div className="text-gray-800 font-semibold font-poppins">+91 8979245215</div>
                 </div>
               </div>
               <div className="flex items-start">
@@ -86,7 +86,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-gray-500 text-sm font-nunito">Email</div>
-                  <div className="text-gray-800 font-semibold font-poppins">admin@brainlybees.com</div>
+                  <div className="text-gray-800 font-semibold font-poppins">BrainlyBeesGlobal@gmail.com</div>
                 </div>
               </div>
               <div className="flex items-start">
