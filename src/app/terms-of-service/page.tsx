@@ -135,11 +135,11 @@ export default function TermsOfServicePage() {
             <div className="w-3 h-3 bg-gray-400 rounded-full mr-3"></div>
             <span className="text-gray-700 font-bold text-sm">Legal Agreement</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins mb-6">
             Terms of Service
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
             Legal terms and conditions for using our educational platform
           </p>
@@ -159,7 +159,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-2xl font-bold text-gray-800 mb-6 font-poppins">Important Legal Notice</h2>
             <div className="prose prose-lg text-gray-600 leading-relaxed">
               <p className="mb-4">
-                These Terms of Service ("Terms") constitute a legally binding agreement between you and BrainlyBees regarding your use of our educational platform, services, and content.
+                These Terms of Service (&ldquo;Terms&rdquo;) constitute a legally binding agreement between you and BrainlyBees regarding your use of our educational platform, services, and content.
               </p>
               <p className="mb-4">
                 Please read these Terms carefully before using our services. By creating an account, enrolling in programs, or using our platform in any way, you acknowledge that you have read, understood, and agree to be bound by these Terms.

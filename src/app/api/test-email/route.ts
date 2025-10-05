@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function GET() {
@@ -15,7 +15,7 @@ export async function GET() {
 
     // Verify connection
     await transporter.verify();
-    
+
     // Send test email
     await transporter.sendMail({
       from: process.env.SMTP_FROM || '"BrainlyBees Test" <noreply@brainlybees.com>',
@@ -31,7 +31,7 @@ export async function GET() {
     });
 
     return NextResponse.json(
-      { 
+      {
         message: 'Test email sent successfully!',
         timestamp: new Date().toISOString()
       },
@@ -41,7 +41,7 @@ export async function GET() {
   } catch (error) {
     console.error('Email test failed:', error);
     return NextResponse.json(
-      { 
+      {
         error: 'Email test failed',
         details: error instanceof Error ? error.message : 'Unknown error'
       },

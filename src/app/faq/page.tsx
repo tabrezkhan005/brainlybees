@@ -173,14 +173,14 @@ export default function FAQPage() {
             <div className="w-3 h-3 bg-purple-400 rounded-full mr-3"></div>
             <span className="text-purple-700 font-bold text-sm">Quick Answers</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins mb-6">
             Frequently Asked
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 mt-2">
               Questions
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
             Find instant answers to the most common questions about BrainlyBees programs and services.
           </p>
@@ -203,7 +203,7 @@ export default function FAQPage() {
                 {category.faqs.map((faq, faqIndex) => {
                   const uniqueIndex = categoryIndex * 1000 + faqIndex;
                   const isOpen = openFaq === uniqueIndex;
-                  
+
                   return (
                     <div key={faqIndex} className="bg-white rounded-2xl shadow-lg border-2 border-purple-100 overflow-hidden">
                       <button
@@ -219,7 +219,7 @@ export default function FAQPage() {
                           </svg>
                         </div>
                       </button>
-                      
+
                       {isOpen && (
                         <div className="px-6 pb-6">
                           <div className="pt-4 border-t border-purple-100">
@@ -246,7 +246,7 @@ export default function FAQPage() {
               Still Have Questions?
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Can't find the answer you're looking for? Our friendly support team is ready to help you.
+              Can&apos;t find the answer you&apos;re looking for? Our friendly support team is ready to help you.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

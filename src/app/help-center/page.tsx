@@ -95,13 +95,13 @@ export default function HelpCenterPage() {
         <div className="relative max-w-4xl mx-auto text-center z-10">
           <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-blue-200 shadow-lg mb-6">
             <div className="w-3 h-3 bg-blue-400 rounded-full mr-3"></div>
-            <span className="text-blue-700 font-bold text-sm">We're Here to Help!</span>
+            <span className="text-blue-700 font-bold text-sm">We&apos;re Here to Help!</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins mb-6">
             Help Center
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
             Find answers to common questions and get the support you need to make the most of your BrainlyBees experience.
           </p>
@@ -170,7 +170,7 @@ export default function HelpCenterPage() {
               Still Need Help?
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Can't find what you're looking for? Our support team is here to assist you with any questions or concerns.
+              Can&apos;t find what you&apos;re looking for? Our support team is here to assist you with any questions or concerns.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import FloatingButtons from '@/components/FloatingButtons'
@@ -117,7 +118,7 @@ export default function CareersPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-50 font-nunito">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         {/* Background SVG Waves */}
@@ -132,7 +133,7 @@ export default function CareersPage() {
             </defs>
             <path fill="url(#wave1)" d="M0,200 C320,150 420,250 800,200 C1120,150 1200,250 1440,200 L1440,800 L0,800 Z" opacity="0.6"/>
           </svg>
-          
+
           <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 800">
             <defs>
               <linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -157,15 +158,15 @@ export default function CareersPage() {
               <div className="inline-block bg-white/80 backdrop-blur-sm border-2 border-orange-200 rounded-full px-6 py-2 mb-6">
                 <span className="text-orange-600 font-poppins font-semibold">Join Our Mission</span>
               </div>
-              
+
               <h1 className="text-6xl lg:text-8xl font-bold font-poppins bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-600 bg-clip-text text-transparent mb-6">
                 Shape the Future of Education
               </h1>
-              
+
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Join BrainlyBees and be part of a revolutionary educational journey. Help us create innovative learning experiences that inspire young minds and build tomorrow's leaders.
+                Join BrainlyBees and be part of a revolutionary educational journey. Help us create innovative learning experiences that inspire young minds and build tomorrow&apos;s leaders.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link href="/consultation">
                   <button className="bg-white border-2 border-orange-400 text-orange-600 px-8 py-4 rounded-2xl font-semibold hover:bg-orange-50 transition-all duration-300 transform hover:scale-105">
@@ -193,12 +194,14 @@ export default function CareersPage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="bg-white/60 backdrop-blur-sm border-4 border-orange-200 rounded-3xl p-6 shadow-2xl">
-                <img 
-                  src="/assets/teacher-with-all-kids.png" 
-                  alt="Our Amazing Team" 
+                <Image
+                  src="/assets/teacher-with-all-kids.png"
+                  alt="Our Amazing Team"
+                  width={800}
+                  height={384}
                   className="w-full h-96 object-contain rounded-2xl"
                 />
               </div>
@@ -239,7 +242,7 @@ export default function CareersPage() {
               Amazing Benefits & Culture
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              We believe in creating an environment where passionate educators and professionals can thrive while making a meaningful impact on children's lives.
+              We believe in creating an environment where passionate educators and professionals can thrive while making a meaningful impact on children&apos;s lives.
             </p>
           </div>
 
@@ -247,9 +250,11 @@ export default function CareersPage() {
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/80 backdrop-blur-sm border-2 border-green-200 rounded-3xl p-6 text-center hover:scale-105 transition-all duration-300 shadow-lg">
                 <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-r from-green-100 to-teal-100 rounded-full border-4 border-green-200 flex items-center justify-center">
-                  <img 
-                    src={benefit.image} 
+                  <Image
+                    src={benefit.image}
                     alt={benefit.title}
+                    width={96}
+                    height={96}
                     className="w-24 h-24 object-contain"
                   />
                 </div>
@@ -319,13 +324,15 @@ export default function CareersPage() {
             {jobOpenings[selectedDepartment as keyof typeof jobOpenings]?.map((job, index) => (
               <div key={index} className="bg-white/80 backdrop-blur-sm border-2 border-purple-200 rounded-3xl p-6 hover:scale-105 transition-all duration-300 shadow-lg">
                 <div className="w-full h-48 mb-6 bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl border-4 border-purple-200 flex items-center justify-center">
-                  <img 
-                    src={job.image} 
+                  <Image
+                    src={job.image}
                     alt={job.title}
+                    width={160}
+                    height={160}
                     className="w-40 h-40 object-contain"
                   />
                 </div>
-                
+
                 <div className="space-y-3 mb-6">
                   <div className="flex justify-between items-start">
                     <span className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">{job.type}</span>
@@ -334,9 +341,9 @@ export default function CareersPage() {
                   <h3 className="text-xl font-bold font-poppins text-purple-700">{job.title}</h3>
                   <p className="text-gray-600 text-sm">{job.location}</p>
                 </div>
-                
+
                 <p className="text-gray-700 mb-4">{job.description}</p>
-                
+
                 <div className="mb-6">
                   <h4 className="font-semibold text-purple-700 mb-2">Requirements:</h4>
                   <ul className="space-y-1">
@@ -348,7 +355,7 @@ export default function CareersPage() {
                     ))}
                   </ul>
                 </div>
-                
+
                 <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
                   <button className="w-full bg-white border-2 border-purple-400 text-purple-600 py-3 rounded-2xl font-semibold hover:bg-purple-50 transition-all duration-300">
                     Apply Now
@@ -398,7 +405,7 @@ export default function CareersPage() {
                 image: "/assets/girl-saying-hi-in-laptop.png"
               },
               {
-                step: "02", 
+                step: "02",
                 title: "Initial Screening",
                 description: "Our HR team will review your application and contact qualified candidates",
                 image: "/assets/boy-saying-hi-in-laptop.png"
@@ -418,9 +425,11 @@ export default function CareersPage() {
             ].map((process, index) => (
               <div key={index} className="text-center">
                 <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-r from-indigo-100 to-blue-100 rounded-full border-4 border-indigo-200 flex items-center justify-center">
-                  <img 
-                    src={process.image} 
+                  <Image
+                    src={process.image}
                     alt={process.title}
+                    width={96}
+                    height={96}
                     className="w-24 h-24 object-contain"
                   />
                 </div>
@@ -464,15 +473,15 @@ export default function CareersPage() {
               <div className="inline-block bg-gradient-to-r from-orange-100 to-amber-100 border-2 border-orange-300 rounded-full px-6 py-2 mb-6">
                 <span className="text-orange-600 font-poppins font-semibold">Ready to Join Us?</span>
               </div>
-              
+
               <h2 className="text-5xl font-bold font-poppins bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-600 bg-clip-text text-transparent mb-6">
                 Start Your Journey with BrainlyBees
               </h2>
-              
+
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                 Be part of our mission to revolutionize education and help shape the minds of tomorrow. Together, we can create learning experiences that inspire, engage, and empower every child.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link href="/consultation">
                   <button className="bg-white border-2 border-orange-400 text-orange-600 px-8 py-4 rounded-2xl font-semibold hover:bg-orange-50 transition-all duration-300 transform hover:scale-105">
@@ -483,7 +492,7 @@ export default function CareersPage() {
                   Contact Recruitment Team
                 </a>
               </div>
-              
+
               <div className="mt-8 text-sm text-gray-600">
                 <p>Questions about careers? Email us at BrainlyBeesGlobal@gmail.com</p>
               </div>

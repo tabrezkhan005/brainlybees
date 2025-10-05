@@ -111,11 +111,11 @@ export default function RefundPolicyPage() {
             <div className="w-3 h-3 bg-gray-400 rounded-full mr-3"></div>
             <span className="text-gray-700 font-bold text-sm">Financial Policy</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins mb-6">
             Refund Policy
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
             Fair and transparent refund terms for our educational services
           </p>
@@ -135,7 +135,7 @@ export default function RefundPolicyPage() {
             <h2 className="text-2xl font-bold text-gray-800 mb-6 font-poppins">Our Commitment to Fair Refunds</h2>
             <div className="prose prose-lg text-gray-600 leading-relaxed">
               <p className="mb-4">
-                At BrainlyBees, we are committed to providing exceptional educational services and ensuring our families feel confident in their investment. This Refund Policy outlines our fair and transparent approach to refunds, designed to protect both our students' interests and the sustainability of our educational programs.
+                At BrainlyBees, we are committed to providing exceptional educational services and ensuring our families feel confident in their investment. This Refund Policy outlines our fair and transparent approach to refunds, designed to protect both our students&apos; interests and the sustainability of our educational programs.
               </p>
               <p className="mb-4">
                 We understand that circumstances can change, and we strive to work with families to find solutions that support continued learning. Our refund policy is designed to be fair while acknowledging the resources invested in providing high-quality educational services.
@@ -156,7 +156,7 @@ export default function RefundPolicyPage() {
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center font-poppins">
             Refund Categories and Eligibility
           </h2>
-          
+
           <div className="space-y-8">
             {refundTypes.map((refund, index) => (
               <div key={index} className="bg-white rounded-3xl shadow-lg p-8 border-2 border-gray-200">
@@ -317,7 +317,7 @@ export default function RefundPolicyPage() {
             <h2 className="text-2xl font-bold text-gray-800 mb-6 font-poppins">
               Alternatives to Refunds
             </h2>
-            
+
             <p className="text-gray-600 mb-6 leading-relaxed">
               Before requesting a refund, consider these alternative solutions that may better meet your needs:
             </p>
@@ -344,7 +344,7 @@ export default function RefundPolicyPage() {
 
             <div className="mt-8 p-6 bg-blue-50 rounded-2xl border-2 border-blue-200">
               <p className="text-blue-800 font-semibold text-center">
-                Our customer success team is always ready to work with you to find solutions that support your child's learning journey.
+                Our customer success team is always ready to work with you to find solutions that support your child&apos;s learning journey.
               </p>
             </div>
           </div>

@@ -67,7 +67,7 @@ export default function ConsultationForm() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 font-nunito">
       <Navigation />
-      
+
       <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
           {/* Form Header - Google Forms Style */}
@@ -96,7 +96,7 @@ export default function ConsultationForm() {
           {/* Form Body */}
           <div className="bg-white shadow-lg">
             <form onSubmit={handleSubmit} className="p-8 space-y-8">
-              
+
               {/* Name Field */}
               <div className="space-y-2">
                 <label htmlFor="name" className="block text-lg font-semibold text-gray-700 font-poppins">
@@ -228,7 +228,7 @@ export default function ConsultationForm() {
                 Thank You!
               </h3>
               <p className="text-green-700">
-                Your consultation request has been submitted successfully. We'll get back to you within 24 hours.
+                Your consultation request has been submitted successfully. We&apos;ll get back to you within 24 hours.
               </p>
             </div>
           )}

@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
+import Image from 'next/image';
 
 export default function ContactUsPage() {
   const contactMethods = [
@@ -81,16 +82,16 @@ export default function ContactUsPage() {
                 <div className="w-3 h-3 bg-orange-400 rounded-full mr-3"></div>
                 <span className="text-orange-700 font-bold text-sm">Get in Touch</span>
               </div>
-              
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins mb-6">
                 Contact
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 mt-2">
                   BrainlyBees
                 </span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-                We're here to help you and your child succeed. Reach out to us with any questions, concerns, or to learn more about our programs.
+                We&apos;re here to help you and your child succeed. Reach out to us with any questions, concerns, or to learn more about our programs.
               </p>
 
               <div className="space-y-4">
@@ -103,7 +104,7 @@ export default function ContactUsPage() {
                     <div className="text-gray-600">We respond within 24 hours</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-teal-400 rounded-full flex items-center justify-center">
                     <span className="text-white text-xl">💝</span>
@@ -113,7 +114,7 @@ export default function ContactUsPage() {
                     <div className="text-gray-600">Friendly and helpful team</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full flex items-center justify-center">
                     <span className="text-white text-xl">🌟</span>
@@ -130,16 +131,18 @@ export default function ContactUsPage() {
               <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-orange-200">
                 <div className="bg-gradient-to-br from-orange-100 to-yellow-100 p-6 flex items-center justify-center">
                   <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-lg">
-                    <img
+                    <Image
                       src="/assets/teacher-with-all-kids.png"
                       alt="Contact BrainlyBees"
+                      width={400}
+                      height={384}
                       className="w-full h-full object-contain"
                     />
                   </div>
                 </div>
                 <div className="absolute top-4 left-4">
                   <div className="bg-white px-4 py-2 rounded-full shadow-lg border-2 border-orange-200">
-                    <span className="text-orange-600 text-lg font-bold font-poppins">We're Here for You!</span>
+                    <span className="text-orange-600 text-lg font-bold font-poppins">We&apos;re Here for You!</span>
                   </div>
                 </div>
               </div>
@@ -229,7 +232,7 @@ export default function ContactUsPage() {
                 Send Us a Message
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Fill out the form below and we'll get back to you as soon as possible.
+                Fill out the form below and we&apos;ll get back to you as soon as possible.
               </p>
             </div>
 
@@ -263,7 +266,7 @@ export default function ContactUsPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-700 font-semibold mb-2 font-poppins">Child's Age</label>
+                  <label className="block text-gray-700 font-semibold mb-2 font-poppins">Child&apos;s Age</label>
                   <select className="w-full px-4 py-3 border-2 border-orange-200 rounded-xl focus:outline-none focus:border-orange-400 font-nunito">
                     <option>Select age group</option>
                     <option>4-6 years</option>

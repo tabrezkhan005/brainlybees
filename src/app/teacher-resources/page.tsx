@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
+import Image from 'next/image';
 
 export default function TeacherResourcesPage() {
   const resourceCategories = [
@@ -205,14 +206,14 @@ export default function TeacherResourcesPage() {
                 <div className="w-3 h-3 bg-emerald-400 rounded-full mr-3"></div>
                 <span className="text-emerald-700 font-bold text-sm">For Educators</span>
               </div>
-              
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins mb-6">
                 Teacher Resources &
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-500 to-green-500 mt-2">
                   Support Center
                 </span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
                 Comprehensive tools, training, and support to help you create exceptional learning experiences for every child.
               </p>
@@ -227,7 +228,7 @@ export default function TeacherResourcesPage() {
                     <div className="text-gray-600">Thousands of teaching materials and tools</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-400 to-green-400 rounded-full flex items-center justify-center">
                     <span className="text-white text-xl">🎓</span>
@@ -237,7 +238,7 @@ export default function TeacherResourcesPage() {
                     <div className="text-gray-600">Regular training and skill enhancement</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center">
                     <span className="text-white text-xl">🤝</span>
@@ -254,9 +255,11 @@ export default function TeacherResourcesPage() {
               <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-emerald-200">
                 <div className="bg-gradient-to-br from-emerald-100 to-teal-100 p-6 flex items-center justify-center">
                   <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-lg">
-                    <img
+                    <Image
                       src="/assets/teacher-helping-girl-kid-doubt.png"
                       alt="Teacher Resources"
+                      width={400}
+                      height={384}
                       className="w-full h-full object-contain"
                     />
                   </div>

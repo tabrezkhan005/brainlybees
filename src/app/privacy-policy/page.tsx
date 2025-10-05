@@ -109,11 +109,11 @@ export default function PrivacyPolicyPage() {
             <div className="w-3 h-3 bg-gray-400 rounded-full mr-3"></div>
             <span className="text-gray-700 font-bold text-sm">Legal Information</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins mb-6">
             Privacy Policy
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
             How we collect, use, and protect your personal information
           </p>
@@ -133,7 +133,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-bold text-gray-800 mb-6 font-poppins">Introduction</h2>
             <div className="prose prose-lg text-gray-600 leading-relaxed">
               <p className="mb-4">
-                BrainlyBees ("we," "our," or "us") is committed to protecting the privacy and security of our users' personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our educational platform and services.
+                BrainlyBees (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting the privacy and security of our users&apos; personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our educational platform and services.
               </p>
               <p className="mb-4">
                 This policy applies to all users of our platform, including students, parents, guardians, teachers, and visitors to our website. By using our services, you consent to the practices described in this Privacy Policy.

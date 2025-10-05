@@ -17,7 +17,7 @@ export default function ParentGuidePage() {
       icon: "🔍"
     },
     {
-      step: "02", 
+      step: "02",
       title: "Choose the Right Program",
       description: "Selecting programs that match your child's needs",
       details: [
@@ -72,7 +72,7 @@ export default function ParentGuidePage() {
     },
     {
       ageGroup: "7-9 Years",
-      title: "Primary Skills Development", 
+      title: "Primary Skills Development",
       icon: "📚",
       tips: [
         "Establish consistent homework and study routines",
@@ -101,7 +101,7 @@ export default function ParentGuidePage() {
       bgColor: "from-purple-50 to-violet-50"
     },
     {
-      ageGroup: "13+ Years", 
+      ageGroup: "13+ Years",
       title: "Teen Academic Mastery",
       icon: "🚀",
       tips: [
@@ -112,7 +112,7 @@ export default function ParentGuidePage() {
         "Be a supportive listener for their challenges",
         "Guide them in making responsible decisions"
       ],
-      color: "from-orange-400 to-red-500", 
+      color: "from-orange-400 to-red-500",
       bgColor: "from-orange-50 to-red-50"
     }
   ];
@@ -175,16 +175,16 @@ export default function ParentGuidePage() {
             <div className="w-3 h-3 bg-teal-400 rounded-full mr-3"></div>
             <span className="text-teal-700 font-bold text-sm">For Parents & Guardians</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins mb-6">
-            Parent's Guide to
+            Parent&apos;s Guide to
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 mt-2">
               Supporting Your Child
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            Practical tips, strategies, and guidance to help you support your child's learning journey with BrainlyBees.
+            Practical tips, strategies, and guidance to help you support your child&apos;s learning journey with BrainlyBees.
           </p>
         </div>
       </section>
@@ -215,7 +215,7 @@ export default function ParentGuidePage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">{step.title}</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">{step.description}</p>
-                
+
                 <div className="bg-white rounded-2xl p-4 shadow-lg border-2 border-teal-200">
                   <ul className="space-y-2 text-left">
                     {step.details.map((detail, detailIndex) => (
@@ -297,7 +297,7 @@ export default function ParentGuidePage() {
                 <div className="text-center mb-6">
                   <div className="text-4xl mb-4">{item.icon}</div>
                   <h3 className="text-lg font-bold text-gray-800 mb-4 font-poppins">
-                    "{item.challenge}"
+                    &ldquo;{item.challenge}&rdquo;
                   </h3>
                 </div>
 
@@ -321,7 +321,7 @@ export default function ParentGuidePage() {
               Need Additional Support?
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Our team is here to support you every step of the way. Don't hesitate to reach out with questions or concerns.
+              Our team is here to support you every step of the way. Don&apos;t hesitate to reach out with questions or concerns.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
