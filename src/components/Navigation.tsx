@@ -86,9 +86,26 @@ export default function Navigation() {
           <div className="flex items-center flex-shrink-0">
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-11 h-11 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full flex items-center justify-center shadow-md">
-                  <span className="text-white font-bold text-lg font-poppins">B</span>
-                </div>
+                <svg className="w-11 h-11" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2C8 2 3 5 3 11C3 14 3 17 3 22C3 27 3 30 3 33C3 39 8 42 13 42C16 42 19 42 22 42C25 42 28 42 31 42C37 42 41 39 41 33C41 30 41 27 41 22C41 17 41 14 41 11C41 5 37 2 31 2C28 2 25 2 22 2C19 2 16 2 13 2Z" 
+                        fill="url(#exactGradient)" 
+                        transform="rotate(-8 22 22)"
+                        style={{filter: 'drop-shadow(0 2px 6px rgba(255, 69, 0, 0.2))'}}
+                  />
+                  <rect x="9" y="9" width="26" height="26" rx="7" ry="7" 
+                        fill="white" 
+                        fillOpacity="0.92"
+                        transform="rotate(-8 22 22)"
+                  />
+                  <defs>
+                    <linearGradient id="exactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#ff4500" />
+                      <stop offset="45%" stopColor="#ff6b35" />
+                      <stop offset="75%" stopColor="#f97316" />
+                      <stop offset="100%" stopColor="#ea580c" />
+                    </linearGradient>
+                  </defs>
+                </svg>
               </div>
               <div>
                 <div className="text-xl font-bold text-gray-800 font-poppins">
