@@ -24,9 +24,7 @@ export default function OfflineProgramsPage() {
         'Language development through songs and rhymes',
         'Art and craft projects for creativity',
         'Social skills development in group settings'
-      ],
-      duration: '45 minutes',
-      price: '₹1,800/session'
+      ]
     },
     '7-9': {
       title: 'Primary Skills Development',
@@ -40,9 +38,7 @@ export default function OfflineProgramsPage() {
         'Group projects and teamwork activities',
         'Critical thinking through puzzles and games',
         'Presentation skills and confidence building'
-      ],
-      duration: '60 minutes',
-      price: '₹2,200/session'
+      ]
     },
     '10-12': {
       title: 'Advanced Academic Skills',
@@ -56,9 +52,7 @@ export default function OfflineProgramsPage() {
         'Creative writing and literary analysis',
         'Leadership skills and project management',
         'Study skills and time management'
-      ],
-      duration: '75 minutes',
-      price: '₹2,500/session'
+      ]
     },
     '13+': {
       title: 'Teen Academic Mastery',
@@ -72,9 +66,7 @@ export default function OfflineProgramsPage() {
         'Critical analysis and debate techniques',
         'Career exploration and internship prep',
         'Life skills and financial literacy'
-      ],
-      duration: '90 minutes',
-      price: '₹2,800/session'
+      ]
     }
   };
 
@@ -369,21 +361,6 @@ export default function OfflineProgramsPage() {
                           <span className="text-gray-700 font-medium">{feature}</span>
                         </div>
                       ))}
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-6 pt-8 border-t border-gray-200">
-                    <div className="text-center bg-amber-50 rounded-2xl p-4 border-2 border-amber-200">
-                      <span className="text-sm text-gray-500 block font-medium">Session Time:</span>
-                      <div className="font-bold text-gray-800 text-lg font-poppins">
-                        {agePrograms[selectedAge as keyof typeof agePrograms].duration}
-                      </div>
-                    </div>
-                    <div className="text-center bg-orange-50 rounded-2xl p-4 border-2 border-orange-200">
-                      <span className="text-sm text-gray-500 block font-medium">Starting at:</span>
-                      <div className="font-bold text-gray-800 text-lg font-poppins">
-                        {agePrograms[selectedAge as keyof typeof agePrograms].price}
-                      </div>
                     </div>
                   </div>
 

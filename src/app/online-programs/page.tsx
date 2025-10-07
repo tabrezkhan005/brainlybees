@@ -23,9 +23,7 @@ export default function OnlineProgramsPage() {
         'Virtual Arts and Creative Tools',
         'Online Social Skills Activities',
         'Digital Motor Skills Games'
-      ],
-      duration: '30 minutes',
-      price: '₹499/session'
+      ]
     },
     '7-9': {
       title: 'Primary Learners (Ages 7-9)',
@@ -38,9 +36,7 @@ export default function OnlineProgramsPage() {
         'Digital Science Exploration',
         'Online Writing Skills Development',
         'Virtual Critical Thinking Activities'
-      ],
-      duration: '45 minutes',
-      price: '₹699/session'
+      ]
     },
     '10-12': {
       title: 'Middle School (Ages 10-12)',
@@ -53,9 +49,7 @@ export default function OnlineProgramsPage() {
         'Digital Essay Writing and Literature',
         'Online Problem-Based Learning',
         'Virtual Study Skills Mastery'
-      ],
-      duration: '60 minutes',
-      price: '₹899/session'
+      ]
     },
     '13+': {
       title: 'High School (Ages 13+)',
@@ -68,9 +62,7 @@ export default function OnlineProgramsPage() {
         'Digital Research and Analysis',
         'Online College Readiness',
         'Virtual Career Guidance'
-      ],
-      duration: '75 minutes',
-      price: '₹1199/session'
+      ]
     }
   };
 
@@ -392,21 +384,6 @@ export default function OnlineProgramsPage() {
                         </li>
                       ))}
                     </ul>
-                  </div>
-
-                  <div className="flex items-center space-x-12 pt-8 border-t border-gray-200">
-                    <div>
-                      <span className="text-sm text-gray-500 block font-nunito">Duration:</span>
-                      <div className="font-bold text-gray-800 text-lg font-poppins">
-                        {agePrograms[selectedAge as keyof typeof agePrograms].duration}
-                      </div>
-                    </div>
-                    <div>
-                      <span className="text-sm text-gray-500 block font-nunito">Starting at:</span>
-                      <div className="font-bold text-gray-800 text-lg font-poppins">
-                        {agePrograms[selectedAge as keyof typeof agePrograms].price}
-                      </div>
-                    </div>
                   </div>
 
                   <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
