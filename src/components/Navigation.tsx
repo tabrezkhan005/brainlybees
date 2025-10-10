@@ -138,8 +138,8 @@ export default function Navigation() {
             </div>
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0">
+          {/* Action Buttons - Hidden on mobile and tablet, shown on desktop */}
+          <div className="hidden lg:flex items-center space-x-1 sm:space-x-2 flex-shrink-0">
             {/* WhatsApp Button */}
             <a
               href="https://wa.me/918979245215"
