@@ -22,6 +22,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "BrainlyBees - Smart Learning for Kids",
   description: "Personalized online and offline learning programs for children aged 3-15. Expert teachers, interactive lessons, and proven results.",
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

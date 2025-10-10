@@ -104,32 +104,32 @@ export default function LearningRoadmapSection() {
   }, [roadmapSteps]);
 
   return (
-    <section ref={sectionRef} className="bg-gradient-to-b from-gray-50 via-white to-gray-50 py-20 relative overflow-hidden">
+    <section ref={sectionRef} className="bg-gradient-to-b from-gray-50 via-white to-gray-50 py-12 sm:py-16 lg:py-20 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-40 h-40 bg-red-200/20 rounded-full blur-2xl animate-float"></div>
-        <div className="absolute bottom-32 right-16 w-56 h-56 bg-orange-200/20 rounded-full blur-2xl animate-float delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-yellow-200/10 rounded-full blur-3xl animate-spin-slow"></div>
+        <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-20 sm:w-40 h-20 sm:h-40 bg-red-200/20 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute bottom-16 sm:bottom-32 right-8 sm:right-16 w-28 sm:w-56 h-28 sm:h-56 bg-orange-200/20 rounded-full blur-2xl animate-float delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-36 sm:w-72 h-36 sm:h-72 bg-yellow-200/10 rounded-full blur-3xl animate-spin-slow"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 relative z-10">
         {/* Enhanced Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full text-red-700 text-sm font-semibold mb-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <svg className="w-4 h-4 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-white/80 backdrop-blur-sm rounded-full text-red-700 text-xs sm:text-sm font-semibold mb-6 sm:mb-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <svg className="w-3 sm:w-4 h-3 sm:h-4 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
             </svg>
             Learning Journey
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6 px-2">
             Your Child&apos;s{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-red-600 animate-gradient-x">
               Learning Roadmap
             </span>
             <br />
-            <span className="text-2xl md:text-3xl lg:text-4xl text-gray-700">with BrainlyBees</span>
+            <span className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700">with BrainlyBees</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
             A carefully crafted, step-by-step journey that transforms your child from foundation building
             to advanced mastery, ensuring continuous growth and academic excellence.
           </p>
@@ -141,7 +141,7 @@ export default function LearningRoadmapSection() {
           <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-red-500 via-orange-500 to-red-500 rounded-full opacity-30"></div>
 
           {/* Timeline Steps */}
-          <div className="space-y-12 lg:space-y-16">
+          <div className="space-y-8 sm:space-y-10 lg:space-y-16">
             {roadmapSteps.map((step, index) => (
               <div
                 key={index}
@@ -154,48 +154,48 @@ export default function LearningRoadmapSection() {
               >
                 {/* Timeline Node */}
                 <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 -translate-y-2">
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-500 ${
+                  <div className={`w-10 lg:w-12 h-10 lg:h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-500 ${
                     visibleSteps.includes(index)
                       ? 'bg-gradient-to-r from-red-500 to-orange-500 scale-110'
                       : 'bg-gray-300 scale-100'
                   }`}>
-                    <span className="text-white font-bold text-sm">{step.step}</span>
+                    <span className="text-white font-bold text-xs lg:text-sm">{step.step}</span>
                   </div>
                 </div>
 
                 {/* Step Content */}
-                <div className={`lg:grid lg:grid-cols-2 lg:gap-16 items-center ${
+                <div className={`lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16 items-center ${
                   index % 2 === 0 ? '' : 'lg:grid-flow-col-dense'
                 }`}>
                   {/* Content Card */}
-                  <div className={`${index % 2 === 0 ? 'lg:text-right lg:pr-8' : 'lg:pl-8 lg:col-start-2'}`}>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 hover-lift group relative">
+                  <div className={`${index % 2 === 0 ? 'lg:text-right lg:pr-4 xl:pr-8' : 'lg:pl-4 xl:pl-8 lg:col-start-2'}`}>
+                    <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 hover-lift group relative mx-2 sm:mx-0">
                       {/* Corner Symbol Inside Box */}
-                      <div className={`absolute top-4 ${index % 2 === 0 ? 'left-4' : 'right-4'} w-10 h-10 bg-gradient-to-br from-red-100 to-orange-100 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-all duration-300`}>
-                        <div className="w-5 h-5 text-red-600 group-hover:scale-110 transition-transform duration-300">
+                      <div className={`absolute top-3 sm:top-4 ${index % 2 === 0 ? 'left-3 sm:left-4' : 'right-3 sm:right-4'} w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-br from-red-100 to-orange-100 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-all duration-300`}>
+                        <div className="w-4 sm:w-5 h-4 sm:h-5 text-red-600 group-hover:scale-110 transition-transform duration-300">
                           {step.icon}
                         </div>
                       </div>
 
                       {/* Mobile Step Number */}
-                      <div className="lg:hidden flex items-center mb-4">
-                        <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mr-4">
-                          <span className="text-white font-bold text-sm">{step.step}</span>
+                      <div className="lg:hidden flex items-center mb-3 sm:mb-4">
+                        <div className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mr-3 sm:mr-4">
+                          <span className="text-white font-bold text-xs sm:text-sm">{step.step}</span>
                         </div>
                         <div className="h-px bg-gradient-to-r from-red-500 to-orange-500 flex-1"></div>
                       </div>
 
-                      <div className={`space-y-4 ${index % 2 === 0 ? 'lg:pr-16' : 'lg:pl-16'} pt-4`}>
-                        <h3 className="text-2xl font-bold text-gray-900 group-hover:text-red-600 transition-colors duration-300">
+                      <div className={`space-y-3 sm:space-y-4 ${index % 2 === 0 ? 'lg:pr-8 xl:pr-16' : 'lg:pl-8 xl:pl-16'} pt-3 sm:pt-4`}>
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-red-600 transition-colors duration-300 leading-tight">
                           {step.title}
                         </h3>
-                        <p className="text-gray-600 leading-relaxed text-lg">
+                        <p className="text-gray-600 leading-relaxed text-sm sm:text-base lg:text-lg">
                           {step.description}
                         </p>
                       </div>
 
                       {/* Gradient Border Effect */}
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-red-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                      <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-red-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
                     </div>
                   </div>
                 </div>
@@ -205,28 +205,28 @@ export default function LearningRoadmapSection() {
         </div>
 
         {/* Enhanced Call to Action */}
-        <div className="text-center mt-20">
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-white/20 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className="text-center mt-12 sm:mt-16 lg:mt-20">
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl border border-white/20 max-w-4xl mx-auto">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
               Ready to Begin This Amazing Journey?
             </h3>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Join thousands of families who have transformed their children&apos;s learning experience with our proven roadmap.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="group bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white px-10 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1">
-                <span className="flex items-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+              <button className="group bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-base sm:text-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 w-full sm:w-auto">
+                <span className="flex items-center justify-center">
                   Start Your Journey Today
-                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 sm:w-5 h-4 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
               </button>
 
-              <button className="group bg-white/80 hover:bg-white text-gray-700 px-8 py-4 rounded-2xl text-lg font-semibold border-2 border-gray-200 hover:border-red-300 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <span className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <button className="group bg-white/80 hover:bg-white text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-base sm:text-lg font-semibold border-2 border-gray-200 hover:border-red-300 transition-all duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto">
+                <span className="flex items-center justify-center">
+                  <svg className="w-4 sm:w-5 h-4 sm:h-5 mr-2 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   Schedule Free Demo
@@ -235,18 +235,18 @@ export default function LearningRoadmapSection() {
             </div>
 
             {/* Trust Indicators */}
-            <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 border-t border-gray-200">
               <div className="text-center">
-                <div className="text-2xl font-bold text-red-500 mb-1">7 Steps</div>
-                <div className="text-sm text-gray-600">Structured Journey</div>
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-red-500 mb-1">7 Steps</div>
+                <div className="text-xs sm:text-sm text-gray-600">Structured Journey</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-orange-500 mb-1">100%</div>
-                <div className="text-sm text-gray-600">Personalized</div>
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-orange-500 mb-1">100%</div>
+                <div className="text-xs sm:text-sm text-gray-600">Personalized</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-red-500 mb-1">Proven</div>
-                <div className="text-sm text-gray-600">Results</div>
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-red-500 mb-1">Proven</div>
+                <div className="text-xs sm:text-sm text-gray-600">Results</div>
               </div>
             </div>
           </div>

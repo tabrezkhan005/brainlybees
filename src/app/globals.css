@@ -36,6 +36,110 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Responsive Layout Helpers */
+.container-responsive {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+@media (min-width: 475px) {
+  .container-responsive {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Responsive Typography */
+.text-responsive-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@media (min-width: 640px) {
+  .text-responsive-xs {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.text-responsive-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .text-responsive-sm {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.text-responsive-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .text-responsive-base {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.text-responsive-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .text-responsive-lg {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-responsive-lg {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+/* Responsive Spacing */
+.space-responsive {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .space-responsive {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .space-responsive {
+    margin-bottom: 2rem;
+  }
+}
+
 /* Custom Animations */
 @keyframes gradient-x {
   0%, 100% {
@@ -150,6 +254,21 @@ html, body {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* Mobile-First Touch Targets */
+@media (max-width: 767px) {
+  button, a, input, textarea, select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Responsive Images */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -158,8 +277,15 @@ html {
 /* Custom Scrollbar - Kid-Friendly Design */
 /* For Webkit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
+}
+
+@media (min-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 ::-webkit-scrollbar-track {
@@ -171,9 +297,15 @@ html {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #fb923c, #f97316, #fb923c);
   border-radius: 10px;
-  border: 2px solid #fff5f7;
+  border: 1px solid #fff5f7;
   box-shadow: 0 2px 6px rgba(251, 146, 60, 0.4);
   transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  ::-webkit-scrollbar-thumb {
+    border: 2px solid #fff5f7;
+  }
 }
 
 ::-webkit-scrollbar-thumb:hover {
