@@ -30,31 +30,35 @@ export default function ConsultationForm() {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('/api/send-consultation', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      // Create email content
+      const subject = `Consultation Request - ${formData.name}`;
+      const emailBody = `
+Name: ${formData.name}
+Age: ${formData.age}
+Contact Number: ${formData.contactNumber}
+Email: ${formData.email}
+
+Description:
+${formData.description}
+
+---
+This consultation request was submitted through the BrainlyBees website.
+      `;
+
+      // Create mailto link
+      const mailtoLink = `mailto:BrainlyBeesGlobal@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+      // Open email client
+      window.open(mailtoLink, '_blank');
+
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        age: '',
+        contactNumber: '',
+        email: '',
+        description: ''
       });
-
-      console.log('Response status:', response.status);
-      const responseData = await response.json();
-      console.log('Response data:', responseData);
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          age: '',
-          contactNumber: '',
-          email: '',
-          description: ''
-        });
-      } else {
-        console.error('Server responded with error:', responseData);
-        setSubmitStatus('error');
-      }
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
@@ -74,11 +78,11 @@ export default function ConsultationForm() {
             <div className="w-3 h-3 bg-orange-400 rounded-full mr-3"></div>
             <span className="text-gray-700 font-bold text-sm">Book Your Session</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins mb-6">
             Schedule a Consultation
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
             Connect with our education experts to discuss your learning goals and discover the perfect program for you
           </p>
@@ -90,7 +94,7 @@ export default function ConsultationForm() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-3xl shadow-xl border-2 border-gray-200 overflow-hidden">
             <form onSubmit={handleSubmit} className="p-8 md:p-12 space-y-8">
-              
+
               {/* Name Field */}
               <div className="space-y-3">
                 <label htmlFor="name" className="block text-lg font-bold text-gray-800 font-poppins">
@@ -214,7 +218,7 @@ export default function ConsultationForm() {
                 Request Submitted Successfully
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Thank you for your interest in BrainlyBees! Our education experts will review your request and contact you within 24 hours to schedule your consultation.
+                Thank you for your interest in BrainlyBees! Your email client should have opened with a pre-filled consultation request. Please send the email to complete your submission. Our education experts will review your request and contact you within 24 hours.
               </p>
             </div>
           )}
@@ -230,7 +234,7 @@ export default function ConsultationForm() {
                 Submission Error
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                We're sorry, but there was an issue submitting your consultation request. Please try again or contact us directly via WhatsApp.
+                We&apos;re sorry, but there was an issue submitting your consultation request. Please try again or contact us directly via WhatsApp.
               </p>
               <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
                 <button className="bg-gradient-to-r from-green-400 to-green-500 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 font-poppins">
@@ -257,7 +261,7 @@ export default function ConsultationForm() {
                 <h3 className="text-lg font-bold text-gray-800 mb-3 font-poppins">Review</h3>
                 <p className="text-gray-600 font-nunito">Our team reviews your consultation request and learning requirements</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-400 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <span className="text-white font-bold text-xl font-poppins">2</span>
@@ -265,7 +269,7 @@ export default function ConsultationForm() {
                 <h3 className="text-lg font-bold text-gray-800 mb-3 font-poppins">Contact</h3>
                 <p className="text-gray-600 font-nunito">We reach out within 24 hours to schedule your consultation session</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <span className="text-white font-bold text-xl font-poppins">3</span>

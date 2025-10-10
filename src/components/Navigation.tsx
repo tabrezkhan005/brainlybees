@@ -81,19 +81,19 @@ export default function Navigation() {
 
   return (
     <nav className="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <svg className="w-11 h-11" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13 2C8 2 3 5 3 11C3 14 3 17 3 22C3 27 3 30 3 33C3 39 8 42 13 42C16 42 19 42 22 42C25 42 28 42 31 42C37 42 41 39 41 33C41 30 41 27 41 22C41 17 41 14 41 11C41 5 37 2 31 2C28 2 25 2 22 2C19 2 16 2 13 2Z" 
-                        fill="url(#exactGradient)" 
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          <div className="flex items-center flex-shrink-0 min-w-0">
+            <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
+              <div className="relative flex-shrink-0">
+                <svg className="w-8 h-8 sm:w-11 sm:h-11" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2C8 2 3 5 3 11C3 14 3 17 3 22C3 27 3 30 3 33C3 39 8 42 13 42C16 42 19 42 22 42C25 42 28 42 31 42C37 42 41 39 41 33C41 30 41 27 41 22C41 17 41 14 41 11C41 5 37 2 31 2C28 2 25 2 22 2C19 2 16 2 13 2Z"
+                        fill="url(#exactGradient)"
                         transform="rotate(-8 22 22)"
                         style={{filter: 'drop-shadow(0 2px 6px rgba(255, 69, 0, 0.2))'}}
                   />
-                  <rect x="9" y="9" width="26" height="26" rx="7" ry="7" 
-                        fill="white" 
+                  <rect x="9" y="9" width="26" height="26" rx="7" ry="7"
+                        fill="white"
                         fillOpacity="0.92"
                         transform="rotate(-8 22 22)"
                   />
@@ -107,11 +107,11 @@ export default function Navigation() {
                   </defs>
                 </svg>
               </div>
-              <div>
-                <div className="text-xl font-bold text-gray-800 font-poppins">
+              <div className="min-w-0">
+                <div className="text-sm sm:text-xl font-bold text-gray-800 font-poppins truncate">
                   BrainlyBees
                 </div>
-                <div className="text-xs text-orange-500 font-nunito">
+                <div className="text-[10px] sm:text-xs text-orange-500 font-nunito truncate">
                   Smart Learning for Kids
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function Navigation() {
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 const colors = getColorClasses(link.color, isActive);
-                
+
                 return (
                   <Link
                     key={link.href}
@@ -137,7 +137,7 @@ export default function Navigation() {
             </div>
           </div>
 
-          <div className="flex items-center space-x-2 flex-shrink-0">
+          <div className="hidden lg:flex items-center space-x-2 flex-shrink-0">
             {/* WhatsApp Button */}
             <a
               href="https://wa.me/918979245215"
@@ -159,13 +159,13 @@ export default function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden flex items-center space-x-1">
             <button
               type="button"
-              className="text-gray-600 hover:text-gray-800 focus:outline-none transition-colors p-2"
+              className="text-gray-600 hover:text-gray-800 focus:outline-none transition-colors p-1.5 sm:p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -180,11 +180,11 @@ export default function Navigation() {
       {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
-          <div className="px-4 pt-4 pb-6 space-y-3 max-w-7xl mx-auto">
+          <div className="px-3 sm:px-4 pt-4 pb-6 space-y-3 max-w-7xl mx-auto">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               const colors = getColorClasses(link.color, isActive);
-              
+
               return (
                 <Link
                   key={link.href}
@@ -196,22 +196,22 @@ export default function Navigation() {
                 </Link>
               );
             })}
-            
+
             <div className="pt-4 space-y-3 border-t border-gray-200">
               <a
                 href="https://wa.me/918979245215"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center px-4 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full font-semibold shadow-sm transition-colors duration-200"
+                className="flex items-center justify-center px-4 py-3.5 bg-green-500 hover:bg-green-600 text-white rounded-full font-semibold shadow-md transition-colors duration-200 text-base"
               >
                 <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.891 3.736"/>
                 </svg>
                 WhatsApp
               </a>
-              <Link href="/consultation">
-                <button className="w-full px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-full font-semibold shadow-sm transition-all duration-200">
-                  Book Consultation
+              <Link href="/consultation" onClick={() => setIsMobileMenuOpen(false)}>
+                <button className="w-full px-4 py-3.5 bg-gradient-to-r from-orange-400 via-pink-400 to-red-500 hover:from-orange-500 hover:via-pink-500 hover:to-red-600 text-white rounded-full font-bold shadow-md transition-all duration-200 text-base">
+                  📚 Book Consultation
                 </button>
               </Link>
             </div>

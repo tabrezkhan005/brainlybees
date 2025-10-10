@@ -8,11 +8,11 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50 font-nunito">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50 font-nunito overflow-x-hidden">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-100 via-orange-100 to-red-100 overflow-hidden">
+      <section className="relative py-12 sm:py-16 lg:py-20 px-3 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-100 via-orange-100 to-red-100 overflow-hidden">
         {/* Organic Wave Shapes */}
         <div className="absolute inset-0 overflow-hidden">
           <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
@@ -62,50 +62,50 @@ export default function Home() {
         </div>
 
         <div className="relative max-w-7xl mx-auto z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="space-y-6 sm:space-y-8">
               <div className="space-y-6">
                 {/* Fun Badge */}
-                <div className="inline-flex items-center px-6 py-3 bg-white rounded-full border-2 border-yellow-200 shadow-lg">
-                  <div className="w-3 h-3 bg-green-400 rounded-full mr-3"></div>
-                  <span className="text-orange-700 font-bold text-sm">25,000+ Happy Kids Learning!</span>
+                <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-white rounded-full border-2 border-yellow-200 shadow-lg">
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full mr-2 sm:mr-3"></div>
+                  <span className="text-orange-700 font-bold text-xs sm:text-sm">25,000+ Happy Kids Learning!</span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins">
                   Let&apos;s Make Learning
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 mt-2">
                     Super Fun!
                   </span>
                 </h1>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
                   Amazing 1-on-1 classes where kids love to learn! We make math, science, and reading feel like playing games with friends.
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 py-6">
-                <div className="text-center bg-white rounded-3xl p-4 shadow-lg border-2 border-yellow-200">
-                  <div className="text-2xl md:text-3xl font-bold text-orange-600 font-poppins">25K+</div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">Happy Kids</div>
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 py-4 sm:py-6">
+                <div className="text-center bg-white rounded-2xl sm:rounded-3xl p-2 sm:p-4 shadow-lg border-2 border-yellow-200">
+                  <div className="text-lg sm:text-2xl md:text-3xl font-bold text-orange-600 font-poppins">25K+</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-gray-600 font-medium">Happy Kids</div>
                 </div>
-                <div className="text-center bg-white rounded-3xl p-4 shadow-lg border-2 border-green-200">
-                  <div className="text-2xl md:text-3xl font-bold text-green-600 font-poppins">98%</div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">Love Learning</div>
+                <div className="text-center bg-white rounded-2xl sm:rounded-3xl p-2 sm:p-4 shadow-lg border-2 border-green-200">
+                  <div className="text-lg sm:text-2xl md:text-3xl font-bold text-green-600 font-poppins">98%</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-gray-600 font-medium">Love Learning</div>
                 </div>
-                <div className="text-center bg-white rounded-3xl p-4 shadow-lg border-2 border-pink-200">
-                  <div className="text-2xl md:text-3xl font-bold text-pink-600 font-poppins">4.9★</div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">Parent Rating</div>
+                <div className="text-center bg-white rounded-2xl sm:rounded-3xl p-2 sm:p-4 shadow-lg border-2 border-pink-200">
+                  <div className="text-lg sm:text-2xl md:text-3xl font-bold text-pink-600 font-poppins">4.9★</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-gray-600 font-medium">Parent Rating</div>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
-                  <button className="bg-white border-3 border-green-400 text-green-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-green-50">
-                    WhatsApp Us
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                  <button className="w-full bg-white border-3 border-green-400 text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-green-50">
+                    💬 WhatsApp Us
                   </button>
                 </a>
-                <Link href="/offline-programs">
-                  <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg border-2 border-orange-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-orange-50 font-poppins">
-                    Meet Our Teachers
+                <Link href="/offline-programs" className="w-full sm:w-auto">
+                  <button className="w-full bg-white text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg border-2 border-orange-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-orange-50 font-poppins">
+                    👨‍🏫 Meet Our Teachers
                   </button>
                 </Link>
               </div>
@@ -127,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* Learning Programs */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100 overflow-hidden -mt-32 pt-40">
+      <section className="relative py-12 sm:py-16 lg:py-20 px-3 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100 overflow-hidden -mt-20 sm:-mt-32 pt-28 sm:pt-40">
         {/* Flowing continuation from hero */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -282,7 +282,7 @@ export default function Home() {
       </section>
 
       {/* Age Groups */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-100 overflow-hidden -mt-32 pt-40">
+      <section className="relative py-12 sm:py-16 lg:py-20 px-3 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 via-pink-100 to-yellow-100 overflow-hidden -mt-20 sm:-mt-32 pt-28 sm:pt-40">
         {/* Flowing transition from programs */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -425,7 +425,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose BrainlyBees */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cyan-100 via-blue-100 to-indigo-100 overflow-hidden -mt-32 pt-40">
+      <section className="relative py-12 sm:py-16 lg:py-20 px-3 sm:px-6 lg:px-8 bg-gradient-to-br from-cyan-100 via-blue-100 to-indigo-100 overflow-hidden -mt-20 sm:-mt-32 pt-28 sm:pt-40">
         {/* Flowing transition from age groups */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -554,7 +554,7 @@ export default function Home() {
       </section>
 
       {/* Learning Roadmap Timeline */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 via-pink-100 to-purple-100 overflow-hidden -mt-32 pt-40">
+      <section className="relative py-12 sm:py-16 lg:py-20 px-3 sm:px-6 lg:px-8 bg-gradient-to-br from-red-100 via-pink-100 to-purple-100 overflow-hidden -mt-20 sm:-mt-32 pt-28 sm:pt-40">
         {/* Flowing transition from why choose */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -698,7 +698,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100 overflow-hidden -mt-32 pt-40">
+      <section className="relative py-12 sm:py-16 lg:py-20 px-3 sm:px-6 lg:px-8 bg-gradient-to-br from-green-100 via-teal-100 to-blue-100 overflow-hidden -mt-20 sm:-mt-32 pt-28 sm:pt-40">
         {/* Flowing transition from roadmap */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -829,7 +829,7 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-100 via-red-100 to-pink-100 overflow-hidden -mt-32 pt-40">
+      <section className="relative py-12 sm:py-16 lg:py-20 px-3 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-100 via-red-100 to-pink-100 overflow-hidden -mt-20 sm:-mt-32 pt-28 sm:pt-40">
         {/* Flowing transition from FAQ */}
         <div className="absolute inset-x-0 top-0 h-32">
           <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -914,13 +914,13 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/consultation">
-                <button className="bg-white border-4 border-orange-400 text-orange-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-orange-50">
-                  Book Consultation
+                <button className="w-full sm:w-auto bg-white border-4 border-orange-400 text-orange-600 px-8 sm:px-12 py-3 sm:py-4 rounded-full font-bold text-base sm:text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-orange-50">
+                  📚 Book Consultation
                 </button>
               </Link>
-              <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
-                <button className="bg-white border-4 border-green-400 text-green-600 px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-green-50">
-                  WhatsApp Us
+              <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <button className="w-full bg-white border-4 border-green-400 text-green-600 px-8 sm:px-12 py-3 sm:py-4 rounded-full font-bold text-base sm:text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-green-50">
+                  💬 WhatsApp Us
                 </button>
               </a>
             </div>
