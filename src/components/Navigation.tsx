@@ -107,8 +107,8 @@ export default function Navigation() {
                   </defs>
                 </svg>
               </div>
-              <div className="hidden xs:block">
-                <div className="text-lg sm:text-xl lg:text-xl font-bold text-gray-800 font-poppins">
+              <div>
+                <div className="text-base sm:text-lg lg:text-xl font-bold text-gray-800 font-poppins">
                   BrainlyBees
                 </div>
                 <div className="text-xs sm:text-xs lg:text-xs text-orange-500 font-nunito">
