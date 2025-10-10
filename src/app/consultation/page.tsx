@@ -230,7 +230,7 @@ export default function ConsultationForm() {
                 Submission Error
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                We're sorry, but there was an issue submitting your consultation request. Please try again or contact us directly via WhatsApp.
+                We&apos;re sorry, but there was an issue submitting your consultation request. Please try again or contact us directly via WhatsApp.
               </p>
               <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
                 <button className="bg-gradient-to-r from-green-400 to-green-500 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 font-poppins">

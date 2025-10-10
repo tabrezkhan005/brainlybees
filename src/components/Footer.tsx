@@ -8,8 +8,27 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4 sm:mb-6">
-              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-orange-400 via-red-400 to-pink-400 rounded-xl sm:rounded-2xl flex items-center justify-center mr-3 shadow-lg">
-                <span className="text-white font-bold text-lg sm:text-xl font-poppins">B</span>
+              <div className="relative mr-3">
+                <svg className="w-10 sm:w-12 h-10 sm:h-12" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2C8 2 3 5 3 11C3 14 3 17 3 22C3 27 3 30 3 33C3 39 8 42 13 42C16 42 19 42 22 42C25 42 28 42 31 42C37 42 41 39 41 33C41 30 41 27 41 22C41 17 41 14 41 11C41 5 37 2 31 2C28 2 25 2 22 2C19 2 16 2 13 2Z" 
+                        fill="url(#footerGradient)" 
+                        transform="rotate(-8 22 22)"
+                        style={{filter: 'drop-shadow(0 2px 6px rgba(255, 69, 0, 0.2))'}}
+                  />
+                  <rect x="9" y="9" width="26" height="26" rx="7" ry="7" 
+                        fill="white" 
+                        fillOpacity="0.92"
+                        transform="rotate(-8 22 22)"
+                  />
+                  <defs>
+                    <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#ff4500" />
+                      <stop offset="45%" stopColor="#ff6b35" />
+                      <stop offset="75%" stopColor="#f97316" />
+                      <stop offset="100%" stopColor="#ea580c" />
+                    </linearGradient>
+                  </defs>
+                </svg>
               </div>
               <div>
                 <div className="text-xl sm:text-2xl font-bold text-gray-800 font-poppins">BrainlyBees</div>
