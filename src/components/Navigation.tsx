@@ -201,8 +201,6 @@ export default function Navigation() {
               );
             })}
 
-            <div className="pt-4 space-y-3 border-t border-gray-200">
-
             <div className="pt-3 sm:pt-4 space-y-2 sm:space-y-3 border-t border-gray-200">
               <a
                 href="https://wa.me/918979245215"
