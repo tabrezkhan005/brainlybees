@@ -139,7 +139,7 @@ export default function FAQSection() {
               Chat on WhatsApp
             </a>
             <a 
-              href="mailto:BrainlyBeesGlobal@gmail.com" 
+              href="mailto:brainlybeesglobal@gmail.com" 
               className="bg-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors flex items-center justify-center"
             >
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">

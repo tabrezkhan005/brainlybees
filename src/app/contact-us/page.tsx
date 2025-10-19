@@ -18,7 +18,7 @@ export default function ContactUsPage() {
       title: "Email Support",
       description: "Send us detailed inquiries via email",
       icon: "📧",
-      contact: "BrainlyBeesGlobal@gmail.com",
+      contact: "brainlybeesglobal@gmail.com",
       action: "Send Email",
       color: "from-blue-400 to-blue-500",
       bgColor: "from-blue-50 to-cyan-50"

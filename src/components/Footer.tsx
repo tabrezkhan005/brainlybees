@@ -105,7 +105,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-gray-500 text-xs sm:text-sm font-nunito">Email</div>
-                  <div className="text-gray-800 font-semibold font-poppins text-sm sm:text-base break-all">BrainlyBeesGlobal@gmail.com</div>
+                  <div className="text-gray-800 font-semibold font-poppins text-sm sm:text-base break-all">brainlybeesglobal@gmail.com</div>
                 </div>
               </div>
               <div className="flex items-start">

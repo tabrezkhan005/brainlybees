@@ -178,7 +178,7 @@ export default function HelpCenterPage() {
                 <div className="text-3xl mb-4">📧</div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2 font-poppins">Email Support</h3>
                 <p className="text-gray-600 mb-4">Get detailed help via email</p>
-                <div className="text-blue-600 font-semibold">BrainlyBeesGlobal@gmail.com</div>
+                <div className="text-blue-600 font-semibold">brainlybeesglobal@gmail.com</div>
               </div>
 
               <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 border-2 border-green-200">

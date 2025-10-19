@@ -407,7 +407,7 @@ export default function TeacherResourcesPage() {
                 <div className="text-3xl mb-4">📧</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Resource Requests</h3>
                 <p className="text-gray-600 mb-3">Custom material requests</p>
-                <div className="text-green-600 font-semibold text-sm">BrainlyBeesGlobal@gmail.com</div>
+                <div className="text-green-600 font-semibold text-sm">brainlybeesglobal@gmail.com</div>
               </div>
 
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200">

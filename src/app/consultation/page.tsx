@@ -29,38 +29,39 @@ export default function ConsultationForm() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
+    console.log('🚀 Form submission started:', formData);
+
     try {
-      // Create email content
-      const subject = `Consultation Request - ${formData.name}`;
-      const emailBody = `
-Name: ${formData.name}
-Age: ${formData.age}
-Contact Number: ${formData.contactNumber}
-Email: ${formData.email}
-
-Description:
-${formData.description}
-
----
-This consultation request was submitted through the BrainlyBees website.
-      `;
-
-      // Create mailto link
-      const mailtoLink = `mailto:BrainlyBeesGlobal@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-
-      // Open email client
-      window.open(mailtoLink, '_blank');
-
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        age: '',
-        contactNumber: '',
-        email: '',
-        description: ''
+      console.log('📡 Sending API request to /api/send-consultation...');
+      
+      const response = await fetch('/api/send-consultation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      console.log('📝 API Response status:', response.status);
+      const responseData = await response.json();
+      console.log('📝 API Response data:', responseData);
+
+      if (response.ok) {
+        console.log('✅ Form submitted successfully!');
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          age: '',
+          contactNumber: '',
+          email: '',
+          description: ''
+        });
+      } else {
+        console.error('❌ Server responded with error:', responseData);
+        setSubmitStatus('error');
+      }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('❌ Network error submitting form:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -196,10 +197,10 @@ This consultation request was submitted through the BrainlyBees website.
                   {isSubmitting ? (
                     <div className="flex items-center justify-center space-x-3">
                       <div className="w-5 h-5 border-2 border-gray-500 border-t-transparent rounded-full animate-spin"></div>
-                      <span>Submitting Request...</span>
+                      <span>Sending Emails...</span>
                     </div>
                   ) : (
-                    'Schedule My Consultation'
+                    'Send Consultation Request'
                   )}
                 </button>
               </div>
@@ -218,7 +219,7 @@ This consultation request was submitted through the BrainlyBees website.
                 Request Submitted Successfully
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Thank you for your interest in BrainlyBees! Your email client should have opened with a pre-filled consultation request. Please send the email to complete your submission. Our education experts will review your request and contact you within 24 hours.
+                🚀 <strong>Emails sent instantly!</strong> Check your inbox now for confirmation. Our education experts will review your request and contact you within <strong>2 hours</strong> to schedule your consultation.
               </p>
             </div>
           )}
@@ -266,8 +267,8 @@ This consultation request was submitted through the BrainlyBees website.
                 <div className="w-16 h-16 bg-gradient-to-r from-red-400 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <span className="text-white font-bold text-xl font-poppins">2</span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-3 font-poppins">Contact</h3>
-                <p className="text-gray-600 font-nunito">We reach out within 24 hours to schedule your consultation session</p>
+                <h3 className="text-lg font-bold text-gray-800 mb-3 font-poppins">Quick Contact</h3>
+                <p className="text-gray-600 font-nunito">We reach out within 2 hours to schedule your consultation session</p>
               </div>
 
               <div className="text-center">

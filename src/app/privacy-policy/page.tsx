@@ -181,7 +181,7 @@ export default function PrivacyPolicyPage() {
               <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
                 <div className="text-3xl mb-4">📧</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Email Us</h3>
-                <div className="text-gray-600 font-semibold">BrainlyBeesGlobal@gmail.com</div>
+                <div className="text-gray-600 font-semibold">brainlybeesglobal@gmail.com</div>
               </div>
 
               <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
