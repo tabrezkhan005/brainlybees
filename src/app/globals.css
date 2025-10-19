@@ -36,7 +36,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Responsive Layout Helpers */
 .container-responsive {
   width: 100%;
   max-width: 1280px;

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -184,20 +186,20 @@ Best regards,
 The BrainlyBees Team
         `,
       });
-      console.log('✅ Customer email sent successfully!', customerEmailResult.messageId);
+      console.log('Customer email sent successfully!', customerEmailResult.messageId);
 
     } catch (emailError) {
       console.error('❌ Email sending failed:', emailError);
       
       // Type-safe error handling
-      const errorDetails: any = {};
+      const errorDetails: Record<string, unknown> = {};
       if (emailError instanceof Error) {
         errorDetails.message = emailError.message;
         errorDetails.name = emailError.name;
       }
       if (typeof emailError === 'object' && emailError !== null) {
-        errorDetails.code = (emailError as any).code;
-        errorDetails.response = (emailError as any).response;
+        errorDetails.code = (emailError as { code?: unknown }).code;
+        errorDetails.response = (emailError as { response?: unknown }).response;
       }
       
       console.error('Error details:', errorDetails);

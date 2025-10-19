@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  // Only use static export for production static builds
+  // Remove output: 'export' to allow API routes to work
   trailingSlash: true,
   images: {
     unoptimized: true
