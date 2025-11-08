@@ -29,11 +29,9 @@ export default function ConsultationForm() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    console.log('🚀 Form submission started:', formData);
-
     try {
-      console.log('📡 Sending API request to /api/send-consultation...');
-      
+      console.log('🚀 Form submission started:', formData);
+
       const response = await fetch('/api/send-consultation', {
         method: 'POST',
         headers: {
@@ -48,6 +46,10 @@ export default function ConsultationForm() {
 
       if (response.ok) {
         console.log('✅ Form submitted successfully!');
+        console.log('📧 Email IDs:', {
+          teamEmailId: responseData.teamEmailId,
+          parentEmailId: responseData.parentEmailId
+        });
         setSubmitStatus('success');
         setFormData({
           name: '',
@@ -58,6 +60,11 @@ export default function ConsultationForm() {
         });
       } else {
         console.error('❌ Server responded with error:', responseData);
+        console.error('❌ Error details:', {
+          status: response.status,
+          statusText: response.statusText,
+          data: responseData
+        });
         setSubmitStatus('error');
       }
     } catch (error) {
@@ -197,10 +204,10 @@ export default function ConsultationForm() {
                   {isSubmitting ? (
                     <div className="flex items-center justify-center space-x-3">
                       <div className="w-5 h-5 border-2 border-gray-500 border-t-transparent rounded-full animate-spin"></div>
-                      <span>Sending Emails...</span>
+                      <span>Sending Request...</span>
                     </div>
                   ) : (
-                    'Send Consultation Request'
+                    '📚 Submit Consultation Request'
                   )}
                 </button>
               </div>
@@ -216,10 +223,10 @@ export default function ConsultationForm() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-800 font-poppins mb-4">
-                Request Submitted Successfully
+                Request Submitted Successfully! 🎉
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                🚀 <strong>Emails sent instantly!</strong> Check your inbox now for confirmation. Our education experts will review your request and contact you within <strong>2 hours</strong> to schedule your consultation.
+                🚀 <strong>Emails sent instantly!</strong> Check your inbox now for confirmation. Our education experts will review your request and contact you within <strong>24 hours</strong> to schedule your consultation.
               </p>
             </div>
           )}
