@@ -173,7 +173,7 @@ export default function CareersPage() {
                     Book Consultation
                   </button>
                 </Link>
-                <a href="https://wa.me/919837998535" className="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-500 hover:to-amber-500 transition-all duration-300 transform hover:scale-105">
+                <a href="https://wa.me/916397316375" className="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-500 hover:to-amber-500 transition-all duration-300 transform hover:scale-105">
                   Contact HR Team
                 </a>
               </div>
@@ -356,7 +356,7 @@ export default function CareersPage() {
                   </ul>
                 </div>
 
-                <a href="https://wa.me/919837998535" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/916397316375" target="_blank" rel="noopener noreferrer">
                   <button className="w-full bg-white border-2 border-purple-400 text-purple-600 py-3 rounded-2xl font-semibold hover:bg-purple-50 transition-all duration-300">
                     Apply Now
                   </button>
@@ -488,7 +488,7 @@ export default function CareersPage() {
                     Book Consultation
                   </button>
                 </Link>
-                <a href="https://wa.me/919837998535" className="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-500 hover:to-amber-500 transition-all duration-300 transform hover:scale-105">
+                <a href="https://wa.me/916397316375" className="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-500 hover:to-amber-500 transition-all duration-300 transform hover:scale-105">
                   Contact Recruitment Team
                 </a>
               </div>

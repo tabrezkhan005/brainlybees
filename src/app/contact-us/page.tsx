@@ -9,7 +9,7 @@ export default function ContactUsPage() {
       title: "WhatsApp Support",
       description: "Get instant help through WhatsApp chat",
       icon: "💬",
-      contact: "+91 98379 98535",
+      contact: "+91 63973 16375",
       action: "Chat Now",
       color: "from-green-400 to-green-500",
       bgColor: "from-green-50 to-emerald-50"

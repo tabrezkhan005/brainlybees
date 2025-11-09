@@ -121,7 +121,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-gray-500 text-xs sm:text-sm font-nunito">WhatsApp</div>
-                  <div className="text-gray-800 font-semibold font-poppins text-sm sm:text-base">+91 98379 98535</div>
+                  <div className="text-gray-800 font-semibold font-poppins text-sm sm:text-base">+91 63973 16375</div>
                 </div>
               </div>
               <div className="flex items-start">

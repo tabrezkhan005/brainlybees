@@ -265,7 +265,7 @@ export default function SpecialNeedsPage() {
                   Schedule Assessment
                 </button>
                 <a
-                  href="https://wa.me/919837998535"
+                  href="https://wa.me/916397316375"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-yellow-300 to-orange-300 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
@@ -437,7 +437,7 @@ export default function SpecialNeedsPage() {
                     </div>
                   </div>
 
-                  <a href="https://wa.me/919837998535" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/916397316375" target="_blank" rel="noopener noreferrer">
                     <button className="w-full bg-white border-3 border-yellow-400 text-orange-500 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-yellow-50">
                       Learn More About This
                     </button>
@@ -804,7 +804,7 @@ export default function SpecialNeedsPage() {
                 </button>
               </Link>
               <a
-                href="https://wa.me/919837998535"
+                href="https://wa.me/916397316375"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-purple-400 to-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"

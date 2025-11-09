@@ -98,7 +98,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <a href="https://wa.me/919837998535" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <a href="https://wa.me/916397316375" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <button className="w-full bg-white border-3 border-green-400 text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-green-50">
                     💬 WhatsApp Us
                   </button>
@@ -918,7 +918,7 @@ export default function Home() {
                   📚 Book Consultation
                 </button>
               </Link>
-              <a href="https://wa.me/919837998535" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <a href="https://wa.me/916397316375" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <button className="w-full bg-white border-4 border-green-400 text-green-600 px-8 sm:px-12 py-3 sm:py-4 rounded-full font-bold text-base sm:text-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-green-50">
                   💬 WhatsApp Us
                 </button>
@@ -1011,7 +1011,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6 font-nunito">Still have questions?</p>
-            <a href="https://wa.me/919837998535" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/916397316375" target="_blank" rel="noopener noreferrer">
               <button className="bg-white border-3 border-green-400 text-green-600 px-8 py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-green-50">
                 Contact Our Support Team
               </button>

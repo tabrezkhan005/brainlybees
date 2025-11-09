@@ -131,7 +131,7 @@ export async function POST(request: NextRequest) {
           <div style="text-align: center; margin-top: 30px;">
             <p style="color: #4a5568; margin-bottom: 15px;">Questions? Contact us anytime:</p>
             <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-              <a href="https://wa.me/919837998535" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold;">
+              <a href="https://wa.me/916397316375" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold;">
                 📱 WhatsApp Us
               </a>
               <a href="mailto:kidcubeglobal@gmail.com" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold;">
@@ -196,7 +196,7 @@ What happens next:
 - We'll recommend the best programs
 
 Questions? Contact us:
-WhatsApp: https://wa.me/919837998535
+WhatsApp: https://wa.me/916397316375
 Email: kidcubeglobal@gmail.com
 
 KidCube Global Team

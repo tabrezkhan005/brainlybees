@@ -329,7 +329,7 @@ export default function ParentGuidePage() {
                 <div className="text-3xl mb-4">📞</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Direct Support</h3>
                 <p className="text-gray-600 mb-3">WhatsApp support</p>
-                <div className="text-blue-600 font-semibold">+91 98379 98535</div>
+                <div className="text-blue-600 font-semibold">+91 63973 16375</div>
               </div>
 
               <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 border-2 border-green-200">

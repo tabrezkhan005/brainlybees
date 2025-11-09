@@ -165,7 +165,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center space-x-1 sm:space-x-2 flex-shrink-0">
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/919837998535"
+              href="https://wa.me/916397316375"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full text-xs sm:text-sm font-semibold hover:shadow-lg transition-all duration-200 whitespace-nowrap shadow-sm"
@@ -226,7 +226,7 @@ export default function Navigation() {
 
             <div className="pt-3 sm:pt-4 space-y-2 sm:space-y-3 border-t border-gray-200">
               <a
-                href="https://wa.me/919837998535"
+                href="https://wa.me/916397316375"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center px-3 sm:px-4 py-2.5 sm:py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-lg sm:rounded-full font-semibold shadow-sm transition-all duration-200"

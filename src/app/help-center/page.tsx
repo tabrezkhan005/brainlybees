@@ -185,7 +185,7 @@ export default function HelpCenterPage() {
                 <div className="text-3xl mb-4">💬</div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2 font-poppins">WhatsApp Support</h3>
                 <p className="text-gray-600 mb-4">Quick assistance via chat</p>
-                <div className="text-green-600 font-semibold">+91 98379 98535</div>
+                <div className="text-green-600 font-semibold">+91 63973 16375</div>
               </div>
             </div>
           </div>

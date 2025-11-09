@@ -23,7 +23,7 @@ export default function FAQPage() {
         },
         {
           question: "How do I get started?",
-          answer: "Getting started is easy! You can book a consultation through our website, contact us via WhatsApp at +91 98379 98535, or email us at kidcubeglobal@gmail.com. We'll help you choose the right program for your child."
+          answer: "Getting started is easy! You can book a consultation through our website, contact us via WhatsApp at +91 63973 16375, or email us at kidcubeglobal@gmail.com. We'll help you choose the right program for your child."
         },
         {
           question: "Do you offer free trials?",
@@ -259,7 +259,7 @@ export default function FAQPage() {
               <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 border-2 border-green-200">
                 <div className="text-3xl mb-4">💬</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">WhatsApp</h3>
-                <div className="text-green-600 font-semibold text-sm">+91 98379 98535</div>
+                <div className="text-green-600 font-semibold text-sm">+91 63973 16375</div>
               </div>
 
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200">
