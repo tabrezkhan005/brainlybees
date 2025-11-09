@@ -96,11 +96,11 @@ export default function CookiePolicyPage() {
             <div className="w-3 h-3 bg-gray-400 rounded-full mr-3"></div>
             <span className="text-gray-700 font-bold text-sm">Data & Privacy</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins mb-6">
             Cookie Policy
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
             How we use cookies and tracking technologies on our platform
           </p>
@@ -141,7 +141,7 @@ export default function CookiePolicyPage() {
           <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center font-poppins">
             Types of Cookies We Use
           </h2>
-          
+
           <div className="space-y-8">
             {cookieTypes.map((cookie, index) => (
               <div key={index} className="bg-white rounded-3xl shadow-lg p-8 border-2 border-gray-200">
@@ -203,7 +203,7 @@ export default function CookiePolicyPage() {
                 <h3 className="text-xl font-bold text-gray-800 mb-3 font-poppins">
                   {service.service}
                 </h3>
-                
+
                 <div className="space-y-4">
                   <div>
                     <h4 className="text-sm font-bold text-gray-700 mb-1">Purpose:</h4>
@@ -231,7 +231,7 @@ export default function CookiePolicyPage() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-3xl shadow-xl p-8 border-2 border-gray-200">
             <h2 className="text-2xl font-bold text-gray-800 mb-6 font-poppins">Managing Your Cookie Preferences</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-lg font-bold text-gray-800 mb-4 font-poppins">Browser Settings</h3>
@@ -295,13 +295,13 @@ export default function CookiePolicyPage() {
               <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
                 <div className="text-3xl mb-4">📧</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Email Support</h3>
-                <div className="text-gray-600 font-semibold">brainlybeesglobal@gmail.com</div>
+                <div className="text-gray-600 font-semibold">kidcubeglobal@gmail.com</div>
               </div>
 
               <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
                 <div className="text-3xl mb-4">💬</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">WhatsApp</h3>
-                <div className="text-gray-600 font-semibold">+91 8979245215</div>
+                <div className="text-gray-600 font-semibold">+91 98379 98535</div>
               </div>
             </div>
 

@@ -135,7 +135,7 @@ export default function RefundPolicyPage() {
             <h2 className="text-2xl font-bold text-gray-800 mb-6 font-poppins">Our Commitment to Fair Refunds</h2>
             <div className="prose prose-lg text-gray-600 leading-relaxed">
               <p className="mb-4">
-                At BrainlyBees, we are committed to providing exceptional educational services and ensuring our families feel confident in their investment. This Refund Policy outlines our fair and transparent approach to refunds, designed to protect both our students&apos; interests and the sustainability of our educational programs.
+                At KidCube Global, we are committed to providing exceptional educational services and ensuring our families feel confident in their investment. This Refund Policy outlines our fair and transparent approach to refunds, designed to protect both our students&apos; interests and the sustainability of our educational programs.
               </p>
               <p className="mb-4">
                 We understand that circumstances can change, and we strive to work with families to find solutions that support continued learning. Our refund policy is designed to be fair while acknowledging the resources invested in providing high-quality educational services.
@@ -295,14 +295,14 @@ export default function RefundPolicyPage() {
               <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
                 <div className="text-3xl mb-4">📧</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Email Request</h3>
-                <div className="text-gray-600 font-semibold">brainlybeesglobal@gmail.com</div>
+                <div className="text-gray-600 font-semibold">kidcubeglobal@gmail.com</div>
                 <p className="text-gray-500 text-sm mt-2">Include: Student name, enrollment ID, refund reason</p>
               </div>
 
               <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
                 <div className="text-3xl mb-4">💬</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">WhatsApp Support</h3>
-                <div className="text-gray-600 font-semibold">+91 8979245215</div>
+                <div className="text-gray-600 font-semibold">+91 98379 98535</div>
                 <p className="text-gray-500 text-sm mt-2">Quick response for urgent refund requests</p>
               </div>
             </div>

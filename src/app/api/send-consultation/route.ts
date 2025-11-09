@@ -4,10 +4,10 @@ import nodemailer from "nodemailer";
 export async function POST(request: NextRequest) {
   try {
     console.log('📧 API Route called - send-consultation');
-    
+
     const body = await request.json();
     console.log('📝 Request body received:', body);
-    
+
     const { name, age, contactNumber, email, description } = body;
 
     // Validate required fields
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS ? '***hidden***' : 'NOT SET'
     });
-    
+
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
       port: parseInt(process.env.SMTP_PORT || '587'),
@@ -42,12 +42,12 @@ export async function POST(request: NextRequest) {
 
     console.log('✅ Email transporter created successfully');
 
-    // Email content for BrainlyBees team
+    // Email content for KidCube Global team
     const teamEmailContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f8fafc;">
         <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px 10px 0 0; text-align: center;">
           <h1 style="color: white; margin: 0; font-size: 28px;">📚 New Consultation Request</h1>
-          <p style="color: #e2e8f0; margin: 10px 0 0 0; font-size: 16px;">BrainlyBees Education Platform</p>
+          <p style="color: #e2e8f0; margin: 10px 0 0 0; font-size: 16px;">KidCube Global Education Platform</p>
         </div>
 
         <div style="background-color: white; padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
@@ -99,14 +99,14 @@ export async function POST(request: NextRequest) {
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f8fafc;">
         <div style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%); padding: 30px; border-radius: 10px 10px 0 0; text-align: center;">
           <h1 style="color: white; margin: 0; font-size: 28px;">🎉 Thank You!</h1>
-          <p style="color: #ffe0e0; margin: 10px 0 0 0; font-size: 16px;">BrainlyBees Education Platform</p>
+          <p style="color: #ffe0e0; margin: 10px 0 0 0; font-size: 16px;">KidCube Global Education Platform</p>
         </div>
 
         <div style="background-color: white; padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
           <h2 style="color: #2d3748; margin-bottom: 20px;">Dear ${name}'s Parent,</h2>
 
           <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px;">
-            Thank you for your interest in BrainlyBees! We've received your consultation request and our education experts are excited to help your child succeed.
+            Thank you for your interest in KidCube Global! We've received your consultation request and our education experts are excited to help your child succeed.
           </p>
 
           <div style="background-color: #fff5f5; padding: 20px; border-radius: 8px; border-left: 4px solid #ff6b6b; margin-bottom: 20px;">
@@ -131,10 +131,10 @@ export async function POST(request: NextRequest) {
           <div style="text-align: center; margin-top: 30px;">
             <p style="color: #4a5568; margin-bottom: 15px;">Questions? Contact us anytime:</p>
             <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-              <a href="https://wa.me/918979245215" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold;">
+              <a href="https://wa.me/919837998535" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold;">
                 📱 WhatsApp Us
               </a>
-              <a href="mailto:tabrezkhanloyola@gmail.com" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold;">
+              <a href="mailto:kidcubeglobal@gmail.com" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold;">
                 📧 Email Us
               </a>
             </div>
@@ -142,7 +142,7 @@ export async function POST(request: NextRequest) {
 
           <div style="margin-top: 30px; padding: 15px; background-color: #edf2f7; border-radius: 8px; text-align: center;">
             <p style="color: #4a5568; font-size: 14px; margin: 0;">
-              <strong>BrainlyBees Team</strong><br>
+              <strong>KidCube Global Team</strong><br>
               Making Learning Fun & Effective for Kids! 🌟
             </p>
           </div>
@@ -150,15 +150,15 @@ export async function POST(request: NextRequest) {
       </div>
     `;
 
-    // Send email to BrainlyBees team
-    console.log('📤 Sending email to BrainlyBees team...');
+    // Send email to KidCube Global team
+    console.log('📤 Sending email to KidCube Global team...');
     const teamEmailResult = await transporter.sendMail({
-      from: process.env.SMTP_FROM || '"BrainlyBees Consultation" <tabrezkhanloyola@gmail.com>',
-      to: process.env.CONSULTATION_EMAIL || 'tabrezkhanloyola@gmail.com',
+      from: process.env.SMTP_FROM || '"KidCube Global Consultation" <kidcubeglobal@gmail.com>',
+      to: process.env.CONSULTATION_EMAIL || 'kidcubeglobal@gmail.com',
       subject: `📚 New Consultation Request - ${name} (${age} years)`,
       html: teamEmailContent,
       text: `
-New Consultation Request - BrainlyBees
+New Consultation Request - KidCube Global
 
 Student: ${name} (${age} years)
 Contact: ${contactNumber}
@@ -175,9 +175,9 @@ Please contact within 24 hours.
     // Send confirmation email to parent
     console.log('📤 Sending confirmation email to parent...');
     const parentEmailResult = await transporter.sendMail({
-      from: process.env.SMTP_FROM || '"BrainlyBees Team" <tabrezkhanloyola@gmail.com>',
+      from: process.env.SMTP_FROM || '"KidCube Global Team" <kidcubeglobal@gmail.com>',
       to: email,
-      subject: `🎉 Thank You! Consultation Request Received - BrainlyBees`,
+      subject: `🎉 Thank You! Consultation Request Received - KidCube Global`,
       html: parentEmailContent,
       text: `
 Thank you for your consultation request!
@@ -196,10 +196,10 @@ What happens next:
 - We'll recommend the best programs
 
 Questions? Contact us:
-WhatsApp: https://wa.me/918979245215
-Email: tabrezkhanloyola@gmail.com
+WhatsApp: https://wa.me/919837998535
+Email: kidcubeglobal@gmail.com
 
-BrainlyBees Team
+KidCube Global Team
       `,
     });
     console.log('✅ Parent email sent successfully:', parentEmailResult.messageId);
@@ -223,7 +223,7 @@ BrainlyBees Team
       stack: error instanceof Error ? error.stack : undefined,
       name: error instanceof Error ? error.name : undefined
     });
-    
+
     return NextResponse.json(
       {
         error: 'Failed to submit consultation request',

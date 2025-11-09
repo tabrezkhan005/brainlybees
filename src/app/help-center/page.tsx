@@ -61,7 +61,7 @@ export default function HelpCenterPage() {
     },
     {
       title: "Account Management",
-      description: "Managing your BrainlyBees account",
+      description: "Managing your KidCube Global account",
       icon: "⚙️",
       articles: [
         "Profile settings",
@@ -103,7 +103,7 @@ export default function HelpCenterPage() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-            Find answers to common questions and get the support you need to make the most of your BrainlyBees experience.
+            Find answers to common questions and get the support you need to make the most of your KidCube Global experience.
           </p>
 
           <div className="max-w-2xl mx-auto">
@@ -178,14 +178,14 @@ export default function HelpCenterPage() {
                 <div className="text-3xl mb-4">📧</div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2 font-poppins">Email Support</h3>
                 <p className="text-gray-600 mb-4">Get detailed help via email</p>
-                <div className="text-blue-600 font-semibold">brainlybeesglobal@gmail.com</div>
+                <div className="text-blue-600 font-semibold">kidcubeglobal@gmail.com</div>
               </div>
 
               <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 border-2 border-green-200">
                 <div className="text-3xl mb-4">💬</div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2 font-poppins">WhatsApp Support</h3>
                 <p className="text-gray-600 mb-4">Quick assistance via chat</p>
-                <div className="text-green-600 font-semibold">+91 8979245215</div>
+                <div className="text-green-600 font-semibold">+91 98379 98535</div>
               </div>
             </div>
           </div>

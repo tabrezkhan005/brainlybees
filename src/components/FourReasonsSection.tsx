@@ -89,7 +89,7 @@ export default function FourReasonsSection() {
             Why Choose Us
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            What Makes BrainlyBees
+            What Makes KidCube Global
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500 animate-gradient-x"> Special</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">

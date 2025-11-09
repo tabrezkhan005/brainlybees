@@ -133,7 +133,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-bold text-gray-800 mb-6 font-poppins">Introduction</h2>
             <div className="prose prose-lg text-gray-600 leading-relaxed">
               <p className="mb-4">
-                BrainlyBees (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting the privacy and security of our users&apos; personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our educational platform and services.
+                KidCube Global (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting the privacy and security of our users&apos; personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our educational platform and services.
               </p>
               <p className="mb-4">
                 This policy applies to all users of our platform, including students, parents, guardians, teachers, and visitors to our website. By using our services, you consent to the practices described in this Privacy Policy.
@@ -181,13 +181,13 @@ export default function PrivacyPolicyPage() {
               <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
                 <div className="text-3xl mb-4">📧</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Email Us</h3>
-                <div className="text-gray-600 font-semibold">brainlybeesglobal@gmail.com</div>
+                <div className="text-gray-600 font-semibold">kidcubeglobal@gmail.com</div>
               </div>
 
               <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
                 <div className="text-3xl mb-4">💬</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">WhatsApp</h3>
-                <div className="text-gray-600 font-semibold">+91 8979245215</div>
+                <div className="text-gray-600 font-semibold">+91 98379 98535</div>
               </div>
             </div>
 

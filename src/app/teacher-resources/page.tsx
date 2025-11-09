@@ -155,7 +155,7 @@ export default function TeacherResourcesPage() {
     },
     {
       service: "Mentorship Program",
-      description: "Connect with experienced BrainlyBees educators for guidance and support",
+      description: "Connect with experienced KidCube Global educators for guidance and support",
       icon: "🤝",
       availability: "Ongoing program"
     },
@@ -354,7 +354,7 @@ export default function TeacherResourcesPage() {
               Support Services
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive support services available to all BrainlyBees educators.
+              Comprehensive support services available to all KidCube Global educators.
             </p>
           </div>
 
@@ -400,14 +400,14 @@ export default function TeacherResourcesPage() {
                 <div className="text-3xl mb-4">📞</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Educator Hotline</h3>
                 <p className="text-gray-600 mb-3">Direct teacher support</p>
-                <div className="text-blue-600 font-semibold">+91 8979245215</div>
+                <div className="text-blue-600 font-semibold">+91 98379 98535</div>
               </div>
 
               <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 border-2 border-green-200">
                 <div className="text-3xl mb-4">📧</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Resource Requests</h3>
                 <p className="text-gray-600 mb-3">Custom material requests</p>
-                <div className="text-green-600 font-semibold text-sm">brainlybeesglobal@gmail.com</div>
+                <div className="text-green-600 font-semibold text-sm">kidcubeglobal@gmail.com</div>
               </div>
 
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200">

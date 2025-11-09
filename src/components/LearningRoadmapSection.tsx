@@ -127,7 +127,7 @@ export default function LearningRoadmapSection() {
               Learning Roadmap
             </span>
             <br />
-            <span className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700">with BrainlyBees</span>
+            <span className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700">with KidCube Global</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
             A carefully crafted, step-by-step journey that transforms your child from foundation building

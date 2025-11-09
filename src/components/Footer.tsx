@@ -8,31 +8,58 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4 sm:mb-6">
-              <div className="relative mr-3">
-                <svg className="w-10 sm:w-12 h-10 sm:h-12" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13 2C8 2 3 5 3 11C3 14 3 17 3 22C3 27 3 30 3 33C3 39 8 42 13 42C16 42 19 42 22 42C25 42 28 42 31 42C37 42 41 39 41 33C41 30 41 27 41 22C41 17 41 14 41 11C41 5 37 2 31 2C28 2 25 2 22 2C19 2 16 2 13 2Z" 
-                        fill="url(#footerGradient)" 
-                        transform="rotate(-8 22 22)"
-                        style={{filter: 'drop-shadow(0 2px 6px rgba(255, 69, 0, 0.2))'}}
-                  />
-                  <rect x="9" y="9" width="26" height="26" rx="7" ry="7" 
-                        fill="white" 
-                        fillOpacity="0.92"
-                        transform="rotate(-8 22 22)"
-                  />
+              <div className="relative mr-3 sm:mr-4">
+                {/* Enhanced KidCube Logo - Modern 3D Cube with Shadow */}
+                <svg className="w-12 sm:w-14 h-12 sm:h-14" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Shadow for depth */}
+                  <ellipse cx="28" cy="50" rx="18" ry="4" fill="rgba(99, 102, 241, 0.2)"/>
+
+                  {/* 3D Cube - Top face with shine */}
+                  <path d="M14 10L28 3L42 10V24L28 31L14 24V10Z" fill="url(#footerCubeGradient1)" opacity="0.95">
+                    <animate attributeName="opacity" values="0.95;1;0.95" dur="3s" repeatCount="indefinite"/>
+                  </path>
+
+                  {/* 3D Cube - Front face */}
+                  <path d="M14 24L28 31V45L14 38V24Z" fill="url(#footerCubeGradient2)"/>
+
+                  {/* 3D Cube - Right face */}
+                  <path d="M28 31L42 24V38L28 45V31Z" fill="url(#footerCubeGradient3)"/>
+
+                  {/* Highlight on top face */}
+                  <path d="M14 10L28 3L42 10L35 13L21 20L14 17Z" fill="rgba(255,255,255,0.3)"/>
+
+                  {/* Cube edges for definition */}
+                  <path d="M14 10L28 3L42 10M14 10V24L28 31L42 24V10M14 24L28 31V45L14 38V24M28 31L42 24V38L28 45V31"
+                        stroke="rgba(255,255,255,0.45)" strokeWidth="1" fill="none" strokeLinecap="round"/>
+
+                  {/* Letter K with better styling */}
+                  <text x="28" y="21" fontSize="18" fontWeight="800" fill="white" textAnchor="middle"
+                        fontFamily="'Poppins', 'Arial', sans-serif" letterSpacing="-0.5">K</text>
+
                   <defs>
-                    <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#ff4500" />
-                      <stop offset="45%" stopColor="#ff6b35" />
-                      <stop offset="75%" stopColor="#f97316" />
-                      <stop offset="100%" stopColor="#ea580c" />
+                    <linearGradient id="footerCubeGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#6366f1" />
+                      <stop offset="50%" stopColor="#818cf8" />
+                      <stop offset="100%" stopColor="#8b5cf6" />
+                    </linearGradient>
+                    <linearGradient id="footerCubeGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#8b5cf6" />
+                      <stop offset="100%" stopColor="#a855f7" />
+                    </linearGradient>
+                    <linearGradient id="footerCubeGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#7c3aed" />
+                      <stop offset="100%" stopColor="#6366f1" />
                     </linearGradient>
                   </defs>
                 </svg>
               </div>
-              <div>
-                <div className="text-xl sm:text-2xl font-bold text-gray-800 font-poppins">BrainlyBees</div>
-                <div className="text-xs sm:text-sm text-orange-600 font-nunito">Smart Learning for Kids</div>
+              <div className="flex flex-col">
+                <div className="text-xl sm:text-2xl lg:text-3xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700 bg-clip-text text-transparent font-poppins tracking-tight leading-tight">
+                  KidCube
+                </div>
+                <div className="text-xs sm:text-sm text-indigo-500 font-semibold font-nunito tracking-wide uppercase mt-0.5">
+                  Global Learning Platform
+                </div>
               </div>
             </div>
             <p className="text-gray-700 leading-relaxed mb-4 sm:mb-6 font-nunito text-sm sm:text-base">
@@ -94,7 +121,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-gray-500 text-xs sm:text-sm font-nunito">WhatsApp</div>
-                  <div className="text-gray-800 font-semibold font-poppins text-sm sm:text-base">+91 8979245215</div>
+                  <div className="text-gray-800 font-semibold font-poppins text-sm sm:text-base">+91 98379 98535</div>
                 </div>
               </div>
               <div className="flex items-start">
@@ -105,7 +132,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-gray-500 text-xs sm:text-sm font-nunito">Email</div>
-                  <div className="text-gray-800 font-semibold font-poppins text-sm sm:text-base break-all">brainlybeesglobal@gmail.com</div>
+                  <div className="text-gray-800 font-semibold font-poppins text-sm sm:text-base break-all">kidcubeglobal@gmail.com</div>
                 </div>
               </div>
               <div className="flex items-start">
@@ -133,7 +160,7 @@ export default function Footer() {
               <Link href="/refund-policy" className="text-gray-500 hover:text-orange-600 text-xs sm:text-sm transition-colors font-nunito">Refund Policy</Link>
             </div>
             <div className="text-gray-500 text-xs sm:text-sm font-nunito text-center md:text-right">
-              © 2025 BrainlyBees. All rights reserved.
+              © 2025 KidCube Global. All rights reserved.
             </div>
           </div>
         </div>

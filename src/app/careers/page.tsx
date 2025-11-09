@@ -164,7 +164,7 @@ export default function CareersPage() {
               </h1>
 
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Join BrainlyBees and be part of a revolutionary educational journey. Help us create innovative learning experiences that inspire young minds and build tomorrow&apos;s leaders.
+                Join KidCube Global and be part of a revolutionary educational journey. Help us create innovative learning experiences that inspire young minds and build tomorrow&apos;s leaders.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -173,7 +173,7 @@ export default function CareersPage() {
                     Book Consultation
                   </button>
                 </Link>
-                <a href="https://wa.me/918979245215" className="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-500 hover:to-amber-500 transition-all duration-300 transform hover:scale-105">
+                <a href="https://wa.me/919837998535" className="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-500 hover:to-amber-500 transition-all duration-300 transform hover:scale-105">
                   Contact HR Team
                 </a>
               </div>
@@ -236,7 +236,7 @@ export default function CareersPage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-block bg-white/80 backdrop-blur-sm border-2 border-green-200 rounded-full px-6 py-2 mb-6">
-              <span className="text-green-600 font-poppins font-semibold">Why Choose BrainlyBees</span>
+              <span className="text-green-600 font-poppins font-semibold">Why Choose KidCube Global</span>
             </div>
             <h2 className="text-5xl font-bold font-poppins bg-gradient-to-r from-green-600 via-teal-500 to-blue-600 bg-clip-text text-transparent mb-6">
               Amazing Benefits & Culture
@@ -356,7 +356,7 @@ export default function CareersPage() {
                   </ul>
                 </div>
 
-                <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/919837998535" target="_blank" rel="noopener noreferrer">
                   <button className="w-full bg-white border-2 border-purple-400 text-purple-600 py-3 rounded-2xl font-semibold hover:bg-purple-50 transition-all duration-300">
                     Apply Now
                   </button>
@@ -475,7 +475,7 @@ export default function CareersPage() {
               </div>
 
               <h2 className="text-5xl font-bold font-poppins bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-600 bg-clip-text text-transparent mb-6">
-                Start Your Journey with BrainlyBees
+                Start Your Journey with KidCube Global
               </h2>
 
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
@@ -488,13 +488,13 @@ export default function CareersPage() {
                     Book Consultation
                   </button>
                 </Link>
-                <a href="https://wa.me/918979245215" className="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-500 hover:to-amber-500 transition-all duration-300 transform hover:scale-105">
+                <a href="https://wa.me/919837998535" className="bg-gradient-to-r from-orange-400 to-amber-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-500 hover:to-amber-500 transition-all duration-300 transform hover:scale-105">
                   Contact Recruitment Team
                 </a>
               </div>
 
               <div className="mt-8 text-sm text-gray-600">
-                <p>Questions about careers? Email us at brainlybeesglobal@gmail.com</p>
+                <p>Questions about careers? Email us at kidcubeglobal@gmail.com</p>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ export default function TermsOfServicePage() {
     {
       title: "Acceptance of Terms",
       content: [
-        "By accessing or using BrainlyBees educational platform and services, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
+        "By accessing or using KidCube Global educational platform and services, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
         "If you do not agree with any of these terms, you are prohibited from using or accessing our services.",
         "These terms apply to all users of the platform, including students, parents, guardians, teachers, and visitors.",
         "For users under 18, a parent or legal guardian must agree to these terms on behalf of the minor."
@@ -16,7 +16,7 @@ export default function TermsOfServicePage() {
     {
       title: "Description of Services",
       content: [
-        "BrainlyBees provides online and offline educational services including interactive learning programs, personalized tutoring, worksheets, and educational resources.",
+        "KidCube Global provides online and offline educational services including interactive learning programs, personalized tutoring, worksheets, and educational resources.",
         "Our services are designed to support students' academic growth through innovative teaching methods and technology-enhanced learning experiences.",
         "We offer various program options including individual and group sessions, different subject areas, and age-appropriate content.",
         "Service availability may vary by location and is subject to instructor availability and program capacity."
@@ -159,7 +159,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-2xl font-bold text-gray-800 mb-6 font-poppins">Important Legal Notice</h2>
             <div className="prose prose-lg text-gray-600 leading-relaxed">
               <p className="mb-4">
-                These Terms of Service (&ldquo;Terms&rdquo;) constitute a legally binding agreement between you and BrainlyBees regarding your use of our educational platform, services, and content.
+                These Terms of Service (&ldquo;Terms&rdquo;) constitute a legally binding agreement between you and KidCube Global regarding your use of our educational platform, services, and content.
               </p>
               <p className="mb-4">
                 Please read these Terms carefully before using our services. By creating an account, enrolling in programs, or using our platform in any way, you acknowledge that you have read, understood, and agree to be bound by these Terms.
@@ -207,13 +207,13 @@ export default function TermsOfServicePage() {
               <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
                 <div className="text-3xl mb-4">📧</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Legal Inquiries</h3>
-                <div className="text-gray-600 font-semibold">brainlybeesglobal@gmail.com</div>
+                <div className="text-gray-600 font-semibold">kidcubeglobal@gmail.com</div>
               </div>
 
               <div className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
                 <div className="text-3xl mb-4">💬</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Support Team</h3>
-                <div className="text-gray-600 font-semibold">+91 8979245215</div>
+                <div className="text-gray-600 font-semibold">+91 98379 98535</div>
               </div>
             </div>
 

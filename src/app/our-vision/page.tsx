@@ -269,7 +269,7 @@ export default function OurVisionPage() {
                 </h1>
 
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  At BrainlyBees, we believe every child is unique and deserves an education that celebrates their individuality.
+                  At KidCube Global, we believe every child is unique and deserves an education that celebrates their individuality.
                   We create transformative learning experiences that ignite curiosity, build confidence, and nurture the innovators
                   and problem-solvers of tomorrow.
                 </p>
@@ -279,7 +279,7 @@ export default function OurVisionPage() {
                     Explore Our Vision
                   </button>
                   <a
-                    href="https://wa.me/918979245215"
+                    href="https://wa.me/919837998535"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-orange-400 to-yellow-400 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
@@ -364,7 +364,7 @@ export default function OurVisionPage() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              At BrainlyBees, we&apos;re committed to revolutionizing education by putting each child at the center of their learning journey.
+              At KidCube Global, we&apos;re committed to revolutionizing education by putting each child at the center of their learning journey.
               We combine cutting-edge technology with proven pedagogical methods to create engaging, meaningful, and joyful educational
               experiences that prepare children for success in life.
             </p>
@@ -673,7 +673,7 @@ export default function OurVisionPage() {
             </div>
 
             <p className="text-lg text-gray-600 leading-relaxed text-center mb-8">
-              At BrainlyBees, we understand that every child learns differently and has unique strengths waiting to be discovered.
+              At KidCube Global, we understand that every child learns differently and has unique strengths waiting to be discovered.
               Our approach focuses on creating adaptive learning environments where children feel safe to explore, experiment,
               and express themselves while building strong foundational skills and confidence.
             </p>
@@ -684,7 +684,7 @@ export default function OurVisionPage() {
                   Discover Our Approach
                 </button>
                 <a
-                  href="https://wa.me/918979245215"
+                  href="https://wa.me/919837998535"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
@@ -938,7 +938,7 @@ export default function OurVisionPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/918979245215"
+                href="https://wa.me/919837998535"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"

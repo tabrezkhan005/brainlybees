@@ -184,7 +184,7 @@ export default function ParentGuidePage() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            Practical tips, strategies, and guidance to help you support your child&apos;s learning journey with BrainlyBees.
+            Practical tips, strategies, and guidance to help you support your child&apos;s learning journey with KidCube Global.
           </p>
         </div>
       </section>
@@ -200,7 +200,7 @@ export default function ParentGuidePage() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Follow these steps to ensure your child gets the most out of their BrainlyBees experience.
+              Follow these steps to ensure your child gets the most out of their KidCube Global experience.
             </p>
           </div>
 
@@ -329,14 +329,14 @@ export default function ParentGuidePage() {
                 <div className="text-3xl mb-4">📞</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Direct Support</h3>
                 <p className="text-gray-600 mb-3">WhatsApp support</p>
-                <div className="text-blue-600 font-semibold">+91 8979245215</div>
+                <div className="text-blue-600 font-semibold">+91 98379 98535</div>
               </div>
 
               <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 border-2 border-green-200">
                 <div className="text-3xl mb-4">📧</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Email Support</h3>
                 <p className="text-gray-600 mb-3">Detailed inquiries</p>
-                <div className="text-green-600 font-semibold text-sm">brainlybeesglobal@gmail.com</div>
+                <div className="text-green-600 font-semibold text-sm">kidcubeglobal@gmail.com</div>
               </div>
 
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200">

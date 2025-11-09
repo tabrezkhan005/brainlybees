@@ -9,7 +9,7 @@ export default function ContactUsPage() {
       title: "WhatsApp Support",
       description: "Get instant help through WhatsApp chat",
       icon: "💬",
-      contact: "+91 8979245215",
+      contact: "+91 98379 98535",
       action: "Chat Now",
       color: "from-green-400 to-green-500",
       bgColor: "from-green-50 to-emerald-50"
@@ -18,7 +18,7 @@ export default function ContactUsPage() {
       title: "Email Support",
       description: "Send us detailed inquiries via email",
       icon: "📧",
-      contact: "brainlybeesglobal@gmail.com",
+      contact: "kidcubeglobal@gmail.com",
       action: "Send Email",
       color: "from-blue-400 to-blue-500",
       bgColor: "from-blue-50 to-cyan-50"
@@ -86,7 +86,7 @@ export default function ContactUsPage() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight font-poppins mb-6">
                 Contact
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 mt-2">
-                  BrainlyBees
+                  KidCube Global
                 </span>
               </h1>
 
@@ -133,7 +133,7 @@ export default function ContactUsPage() {
                   <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-lg">
                     <Image
                       src="/assets/teacher-with-all-kids.png"
-                      alt="Contact BrainlyBees"
+                      alt="Contact KidCube Global"
                       width={400}
                       height={384}
                       className="w-full h-full object-contain"

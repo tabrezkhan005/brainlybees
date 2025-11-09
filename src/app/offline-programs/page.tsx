@@ -207,7 +207,7 @@ export default function OfflineProgramsPage() {
                   </button>
                 </Link>
                 <a
-                  href="https://wa.me/918979245215"
+                  href="https://wa.me/919837998535"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-pink-400 to-rose-400 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"
@@ -364,7 +364,7 @@ export default function OfflineProgramsPage() {
                     </div>
                   </div>
 
-                  <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/919837998535" target="_blank" rel="noopener noreferrer">
                     <button className="w-full bg-white border-3 border-orange-400 text-orange-600 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-orange-50">
                       Join This Program
                     </button>
@@ -492,7 +492,7 @@ export default function OfflineProgramsPage() {
                   </div>
                 </div>
 
-                <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/919837998535" target="_blank" rel="noopener noreferrer">
                   <button className="w-full bg-white border-3 border-emerald-400 text-emerald-600 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-emerald-50">
                     Try This Subject
                   </button>
@@ -608,7 +608,7 @@ export default function OfflineProgramsPage() {
                   </button>
                 </Link>
                 <a
-                  href="https://wa.me/918979245215"
+                  href="https://wa.me/919837998535"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins text-center"

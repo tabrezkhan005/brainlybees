@@ -14,8 +14,8 @@ export default function FAQPage() {
       icon: "❓",
       faqs: [
         {
-          question: "What is BrainlyBees?",
-          answer: "BrainlyBees is an innovative educational platform that offers personalized online and offline learning experiences for children. We focus on making learning engaging, fun, and effective through interactive methods and caring educators."
+          question: "What is KidCube Global?",
+          answer: "KidCube Global is an innovative educational platform that offers personalized online and offline learning experiences for children. We focus on making learning engaging, fun, and effective through interactive methods and caring educators."
         },
         {
           question: "What age groups do you serve?",
@@ -23,7 +23,7 @@ export default function FAQPage() {
         },
         {
           question: "How do I get started?",
-          answer: "Getting started is easy! You can book a consultation through our website, contact us via WhatsApp at +91 8979245215, or email us at brainlybeesglobal@gmail.com. We'll help you choose the right program for your child."
+          answer: "Getting started is easy! You can book a consultation through our website, contact us via WhatsApp at +91 98379 98535, or email us at kidcubeglobal@gmail.com. We'll help you choose the right program for your child."
         },
         {
           question: "Do you offer free trials?",
@@ -182,7 +182,7 @@ export default function FAQPage() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            Find instant answers to the most common questions about BrainlyBees programs and services.
+            Find instant answers to the most common questions about KidCube Global programs and services.
           </p>
         </div>
       </section>
@@ -253,13 +253,13 @@ export default function FAQPage() {
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border-2 border-blue-200">
                 <div className="text-3xl mb-4">📧</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">Email Us</h3>
-                <div className="text-blue-600 font-semibold text-sm">brainlybeesglobal@gmail.com</div>
+                <div className="text-blue-600 font-semibold text-sm">kidcubeglobal@gmail.com</div>
               </div>
 
               <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 border-2 border-green-200">
                 <div className="text-3xl mb-4">💬</div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2 font-poppins">WhatsApp</h3>
-                <div className="text-green-600 font-semibold text-sm">+91 8979245215</div>
+                <div className="text-green-600 font-semibold text-sm">+91 98379 98535</div>
               </div>
 
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-200">

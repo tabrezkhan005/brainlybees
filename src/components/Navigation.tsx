@@ -84,35 +84,58 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20">
           <div className="flex items-center flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
-              <div className="relative">
-                <svg className="w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13 2C8 2 3 5 3 11C3 14 3 17 3 22C3 27 3 30 3 33C3 39 8 42 13 42C16 42 19 42 22 42C25 42 28 42 31 42C37 42 41 39 41 33C41 30 41 27 41 22C41 17 41 14 41 11C41 5 37 2 31 2C28 2 25 2 22 2C19 2 16 2 13 2Z"
-                        fill="url(#exactGradient)"
-                        transform="rotate(-8 22 22)"
-                        style={{filter: 'drop-shadow(0 2px 6px rgba(255, 69, 0, 0.2))'}}
-                  />
-                  <rect x="9" y="9" width="26" height="26" rx="7" ry="7"
-                        fill="white"
-                        fillOpacity="0.92"
-                        transform="rotate(-8 22 22)"
-                  />
+            <Link href="/" className="flex items-center space-x-2.5 sm:space-x-3 group transition-transform duration-200 hover:scale-105">
+              <div className="relative flex-shrink-0">
+                {/* Enhanced KidCube Logo - Modern 3D Cube with Shadow */}
+                <svg className="w-9 h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Shadow for depth */}
+                  <ellipse cx="28" cy="50" rx="18" ry="4" fill="rgba(99, 102, 241, 0.15)"/>
+
+                  {/* 3D Cube - Top face with shine */}
+                  <path d="M14 10L28 3L42 10V24L28 31L14 24V10Z" fill="url(#navCubeGradient1)" opacity="0.95">
+                    <animate attributeName="opacity" values="0.95;1;0.95" dur="3s" repeatCount="indefinite"/>
+                  </path>
+
+                  {/* 3D Cube - Front face */}
+                  <path d="M14 24L28 31V45L14 38V24Z" fill="url(#navCubeGradient2)"/>
+
+                  {/* 3D Cube - Right face */}
+                  <path d="M28 31L42 24V38L28 45V31Z" fill="url(#navCubeGradient3)"/>
+
+                  {/* Highlight on top face */}
+                  <path d="M14 10L28 3L42 10L35 13L21 20L14 17Z" fill="rgba(255,255,255,0.25)"/>
+
+                  {/* Cube edges for definition */}
+                  <path d="M14 10L28 3L42 10M14 10V24L28 31L42 24V10M14 24L28 31V45L14 38V24M28 31L42 24V38L28 45V31"
+                        stroke="rgba(255,255,255,0.4)" strokeWidth="0.8" fill="none" strokeLinecap="round"/>
+
+                  {/* Letter K with better styling */}
+                  <text x="28" y="21" fontSize="16" fontWeight="800" fill="white" textAnchor="middle"
+                        fontFamily="'Poppins', 'Arial', sans-serif" letterSpacing="-0.5">K</text>
+
                   <defs>
-                    <linearGradient id="exactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#ff4500" />
-                      <stop offset="45%" stopColor="#ff6b35" />
-                      <stop offset="75%" stopColor="#f97316" />
-                      <stop offset="100%" stopColor="#ea580c" />
+                    <linearGradient id="navCubeGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#6366f1" />
+                      <stop offset="50%" stopColor="#818cf8" />
+                      <stop offset="100%" stopColor="#8b5cf6" />
+                    </linearGradient>
+                    <linearGradient id="navCubeGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#8b5cf6" />
+                      <stop offset="100%" stopColor="#a855f7" />
+                    </linearGradient>
+                    <linearGradient id="navCubeGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#7c3aed" />
+                      <stop offset="100%" stopColor="#6366f1" />
                     </linearGradient>
                   </defs>
                 </svg>
               </div>
-              <div>
-                <div className="text-base sm:text-lg lg:text-xl font-bold text-gray-800 font-poppins">
-                  BrainlyBees
+              <div className="flex flex-col">
+                <div className="text-base sm:text-lg lg:text-xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700 bg-clip-text text-transparent font-poppins tracking-tight leading-tight">
+                  KidCube
                 </div>
-                <div className="text-xs sm:text-xs lg:text-xs text-orange-500 font-nunito">
-                  Smart Learning for Kids
+                <div className="text-[10px] sm:text-xs text-indigo-500 font-semibold font-nunito tracking-wide uppercase">
+                  Global
                 </div>
               </div>
             </Link>
@@ -142,7 +165,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center space-x-1 sm:space-x-2 flex-shrink-0">
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/918979245215"
+              href="https://wa.me/919837998535"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full text-xs sm:text-sm font-semibold hover:shadow-lg transition-all duration-200 whitespace-nowrap shadow-sm"
@@ -203,7 +226,7 @@ export default function Navigation() {
 
             <div className="pt-3 sm:pt-4 space-y-2 sm:space-y-3 border-t border-gray-200">
               <a
-                href="https://wa.me/918979245215"
+                href="https://wa.me/919837998535"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center px-3 sm:px-4 py-2.5 sm:py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-lg sm:rounded-full font-semibold shadow-sm transition-all duration-200"

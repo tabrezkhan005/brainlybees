@@ -259,7 +259,7 @@ export default function OnlineProgramsPage() {
                     Start Learning Online
                   </button>
                 </Link>
-                <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/919837998535" target="_blank" rel="noopener noreferrer">
                   <button className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg border-2 border-purple-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-purple-50 font-poppins">
                     Schedule Demo
                   </button>
@@ -386,7 +386,7 @@ export default function OnlineProgramsPage() {
                     </ul>
                   </div>
 
-                  <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/919837998535" target="_blank" rel="noopener noreferrer">
                     <button className="w-full bg-white border-3 border-green-400 text-green-600 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-green-50">
                       Start Online Learning
                     </button>
@@ -542,7 +542,7 @@ export default function OnlineProgramsPage() {
                     </div>
 
                     <div className="mt-auto">
-                      <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+                      <a href="https://wa.me/919837998535" target="_blank" rel="noopener noreferrer">
                         <button className={`w-full bg-white border-3 ${borderColors[index]} ${textColors[index]} py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-poppins hover:bg-gray-50`}>
                           Start {subject.title}
                         </button>
@@ -730,7 +730,7 @@ export default function OnlineProgramsPage() {
                 </span>
               </h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed mb-8 font-nunito">
-                Join thousands of families who have chosen BrainlyBees for amazing online education.
+                Join thousands of families who have chosen KidCube Global for amazing online education.
                 Start your digital learning adventure today!
               </p>
             </div>
@@ -741,7 +741,7 @@ export default function OnlineProgramsPage() {
                   Book Consultation
                 </button>
               </Link>
-              <a href="https://wa.me/918979245215" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919837998535" target="_blank" rel="noopener noreferrer">
                 <button className="bg-white border-4 border-green-400 text-green-600 px-12 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 font-poppins hover:bg-green-50">
                   WhatsApp Us
                 </button>

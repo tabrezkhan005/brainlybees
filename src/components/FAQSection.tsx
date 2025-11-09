@@ -6,8 +6,8 @@ export default function FAQSection() {
   const [openItems, setOpenItems] = useState<string[]>([]);
 
   const toggleItem = (itemId: string) => {
-    setOpenItems(prev => 
-      prev.includes(itemId) 
+    setOpenItems(prev =>
+      prev.includes(itemId)
         ? prev.filter(id => id !== itemId)
         : [...prev, itemId]
     );
@@ -126,7 +126,7 @@ export default function FAQSection() {
                 </div>
                 {category.category}
               </h3>
-              
+
               <div className="space-y-4">
                 {category.questions.map((faq) => (
                   <div key={faq.id} className="border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover-lift">
@@ -148,8 +148,8 @@ export default function FAQSection() {
                       </div>
                     </button>
                     <div className={`transition-all duration-300 ease-in-out ${
-                      openItems.includes(faq.id) 
-                        ? 'max-h-96 opacity-100' 
+                      openItems.includes(faq.id)
+                        ? 'max-h-96 opacity-100'
                         : 'max-h-0 opacity-0'
                     } overflow-hidden`}>
                       <div className="px-6 py-5 bg-white border-t border-gray-100">
@@ -174,8 +174,8 @@ export default function FAQSection() {
             Our team is here to help you find the perfect learning program for your child.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://wa.me/918979245215" 
+            <a
+              href="https://wa.me/919837998535"
               className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center"
             >
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -183,8 +183,8 @@ export default function FAQSection() {
               </svg>
               Chat on WhatsApp
             </a>
-            <a 
-              href="mailto:brainlybeesglobal@gmail.com" 
+            <a
+              href="mailto:kidcubeglobal@gmail.com"
               className="bg-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition-colors flex items-center justify-center"
             >
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
